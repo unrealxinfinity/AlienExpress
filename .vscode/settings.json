@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.xpm": "c",
+        "lcf.h": "c",
+        "graphics.h": "c",
+        "game.h": "c",
+        "keyboard.h": "c",
+        "includes.h": "c",
+        "struct.h": "c",
+        "menu.h": "c",
+        "random": "c",
+        "ostream": "c",
+        "functional": "c",
+        "memory": "c",
+        "sstream": "c",
+        "lab5.h": "c"
+    }
+}

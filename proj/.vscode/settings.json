@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "struct.h": "c",
+        "game.h": "c",
+        "view.h": "c",
+        "keyboard.h": "c",
+        "menu.h": "c",
+        "timer_proj.h": "c",
+        "*.xpm": "c",
+        "graphics.h": "c",
+        "includes.h": "c"
+    }
+}
