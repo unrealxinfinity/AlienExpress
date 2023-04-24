@@ -5,5 +5,4 @@
 #include "../load/view.h"
 
 void draw_menu(uint16_t mode);
-void draw_menu_animated(uint16_t mode, int indexToDraw);
 #endif

@@ -10,11 +10,13 @@ movement_t move[4]={STILL,STILL,STILL,STILL};
 void set_state(game_state_t state){
     game_info.state = state;
     game_info.action = AFK;
+    player.direction = STILL;
 }
 
 
 //handlers
 int keyboard_ih(uint32_t scancode){
+    bool is_idle = true;
     if(game_info.state == MENU){
         if(scancode == MAKE_ESC){
             game_info.action = EXIT;
@@ -36,20 +38,31 @@ int keyboard_ih(uint32_t scancode){
         if(scancode == B(MAKE_A))move[2] = STILL;
         if(scancode == B(MAKE_S))move[3] = STILL;
         if(move[0] == UP){
-            animated_img.img.y -= 10;
-            animated_img.no_img += 1;
+            player.y -= 10;
+            player.no_img += 1;
+            player.direction = UP;
+            is_idle = false;
         }
         if(move[1] == RIGHT){
-            animated_img.img.x += 10;
-            animated_img.no_img += 1;
+            player.x += 10;
+            player.no_img += 1;
+            player.direction = RIGHT;
+            is_idle = false;
         }
         if(move[2] == LEFT){
-            animated_img.img.x -= 10;
-            animated_img.no_img += 1;
+            player.x -= 10;
+            player.no_img += 1;
+            player.direction = LEFT;
+            is_idle = false;
         }
         if(move[3] == DOWN){
-            animated_img.img.y += 10;
-            animated_img.no_img += 1;
+            player.y += 10;
+            player.no_img += 1;
+            player.direction = DOWN;
+            is_idle = false;
+        }
+        if(is_idle){
+            player.direction = STILL;
         }
     }
     return 0;

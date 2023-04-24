@@ -16,8 +16,9 @@ uint8_t *view_buffer;
 uint16_t mode;
 
 //xpm images
+img_t letters;
 img_t player;
-AnimatedImg_t animated_img;
+AnimatedImg_t animated_img_player;
 
 
 #endif

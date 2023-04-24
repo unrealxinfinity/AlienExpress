@@ -1,17 +1,15 @@
 #include "menu.h"
 
 
-img_t letter;
 
 void draw_menu(uint16_t mode){
     memset(frame_buffer, 0xDDDDDD, frame_size);
     //draw(title, title.x, title.y);
-    draw_small_xpm((xpm_map_t)s_xpm, 400, 200, mode);
+    draw_small_xpm((xpm_map_t)selected_s_xpm, 400, 200, mode);
     draw_small_xpm((xpm_map_t)t_xpm, 415, 200, mode);
     draw_small_xpm((xpm_map_t)a_xpm, 430, 200, mode);
     draw_small_xpm((xpm_map_t)r_xpm, 445, 200, mode);
     draw_small_xpm((xpm_map_t)t_xpm, 460, 200, mode);
-
 
     draw_small_xpm((xpm_map_t)q_xpm, 406, 230, mode);
     draw_small_xpm((xpm_map_t)u_xpm, 421, 230, mode);
@@ -19,7 +17,3 @@ void draw_menu(uint16_t mode){
     draw_small_xpm((xpm_map_t)t_xpm, 451, 230, mode);
 }
 
-void draw_menu_animated(uint16_t mode, int indexToDraw){
-     /*memset(frame_buffer, 0x1, x_res*y_res*bytes_per_pixel);
-     draw_animated_img(animated_img,animated_img->x,animated_img->y,mode,indexToDraw);*/
-}

@@ -4,5 +4,5 @@
 #include "../load/view.h"
 
 void draw_level(uint16_t mode);
-
+void draw_player(uint16_t mode);
 #endif
