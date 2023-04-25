@@ -35,7 +35,7 @@ void init_img(unsigned int x, unsigned int y){
     player = make_img((xpm_map_t) mc1_xpm,x,y);
     player.prev_direction = RIGHT;
 
-    mouse_normal = make_img((xpm_map_t)mouse_normal_xpm, mouse_x, mouse_y, mode);
+    mouse_normal = make_img((xpm_map_t)mouse_normal_xpm, mouse_x, mouse_y);
 }
 void init_anim_img(unsigned int x, unsigned int y){
     xpm_map_t up[8] = {(xpm_map_t)mcUp1_xpm, (xpm_map_t)mcUp2_xpm,(xpm_map_t)mcUp3_xpm,(xpm_map_t)mcUp4_xpm,(xpm_map_t)mcUp5_xpm,(xpm_map_t)mcUp6_xpm,(xpm_map_t)mcUp7_xpm, (xpm_map_t)mcUp8_xpm};

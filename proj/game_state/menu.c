@@ -17,7 +17,7 @@ action_t keyboard_ih_menu(uint32_t scancode){
 void draw_menu(){
     memset(frame_buffer, 0xDDDDDD, frame_size);
     draw_menu_words();
-    draw(mouse_normal, mouse_x, mouse_y, mode);
+    draw(mouse_normal, mouse_x, mouse_y);
 }
 void draw_menu_words(){
     switch(menu_selection){
