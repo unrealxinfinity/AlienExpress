@@ -41,7 +41,7 @@ typedef struct {
   uint8_t NumberOfBanks;      /**< @brief number of banks */
   uint8_t MemoryModel;        /**< @brief memory model type */
   uint8_t BankSize;           /**< @brief bank size in KB */
-  uint8_t NumberOfImagePages; /**< @brief number of images_up */
+  uint8_t NumberOfImagePages; /**< @brief number of images */
   uint8_t Reserved1;          /**< @brief reserved for page function */
 
   /* Direct Color fields (required for direct/6 and YUV/7 memory models) */
@@ -63,8 +63,8 @@ typedef struct {
 
   /* Mandatory information for VBE 3.0 and above */
   uint16_t LinBytesPerScanLine;  /* bytes per scan line for linear modes */
-  uint8_t BnkNumberOfImagePages; /* number of images_up for banked modes */
-  uint8_t LinNumberOfImagePages; /* number of images_up for linear modes */
+  uint8_t BnkNumberOfImagePages; /* number of images for banked modes */
+  uint8_t LinNumberOfImagePages; /* number of images for linear modes */
   uint8_t LinRedMaskSize;        /* size of direct color red mask (linear modes) */
   uint8_t LinRedFieldPosition;   /* bit position of lsb of red mask (linear modes) */
   uint8_t LinGreenMaskSize;      /* size of direct color green mask (linear modes) */

@@ -1,6 +1,5 @@
 #include "graphics.h"
 
-char *double_buffer;
 
 uint8_t *vm_buffer;
 
@@ -52,19 +51,8 @@ int init_graphics(uint16_t mode){
     if(set_graphics_mode(mode))return 1;
     return 0;
 }
-
-void allocate(){
-    frame_buffer = (uint8_t *)malloc(frame_size); 
-    view_buffer = (uint8_t *)malloc(frame_size);
-    memset(view_buffer,0xFFFFFF,frame_size);
-}
-void free_buffers(){
-    free(frame_buffer);
-    free(view_buffer);
-}
-void copyBufferToVideo(){
-    memcpy(vm_buffer, frame_buffer, frame_size);
-    memset(frame_buffer, 0, frame_size); 
+void pass_to_vm_buffer(){
+    memcpy(vm_buffer, frame_buffer, frame_size); 
 }
 
 int draw_pixel(uint16_t x, uint16_t y, uint32_t colors_32){

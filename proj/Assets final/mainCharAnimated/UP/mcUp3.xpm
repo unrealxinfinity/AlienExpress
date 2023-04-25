@@ -1,7 +1,7 @@
 /* XPM */
 static char * mcUp3_xpm[] = {
 "31 38 11 1",
-" 	c None",
+" 	c #FFFFFE",
 ".	c #161516",
 "+	c #D4D7D8",
 "@	c #A3A79F",

@@ -338,7 +338,7 @@ DSO_METHOD *DSO_METHOD_dl(void);
 /* If WIN32 is defined, use DLLs. If not, return NULL. */
 DSO_METHOD *DSO_METHOD_win32(void);
 
-/* If VMS is defined, use shared images_up. If not, return NULL. */
+/* If VMS is defined, use shared images. If not, return NULL. */
 DSO_METHOD *DSO_METHOD_vms(void);
 
 /*
@@ -363,7 +363,7 @@ int DSO_pathbyaddr(void *addr, char *path, int sz);
  */
 void *DSO_global_lookup(const char *name);
 
-/* If BeOS is defined, use shared images_up. If not, return NULL. */
+/* If BeOS is defined, use shared images. If not, return NULL. */
 DSO_METHOD *DSO_METHOD_beos(void);
 
 /* BEGIN ERROR CODES */
