@@ -12,7 +12,6 @@ uint16_t x_res;
 uint16_t y_res;
 unsigned int frame_size;
 uint8_t *frame_buffer;
-uint8_t *view_buffer;
 uint16_t mode;
 
 //xpm images

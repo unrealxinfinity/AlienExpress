@@ -36,11 +36,11 @@ int draw_small_xpm(xpm_map_t xpm, uint16_t x, uint16_t y, uint16_t mode){
     if(draw(img, img.x, img.y, mode)) return 1;
     return 0;
 }
-void init_img(unsigned int x, unsigned int y,unsigned int xSpd,unsigned int ySpd,uint16_t mode){
+void init_img(unsigned int x, unsigned int y,uint16_t mode){
     player = make_img((xpm_map_t) mc1_xpm,x,y,mode);
     player.prev_direction = RIGHT;
 }
-void init_anim_img(unsigned int x, unsigned int y, unsigned int speed,uint16_t mode){
+void init_anim_img(unsigned int x, unsigned int y,uint16_t mode){
     xpm_map_t up[8] = {(xpm_map_t)mcUp1_xpm, (xpm_map_t)mcUp2_xpm,(xpm_map_t)mcUp3_xpm,(xpm_map_t)mcUp4_xpm,(xpm_map_t)mcUp5_xpm,(xpm_map_t)mcUp6_xpm,(xpm_map_t)mcUp7_xpm, (xpm_map_t)mcUp8_xpm};
     xpm_map_t left[8] = {(xpm_map_t)mcLeft1_xpm, (xpm_map_t)mcLeft2_xpm,(xpm_map_t)mcLeft3_xpm,(xpm_map_t)mcLeft4_xpm,(xpm_map_t)mcLeft5_xpm,(xpm_map_t)mcLeft6_xpm,(xpm_map_t)mcLeft7_xpm, (xpm_map_t)mcLeft8_xpm};
     xpm_map_t right[8] = {(xpm_map_t)mcRight1_xpm, (xpm_map_t)mcRight2_xpm,(xpm_map_t)mcRight3_xpm,(xpm_map_t)mcRight4_xpm,(xpm_map_t)mcRight5_xpm,(xpm_map_t)mcRight6_xpm,(xpm_map_t)mcRight7_xpm, (xpm_map_t)mcRight8_xpm};

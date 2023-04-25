@@ -1,6 +1,50 @@
 #include "level.h"
 
 
+movement_t move[4]={STILL,STILL,STILL,STILL};
+
+action_t keyboard_ih_level(uint32_t scancode){
+    bool is_idle = true;
+    if(scancode == MAKE_ESC){
+        return EXIT;
+    }
+    if(scancode == MAKE_W)move[0] = UP;
+    if(scancode == MAKE_D)move[1] = RIGHT;
+    if(scancode == MAKE_A)move[2] = LEFT;
+    if(scancode == MAKE_S)move[3] = DOWN;
+    if(scancode == B(MAKE_W))move[0] = STILL;
+    if(scancode == B(MAKE_D))move[1] = STILL;
+    if(scancode == B(MAKE_A))move[2] = STILL;
+    if(scancode == B(MAKE_S))move[3] = STILL;
+    if(move[0] == UP){
+        player.y -= 10;
+        player.no_img += 1;
+        player.direction = UP;
+        is_idle = false;
+    }
+    if(move[1] == RIGHT){
+        player.x += 10;
+        player.no_img += 1;
+        player.direction = RIGHT;
+        is_idle = false;
+    }
+    if(move[2] == LEFT){
+        player.x -= 10;
+        player.no_img += 1;
+        player.direction = LEFT;
+        is_idle = false;
+    }
+    if(move[3] == DOWN){
+        player.y += 10;
+        player.no_img += 1;
+        player.direction = DOWN;
+        is_idle = false;
+    }
+    if(is_idle){
+        player.direction = STILL;
+    }
+    return AFK;
+}
 void draw_level(uint16_t mode){
     memset(frame_buffer, 0xDDDDDD, frame_size);
     draw_player(mode);

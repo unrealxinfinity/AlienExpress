@@ -6,6 +6,7 @@
 #include "../load/view.h"
 #include "../devices/graphics.h"
 #include "../devices/keyboard.h"
+#include "../devices/mouse.h"
 #include "../devices/timer_proj.h"
 #include "../game_state/menu.h"
 #include "../game_state/level.h"
