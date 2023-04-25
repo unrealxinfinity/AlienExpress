@@ -22,7 +22,7 @@ typedef struct link_map {
  */
 struct r_debug {
 	int r_version;			/* not used */
-	struct link_map *r_map;		/* list of loaded images */
+	struct link_map *r_map;		/* list of loaded images_up */
 	void (*r_brk)(void);		/* pointer to break point */
 	enum {
 		RT_CONSISTENT,		/* things are stable */

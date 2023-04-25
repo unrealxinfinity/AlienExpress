@@ -9,7 +9,9 @@ int init_graphics(uint16_t mode);
 int set_frame_buffer(uint16_t mode);
 
 
-void pass_to_vm_buffer();
+void copyBufferToVideo();
+void allocate();
+void free_buffers();
 int draw_pixel(uint16_t x,uint16_t y,uint32_t color);
 
 

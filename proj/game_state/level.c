@@ -1,94 +1,13 @@
 #include "level.h"
 
 
-movement_t move[4]={STILL,STILL,STILL,STILL};
 
-action_t keyboard_ih_level(uint32_t scancode){
-    bool is_idle = true;
-    if(scancode == MAKE_ESC){
-        return EXIT;
-    }
-    if(scancode == MAKE_W)move[0] = UP;
-    if(scancode == MAKE_D)move[1] = RIGHT;
-    if(scancode == MAKE_A)move[2] = LEFT;
-    if(scancode == MAKE_S)move[3] = DOWN;
-    if(scancode == B(MAKE_W))move[0] = STILL;
-    if(scancode == B(MAKE_D))move[1] = STILL;
-    if(scancode == B(MAKE_A))move[2] = STILL;
-    if(scancode == B(MAKE_S))move[3] = STILL;
-    if(move[0] == UP){
-        player.y -= 10;
-        player.no_img += 1;
-        player.direction = UP;
-        is_idle = false;
-    }
-    if(move[1] == RIGHT){
-        player.x += 10;
-        player.no_img += 1;
-        player.direction = RIGHT;
-        is_idle = false;
-    }
-    if(move[2] == LEFT){
-        player.x -= 10;
-        player.no_img += 1;
-        player.direction = LEFT;
-        is_idle = false;
-    }
-    if(move[3] == DOWN){
-        player.y += 10;
-        player.no_img += 1;
-        player.direction = DOWN;
-        is_idle = false;
-    }
-    if(is_idle){
-        player.direction = STILL;
-    }
-    return AFK;
+void draw_level(){
+   // memset(frame_buffer, 0xDDDDDD, frame_size);
+   //tilesPerAxis temp;
+    drawTiles();
+    //draw(player, player.x, player.y);
+    
+    draw(animated_img.images[animated_img.no_img%7], animated_img.img.x, animated_img.img.y);
 }
-void draw_level(uint16_t mode){
-    memset(frame_buffer, 0xDDDDDD, frame_size);
-    draw_player(mode);
-}
-void draw_player(uint16_t mode){
-    switch(player.direction){
-        case UP:
-            if(player.prev_direction == STILL) player.direction = STILL;
-            else player.idle_time = 1;
-            player.prev_direction = UP;
-            draw(animated_img_player.up[player.no_img%8], player.x, player.y, mode);
-            break;
-        case LEFT:
-            if(player.prev_direction == STILL) player.direction = STILL;
-            else player.idle_time = 1;
-            player.prev_direction = LEFT;
-            draw(animated_img_player.left[player.no_img%8], player.x, player.y, mode);
-            break;
-        case RIGHT:
-            if(player.prev_direction == STILL) player.direction = STILL;
-            else player.idle_time = 1;
-            player.prev_direction = RIGHT;
-            draw(animated_img_player.right[player.no_img%8], player.x, player.y, mode);
-            break;
-        case DOWN:
-            if(player.prev_direction == STILL) player.direction = STILL;
-            else player.idle_time = 1;
-            player.prev_direction = DOWN;
-            draw(animated_img_player.down[player.no_img%8], player.x, player.y, mode);
-            break;
-        case STILL:
-            if((player.idle_time % 15) == 0){
-                player.direction = player.prev_direction;
-                player.prev_direction = player.direction;
-                player.no_img = 0;
-                draw_player(mode);
-            }
-            else{
-                player.idle_time += 1;
-                player.direction = player.prev_direction;
-                player.prev_direction = STILL;
-                draw_player(mode);
-            }
-        default:
-            break;
-    }
-}
+

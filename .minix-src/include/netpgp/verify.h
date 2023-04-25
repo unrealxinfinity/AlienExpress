@@ -175,7 +175,7 @@ typedef struct pgpv_litdata_t {
 	size_t			 len;
 } pgpv_litdata_t;
 
-/* user attributes - images */
+/* user attributes - images_up */
 typedef struct pgpv_userattr_t {
 	size_t 			 len;
 	PGPV_ARRAY(pgpv_string_t, subattrs);

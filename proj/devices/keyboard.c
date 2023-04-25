@@ -13,27 +13,36 @@ int (keyboard_unsubscribe)(){
 }
 int (kbc_read_output)(int port, uint32_t *command){
     uint32_t status;
+    uint8_t attemps = 3;
     uint32_t scancode;
-    sys_inb(KBC_STATUS, &status);
-    if ((status & OUT_BUFFER_BIT) != 0) {
+    
+    while (attemps) {
 
-        sys_inb(port, &scancode);
+        sys_inb(KBC_STATUS, &status);
+        if ((status & OUT_BUFFER_BIT) != 0) {
 
-        if((status & PARITY_ERROR) != 0){
-            return ERROR;
+            sys_inb(port, &scancode);
+
+            if((status & PARITY_ERROR) != 0){
+                printf("Error: Parity error!\n");
+                return 0xFFFF;
+            }
+
+            if((status & TIME_OUT_ERROR) != 0){
+                printf("Error: Timeout error!\n");
+                return 0xFFFF;
+            }
+
+            if(status & BIT(5)) return 0xFFFF;
+            *command = scancode;
+            return scancode;
+
         }
-
-        if((status & TIME_OUT_ERROR) != 0){
-            return ERROR;
-        }
-
-        if(status & BIT(5)) return 0xFFFF;
-        *command = scancode;
-        return scancode;
-
+        tickdelay(micros_to_ticks(DELAY));
+        attemps--;
     }
 
-    return ERROR;
+    return 0xFFFF;
 }
 int (kbc_write_output)(int port, unsigned long command){
     uint32_t status;
@@ -44,9 +53,10 @@ int (kbc_write_output)(int port, unsigned long command){
         sys_inb(KBC_STATUS, &status);
 
         if ((status & IN_BUFFER_BIT) == 0){
+
             if(sys_outb(port, command) != 0){
                 printf("Error: Could not write commandByte!\n");
-                return ERROR;
+                return 0xFFFF;
             }
 
             return 0;
@@ -55,7 +65,7 @@ int (kbc_write_output)(int port, unsigned long command){
         attemps--;
     }
     
-    return ERROR;
+    return 0xFFFF;
 }
 int (keyboard_restore)(){
     uint32_t command;

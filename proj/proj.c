@@ -35,21 +35,13 @@ int main(int argc, char *argv[]) {
 int(proj_main_loop)(int argc, char *argv[]){
     
     
-    uint16_t mode = (int)strtol(argv[0], NULL, 16);
-    if(argc != 1){
-      printf("Wrong number of arguments!, valid: %d",argc);
-      return EXIT_FAILURE;
-    }
-    if(!(mode == DIRECT_COLOR_1_5_5_5 || mode == DIRECT_COLOR_5_6_5 || mode==DIRECT_COLOR_8_8_8 || mode==DIRECT_COLOR_8_8_8_8 || mode == INDEXED_MODE)){
-      printf("Wrong mode! %d",mode);
-      return EXIT_FAILURE;
-    }
-   
-    if(initialize(mode)){
+    
+    
+    if(initialize()){
       printf("initialization error\n");
       return EXIT_FAILURE;
     }
-    game_loop(mode);
+    game_loop();
     if(terminate()){
       printf("terminate error\n");
       return EXIT_FAILURE;

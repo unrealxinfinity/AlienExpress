@@ -249,7 +249,7 @@
  * This means [to be determined]. (XXX)
  *
  * As DIRBLKSIZE in its FFS sense is hardware-dependent, and file
- * system images do from time to time move to different hardware, code
+ * system images_up do from time to time move to different hardware, code
  * that reads directories should be prepared to handle directories
  * written in a context where DIRBLKSIZE was different (smaller or
  * larger) than its current value. Note however that it is not

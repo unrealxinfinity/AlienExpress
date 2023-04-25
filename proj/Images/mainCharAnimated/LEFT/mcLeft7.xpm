@@ -1,7 +1,7 @@
 /* XPM */
 static char * mcLeft7_xpm[] = {
 "35 31 11 1",
-" 	c #FFFFFE",
+" 	c None",
 ".	c #161516",
 "+	c #312B35",
 "@	c #838B7B",

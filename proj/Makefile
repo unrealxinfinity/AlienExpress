@@ -8,7 +8,7 @@ PROG=proj
 
 
 # source code files to be compiled
-SRCS = proj.c game.c graphics.c keyboard.c menu.c view.c timer_proj.c level.c mouse.c
+SRCS = proj.c game.c graphics.c keyboard.c menu.c view.c timer_proj.c level.c
 
 #IPATHS=-I./libs/graph/ -I./libs/kbc/ -I./libs/rtc/ -I./libs/timer/ -I./libs/keyboard/ -I./libs/mouse/  -I./libs/mouse/ 
 # additional compilation flags

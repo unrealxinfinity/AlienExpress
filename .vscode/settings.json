@@ -13,6 +13,7 @@
         "functional": "c",
         "memory": "c",
         "sstream": "c",
-        "lab5.h": "c"
+        "lab5.h": "c",
+        "chrono": "c"
     }
 }
