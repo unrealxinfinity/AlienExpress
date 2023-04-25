@@ -90,5 +90,6 @@
 #include "../Assets final/selected_letters/y.xpm"
 #include "../Assets final/selected_letters/z.xpm"
 
+#include "../Images/mouse/mouse_normal.xpm"
 #include "../Assets final/tileset/ground.xpm"
 #endif

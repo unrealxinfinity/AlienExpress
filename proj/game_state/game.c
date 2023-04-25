@@ -65,6 +65,8 @@ int draw_state(){
 int initialize(){
     memset(&game_info, 0, sizeof(game_info));
     if(init_graphics(DIRECT_COLOR_8_8_8_8)) return 1;
+    mouse_x = 5;
+    mouse_y = 5;
     init_img( 214, 100);
     init_anim_img(214,100);
     frame_buffer = (uint8_t *)malloc(frame_size);
