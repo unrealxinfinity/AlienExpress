@@ -14,10 +14,11 @@ typedef struct{
     uint16_t y;
     uint16_t width;
     uint16_t height;
-    int xSpeed, ySpeed;
     uint32_t *colors_32; 
     uint16_t *colors_16;
     uint8_t *colors_8;
+    int hitbox_x;
+    int hitbox_y;
     int no_img;
     int idle_time;
     movement_t direction;
@@ -29,7 +30,12 @@ typedef struct {
     img_t left[8];
     img_t right[8];
     img_t down[8];
+    int speed;
 }AnimatedImg_t;
+
+typedef struct{
+    img_t animation[8];
+}simple_animation_t;
 
 typedef struct{
     int tilesPerXAxis;

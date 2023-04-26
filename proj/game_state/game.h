@@ -15,7 +15,9 @@ void set_state(game_state_t state);
 
 
 int keyboard_ih(uint32_t scancode);
-int control_state(uint32_t scancode);
+int mouse_proj_ih();
+
+int control_state();
 int draw_state();
 
 

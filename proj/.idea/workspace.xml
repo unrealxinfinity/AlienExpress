@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a587f709-2d4c-4d6a-8f71-35c16021c4c1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets final/Enemy3/enemy.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/Enemy3/enemy.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets final/Enemy3/enemy2.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/Enemy3/enemy2.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets final/Enemy3/enemy3.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/Enemy3/enemy3.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets final/Enemy3/enemy4.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/Enemy3/enemy4.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets final/Enemy3/enemy5.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/Enemy3/enemy5.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets final/Enemy3/enemy6.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/Enemy3/enemy6.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets final/Enemy3/enemy7.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/Enemy3/enemy7.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets final/Enemy3/enemy8.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/Enemy3/enemy8.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets final/Enemy3/enemyAttack56.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/Enemy3/enemyAttack6.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets final/items/delivery.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/items/bigBox.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets final/obstacle/unbreakableWalls.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/tileset/unbreakableWalls.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/heart_xpm.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/heart_xpm.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/mainCharFront.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/mainCharFront.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/mc1.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/mc1.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/menu_bg.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/menu_bg.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/mouse/mouse_normal.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets final/mouse/mouse_normal.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.o" beforeDir="false" afterPath="$PROJECT_DIR$/game.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_state/level.c" beforeDir="false" afterPath="$PROJECT_DIR$/game_state/level.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_state/level.h" beforeDir="false" afterPath="$PROJECT_DIR$/game_state/level.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics.o" beforeDir="false" afterPath="$PROJECT_DIR$/graphics.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyboard.o" beforeDir="false" afterPath="$PROJECT_DIR$/keyboard.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/level.o" beforeDir="false" afterPath="$PROJECT_DIR$/level.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load/view.c" beforeDir="false" afterPath="$PROJECT_DIR$/load/view.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/macros/global.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.o" beforeDir="false" afterPath="$PROJECT_DIR$/menu.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mouse.o" beforeDir="false" afterPath="$PROJECT_DIR$/mouse.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj" beforeDir="false" afterPath="$PROJECT_DIR$/proj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj.c" beforeDir="false" afterPath="$PROJECT_DIR$/proj.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj.o" beforeDir="false" afterPath="$PROJECT_DIR$/proj.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timer_proj.o" beforeDir="false" afterPath="$PROJECT_DIR$/timer_proj.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view.o" beforeDir="false" afterPath="$PROJECT_DIR$/view.o" afterDir="false" />
+    </list>
+    <list id="77789c1b-7aea-40d8-9718-2070367314dc" name="Changes by jomi" comment="">
+      <change beforePath="$PROJECT_DIR$/devices/graphics.c" beforeDir="false" afterPath="$PROJECT_DIR$/devices/graphics.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devices/mouse.c" beforeDir="false" afterPath="$PROJECT_DIR$/devices/mouse.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_state/game.c" beforeDir="false" afterPath="$PROJECT_DIR$/game_state/game.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_state/game.h" beforeDir="false" afterPath="$PROJECT_DIR$/game_state/game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_state/level.c" beforeDir="false" afterPath="$PROJECT_DIR$/game_state/level.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_state/menu.c" beforeDir="false" afterPath="$PROJECT_DIR$/game_state/menu.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_state/menu.h" beforeDir="false" afterPath="$PROJECT_DIR$/game_state/menu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load/view.c" beforeDir="false" afterPath="$PROJECT_DIR$/load/view.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load/view.h" beforeDir="false" afterPath="$PROJECT_DIR$/load/view.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/macros/global.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/struct.h" beforeDir="false" afterPath="$PROJECT_DIR$/macros/struct.h" afterDir="false" />
+    </list>
+    <list id="27c2c53b-e974-48b2-8c75-a81786579b1f" name="Changes by not_real_fu" comment="">
+      <change beforePath="$PROJECT_DIR$/game_state/level.c" beforeDir="false" afterPath="$PROJECT_DIR$/game_state/level.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load/view.c" beforeDir="false" afterPath="$PROJECT_DIR$/load/view.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load/view.h" beforeDir="false" afterPath="$PROJECT_DIR$/load/view.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macros/xpm_includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/macros/xpm_includes.h" afterDir="false" />
+    </list>
+    <list id="5b9b5fa8-04db-464a-ac56-960f00ecc0e9" name="Changes by PJ" comment="">
+      <change beforePath="$PROJECT_DIR$/game_state/level.c" beforeDir="false" afterPath="$PROJECT_DIR$/game_state/level.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/load/view.c">
+      <ranges>
+        <range start1="2" end1="8" start2="2" end2="50" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="15" end1="16" start2="57" end2="58" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="18" end1="18" start2="60" end2="66" changelist="27c2c53b-e974-48b2-8c75-a81786579b1f" />
+        <range start1="22" end1="24" start2="70" end2="73" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+        <range start1="26" end1="27" start2="75" end2="78" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="31" end1="31" start2="82" end2="114" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+        <range start1="32" end1="32" start2="115" end2="121" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+        <range start1="33" end1="35" start2="122" end2="131" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+        <range start1="36" end1="36" start2="132" end2="141" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+        <range start1="37" end1="38" start2="142" end2="142" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+        <range start1="39" end1="40" start2="143" end2="145" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+        <range start1="44" end1="45" start2="149" end2="156" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+        <range start1="46" end1="47" start2="157" end2="161" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+        <range start1="49" end1="50" start2="163" end2="164" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+        <range start1="60" end1="60" start2="174" end2="176" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="64" end1="65" start2="180" end2="181" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="67" end1="71" start2="183" end2="187" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="73" end1="73" start2="189" end2="190" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="75" end1="75" start2="192" end2="199" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/macros/global.h">
+      <ranges>
+        <range start1="17" end1="17" start2="17" end2="18" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="19" end1="19" start2="20" end2="21" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="22" end1="23" start2="24" end2="38" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="27" end1="27" start2="42" end2="44" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/game_state/level.c">
+      <ranges>
+        <range start1="19" end1="20" start2="19" end2="21" changelist="27c2c53b-e974-48b2-8c75-a81786579b1f" />
+        <range start1="25" end1="26" start2="26" end2="28" changelist="27c2c53b-e974-48b2-8c75-a81786579b1f" />
+        <range start1="31" end1="32" start2="33" end2="35" changelist="27c2c53b-e974-48b2-8c75-a81786579b1f" />
+        <range start1="37" end1="38" start2="40" end2="42" changelist="5b9b5fa8-04db-464a-ac56-960f00ecc0e9" />
+        <range start1="48" end1="49" start2="52" end2="52" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="50" end1="50" start2="53" end2="57" changelist="27c2c53b-e974-48b2-8c75-a81786579b1f" />
+        <range start1="51" end1="51" start2="58" end2="59" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+        <range start1="52" end1="52" start2="60" end2="61" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+        <range start1="58" end1="59" start2="67" end2="69" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="64" end1="65" start2="74" end2="76" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="70" end1="71" start2="81" end2="83" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="76" end1="77" start2="88" end2="90" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="96" end1="96" start2="109" end2="167" changelist="a587f709-2d4c-4d6a-8f71-35c16021c4c1" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/load/view.h">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="7" changelist="27c2c53b-e974-48b2-8c75-a81786579b1f" />
+        <range start1="8" end1="9" start2="9" end2="10" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="11" end1="13" start2="12" end2="17" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="14" end1="15" start2="18" end2="21" changelist="77789c1b-7aea-40d8-9718-2070367314dc" />
+        <range start1="17" end1="17" start2="23" end2="30" changelist="27c2c53b-e974-48b2-8c75-a81786579b1f" />
+      </ranges>
+    </file>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="2.3" />
+  </component>
+  <component name="ProjectId" id="2OvJAQ3k2ogvv9If44eX1wrjYUa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/Users/Isabel/Documents/Faculdade/VirtualBox/MINIX-LCOM/shared/AlienExpress/proj/Assets final/items",
+    "run.code.analysis.last.selected.profile": "pProject Default"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Isabel\Documents\Faculdade\VirtualBox\MINIX-LCOM\shared\AlienExpress\proj\Assets final\items" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Isabel\Documents\Faculdade\VirtualBox\MINIX-LCOM\shared\AlienExpress\proj\Assets final\tileset" />
+      <recent name="C:\Users\Isabel\Documents\Faculdade\VirtualBox\MINIX-LCOM\shared\AlienExpress\proj\Assets final" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a587f709-2d4c-4d6a-8f71-35c16021c4c1" name="Changes" comment="" />
+      <created>1682434977568</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682434977568</updated>
+      <workItem from="1682434978755" duration="1449000" />
+      <workItem from="1682442182405" duration="2763000" />
+      <workItem from="1682445184189" duration="1000" />
+      <workItem from="1682445509557" duration="19569000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

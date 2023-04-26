@@ -6,4 +6,6 @@
 action_t keyboard_ih_level(uint32_t scancode);
 void draw_level();
 void draw_player();
+void draw_enemies();
+void change_dir(int index);
 #endif

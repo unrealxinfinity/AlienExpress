@@ -24,8 +24,15 @@ int keyboard_ih(uint32_t scancode){
     }
     return 0;
 }
-int control_state(uint32_t scancode){
-    keyboard_ih(scancode);
+int mouse_proj_ih(){
+    mouse.x = mouse_x;
+    mouse.y = mouse_y;
+    if(game_info.state == MENU){
+        game_info.action = mouse_ih_menu();
+    }
+    return 0;
+}
+int control_state(){
     switch(game_info.state){
         case MENU:
             if(game_info.action == START){
@@ -65,10 +72,9 @@ int draw_state(){
 int initialize(){
     memset(&game_info, 0, sizeof(game_info));
     if(init_graphics(DIRECT_COLOR_8_8_8_8)) return 1;
-    mouse_x = 5;
-    mouse_y = 5;
-    init_img( 214, 100);
-    init_anim_img(214,100);
+    init_img();
+    init_anim_img();
+    init_simple_animation();
     frame_buffer = (uint8_t *)malloc(frame_size);
     set_state(MENU);
     if(mouse_write(STREAM_MODE)) return 1;
@@ -104,14 +110,20 @@ int game_loop(){
 				if(msg.m_notify.interrupts & kbd_bit_no) {
                     uint32_t command;
 					uint32_t scancode = kbc_read_output(OUT_BUFFER, &command);
+                    keyboard_ih(scancode);
                     
-                    int res = control_state(scancode);
+                    int res = control_state();
 					if(res == 1){
                         return 0;
                     }
 				}
                 if(msg.m_notify.interrupts & mouse_bit_no){
                     mouse_control();
+                    mouse_proj_ih();
+                    int res = control_state();
+                    if(res == 1){
+                        return 0;
+                    }
                 }
                 
 				break;

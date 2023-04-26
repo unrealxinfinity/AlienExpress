@@ -52,7 +52,8 @@ int init_graphics(uint16_t mode){
     return 0;
 }
 void pass_to_vm_buffer(){
-    memcpy(vm_buffer, frame_buffer, frame_size); 
+    memcpy(vm_buffer, frame_buffer, frame_size);
+    memset(frame_buffer, 0xDDDDDD, frame_size);
 }
 
 int draw_pixel(uint16_t x, uint16_t y, uint32_t colors_32){

@@ -2,7 +2,7 @@
 #define XPM_INCLUDES_H
 
 #include "../Assets final/MC2/mainCharFront.xpm"
-#include "../Images/mc1.xpm"
+#include "../Assets final/mc1.xpm"
 #include "../Assets final/mainCharAnimated/UP/mcUp8.xpm"
 #include "../Assets final/mainCharAnimated/UP/mcUp2.xpm"
 #include "../Assets final/mainCharAnimated/UP/mcUp3.xpm"
@@ -90,6 +90,33 @@
 #include "../Assets final/selected_letters/y.xpm"
 #include "../Assets final/selected_letters/z.xpm"
 
-#include "../Images/mouse/mouse_normal.xpm"
+#include "../Assets final/mouse/mouse_normal.xpm"
+#include "../Assets final/mouse/mouse_selected.xpm"
+
 #include "../Assets final/tileset/ground.xpm"
+#include "../Assets final/tileset/border1.xpm"
+#include "../Assets final/tileset/border2.xpm"
+#include "../Assets final/tileset/unbreakableWalls.xpm"
+
+#include "../Assets final/items/bigBox.xpm"
+#include "../Assets final/items/smallBox.xpm"
+
+
+#include "../Assets final/Enemy3/enemy.xpm"
+#include "../Assets final/Enemy3/enemy2.xpm"
+#include "../Assets final/Enemy3/enemy3.xpm"
+#include "../Assets final/Enemy3/enemy4.xpm"
+#include "../Assets final/Enemy3/enemy5.xpm"
+#include "../Assets final/Enemy3/enemy6.xpm"
+#include "../Assets final/Enemy3/enemy7.xpm"
+#include "../Assets final/Enemy3/enemy8.xpm"
+#include "../Assets final/Enemy3/enemyAttack1.xpm"
+#include "../Assets final/Enemy3/enemyAttack2.xpm"
+#include "../Assets final/Enemy3/enemyAttack3.xpm"
+#include "../Assets final/Enemy3/enemyAttack4.xpm"
+#include "../Assets final/Enemy3/enemyAttack5.xpm"
+#include "../Assets final/Enemy3/enemyAttack7.xpm"
+#include "../Assets final/Enemy3/enemyAttack8.xpm"
+#include "../Assets final/Enemy3/enemyProjectile.xpm"
+
 #endif

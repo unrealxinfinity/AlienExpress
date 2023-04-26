@@ -33,9 +33,7 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 int(proj_main_loop)(int argc, char *argv[]){
-    
-    
-   
+
     if(initialize()){
       printf("initialization error\n");
       return EXIT_FAILURE;

@@ -2,7 +2,6 @@
 
 int hook_id_mouse = 3;
 
-struct packet mouse_packet;
 uint8_t bytes_index = 0;
 uint32_t bytes[3];
 
@@ -103,8 +102,8 @@ void move_mouse(){
     if(mouse_x+mouse_packet.delta_x < 0 && !mouse_packet.x_ov){
         mouse_x = 0;
     }
-    else if(mouse_x+mouse_packet.delta_x > 800 && !mouse_packet.x_ov){
-        mouse_x = 800;
+    else if(mouse_x+mouse_packet.delta_x > 1140 && !mouse_packet.x_ov){
+        mouse_x = 1140;
     }
     else if(!mouse_packet.x_ov){
         mouse_x+=mouse_packet.delta_x;
@@ -113,8 +112,8 @@ void move_mouse(){
     if(mouse_y-mouse_packet.delta_y < 0 && !mouse_packet.y_ov){
         mouse_y = 0;
     }
-    else if(mouse_y-mouse_packet.delta_y > 600 && !mouse_packet.y_ov){
-        mouse_y = 600;
+    else if(mouse_y-mouse_packet.delta_y > 850 && !mouse_packet.y_ov){
+        mouse_y = 850;
     }
     else if(!mouse_packet.y_ov){
         mouse_y-=mouse_packet.delta_y;
