@@ -1,5 +1,11 @@
 #include "menu.h"
+
 action_t menu_selection = AFK;
+
+
+void set_selection_menu(action_t action){
+    menu_selection = action;
+}
 
 action_t mouse_ih_menu(){
     if(mouse_position(500, 300, 575, 315)){
@@ -14,7 +20,7 @@ action_t mouse_ih_menu(){
             menu_selection = AFK;
         }
     }
-    if(mouse_packet.lb) return menu_selection;
+    if(mouse_packet.lb && mouse_hover) return menu_selection;
     return AFK;
 
 }
@@ -35,6 +41,7 @@ action_t keyboard_ih_menu(uint32_t scancode){
 }
 
 void draw_menu(){
+    draw_menu_title();
     draw_menu_words();
     if(mouse_hover)draw(mouse_animation.animation[1], mouse);
     else draw(mouse_animation.animation[0], mouse);
@@ -79,5 +86,20 @@ void draw_menu_words(){
         default:
             break;
     }
+}
+void draw_menu_title(){
+    draw_small_xpm((xpm_map_t)selected_a_xpm, 445, 100);
+    draw_small_xpm((xpm_map_t)selected_l_xpm, 460, 100);
+    draw_small_xpm((xpm_map_t)selected_i_xpm, 475, 100);
+    draw_small_xpm((xpm_map_t)selected_e_xpm, 490, 100);
+    draw_small_xpm((xpm_map_t)selected_n_xpm, 505, 100);
+
+    draw_small_xpm((xpm_map_t)selected_e_xpm, 535, 100);
+    draw_small_xpm((xpm_map_t)selected_x_xpm, 550, 100);
+    draw_small_xpm((xpm_map_t)selected_p_xpm, 565, 100);
+    draw_small_xpm((xpm_map_t)selected_r_xpm, 580, 100);
+    draw_small_xpm((xpm_map_t)selected_e_xpm, 595, 100);
+    draw_small_xpm((xpm_map_t)selected_s_xpm, 610, 100);
+    draw_small_xpm((xpm_map_t)selected_s_xpm, 625, 100);
 }
 

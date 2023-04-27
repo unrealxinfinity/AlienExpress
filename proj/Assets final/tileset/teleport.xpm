@@ -1,7 +1,7 @@
 /* XPM */
 static char * teleport_xpm[] = {
 "30 30 8 1",
-" 	c None",
+" 	c #FFFFFE",
 ".	c #394A50",
 "+	c #10141F",
 "@	c #151D28",

@@ -10,6 +10,9 @@ bool is_occupied(img_t img, int distance){
                     if(colors_32 == ENEMY){
                         return true;
                     }
+                    else if(colors_32 == PLAYER){
+                        player_lives--;
+                    }
                 }
             }
             break;
@@ -19,6 +22,9 @@ bool is_occupied(img_t img, int distance){
                     memcpy(&colors_32, &frame_buffer[(x_res*(j)+img.x-(i+1)) * bytes_per_pixel], bytes_per_pixel);
                     if(colors_32 == ENEMY){
                         return true;
+                    }
+                    else if(colors_32 == PLAYER){
+                        player_lives--;
                     }
                 }
             }
@@ -30,6 +36,9 @@ bool is_occupied(img_t img, int distance){
                     if(colors_32 == ENEMY){
                         return true;
                     }
+                    else if(colors_32 == PLAYER){
+                        player_lives--;;
+                    }
                 }
             }
             break;
@@ -39,6 +48,9 @@ bool is_occupied(img_t img, int distance){
                     memcpy(&colors_32, &frame_buffer[(x_res*(img.y+img.height+j+1)+i) * bytes_per_pixel], bytes_per_pixel);
                     if(colors_32 == ENEMY){
                         return true;
+                    }
+                    else if(colors_32 == PLAYER){
+                        player_lives--;
                     }
                 }
             }
@@ -154,6 +166,12 @@ int manage_collision(img_t *img, int distance){
     }
     return 0;
 }
+bool manage_hitbox(img_t target, img_t character){
+    if(character.hitbox_x >= target.x && character.hitbox_x <= (target.x+target.width) && character.hitbox_y <= (target.y+target.height) && character.hitbox_y >= target.y){
+        return true;
+    }
+    return false;
+}
 int draw(img_t draw_img, img_t img){
     for(int j = 0; j < draw_img.height; j++){
         for(int i = 0; i < draw_img.width; i++){
@@ -246,24 +264,111 @@ int drawInventory(){
     return 0;
 
 }
-
+int draw_timer(int sec, int min){
+    int x = 515;
+    int number;
+    int count = 1;
+    while(count < 3){
+        number = min % 10;
+        min = min/10;
+        draw_number(number, x, 20);
+        x -= 15;
+        count++;
+    }
+    x = 560;
+    count = 1;
+    while(count < 3){
+        number = sec % 10;
+        sec = sec / 10;
+        draw_number(number, x, 20);
+        x-= 15;
+        count++;
+    }
+    return 0;
+}
+int draw_number(int number, int x, int y){
+    switch(number){
+        case 0:
+            draw_small_xpm((xpm_map_t)zero_xpm, x, y);
+            break;
+        case 1:
+            draw_small_xpm((xpm_map_t)one_xpm, x, y);
+            break;
+        case 2:
+            draw_small_xpm((xpm_map_t)two_xpm, x, y);
+            break;
+        case 3:
+            draw_small_xpm((xpm_map_t)three_xpm, x, y);
+            break;
+        case 4:
+            draw_small_xpm((xpm_map_t)four_xpm, x, y);
+            break;
+        case 5:
+            draw_small_xpm((xpm_map_t)five_xpm, x, y);
+            break;
+        case 6:
+            draw_small_xpm((xpm_map_t)six_xpm, x, y);
+            break;
+        case 7:
+            draw_small_xpm((xpm_map_t)seven_xpm, x, y);
+            break;
+        case 8:
+            draw_small_xpm((xpm_map_t)eight_xpm, x, y);
+            break;
+        case 9:
+            draw_small_xpm((xpm_map_t)nine_xpm, x, y);
+            break;
+    }
+    return 0;
+}
+int draw_health(){
+    int health = 40;
+    if(player_lives < -20)player_lives = -20;
+    for(int i = 1; i <= health; i++){
+        if(i > player_lives){
+            draw_line(player.x + i-5, player.y+player.height + 8, 4, EMPTY_HEALTH);
+        }
+        else{
+            draw_line(player.x + i - 5, player.y+player.height + 8, 4, HEALTH);
+        }
+    }
+    return 0;
+}
+int draw_line(int x, int y, int len, uint32_t colors){
+    for(int i = 0; i < len; i++){
+        if(draw_pixel(i+x, y+i, colors)) return 1;
+    }
+    return 0;
+}
 void init_img(){
+    seconds = 0;
+    minutes = 0;
+    score = 0;
     //player
     player = make_img((xpm_map_t) mc1_xpm,214,100);
     player.prev_direction = RIGHT;
-    alive[0] = 1;
+    player_lives = 40;
     //enemies
     for (int i =0; i<5; i++) {
         enemies_lv1[i] = make_img((xpm_map_t) enemy1_xpm,100*(i),100*(i));
         enemies_lv1[i].direction = RIGHT;
+
+        packages[i] = make_img((xpm_map_t)small_box_xpm, 0, 0);
     }
+    packages[3].x = 100;
+    packages[3].y = 100;
+    packages[3].is_dead = false;
     //mouse
-    mouse_x = 5;
-    mouse_y = 5;
+
+
+}
+void init_mouse(){
     mouse_hover = false;
-    mouse = make_img((xpm_map_t)mouse_normal_xpm, mouse_x, mouse_y);
-
-
+    mouse_x = -20;
+    mouse_y = -20;
+    mouse = make_img((xpm_map_t)mouse_normal_xpm, mouse_x, mouse_y);  
+    xpm_map_t mouse_movement[2] = {(xpm_map_t)mouse_normal_xpm, (xpm_map_t)mouse_selected_xpm};
+    mouse_animation = make_simple_animation(2, mouse_movement);  
 }
 void init_anim_img(){
     //player
@@ -280,8 +385,6 @@ void init_anim_img(){
     animated_img_enemy1 = make_animated_img(8, 2, up1, left1, right1, down1);
 }
 void init_simple_animation(){
-    xpm_map_t mouse_movement[2] = {(xpm_map_t)mouse_normal_xpm, (xpm_map_t)mouse_selected_xpm};
-    mouse_animation = make_simple_animation(2, mouse_movement);
 }
 
 
@@ -298,6 +401,8 @@ img_t make_img(xpm_map_t xpm, unsigned int x, unsigned int y){
         img.direction = STILL;
         img.hitbox_x = x + (img.width/2);
         img.hitbox_y = y + (img.height/2);
+        img.is_dead = true;
+        img.is_in_inventory = false;
 
     return img;
 }

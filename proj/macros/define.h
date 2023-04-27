@@ -74,8 +74,12 @@
 #define DIRECT_COLOR_8_8_8_8        0x14C
 
 //entities
-#define UNBREAKABLE_WALL            0x000000
+#define UNBREAKABLE_WALL            0x4E4E4E
+#define PLAYER                      0x161516
 #define ENEMY                       0x161319
 #define PACKAGE                     0x000001
+#define HEALTH                      0xFF0000
+#define EMPTY_HEALTH                0x000002
+#define EMPTY_INVENTORY             0x696969
 
 #endif

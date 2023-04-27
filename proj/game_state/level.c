@@ -4,6 +4,12 @@
 
 movement_t move[4]={STILL,STILL,STILL,STILL};
 
+void reset_movement(){
+    for(int i = 0; i<4; i++){
+        move[i] = STILL;
+    }
+}
+
 action_t keyboard_ih_level(uint32_t scancode){
     bool is_idle = true;
     if(scancode == MAKE_ESC){
@@ -49,22 +55,77 @@ action_t keyboard_ih_level(uint32_t scancode){
 }
 
 void remove_package(img_t character){
-    if(alive[0]){
-        if(character.hitbox_x >= 100 && character.hitbox_x <= 132 && character.hitbox_y <= 128 && character.hitbox_y >= 100){
-            alive[0] = 0;
+    for(int i = 0; i < (int) (sizeof(packages) / sizeof(packages[0])); i++){
+        if(!packages[i].is_dead && !packages[i].is_in_inventory){
+            if(manage_hitbox(packages[i], character)){
+                
+                packages[i].is_dead = true;
+                
+            }
         }
     }
+}
+
+void player_hit(){
 }
 
 
 void draw_level(){
 
-    if(alive[0])drawPackage(100,100);
-    
+    draw_packages();
+    //draw_small_xpm((xpm_map_t) unbreakableWalls_xpm, 200, 400);
+    //draw_small_xpm((xpm_map_t) teleport_xpm, 300, 600);
     draw_player();
     move_monsters();
-}
 
+    draw_level_words();
+    draw_level_numbers();
+
+    draw_health();
+    draw_inventory();
+}
+void draw_inventory(){
+    int x = -30;
+    for(int i = 0; i < 6; i++){
+        if(i < 3){
+            x+=36;
+            draw_small_xpm((xpm_map_t)inventory_xpm, x, 6);
+            if(i == 2)x = -30;
+        }
+        else{
+            x+=36;
+            draw_small_xpm((xpm_map_t)inventory_xpm, x, 42);
+        }
+    }
+}
+void draw_packages(){
+    for(int i = 0; i < (int) (sizeof(packages) / sizeof(packages[0])); i++){
+        if(!packages[i].is_dead){
+            draw(packages[i], packages[i]);
+        }
+    }
+}
+void draw_level_numbers(){
+    if(player_lives > 0){
+        if((counter_timer % 30) == 0) seconds++;
+        if(seconds == 60){
+            minutes++;
+            seconds = 0;
+        }
+    }
+    draw_timer(seconds, minutes);
+}
+void draw_level_words(){
+    draw_small_xpm((xpm_map_t)s_xpm, 800, 20);
+    draw_small_xpm((xpm_map_t)c_xpm, 815, 20);
+    draw_small_xpm((xpm_map_t)o_xpm, 830, 20);
+    draw_small_xpm((xpm_map_t)r_xpm, 845, 20);
+    draw_small_xpm((xpm_map_t)e_xpm, 860, 20);
+    draw_small_xpm((xpm_map_t)two_dots_xpm, 875, 20);
+
+    draw_small_xpm((xpm_map_t)two_dots_xpm, 530, 20);
+
+}
 void draw_player(){
     switch(player.direction){
         case UP:
@@ -133,14 +194,25 @@ void move_monsters(){
 
         int width = player.hitbox_x - enemies_lv1[i].hitbox_x;
         int height = player.hitbox_y - enemies_lv1[i].hitbox_y;
-        if(width == 0 && height == 0){
+        /*if(width == 0 && height == 0){
             if(counter_timer % 5 == 0)enemies_lv1[i].no_img += 1;
             draw_enemies(enemies_lv1[i]);
             continue;
+        }*/
+        int distance;
+        int final_x;
+        int final_y;
+        if(width == 0 && height == 0) {
+            distance = 0;
+            final_x = 0;
+            final_y = 0;
+            player_lives -=2;
         }
-        int distance = sqrt(width*width + height*height);
-        int final_x = (width*animated_img_enemy1.speed)/distance;
-        int final_y = (height*animated_img_enemy1.speed)/distance;
+        else {
+            distance = sqrt(width*width + height*height);
+            final_x = (width*animated_img_enemy1.speed)/distance;
+            final_y = (height*animated_img_enemy1.speed)/distance;
+        }
 
         if(final_x > 0) enemies_lv1[i].direction = RIGHT;
         else if(final_x < 0) {

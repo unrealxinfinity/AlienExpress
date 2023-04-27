@@ -17,12 +17,18 @@ void set_state(game_state_t state){
 int keyboard_ih(uint32_t scancode){
     if(game_info.state == MENU){
         game_info.action = keyboard_ih_menu(scancode);
+        if(game_info.action != AFK)set_selection_menu(AFK);
     }
     else if(game_info.state == LEVEL1){
         game_info.action = keyboard_ih_level(scancode);
     }
     else if(game_info.state == PAUSE){
         game_info.action = keyboard_ih_pause(scancode);
+        if(game_info.action != AFK)set_selection_pause(AFK);
+    }
+    else if(game_info.state == GAME_OVER){
+        game_info.action = keyboard_ih_game_over(scancode);
+        if(game_info.action != AFK)set_selection_game_over(AFK);
     }
     return 0;
 }
@@ -31,9 +37,15 @@ int mouse_proj_ih(){
     mouse.y = mouse_y;
     if(game_info.state == MENU){
         game_info.action = mouse_ih_menu();
+        if(game_info.action != AFK)set_selection_menu(AFK);
     }
     else if(game_info.state == PAUSE){
         game_info.action = mouse_ih_pause();
+        if(game_info.action != AFK)set_selection_pause(AFK);
+    }
+    else if(game_info.state == GAME_OVER){
+        game_info.action = mouse_ih_game_over();
+        if(game_info.action != AFK)set_selection_game_over(AFK);
     }
     return 0;
 }
@@ -41,10 +53,13 @@ int control_state(){
     switch(game_info.state){
         case MENU:
             if(game_info.action == START){
+                reset_movement();
                 set_state(LEVEL1);
+                init_img();
+                init_anim_img();
+                init_simple_animation();
             }
             else if(game_info.action == EXIT){
-                set_state(GAME_OVER);
                 return 1;
             }
             break;
@@ -55,14 +70,24 @@ int control_state(){
             break;
         case PAUSE:
             if(game_info.action == EXIT){
-                set_state(GAME_OVER);
-                return 1;
+                set_state(MENU);
             }
             else if(game_info.action == START){
                 set_state(LEVEL1);
                 
             }
             break;
+        case GAME_OVER:
+            if(game_info.action == START){
+                reset_movement();
+                set_state(LEVEL1);
+                init_img();
+                init_anim_img();
+                init_simple_animation();
+            }
+            else if(game_info.action == EXIT){
+                set_state(MENU);
+            }
         default:
             return 0;
     }
@@ -76,9 +101,13 @@ int draw_state(){
             break;
         case LEVEL1:
             draw_level();
+            if(player_lives <= 0)set_state(GAME_OVER);
             break;
         case PAUSE:
             draw_pause();
+            break;
+        case GAME_OVER:
+            draw_game_over();
             break;
         default:
             return 1;
@@ -90,9 +119,6 @@ int draw_state(){
 int initialize(){
     memset(&game_info, 0, sizeof(game_info));
     if(init_graphics(DIRECT_COLOR_8_8_8_8)) return 1;
-    init_img();
-    init_anim_img();
-    init_simple_animation();
     Allocate();
     drawBorder();
     drawTiles();
@@ -101,7 +127,7 @@ int initialize(){
     if(mouse_write(STREAM_MODE)) return 1;
     if(mouse_write(DATA_REPORT))return 1;
     if(timer_set_frequency_proj(0, 30)) return 1;
-
+    init_mouse();
 
     timer_bit_no = timer_subscribe();
     if(timer_bit_no == 0xFF) return 1;
@@ -124,7 +150,7 @@ int game_loop(){
 			switch (_ENDPOINT_P(msg.m_source)) {
 			case HARDWARE:
                 if (msg.m_notify.interrupts & timer_bit_no){
-                    timer_int_handler_proj();
+                    if(game_info.state == LEVEL1)timer_int_handler_proj();
                     memset(frame_buffer, 0, frame_size);
                     if(game_info.state != MENU)pass_map();
                     draw_state();

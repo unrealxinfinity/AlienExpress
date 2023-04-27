@@ -4,6 +4,12 @@
 #include "struct.h"
 //timer 
 int counter_timer;
+int seconds;
+int minutes;
+
+
+//points
+int score;
 
 //graphics
 vbe_mode_info_t mode_info;
@@ -41,10 +47,12 @@ simple_animation_t mouse_animation;
 
 img_t player;
 AnimatedImg_t animated_img_player;
-int alive[20];
+int player_lives;
 
 img_t enemies_lv1[5];
 AnimatedImg_t animated_img_enemy1;
+
+img_t packages[5];
 
 
 #endif

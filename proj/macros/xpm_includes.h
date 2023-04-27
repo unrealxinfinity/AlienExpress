@@ -90,6 +90,19 @@
 #include "../Assets final/selected_letters/y.xpm"
 #include "../Assets final/selected_letters/z.xpm"
 
+#include "../Assets final/numbers/zero.xpm"
+#include "../Assets final/numbers/one.xpm"
+#include "../Assets final/numbers/two.xpm"
+#include "../Assets final/numbers/three.xpm"
+#include "../Assets final/numbers/four.xpm"
+#include "../Assets final/numbers/five.xpm"
+#include "../Assets final/numbers/six.xpm"
+#include "../Assets final/numbers/seven.xpm"
+#include "../Assets final/numbers/eight.xpm"
+#include "../Assets final/numbers/nine.xpm"
+
+#include "../Assets final/symbols/two_dots.xpm"
+
 #include "../Assets final/mouse/mouse_normal.xpm"
 #include "../Assets final/mouse/mouse_selected.xpm"
 
@@ -97,6 +110,8 @@
 #include "../Assets final/tileset/border1.xpm"
 #include "../Assets final/tileset/border2.xpm"
 #include "../Assets final/tileset/unbreakableWalls.xpm"
+#include "../Assets final/tileset/teleport.xpm"
+#include "../Assets final/tileset/inventory.xpm"
 
 #include "../Assets final/items/bigBox.xpm"
 #include "../Assets final/items/smallBox.xpm"

@@ -11,6 +11,7 @@
 #include "../game_state/menu.h"
 #include "../game_state/level.h"
 #include "../game_state/pause.h"
+#include "../game_state/game_over.h"
 
 void set_state(game_state_t state);
 

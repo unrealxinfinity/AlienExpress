@@ -1,13 +1,18 @@
 #include "pause.h"
 
 action_t pause_selection = AFK;
+
+
+void set_selection_pause(action_t action){
+    pause_selection = action;
+}
+
 action_t keyboard_ih_pause(uint32_t scancode){
     if(scancode == MAKE_ENTER){
         return pause_selection;
     }
     else if(scancode == MAKE_ESC){
-        pause_selection = EXIT;
-        return pause_selection;
+        return START;
     }
     else if(scancode == MAKE_S){
         if(pause_selection == AFK) pause_selection = START;
@@ -20,10 +25,10 @@ action_t keyboard_ih_pause(uint32_t scancode){
     return AFK;
 }
 action_t mouse_ih_pause(){
-    if(mouse_position(500, 300, 575, 315)){
+    if(mouse_position(493, 300, 583, 315)){
         pause_selection = START;
     }
-    else if(mouse_position(506, 330, 566, 345)){
+    else if(mouse_position(506, 360, 566, 375)){
         pause_selection = EXIT;
     }
     else{
@@ -32,19 +37,71 @@ action_t mouse_ih_pause(){
             pause_selection = AFK;
         }
     }
-    if(mouse_packet.lb) return pause_selection;
+    if(mouse_packet.lb && mouse_hover) return pause_selection;
     return AFK;
 }
 
 void draw_pause(){
-    if(alive[0])drawPackage(100,100);
+    draw_packages();
+    draw_small_xpm((xpm_map_t) unbreakableWalls_xpm, 200, 400);
     
     draw_player();
     
     for (int i = 0; i < (int) (sizeof(enemies_lv1) / sizeof(enemies_lv1[0])); i++) draw_enemies(enemies_lv1[i]);
+
+    draw_pause_words();
+
+    draw_level_words();
+    draw_level_numbers();
+
+    if(mouse_hover)draw(mouse_animation.animation[1], mouse);
+    else draw(mouse_animation.animation[0], mouse);
+
+    draw_health();
 }
 
 void draw_pause_words(){
-    
+     switch(pause_selection){
+        case START:
+            draw_small_xpm((xpm_map_t)selected_r_xpm, 493, 300);
+            draw_small_xpm((xpm_map_t)selected_e_xpm, 508, 300);
+            draw_small_xpm((xpm_map_t)selected_s_xpm, 523, 300);
+            draw_small_xpm((xpm_map_t)selected_u_xpm, 538, 300);
+            draw_small_xpm((xpm_map_t)selected_m_xpm, 553, 300);
+            draw_small_xpm((xpm_map_t)selected_e_xpm, 568, 300);
+
+            draw_small_xpm((xpm_map_t)m_xpm, 506, 360);
+            draw_small_xpm((xpm_map_t)e_xpm, 521, 360);
+            draw_small_xpm((xpm_map_t)n_xpm, 536, 360);
+            draw_small_xpm((xpm_map_t)u_xpm, 551, 360);
+            break;
+        case EXIT:
+            draw_small_xpm((xpm_map_t)r_xpm, 493, 300);
+            draw_small_xpm((xpm_map_t)e_xpm, 508, 300);
+            draw_small_xpm((xpm_map_t)s_xpm, 523, 300);
+            draw_small_xpm((xpm_map_t)u_xpm, 538, 300);
+            draw_small_xpm((xpm_map_t)m_xpm, 553, 300);
+            draw_small_xpm((xpm_map_t)e_xpm, 568, 300);
+
+            draw_small_xpm((xpm_map_t)selected_m_xpm, 506, 360);
+            draw_small_xpm((xpm_map_t)selected_e_xpm, 521, 360);
+            draw_small_xpm((xpm_map_t)selected_n_xpm, 536, 360);
+            draw_small_xpm((xpm_map_t)selected_u_xpm, 551, 360);
+            break;
+        case AFK:
+            draw_small_xpm((xpm_map_t)r_xpm, 493, 300);
+            draw_small_xpm((xpm_map_t)e_xpm, 508, 300);
+            draw_small_xpm((xpm_map_t)s_xpm, 523, 300);
+            draw_small_xpm((xpm_map_t)u_xpm, 538, 300);
+            draw_small_xpm((xpm_map_t)m_xpm, 553, 300);
+            draw_small_xpm((xpm_map_t)e_xpm, 568, 300);
+
+            draw_small_xpm((xpm_map_t)m_xpm, 506, 360);
+            draw_small_xpm((xpm_map_t)e_xpm, 521, 360);
+            draw_small_xpm((xpm_map_t)n_xpm, 536, 360);
+            draw_small_xpm((xpm_map_t)u_xpm, 551, 360);
+        default:
+            break;
+    }
 }
 

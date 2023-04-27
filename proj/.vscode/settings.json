@@ -11,6 +11,8 @@
         "includes.h": "c",
         "pause.h": "c",
         "mouse.h": "c",
-        "level.h": "c"
+        "level.h": "c",
+        "GAME_OVER.C": "cpp",
+        "game_over.h": "c"
     }
 }

@@ -21,6 +21,8 @@ typedef struct{
     int hitbox_y;
     int no_img;
     int idle_time;
+    bool is_dead;
+    bool is_in_inventory;
     movement_t direction;
     movement_t prev_direction;
 }img_t;
