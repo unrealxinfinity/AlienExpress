@@ -1,42 +1,153 @@
 #include "view.h"
 
-int manage_collision(img_t draw_img,img_t *img){
-    if(img->direction == STILL)return 0;
+bool is_occupied(img_t img, int distance){
     uint32_t colors_32 = 0;
-    switch(img->direction) {
+    switch(img.direction){
         case UP:
-            for(int i = 0; i < draw_img.width; i++){
-                for(int j = draw_img.height; j > 0; j--){
-                    int index = j*draw_img.width + i;
-                    if(draw_img.colors_32[index] == 0xfffffe)continue;
-                    memcpy(&colors_32, &frame_buffer[(x_res*(img->y+j)+img->x+i) * bytes_per_pixel], bytes_per_pixel);
-                    if(colors_32 == 0x000000){
-                        img->y += j+1;
-                        return 0;
+            for(int j = 0; j < distance; j++){
+                for(int i = img.hitbox_x-3; i <= img.hitbox_x+3; i++){
+                    memcpy(&colors_32, &frame_buffer[(x_res*(img.y-(j+1))+ i) * bytes_per_pixel], bytes_per_pixel);
+                    if(colors_32 == ENEMY){
+                        return true;
                     }
                 }
             }
             break;
         case LEFT:
-            while(colors_32 == 0xB2B2B2){
-                img->hitbox_x += 1;
-                img->x += 1;
-                memcpy(&colors_32, &frame_buffer[(x_res*img->hitbox_y+img->hitbox_x) * bytes_per_pixel], bytes_per_pixel);
+            for(int i = 0; i < distance; i++){
+                for(int j = img.hitbox_y-3; j <= img.hitbox_y+3; j++){
+                    memcpy(&colors_32, &frame_buffer[(x_res*(j)+img.x-(i+1)) * bytes_per_pixel], bytes_per_pixel);
+                    if(colors_32 == ENEMY){
+                        return true;
+                    }
+                }
             }
             break;
         case RIGHT:
-            while(colors_32 == 0xB2B2B2){
-                img->hitbox_x -= 1;
-                img->x -= 1;
-                memcpy(&colors_32, &frame_buffer[(x_res*img->hitbox_y+img->hitbox_x) * bytes_per_pixel], bytes_per_pixel);
+            for(int i = 0; i < distance; i++){
+                for(int j = img.hitbox_y-3; j <= img.hitbox_y+3; j++){
+                    memcpy(&colors_32, &frame_buffer[(x_res*(j)+(img.x+img.width+i+1)) * bytes_per_pixel], bytes_per_pixel);
+                    if(colors_32 == ENEMY){
+                        return true;
+                    }
+                }
             }
             break;
         case DOWN:
-            while(colors_32 == 0xB2B2B2){
-                img->hitbox_y -= 1;
-                img->y -= 1;
-                memcpy(&colors_32, &frame_buffer[(x_res*img->hitbox_y+img->hitbox_x) * bytes_per_pixel], bytes_per_pixel);
+            for(int j = 0; j < distance; j++){
+                for(int i = img.hitbox_x-3; i <= img.hitbox_x+3; i++){
+                    memcpy(&colors_32, &frame_buffer[(x_res*(img.y+img.height+j+1)+i) * bytes_per_pixel], bytes_per_pixel);
+                    if(colors_32 == ENEMY){
+                        return true;
+                    }
+                }
             }
+            break;
+        default:
+            break;
+    }
+    return false;
+}
+int manage_collision(img_t *img, int distance){
+    if(img->direction == STILL)return 0;
+    uint32_t colors_32 = 0;
+    switch(img->direction) {
+        case UP:
+            if((img->y-distance) < 0){
+                img->y = 0;
+                img->hitbox_y = img->y + (img->height/2);
+                break;
+            }
+            for(int j = 0; j < distance; j++){
+                for(int i = img->hitbox_x-3; i <= img->hitbox_x+3; i++){
+                    memcpy(&colors_32, &prev_buffer[(x_res*(img->y-(j+1))+ i) * bytes_per_pixel], bytes_per_pixel);
+                    if((colors_32 == UNBREAKABLE_WALL) ||  (colors_32 == ENEMY)){
+                        img->y -= j;
+                        img->hitbox_y -= j;
+                        return 0;
+                    }
+                    if(colors_32 == PACKAGE && img->hitbox_x == player.hitbox_x && img->hitbox_y == player.hitbox_y){
+                        img->hitbox_y -= distance;
+                        remove_package(*img);
+                        img->hitbox_y += distance;
+                    }
+                }
+            }
+            img->y -= distance;
+            img->hitbox_y -= distance;
+
+            break;
+        case LEFT:
+            if((img->x-distance) < 0){
+                img->x = 0;
+                img->hitbox_x = (img->width/2);
+                break;
+            }
+            for(int i = 0; i < distance; i++){
+                for(int j = img->hitbox_y-3; j <= img->hitbox_y+3; j++){
+                    memcpy(&colors_32, &prev_buffer[(x_res*(j)+img->x-(i+1)) * bytes_per_pixel], bytes_per_pixel);
+                    if((colors_32 == UNBREAKABLE_WALL) || (colors_32 == ENEMY)){
+                        img->x -= i;
+                        img->hitbox_x -= i;
+                        return 0;
+                    }
+                    if(colors_32 == PACKAGE && img->hitbox_x == player.hitbox_x && img->hitbox_y == player.hitbox_y){
+                        img->hitbox_x -= distance;
+                        remove_package(*img);
+                        img->hitbox_x += distance;
+                    }
+                }
+            }
+            img->x -= distance;
+            img->hitbox_x -= distance;
+            break;
+        case RIGHT:
+            if((img->x+img->width+distance) > x_res){
+                img->x = x_res-img->width;
+                img->hitbox_x = img->x+(img->width/2);
+                break;
+            }
+            for(int i = 0; i < distance; i++){
+                for(int j = img->hitbox_y-3; j <= img->hitbox_y+3; j++){
+                    memcpy(&colors_32, &prev_buffer[(x_res*(j)+(img->x+img->width+i+1)) * bytes_per_pixel], bytes_per_pixel);
+                    if((colors_32 == UNBREAKABLE_WALL) || (colors_32 == ENEMY)){
+                        img->x += i;
+                        img->hitbox_x += i;
+                        return 0;
+                    }
+                    if(colors_32 == PACKAGE && img->hitbox_x == player.hitbox_x && img->hitbox_y == player.hitbox_y){
+                        img->hitbox_x += distance;
+                        remove_package(*img);
+                        img->hitbox_x -= distance;
+                    }
+                }
+            }
+            img->x += distance;
+            img->hitbox_x += distance;
+            break;
+        case DOWN:
+            if((img->y + img->height+distance) > y_res){
+                img->y = y_res-img->height;
+                img->hitbox_y = img->y + (img->height/2);
+                break;
+            }
+            for(int j = 0; j < distance; j++){
+                for(int i = img->hitbox_x-3; i <= img->hitbox_x+3; i++){
+                    memcpy(&colors_32, &prev_buffer[(x_res*(img->y+img->height+j+1)+i) * bytes_per_pixel], bytes_per_pixel);
+                    if((colors_32 == UNBREAKABLE_WALL) || (colors_32 == ENEMY)){
+                        img->y += j;
+                        img->hitbox_y += j;
+                        return 0;
+                    }
+                    if(colors_32 == PACKAGE && img->hitbox_x == player.hitbox_x && img->hitbox_y == player.hitbox_y){
+                        img->hitbox_y += distance;
+                        remove_package(*img);
+                        img->hitbox_y -= distance;
+                    }
+                }
+            }
+            img->y += distance;
+            img->hitbox_y += distance;
             break;
         default:
             break;
@@ -48,6 +159,16 @@ int draw(img_t draw_img, img_t img){
         for(int i = 0; i < draw_img.width; i++){
             int index = j*draw_img.width + i;
             if(draw_pixel(img.x+i, img.y+j, draw_img.colors_32[index])) return 1;
+        }
+    }
+    return 0;
+}
+
+int draw_map(img_t draw_img, img_t img){
+    for(int j = 0; j < draw_img.height; j++){
+        for(int i = 0; i < draw_img.width; i++){
+            int index = j*draw_img.width + i;
+            if(draw_pixel_map(img.x+i, img.y+j, draw_img.colors_32[index])) return 1;
         }
     }
     return 0;
@@ -75,7 +196,7 @@ int drawTiles(){
         for(int j=0; j<tilesXY.tilesPerXAxis;j++){
             img.x = j*img.width;
             img.y = i*img.height;
-            if(draw(img,img))return 1;
+            if(draw_map(img,img))return 1;
         }
     }
     return 0;
@@ -88,22 +209,22 @@ int drawBorder(){
     tilesXY.tilesPerYAxis=y_res/img.height+1;
     for(int i=0 ; i<tilesXY.tilesPerYAxis;i++){
         img.y = i*img.height;
-        if(draw(img,img)) return 1;
+        if(draw_map(img,img)) return 1;
     }
     for(int i=0 ; i<tilesXY.tilesPerXAxis;i++){
         img.x = i*img.width;
         img.y = 0;
-        if(draw(img,img)) return 1;
+        if(draw_map(img,img)) return 1;
     }
     for(int i=0 ; i<tilesXY.tilesPerYAxis;i++){
-        img.x = (x_res-img.width);
+        img.x = (x_res-img.width-200);
         img.y = i*img.height;
-        if(draw(img,img)) return 1;
+        if(draw_map(img,img)) return 1;
     }
     for(int i=0 ; i<tilesXY.tilesPerXAxis;i++){
         img.x = img.width*i;
         img.y = y_res - img.height;
-        if(draw(img,img)) return 1;
+        if(draw_map(img,img)) return 1;
     }
 
     inner_border_up=img.height;
@@ -130,15 +251,18 @@ void init_img(){
     //player
     player = make_img((xpm_map_t) mc1_xpm,214,100);
     player.prev_direction = RIGHT;
+    alive[0] = 1;
     //enemies
     for (int i =0; i<5; i++) {
-        enemies_lv1[i] = make_img((xpm_map_t) enemy1_xpm,100*(i+1),100*(i+1));
+        enemies_lv1[i] = make_img((xpm_map_t) enemy1_xpm,100*(i),100*(i));
+        enemies_lv1[i].direction = RIGHT;
     }
     //mouse
     mouse_x = 5;
     mouse_y = 5;
     mouse_hover = false;
     mouse = make_img((xpm_map_t)mouse_normal_xpm, mouse_x, mouse_y);
+
 
 }
 void init_anim_img(){
@@ -152,8 +276,8 @@ void init_anim_img(){
     xpm_map_t down1[8] = {(xpm_map_t)enemy1_xpm, (xpm_map_t)enemy2_xpm,(xpm_map_t)enemy3_xpm,(xpm_map_t)enemy4_xpm,(xpm_map_t)enemy5_xpm,(xpm_map_t)enemy6_xpm,(xpm_map_t)enemy7_xpm, (xpm_map_t)enemy8_xpm};
     xpm_map_t left1[8] = {(xpm_map_t)enemy1_xpm, (xpm_map_t)enemy2_xpm,(xpm_map_t)enemy3_xpm,(xpm_map_t)enemy4_xpm,(xpm_map_t)enemy5_xpm,(xpm_map_t)enemy6_xpm,(xpm_map_t)enemy7_xpm, (xpm_map_t)enemy8_xpm};
     xpm_map_t right1[8] = {(xpm_map_t)enemy1_xpm, (xpm_map_t)enemy2_xpm,(xpm_map_t)enemy3_xpm,(xpm_map_t)enemy4_xpm,(xpm_map_t)enemy5_xpm,(xpm_map_t)enemy6_xpm,(xpm_map_t)enemy7_xpm, (xpm_map_t)enemy8_xpm};
-    xpm_map_t up1[8] = {(xpm_map_t)enemy1_xpm, (xpm_map_t)enemy2_xpm,(xpm_map_t)enemy3_xpm,(xpm_map_t)enemy4_xpm,(xpm_map_t)mcUp5_xpm,(xpm_map_t)enemy6_xpm,(xpm_map_t)enemy7_xpm, (xpm_map_t)enemy8_xpm};
-    animated_img_enemy1 = make_animated_img(8, 10, up1, left1, right1, down1);
+    xpm_map_t up1[8] = {(xpm_map_t)enemy1_xpm, (xpm_map_t)enemy2_xpm,(xpm_map_t)enemy3_xpm,(xpm_map_t)enemy4_xpm,(xpm_map_t)enemy5_xpm,(xpm_map_t)enemy6_xpm,(xpm_map_t)enemy7_xpm, (xpm_map_t)enemy8_xpm};
+    animated_img_enemy1 = make_animated_img(8, 2, up1, left1, right1, down1);
 }
 void init_simple_animation(){
     xpm_map_t mouse_movement[2] = {(xpm_map_t)mouse_normal_xpm, (xpm_map_t)mouse_selected_xpm};

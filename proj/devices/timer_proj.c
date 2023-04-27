@@ -18,9 +18,6 @@ int (timer_unsubscribe)() {
 void (timer_int_handler_proj)() {
   timerCount++;
   counter_timer=timerCount;
-  if((timerCount % 30) == 0){
-    
-  }
 }
 
 

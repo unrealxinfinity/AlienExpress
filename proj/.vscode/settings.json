@@ -8,6 +8,9 @@
         "timer_proj.h": "c",
         "*.xpm": "c",
         "graphics.h": "c",
-        "includes.h": "c"
+        "includes.h": "c",
+        "pause.h": "c",
+        "mouse.h": "c",
+        "level.h": "c"
     }
 }

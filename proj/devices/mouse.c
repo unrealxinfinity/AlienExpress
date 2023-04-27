@@ -119,4 +119,11 @@ void move_mouse(){
         mouse_y-=mouse_packet.delta_y;
     }
 }
+bool mouse_position(unsigned int xi, unsigned int yi, unsigned int xf, unsigned int yf){
+    if(mouse_x >= xi && mouse_x <= xf && mouse_y <= yf && mouse_y >= yi){
+        mouse_hover = true;
+        return true;
+    }
+    return false;
+}
 

@@ -12,6 +12,8 @@ uint16_t x_res;
 uint16_t y_res;
 unsigned int frame_size;
 uint8_t *frame_buffer;
+uint8_t *prev_buffer;
+uint8_t *map;
 uint16_t mode;
 
 //mouse
@@ -39,6 +41,7 @@ simple_animation_t mouse_animation;
 
 img_t player;
 AnimatedImg_t animated_img_player;
+int alive[20];
 
 img_t enemies_lv1[5];
 AnimatedImg_t animated_img_enemy1;

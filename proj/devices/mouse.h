@@ -14,5 +14,6 @@ int mouse_control();
 void fill_mouse_packet(uint32_t scancode);
 
 void move_mouse();
+bool mouse_position(unsigned int xi, unsigned int yi, unsigned int xf, unsigned int yf);
 
 #endif

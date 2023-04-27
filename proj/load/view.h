@@ -16,9 +16,11 @@ AnimatedImg_t make_animated_img(int no_images, int speed, xpm_map_t *up, xpm_map
 void init_simple_animation();
 simple_animation_t make_simple_animation(int no_images, xpm_map_t *animation);
 
-int manage_collision(img_t draw_image, img_t *img);
+int manage_collision(img_t *img, int distance);
+bool is_occupied(img_t img, int distance);
 
 int draw(img_t draw_img, img_t img);
+int draw_map(img_t draw_img, img_t img);
 int draw_small_xpm(xpm_map_t xpm, uint16_t x, uint16_t y);
 int drawTiles();
 int drawTile(int x ,int y,img_t img);

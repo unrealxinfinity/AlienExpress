@@ -13,7 +13,6 @@ void set_state(game_state_t state){
     player.direction = STILL;
 }
 
-
 //handlers
 int keyboard_ih(uint32_t scancode){
     if(game_info.state == MENU){
@@ -22,6 +21,9 @@ int keyboard_ih(uint32_t scancode){
     else if(game_info.state == LEVEL1){
         game_info.action = keyboard_ih_level(scancode);
     }
+    else if(game_info.state == PAUSE){
+        game_info.action = keyboard_ih_pause(scancode);
+    }
     return 0;
 }
 int mouse_proj_ih(){
@@ -29,6 +31,9 @@ int mouse_proj_ih(){
     mouse.y = mouse_y;
     if(game_info.state == MENU){
         game_info.action = mouse_ih_menu();
+    }
+    else if(game_info.state == PAUSE){
+        game_info.action = mouse_ih_pause();
     }
     return 0;
 }
@@ -45,7 +50,17 @@ int control_state(){
             break;
         case LEVEL1:
             if(game_info.action == EXIT){
-                set_state(MENU);
+                set_state(PAUSE);
+            }
+            break;
+        case PAUSE:
+            if(game_info.action == EXIT){
+                set_state(GAME_OVER);
+                return 1;
+            }
+            else if(game_info.action == START){
+                set_state(LEVEL1);
+                
             }
             break;
         default:
@@ -62,6 +77,9 @@ int draw_state(){
         case LEVEL1:
             draw_level();
             break;
+        case PAUSE:
+            draw_pause();
+            break;
         default:
             return 1;
     }
@@ -75,8 +93,11 @@ int initialize(){
     init_img();
     init_anim_img();
     init_simple_animation();
-    frame_buffer = (uint8_t *)malloc(frame_size);
+    Allocate();
+    drawBorder();
+    drawTiles();
     set_state(MENU);
+
     if(mouse_write(STREAM_MODE)) return 1;
     if(mouse_write(DATA_REPORT))return 1;
     if(timer_set_frequency_proj(0, 30)) return 1;
@@ -104,6 +125,8 @@ int game_loop(){
 			case HARDWARE:
                 if (msg.m_notify.interrupts & timer_bit_no){
                     timer_int_handler_proj();
+                    memset(frame_buffer, 0, frame_size);
+                    if(game_info.state != MENU)pass_map();
                     draw_state();
                     pass_to_vm_buffer();
                 }
@@ -146,6 +169,8 @@ int terminate(){
     keyboard_restore();  
     if(vg_exit()) return 1;
     free(frame_buffer);
+    free(prev_buffer);
+    free(map);
     return 0;
 }
 

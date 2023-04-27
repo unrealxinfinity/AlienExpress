@@ -10,6 +10,7 @@
 #include "../devices/timer_proj.h"
 #include "../game_state/menu.h"
 #include "../game_state/level.h"
+#include "../game_state/pause.h"
 
 void set_state(game_state_t state);
 

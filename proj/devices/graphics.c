@@ -51,14 +51,31 @@ int init_graphics(uint16_t mode){
     if(set_graphics_mode(mode))return 1;
     return 0;
 }
+
+void Allocate(){
+    frame_buffer = (uint8_t *)malloc(frame_size);
+    prev_buffer = (uint8_t *)malloc(frame_size);
+    map = (uint8_t *)malloc(frame_size);
+}
 void pass_to_vm_buffer(){
     memcpy(vm_buffer, frame_buffer, frame_size);
-    memset(frame_buffer, 0xDDDDDD, frame_size);
+    memset(prev_buffer, 0, frame_size);
+    memcpy(prev_buffer, frame_buffer, frame_size);
+}
+void pass_map(){
+    memset(frame_buffer, 0, frame_size);
+    memcpy(frame_buffer, map, frame_size);
 }
 
 int draw_pixel(uint16_t x, uint16_t y, uint32_t colors_32){
     if(colors_32 == 0xfffffe) return 0;
     if(x >= x_res || y >= y_res) return 0;
     memcpy(&frame_buffer[(x_res*y + x) * bytes_per_pixel], &colors_32, bytes_per_pixel);
+    return 0;
+}
+int draw_pixel_map(uint16_t x, uint16_t y, uint32_t colors_32){
+    if(colors_32 == 0xfffffe) return 0;
+    if(x >= x_res || y >= y_res) return 0;
+    memcpy(&map[(x_res*y + x) * bytes_per_pixel], &colors_32, bytes_per_pixel);
     return 0;
 }

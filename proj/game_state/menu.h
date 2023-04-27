@@ -3,6 +3,7 @@
 
 #include "../macros/includes.h"
 #include "../load/view.h"
+#include "../devices/mouse.h"
 action_t mouse_ih_menu();
 action_t keyboard_ih_menu(uint32_t scancode);
 
