@@ -4,6 +4,10 @@
 
 movement_t move[4]={STILL,STILL,STILL,STILL};
 
+/*int up_int = 0;
+int down_int = 0;
+int left_int = 0;*/
+
 void reset_movement(){
     for(int i = 0; i<4; i++){
         move[i] = STILL;
@@ -60,6 +64,10 @@ void remove_package(img_t character){
             if(manage_hitbox(packages[i], character)){
                 
                 packages[i].is_dead = true;
+                if(!is_inventory_full()){
+                    packages[i].is_in_inventory = true;
+                }
+                packages[i].is_in_inventory = true;
                 
             }
         }
@@ -73,8 +81,8 @@ void player_hit(){
 void draw_level(){
 
     draw_packages();
-    //draw_small_xpm((xpm_map_t) unbreakableWalls_xpm, 200, 400);
-    //draw_small_xpm((xpm_map_t) teleport_xpm, 300, 600);
+    draw_small_xpm((xpm_map_t) unbreakableWalls_xpm, 200, 400);
+    draw_small_xpm((xpm_map_t) teleport_xpm, 300, 600);
     draw_player();
     move_monsters();
 
@@ -142,7 +150,14 @@ void draw_player(){
             break;
         case RIGHT:
             if(player.prev_direction == STILL) player.direction = STILL;
-            else player.idle_time = 1;
+            else {
+                player.idle_time = 1;
+                /*if(move[1] == RIGHT){
+                    right_int++;
+                    manage_collision(&player, animated_img_player.speed);
+                }
+                else right_int = 0;*/
+            }
             player.prev_direction = RIGHT;
             draw(animated_img_player.right[player.no_img%8], player);
             break;

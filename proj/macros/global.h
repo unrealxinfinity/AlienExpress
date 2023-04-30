@@ -48,6 +48,7 @@ simple_animation_t mouse_animation;
 img_t player;
 AnimatedImg_t animated_img_player;
 int player_lives;
+int right_int;
 
 img_t enemies_lv1[5];
 AnimatedImg_t animated_img_enemy1;

@@ -74,7 +74,7 @@
 #define DIRECT_COLOR_8_8_8_8        0x14C
 
 //entities
-#define UNBREAKABLE_WALL            0x4E4E4E
+#define UNBREAKABLE_WALL            0xB2B2B2
 #define PLAYER                      0x161516
 #define ENEMY                       0x161319
 #define PACKAGE                     0x000001

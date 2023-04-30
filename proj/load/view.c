@@ -376,7 +376,7 @@ void init_anim_img(){
     xpm_map_t left[8] = {(xpm_map_t)mcLeft1_xpm, (xpm_map_t)mcLeft2_xpm,(xpm_map_t)mcLeft3_xpm,(xpm_map_t)mcLeft4_xpm,(xpm_map_t)mcLeft5_xpm,(xpm_map_t)mcLeft6_xpm,(xpm_map_t)mcLeft7_xpm, (xpm_map_t)mcLeft8_xpm};
     xpm_map_t right[8] = {(xpm_map_t)mcRight1_xpm, (xpm_map_t)mcRight2_xpm,(xpm_map_t)mcRight3_xpm,(xpm_map_t)mcRight4_xpm,(xpm_map_t)mcRight5_xpm,(xpm_map_t)mcRight6_xpm,(xpm_map_t)mcRight7_xpm, (xpm_map_t)mcRight8_xpm};
     xpm_map_t down[8] = {(xpm_map_t)mcDown1_xpm, (xpm_map_t)mcDown2_xpm,(xpm_map_t)mcDown3_xpm,(xpm_map_t)mcDown4_xpm,(xpm_map_t)mcDown5_xpm,(xpm_map_t)mcDown6_xpm,(xpm_map_t)mcDown7_xpm, (xpm_map_t)mcDown8_xpm};
-    animated_img_player= make_animated_img(8, 20, up, left, right, down);
+    animated_img_player= make_animated_img(8, 10, up, left, right, down);
     //enemy1
     xpm_map_t down1[8] = {(xpm_map_t)enemy1_xpm, (xpm_map_t)enemy2_xpm,(xpm_map_t)enemy3_xpm,(xpm_map_t)enemy4_xpm,(xpm_map_t)enemy5_xpm,(xpm_map_t)enemy6_xpm,(xpm_map_t)enemy7_xpm, (xpm_map_t)enemy8_xpm};
     xpm_map_t left1[8] = {(xpm_map_t)enemy1_xpm, (xpm_map_t)enemy2_xpm,(xpm_map_t)enemy3_xpm,(xpm_map_t)enemy4_xpm,(xpm_map_t)enemy5_xpm,(xpm_map_t)enemy6_xpm,(xpm_map_t)enemy7_xpm, (xpm_map_t)enemy8_xpm};
