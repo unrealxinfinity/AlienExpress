@@ -358,6 +358,12 @@ void init_img(){
     packages[3].x = 100;
     packages[3].y = 100;
     packages[3].is_dead = false;
+
+
+    for(int i = 0; i < 6; i++){
+        if(i < 3) inventory[i] = make_img((xpm_map_t)small_box_xpm, 6+(i*36), 6);
+        else inventory[i] = make_img((xpm_map_t)small_box_xpm, 6 + ((i-3)*36), 42);
+    }
     //mouse
 
 

@@ -6,6 +6,7 @@
 
 action_t keyboard_ih_level(uint32_t scancode);
 void remove_package(img_t character);
+int is_inventory_full();
 void player_hit();
 void reset_movement();
 

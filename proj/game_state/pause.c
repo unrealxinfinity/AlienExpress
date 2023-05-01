@@ -43,7 +43,6 @@ action_t mouse_ih_pause(){
 
 void draw_pause(){
     draw_packages();
-    draw_small_xpm((xpm_map_t) unbreakableWalls_xpm, 200, 400);
     
     draw_player();
     
@@ -58,6 +57,7 @@ void draw_pause(){
     else draw(mouse_animation.animation[0], mouse);
 
     draw_health();
+    draw_inventory();
 }
 
 void draw_pause_words(){

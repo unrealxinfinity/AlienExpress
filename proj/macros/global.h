@@ -55,6 +55,9 @@ AnimatedImg_t animated_img_enemy1;
 
 img_t packages[5];
 
+//inventory
+img_t inventory[6];
+
 
 #endif
 

@@ -62,16 +62,25 @@ void remove_package(img_t character){
     for(int i = 0; i < (int) (sizeof(packages) / sizeof(packages[0])); i++){
         if(!packages[i].is_dead && !packages[i].is_in_inventory){
             if(manage_hitbox(packages[i], character)){
-                
-                packages[i].is_dead = true;
-                if(!is_inventory_full()){
+                int index = is_inventory_full();
+                if(index != -1){
                     packages[i].is_in_inventory = true;
+                    inventory[index].colors_32 = packages[i].colors_32;
+                    inventory[index].is_in_inventory = packages[i].is_in_inventory;
                 }
-                packages[i].is_in_inventory = true;
                 
             }
         }
     }
+}
+
+int is_inventory_full(){
+    for(int i = 0; i < 6; i++){
+        if(inventory[i].is_in_inventory == false){
+            return i;
+        }
+    }
+    return -1;
 }
 
 void player_hit(){
@@ -104,11 +113,14 @@ void draw_inventory(){
             x+=36;
             draw_small_xpm((xpm_map_t)inventory_xpm, x, 42);
         }
+        if(inventory[i].is_in_inventory){
+            draw(inventory[i], inventory[i]);
+        }
     }
 }
 void draw_packages(){
     for(int i = 0; i < (int) (sizeof(packages) / sizeof(packages[0])); i++){
-        if(!packages[i].is_dead){
+        if(!packages[i].is_dead && !packages[i].is_in_inventory){
             draw(packages[i], packages[i]);
         }
     }
