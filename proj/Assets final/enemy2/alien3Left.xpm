@@ -1,7 +1,7 @@
 /* XPM */
 static char * alien3Left_xpm[] = {
 "13 13 8 1",
-" 	c None",
+" 	c #FFFFFE",
 ".	c #1B1D34",
 "+	c #FCFCFC",
 "@	c #7BE1F6",
