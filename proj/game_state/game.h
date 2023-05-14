@@ -12,6 +12,8 @@
 #include "../game_state/level.h"
 #include "../game_state/pause.h"
 #include "../game_state/game_over.h"
+#include "../load/spawner.h"
+#include "../devices/rtc.h"
 
 void set_state(game_state_t state);
 

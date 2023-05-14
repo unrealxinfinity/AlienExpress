@@ -15,14 +15,13 @@ typedef struct{
     uint16_t width;
     uint16_t height;
     uint32_t *colors_32; 
-    uint16_t *colors_16;
-    uint8_t *colors_8;
     int hitbox_x;
     int hitbox_y;
     int no_img;
     int idle_time;
     bool is_dead;
     bool is_in_inventory;
+    uint32_t type;
     movement_t direction;
     movement_t prev_direction;
 }img_t;

@@ -17,7 +17,7 @@ int (timer_unsubscribe)() {
 
 void (timer_int_handler_proj)() {
   timerCount++;
-  counter_timer=timerCount;
+  counter_timer++;
 }
 
 

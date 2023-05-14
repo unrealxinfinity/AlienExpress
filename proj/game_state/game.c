@@ -4,10 +4,18 @@
 uint8_t timer_bit_no;
 uint8_t kbd_bit_no;
 uint8_t mouse_bit_no;
+uint8_t rtc_bit_no;
+message msg;
 game_info_t game_info = {MENU, START};
 
 //setters
 void set_state(game_state_t state){
+    if(state == LEVEL1){
+        if(game_info.state == GAME_OVER || game_info.state == MENU){
+            eliminate_entities();
+            counter_timer = 0;
+        }
+    }
     game_info.state = state;
     game_info.action = AFK;
     player.direction = STILL;
@@ -39,6 +47,9 @@ int mouse_proj_ih(){
         game_info.action = mouse_ih_menu();
         if(game_info.action != AFK)set_selection_menu(AFK);
     }
+    else if(game_info.state == LEVEL1){
+        game_info.action = mouse_ih_level();
+    }
     else if(game_info.state == PAUSE){
         game_info.action = mouse_ih_pause();
         if(game_info.action != AFK)set_selection_pause(AFK);
@@ -66,6 +77,7 @@ int control_state(){
         case LEVEL1:
             if(game_info.action == EXIT){
                 set_state(PAUSE);
+                reset_movement();
             }
             break;
         case PAUSE:
@@ -101,6 +113,9 @@ int draw_state(){
             break;
         case LEVEL1:
             draw_level();
+            if((counter_timer%60) == 0)spawn();
+            if(mouse_click) draw(mouse_animation.animation[1], mouse);
+            else draw(mouse_animation.animation[0], mouse);
             if(player_lives <= 0)set_state(GAME_OVER);
             break;
         case PAUSE:
@@ -128,19 +143,20 @@ int initialize(){
     if(mouse_write(DATA_REPORT))return 1;
     if(timer_set_frequency_proj(0, 30)) return 1;
     init_mouse();
-
+    initialize_game();
     timer_bit_no = timer_subscribe();
     if(timer_bit_no == 0xFF) return 1;
     kbd_bit_no = keyboard_subscribe();
     if(kbd_bit_no == 0xFF) return 1;
     mouse_bit_no = mouse_subscribe();
     if(mouse_bit_no == 0xFF)return 1;
+    rtc_bit_no = rtc_subscribe();
+    if(rtc_bit_no == 0xFF)return 1;
     return 0;
 }
 
 int game_loop(){
   int ipc_status;
-  message msg;
   while(true) {
 		if ((driver_receive(ANY, &msg, &ipc_status)) != 0) { 
 			continue;
@@ -155,6 +171,9 @@ int game_loop(){
                     if(game_info.state != MENU)pass_map();
                     draw_state();
                     pass_to_vm_buffer();
+                }
+                if (msg.m_notify.interrupts & rtc_bit_no){
+                    rtc_ih();
                 }
 				if(msg.m_notify.interrupts & kbd_bit_no) {
                     uint32_t command;
@@ -188,7 +207,9 @@ int game_loop(){
 
 
 int terminate(){
+    free(enemies_lv1);
     if(mouse_unsubscribe())return 1;
+    if(rtc_unsubscribe())return 1;
     if(keyboard_unsubscribe()) return 1;
     if(mouse_write(0xF5))return 1;
     if(timer_unsubscribe()) return 1;
