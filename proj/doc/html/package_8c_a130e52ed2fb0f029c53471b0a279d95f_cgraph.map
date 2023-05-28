@@ -1,0 +1,11 @@
+<map id="get_item" name="get_item">
+<area shape="rect" id="node1" title="Randomizes the item to be received after opening a package." alt="" coords="5,183,77,209"/>
+<area shape="rect" id="node2" href="$ammo_8c.html#ae6101f273d23ca58992276ef0bf3a2bf" title="Sets the current inventory position to ammo." alt="" coords="135,5,217,32"/>
+<area shape="rect" id="node3" href="$backpack_8c.html#aeccb2fae3124c45946a071f937c29a95" title="Sets the current inventory position to backpack." alt="" coords="125,56,227,83"/>
+<area shape="rect" id="node4" href="$bone_8c.html#a585f9194dd92b30183c2fc87dd724adb" title="Sets the current inventory position to a bone." alt="" coords="139,107,213,133"/>
+<area shape="rect" id="node5" href="$boots_8c.html#ad1a19ed3b2a6c89fd71d14e9e6cd86fa" title="Sets the current inventory position to boots." alt="" coords="137,157,215,184"/>
+<area shape="rect" id="node6" href="$grenade_8c.html#ae970fad7a23c3620db1d2fe76424fb01" title="Sets the current inventory position to a grenade." alt="" coords="130,208,222,235"/>
+<area shape="rect" id="node7" href="$pistol_8c.html#ad1e3877d49e53fe3ec92556846a00e9d" title="Sets the current inventory position to a pistol." alt="" coords="137,259,215,285"/>
+<area shape="rect" id="node8" href="$pizza_8c.html#a67f32a0cf3c84dc349d7689f5ca5126a" title="Sets the current inventory position to a pizza." alt="" coords="137,309,215,336"/>
+<area shape="rect" id="node9" href="$watch_8c.html#a7955d3211628d3b0c0fe5c3a99028934" title="Sets the current inventory position to a watch." alt="" coords="136,360,216,387"/>
+</map>

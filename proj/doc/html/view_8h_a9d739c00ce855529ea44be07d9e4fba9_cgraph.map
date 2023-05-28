@@ -1,0 +1,6 @@
+<map id="drawTiles" name="drawTiles">
+<area shape="rect" id="node1" title="Loads and calls drawing function on map buffer of the background xpm." alt="" coords="5,31,81,57"/>
+<area shape="rect" id="node2" href="$view_8c.html#abbda7f81a133deb0f2f65671ab58af55" title="Calls drawing function on map buffer on each pixel of image passed by argument." alt="" coords="129,5,210,32"/>
+<area shape="rect" id="node4" href="$view_8c.html#ab3749554144885b5029f6bf77aaa7c7a" title="Loads and sets the variables of struct img_t of a xpm." alt="" coords="129,56,210,83"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a786ceea3f74b17a36d7cb12a9d6d1d8e" title="Draws pixel onto map buffer with color and coordinates passed by argument." alt="" coords="258,5,372,32"/>
+</map>

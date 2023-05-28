@@ -1,0 +1,13 @@
+<map id="throw_animation_grenade" name="throw_animation_grenade">
+<area shape="rect" id="node1" title="The animation when you throw a grenade." alt="" coords="5,157,174,184"/>
+<area shape="rect" id="node2" href="$player_8c.html#a45470fb2ac0252923f17300da2820c3b" title="Gets the value of the inventory index currently being used." alt="" coords="226,5,351,32"/>
+<area shape="rect" id="node3" href="$player_8c.html#ac8ec5d103e4474fa9e333ee8b2244995" title="knows if player is holding down the letter &quot;i&quot; on the keyboard or not" alt="" coords="231,56,346,83"/>
+<area shape="rect" id="node4" href="$player_8c.html#a2c57ae5b0f2fad1d86c7bc12a096937e" title="Gets the value of variable that registers if selected item on the inventory is equal to the one curre..." alt="" coords="222,107,355,133"/>
+<area shape="rect" id="node5" href="$grenade_8c.html#ad063985724d231796338c876b180d46e" title="Eliminates all monsters in a radius cause by grenade explosion." alt="" coords="222,157,355,184"/>
+<area shape="rect" id="node6" href="$view_8c.html#aafcad4c7ae21e495b16b0c1c58bd2e8f" title="Checks in the frame_buffer for collisions." alt="" coords="228,208,349,235"/>
+<area shape="rect" id="node9" href="$explosion_8c.html#a543d40a218a951a0699a774099a2d761" title=" " alt="" coords="238,259,339,285"/>
+<area shape="rect" id="node11" href="$player_8c.html#a1f767d8d83293c8e1b86b96069e659d2" title="Changes the variable taht registers the index of item of inventory being thrown to a value passed by ..." alt="" coords="222,309,355,336"/>
+<area shape="rect" id="node7" href="$view_8c.html#a35fce9c592fbff1ea083e9dc48a7081e" title="Eliminates monster in a certain position passed by argument." alt="" coords="418,157,507,184"/>
+<area shape="rect" id="node8" href="$view_8c.html#affd2e4622b63d5c571629d2c0e108136" title="Eliminates wolf in a certain position passed by argument." alt="" coords="431,208,495,235"/>
+<area shape="rect" id="node10" href="$explosion_8c.html#ab68b40694f9bf496eb316c2bc5f6bf7f" title=" " alt="" coords="403,259,522,285"/>
+</map>

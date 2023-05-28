@@ -1,0 +1,5 @@
+<map id="draw_pizza" name="draw_pizza">
+<area shape="rect" id="node1" title="Calls drawing function to draw pizza." alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#a164a9eeb26da4992f649abb855216e4a" title="Calls drawing function on frame_buffer on each pixel of image passed by argument." alt="" coords="140,5,188,32"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#ab20eed5c22b21f149e761aa71487aea8" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="236,5,318,32"/>
+</map>

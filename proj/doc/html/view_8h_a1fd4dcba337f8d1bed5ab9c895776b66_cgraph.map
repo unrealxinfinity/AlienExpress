@@ -1,0 +1,6 @@
+<map id="drawBorder" name="drawBorder">
+<area shape="rect" id="node1" title="Loads and calls drawing function on map buffer of the border xpm." alt="" coords="5,31,92,57"/>
+<area shape="rect" id="node2" href="$view_8c.html#abbda7f81a133deb0f2f65671ab58af55" title="Calls drawing function on map buffer on each pixel of image passed by argument." alt="" coords="140,5,221,32"/>
+<area shape="rect" id="node4" href="$view_8c.html#ab3749554144885b5029f6bf77aaa7c7a" title="Loads and sets the variables of struct img_t of a xpm." alt="" coords="140,56,221,83"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a786ceea3f74b17a36d7cb12a9d6d1d8e" title="Draws pixel onto map buffer with color and coordinates passed by argument." alt="" coords="269,5,383,32"/>
+</map>

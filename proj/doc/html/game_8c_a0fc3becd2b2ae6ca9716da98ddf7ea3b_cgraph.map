@@ -1,0 +1,4 @@
+<map id="set_state" name="set_state">
+<area shape="rect" id="node1" title="Changes the current value of the state of the struct game_state_t." alt="" coords="5,5,81,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#a4d87196986b07d28a857d850534a3179" title="Sets all entities and items to dead so that they will not show on screen anymore." alt="" coords="129,5,251,32"/>
+</map>

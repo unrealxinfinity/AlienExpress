@@ -1,0 +1,5 @@
+<map id="draw_health" name="draw_health">
+<area shape="rect" id="node1" title="Calls drawing function to draw the health of the player." alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#a4f9254adc9d29655ab76844e72aaa8bd" title="Calls drawing function on frame_buffer to draw a line of format passed by argument." alt="" coords="144,5,219,32"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#ab20eed5c22b21f149e761aa71487aea8" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="267,5,349,32"/>
+</map>

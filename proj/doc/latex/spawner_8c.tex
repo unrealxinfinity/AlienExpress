@@ -1,0 +1,159 @@
+\hypertarget{spawner_8c}{}\doxysection{src/load/spawner.c File Reference}
+\label{spawner_8c}\index{src/load/spawner.c@{src/load/spawner.c}}
+{\ttfamily \#include \char`\"{}spawner.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{spawner_8c_a892164b5b46c6ff69b55418054886bc9}{spawn}} ()
+\begin{DoxyCompactList}\small\item\em Calls all other spawn functions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spawner_8c_a6096221b2443b5e15a3cdf93ed046f69}{spawn\+\_\+monsters}} (int rate)
+\begin{DoxyCompactList}\small\item\em Sets a dead monster to not dead if the rate was high enough. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spawner_8c_a1aee5fe5c96bfad41d4fba24b2a7170f}{spawn\+\_\+workers}} (int rate)
+\begin{DoxyCompactList}\small\item\em Sets a dead worker to not dead if the rate was high enough. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spawner_8c_a24c5893903346196e76c00c421b3a926}{spawn\+\_\+wolf}} (int rate)
+\begin{DoxyCompactList}\small\item\em Sets a dead wolf to not dead if the rate was high enough. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spawner_8c_a05c21159c74e99373724405dbba3aedc}{spawn\+\_\+packages}} (int rate)
+\begin{DoxyCompactList}\small\item\em Sets a dead package to not dead if the rate was high enough. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spawner_8c_af914cc1e1ab0a4d76d41b0d689196436}{spawn\+\_\+teleports}} (int rate)
+\begin{DoxyCompactList}\small\item\em Sets a dead teleport to not dead if the rate was high enough. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spawner_8c_a6a06d94ea08de53d2a179dc211efae0f}{spawn\+\_\+bullet}} (int index)
+\begin{DoxyCompactList}\small\item\em Sets a dead bullet to not dead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{spawner_8c_a892164b5b46c6ff69b55418054886bc9}\label{spawner_8c_a892164b5b46c6ff69b55418054886bc9}} 
+\index{spawner.c@{spawner.c}!spawn@{spawn}}
+\index{spawn@{spawn}!spawner.c@{spawner.c}}
+\doxysubsubsection{\texorpdfstring{spawn()}{spawn()}}
+{\footnotesize\ttfamily void spawn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls all other spawn functions. 
+
+
+
+Definition at line \mbox{\hyperlink{spawner_8c_source_l00004}{4}} of file \mbox{\hyperlink{spawner_8c_source}{spawner.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{spawner_8c_a892164b5b46c6ff69b55418054886bc9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{spawner_8c_a6a06d94ea08de53d2a179dc211efae0f}\label{spawner_8c_a6a06d94ea08de53d2a179dc211efae0f}} 
+\index{spawner.c@{spawner.c}!spawn\_bullet@{spawn\_bullet}}
+\index{spawn\_bullet@{spawn\_bullet}!spawner.c@{spawner.c}}
+\doxysubsubsection{\texorpdfstring{spawn\_bullet()}{spawn\_bullet()}}
+{\footnotesize\ttfamily void spawn\+\_\+bullet (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Sets a dead bullet to not dead. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position of array where the bullet resides \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{spawner_8c_source_l00210}{210}} of file \mbox{\hyperlink{spawner_8c_source}{spawner.\+c}}.
+
+\mbox{\Hypertarget{spawner_8c_a6096221b2443b5e15a3cdf93ed046f69}\label{spawner_8c_a6096221b2443b5e15a3cdf93ed046f69}} 
+\index{spawner.c@{spawner.c}!spawn\_monsters@{spawn\_monsters}}
+\index{spawn\_monsters@{spawn\_monsters}!spawner.c@{spawner.c}}
+\doxysubsubsection{\texorpdfstring{spawn\_monsters()}{spawn\_monsters()}}
+{\footnotesize\ttfamily void spawn\+\_\+monsters (\begin{DoxyParamCaption}\item[{int}]{rate }\end{DoxyParamCaption})}
+
+
+
+Sets a dead monster to not dead if the rate was high enough. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rate} & spawn rate to spawn \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{spawner_8c_source_l00031}{31}} of file \mbox{\hyperlink{spawner_8c_source}{spawner.\+c}}.
+
+\mbox{\Hypertarget{spawner_8c_a05c21159c74e99373724405dbba3aedc}\label{spawner_8c_a05c21159c74e99373724405dbba3aedc}} 
+\index{spawner.c@{spawner.c}!spawn\_packages@{spawn\_packages}}
+\index{spawn\_packages@{spawn\_packages}!spawner.c@{spawner.c}}
+\doxysubsubsection{\texorpdfstring{spawn\_packages()}{spawn\_packages()}}
+{\footnotesize\ttfamily void spawn\+\_\+packages (\begin{DoxyParamCaption}\item[{int}]{rate }\end{DoxyParamCaption})}
+
+
+
+Sets a dead package to not dead if the rate was high enough. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rate} & spawn rate to spawn \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{spawner_8c_source_l00166}{166}} of file \mbox{\hyperlink{spawner_8c_source}{spawner.\+c}}.
+
+\mbox{\Hypertarget{spawner_8c_af914cc1e1ab0a4d76d41b0d689196436}\label{spawner_8c_af914cc1e1ab0a4d76d41b0d689196436}} 
+\index{spawner.c@{spawner.c}!spawn\_teleports@{spawn\_teleports}}
+\index{spawn\_teleports@{spawn\_teleports}!spawner.c@{spawner.c}}
+\doxysubsubsection{\texorpdfstring{spawn\_teleports()}{spawn\_teleports()}}
+{\footnotesize\ttfamily void spawn\+\_\+teleports (\begin{DoxyParamCaption}\item[{int}]{rate }\end{DoxyParamCaption})}
+
+
+
+Sets a dead teleport to not dead if the rate was high enough. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rate} & spawn rate to spawn \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{spawner_8c_source_l00187}{187}} of file \mbox{\hyperlink{spawner_8c_source}{spawner.\+c}}.
+
+\mbox{\Hypertarget{spawner_8c_a24c5893903346196e76c00c421b3a926}\label{spawner_8c_a24c5893903346196e76c00c421b3a926}} 
+\index{spawner.c@{spawner.c}!spawn\_wolf@{spawn\_wolf}}
+\index{spawn\_wolf@{spawn\_wolf}!spawner.c@{spawner.c}}
+\doxysubsubsection{\texorpdfstring{spawn\_wolf()}{spawn\_wolf()}}
+{\footnotesize\ttfamily void spawn\+\_\+wolf (\begin{DoxyParamCaption}\item[{int}]{rate }\end{DoxyParamCaption})}
+
+
+
+Sets a dead wolf to not dead if the rate was high enough. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rate} & spawn rate to spawn \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{spawner_8c_source_l00121}{121}} of file \mbox{\hyperlink{spawner_8c_source}{spawner.\+c}}.
+
+\mbox{\Hypertarget{spawner_8c_a1aee5fe5c96bfad41d4fba24b2a7170f}\label{spawner_8c_a1aee5fe5c96bfad41d4fba24b2a7170f}} 
+\index{spawner.c@{spawner.c}!spawn\_workers@{spawn\_workers}}
+\index{spawn\_workers@{spawn\_workers}!spawner.c@{spawner.c}}
+\doxysubsubsection{\texorpdfstring{spawn\_workers()}{spawn\_workers()}}
+{\footnotesize\ttfamily void spawn\+\_\+workers (\begin{DoxyParamCaption}\item[{int}]{rate }\end{DoxyParamCaption})}
+
+
+
+Sets a dead worker to not dead if the rate was high enough. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rate} & spawn rate to spawn \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{spawner_8c_source_l00075}{75}} of file \mbox{\hyperlink{spawner_8c_source}{spawner.\+c}}.
+

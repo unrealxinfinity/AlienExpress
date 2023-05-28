@@ -1,0 +1,74 @@
+\hypertarget{enemies__lvl_8c_source}{}\doxysection{enemies\+\_\+lvl.\+c}
+\label{enemies__lvl_8c_source}\index{src/Entities/enemies\_lvl.c@{src/Entities/enemies\_lvl.c}}
+\mbox{\hyperlink{enemies__lvl_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{enemies__lvl_8h}{enemies\_lvl.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00004}\mbox{\hyperlink{enemies__lvl_8c_aba8db9c3ee3b9bf796b3c5edaa0c240f}{00004}} \textcolor{keywordtype}{void} \mbox{\hyperlink{enemies__lvl_8c_aba8db9c3ee3b9bf796b3c5edaa0c240f}{move\_enemies\_lvl}}()\{}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00005}00005     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}} = 0; \mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}} < (int) (\textcolor{keyword}{sizeof}(\mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[0])); \mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}++)\{}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00006}00006         \textcolor{keywordflow}{if}(\mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}].is\_dead)\textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00007}00007         \textcolor{keywordtype}{int} width = \mbox{\hyperlink{global_8h_aa82153d501cb5da9b063d2d6857dacbc}{player}}.\mbox{\hyperlink{structimg__t_a6f260343f6015d84147006da565a1f42}{hitbox\_x}} -\/ \mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}].\mbox{\hyperlink{structimg__t_a6f260343f6015d84147006da565a1f42}{hitbox\_x}};}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00008}00008         \textcolor{keywordtype}{int} height = \mbox{\hyperlink{global_8h_aa82153d501cb5da9b063d2d6857dacbc}{player}}.\mbox{\hyperlink{structimg__t_a4c8adb17ed96f1f50ac768ba25f25e80}{hitbox\_y}} -\/ \mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}].\mbox{\hyperlink{structimg__t_a4c8adb17ed96f1f50ac768ba25f25e80}{hitbox\_y}};}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00010}00010         \textcolor{keywordtype}{int} distance;}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00011}00011         \textcolor{keywordtype}{int} final\_x;}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00012}00012         \textcolor{keywordtype}{int} final\_y;}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00013}00013         \textcolor{keywordflow}{if}(abs(width) <= \mbox{\hyperlink{global_8h_a03d87af35228a70459bae7f06c31296f}{animated\_img\_enemy1}}.\mbox{\hyperlink{struct_animated_img__t_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}} \&\& abs(height) <= \mbox{\hyperlink{global_8h_a03d87af35228a70459bae7f06c31296f}{animated\_img\_enemy1}}.\mbox{\hyperlink{struct_animated_img__t_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}) \{}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00014}00014             distance = 0;}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00015}00015             final\_x = 0;}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00016}00016             final\_y = 0;}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00017}00017             \mbox{\hyperlink{global_8h_a0ab27c1a3f6bde5dc369c3b4301f1ac9}{player\_lives}} -\/=2;}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00018}00018         \}}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00019}00019         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00020}00020             distance = sqrt(width*width + height*height);}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00021}00021             final\_x = (width*\mbox{\hyperlink{global_8h_a03d87af35228a70459bae7f06c31296f}{animated\_img\_enemy1}}.\mbox{\hyperlink{struct_animated_img__t_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}})/distance;}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00022}00022             final\_y = (height*\mbox{\hyperlink{global_8h_a03d87af35228a70459bae7f06c31296f}{animated\_img\_enemy1}}.\mbox{\hyperlink{struct_animated_img__t_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}})/distance;}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00023}00023         \}}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00025}00025         \textcolor{keywordflow}{if}(final\_x > 0) \mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}].\mbox{\hyperlink{structimg__t_a91d167ab0a7396d58a4b1beed15dec9c}{direction}} = \mbox{\hyperlink{enum_8h_a26c2d6c8d52195a3053d25e6776705f3aec8379af7490bb9eaaf579cf17876f38}{RIGHT}};}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00026}00026         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(final\_x < 0) \{}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00027}00027             \mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}].\mbox{\hyperlink{structimg__t_a91d167ab0a7396d58a4b1beed15dec9c}{direction}} = \mbox{\hyperlink{enum_8h_a26c2d6c8d52195a3053d25e6776705f3adb45120aafd37a973140edee24708065}{LEFT}};}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00028}00028             final\_x = abs(final\_x);}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00029}00029         \}}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00030}00030         \textcolor{keywordflow}{if}(\mbox{\hyperlink{global_8h_abdd2eef1d70041de463214f2f9469f4d}{counter\_timer}} \% 5 == 0)\mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}].\mbox{\hyperlink{structimg__t_a694e7dc2aae2dacee9a8dee46ac7a538}{no\_img}} += 1;}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00031}00031         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{view_8c_ad83186d18cfd42e5617bb2f8d82031fd}{is\_occupied}}(\mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}], final\_x))\{}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00032}00032             \mbox{\hyperlink{view_8c_aafcad4c7ae21e495b16b0c1c58bd2e8f}{manage\_collision}}(\&\mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}], final\_x);}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00033}00033         \}}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00036}00036         \textcolor{keywordflow}{if}(final\_y>0)\mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}].\mbox{\hyperlink{structimg__t_a91d167ab0a7396d58a4b1beed15dec9c}{direction}} = \mbox{\hyperlink{enum_8h_a26c2d6c8d52195a3053d25e6776705f3a9b0b4a95b99523966e0e34ffdadac9da}{DOWN}};}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00037}00037         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(final\_y <0) \{}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00038}00038             \mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}].\mbox{\hyperlink{structimg__t_a91d167ab0a7396d58a4b1beed15dec9c}{direction}} = \mbox{\hyperlink{enum_8h_a26c2d6c8d52195a3053d25e6776705f3aba595d8bca8bc5e67c37c0a9d89becfa}{UP}};}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00039}00039             final\_y = abs(final\_y);}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00040}00040         \}}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00041}00041         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{view_8c_ad83186d18cfd42e5617bb2f8d82031fd}{is\_occupied}}(\mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}], final\_y))\{}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00042}00042             \mbox{\hyperlink{view_8c_aafcad4c7ae21e495b16b0c1c58bd2e8f}{manage\_collision}}(\&\mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}], final\_y);}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00043}00043         \}}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00044}00044         \mbox{\hyperlink{enemies__lvl_8c_a46732510bbf2ee847d910fa0e14a8394}{draw\_enemies\_lvl}}(\mbox{\hyperlink{global_8h_a4000369b4507c7e4a8e316418a8d30c4}{enemies\_lv1}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}]);}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00047}00047 \}}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00050}\mbox{\hyperlink{enemies__lvl_8c_a46732510bbf2ee847d910fa0e14a8394}{00050}} \textcolor{keywordtype}{void} \mbox{\hyperlink{enemies__lvl_8c_a46732510bbf2ee847d910fa0e14a8394}{draw\_enemies\_lvl}}(\mbox{\hyperlink{structimg__t}{img\_t}} enemy)\{}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00051}00051         \textcolor{keywordflow}{switch} (enemy.\mbox{\hyperlink{structimg__t_a91d167ab0a7396d58a4b1beed15dec9c}{direction}}) \{}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00052}00052             \textcolor{keywordflow}{case} \mbox{\hyperlink{enum_8h_a26c2d6c8d52195a3053d25e6776705f3aba595d8bca8bc5e67c37c0a9d89becfa}{UP}}:}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00053}00053                 \mbox{\hyperlink{view_8c_a164a9eeb26da4992f649abb855216e4a}{draw}}(\mbox{\hyperlink{global_8h_a03d87af35228a70459bae7f06c31296f}{animated\_img\_enemy1}}.\mbox{\hyperlink{struct_animated_img__t_a11056ee6d42c71c4fe9390096c841118}{up}}[enemy.\mbox{\hyperlink{structimg__t_a694e7dc2aae2dacee9a8dee46ac7a538}{no\_img}} \% 8], enemy);}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00054}00054                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00055}00055             \textcolor{keywordflow}{case} \mbox{\hyperlink{enum_8h_a26c2d6c8d52195a3053d25e6776705f3a9b0b4a95b99523966e0e34ffdadac9da}{DOWN}}:}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00056}00056                 \mbox{\hyperlink{view_8c_a164a9eeb26da4992f649abb855216e4a}{draw}}(\mbox{\hyperlink{global_8h_a03d87af35228a70459bae7f06c31296f}{animated\_img\_enemy1}}.\mbox{\hyperlink{struct_animated_img__t_af8637f3e4a29932c9d55036b5bfaca1a}{down}}[enemy.\mbox{\hyperlink{structimg__t_a694e7dc2aae2dacee9a8dee46ac7a538}{no\_img}} \% 8], enemy);}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00057}00057                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00058}00058             \textcolor{keywordflow}{case} \mbox{\hyperlink{enum_8h_a26c2d6c8d52195a3053d25e6776705f3adb45120aafd37a973140edee24708065}{LEFT}}:}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00059}00059                 \mbox{\hyperlink{view_8c_a164a9eeb26da4992f649abb855216e4a}{draw}}(\mbox{\hyperlink{global_8h_a03d87af35228a70459bae7f06c31296f}{animated\_img\_enemy1}}.\mbox{\hyperlink{struct_animated_img__t_a706fdb16a0fc296d0e59cb5c729d37ce}{left}}[enemy.\mbox{\hyperlink{structimg__t_a694e7dc2aae2dacee9a8dee46ac7a538}{no\_img}} \% 8], enemy);}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00060}00060                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00061}00061             \textcolor{keywordflow}{case} \mbox{\hyperlink{enum_8h_a26c2d6c8d52195a3053d25e6776705f3aec8379af7490bb9eaaf579cf17876f38}{RIGHT}}:}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00062}00062                 \mbox{\hyperlink{view_8c_a164a9eeb26da4992f649abb855216e4a}{draw}}(\mbox{\hyperlink{global_8h_a03d87af35228a70459bae7f06c31296f}{animated\_img\_enemy1}}.\mbox{\hyperlink{struct_animated_img__t_a0fbb2fcbe64e34f3e4fb3c539da76975}{right}}[enemy.\mbox{\hyperlink{structimg__t_a694e7dc2aae2dacee9a8dee46ac7a538}{no\_img}} \% 8], enemy);}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00063}00063                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00064}00064             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00065}00065                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00066}00066         \}}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00067}00067 \}}
+\DoxyCodeLine{\Hypertarget{enemies__lvl_8c_source_l00068}00068 }
+
+\end{DoxyCode}

@@ -1,0 +1,171 @@
+\hypertarget{gameover_8c}{}\doxysection{src/game\+\_\+state/gameover.c File Reference}
+\label{gameover_8c}\index{src/game\_state/gameover.c@{src/game\_state/gameover.c}}
+{\ttfamily \#include \char`\"{}game\+\_\+over.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gameover_8c_a549dbe977774241bd1efbb5036595ec3}{set\+\_\+selection\+\_\+game\+\_\+over}} (\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} action)
+\begin{DoxyCompactList}\small\item\em Changes the current value of a game over state controlling variable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} \mbox{\hyperlink{gameover_8c_a36e46b9ba87d25f8242ff803b61b699f}{mouse\+\_\+ih\+\_\+game\+\_\+over}} ()
+\begin{DoxyCompactList}\small\item\em Controls the inputs of the mouse to control the game over state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} \mbox{\hyperlink{gameover_8c_a315f9619cba399b88b3cc8249c5dc76e}{keyboard\+\_\+ih\+\_\+game\+\_\+over}} (uint32\+\_\+t scancode)
+\begin{DoxyCompactList}\small\item\em Controls the inputs of the keyboard to control the game over state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gameover_8c_aa37e76033505d7f48a87284bd85c48a2}{draw\+\_\+game\+\_\+over}} ()
+\begin{DoxyCompactList}\small\item\em Drawing function that draws all the features of the game over state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gameover_8c_a8046b6742ef6c5a4aa9ecc601480604b}{draw\+\_\+game\+\_\+over\+\_\+words}} ()
+\begin{DoxyCompactList}\small\item\em Draws all the game over letters and symbols. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gameover_8c_aeee7500947037ebf01a9a67352ec6bb1}{draw\+\_\+game\+\_\+over\+\_\+tag}} ()
+\begin{DoxyCompactList}\small\item\em Draws the letters from the game over tag onto the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} \mbox{\hyperlink{gameover_8c_afa0f1ad3d148dd557d93ba9d4bf87476}{game\+\_\+over\+\_\+selection}} = \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35eca4ddf822225ddb5e5eac9c0940dcdab90}{AFK}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gameover_8c_aa37e76033505d7f48a87284bd85c48a2}\label{gameover_8c_aa37e76033505d7f48a87284bd85c48a2}} 
+\index{gameover.c@{gameover.c}!draw\_game\_over@{draw\_game\_over}}
+\index{draw\_game\_over@{draw\_game\_over}!gameover.c@{gameover.c}}
+\doxysubsubsection{\texorpdfstring{draw\_game\_over()}{draw\_game\_over()}}
+{\footnotesize\ttfamily void draw\+\_\+game\+\_\+over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Drawing function that draws all the features of the game over state. 
+
+
+
+Definition at line \mbox{\hyperlink{gameover_8c_source_l00043}{43}} of file \mbox{\hyperlink{gameover_8c_source}{gameover.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gameover_8c_aa37e76033505d7f48a87284bd85c48a2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gameover_8c_aeee7500947037ebf01a9a67352ec6bb1}\label{gameover_8c_aeee7500947037ebf01a9a67352ec6bb1}} 
+\index{gameover.c@{gameover.c}!draw\_game\_over\_tag@{draw\_game\_over\_tag}}
+\index{draw\_game\_over\_tag@{draw\_game\_over\_tag}!gameover.c@{gameover.c}}
+\doxysubsubsection{\texorpdfstring{draw\_game\_over\_tag()}{draw\_game\_over\_tag()}}
+{\footnotesize\ttfamily void draw\+\_\+game\+\_\+over\+\_\+tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the letters from the game over tag onto the screen. 
+
+
+
+Definition at line \mbox{\hyperlink{gameover_8c_source_l00084}{84}} of file \mbox{\hyperlink{gameover_8c_source}{gameover.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gameover_8c_aeee7500947037ebf01a9a67352ec6bb1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gameover_8c_a8046b6742ef6c5a4aa9ecc601480604b}\label{gameover_8c_a8046b6742ef6c5a4aa9ecc601480604b}} 
+\index{gameover.c@{gameover.c}!draw\_game\_over\_words@{draw\_game\_over\_words}}
+\index{draw\_game\_over\_words@{draw\_game\_over\_words}!gameover.c@{gameover.c}}
+\doxysubsubsection{\texorpdfstring{draw\_game\_over\_words()}{draw\_game\_over\_words()}}
+{\footnotesize\ttfamily void draw\+\_\+game\+\_\+over\+\_\+words (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws all the game over letters and symbols. 
+
+
+
+Definition at line \mbox{\hyperlink{gameover_8c_source_l00052}{52}} of file \mbox{\hyperlink{gameover_8c_source}{gameover.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gameover_8c_a8046b6742ef6c5a4aa9ecc601480604b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gameover_8c_a315f9619cba399b88b3cc8249c5dc76e}\label{gameover_8c_a315f9619cba399b88b3cc8249c5dc76e}} 
+\index{gameover.c@{gameover.c}!keyboard\_ih\_game\_over@{keyboard\_ih\_game\_over}}
+\index{keyboard\_ih\_game\_over@{keyboard\_ih\_game\_over}!gameover.c@{gameover.c}}
+\doxysubsubsection{\texorpdfstring{keyboard\_ih\_game\_over()}{keyboard\_ih\_game\_over()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} keyboard\+\_\+ih\+\_\+game\+\_\+over (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Controls the inputs of the keyboard to control the game over state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & Keyboard input which will control the game over state and it\textquotesingle{}s features \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the action that has been made by the user using the keyboard 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gameover_8c_source_l00028}{28}} of file \mbox{\hyperlink{gameover_8c_source}{gameover.\+c}}.
+
+\mbox{\Hypertarget{gameover_8c_a36e46b9ba87d25f8242ff803b61b699f}\label{gameover_8c_a36e46b9ba87d25f8242ff803b61b699f}} 
+\index{gameover.c@{gameover.c}!mouse\_ih\_game\_over@{mouse\_ih\_game\_over}}
+\index{mouse\_ih\_game\_over@{mouse\_ih\_game\_over}!gameover.c@{gameover.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_ih\_game\_over()}{mouse\_ih\_game\_over()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} mouse\+\_\+ih\+\_\+game\+\_\+over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Controls the inputs of the mouse to control the game over state. 
+
+\begin{DoxyReturn}{Returns}
+Returns the action that has been made by the user using the mouse 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gameover_8c_source_l00008}{8}} of file \mbox{\hyperlink{gameover_8c_source}{gameover.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{gameover_8c_a36e46b9ba87d25f8242ff803b61b699f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gameover_8c_a549dbe977774241bd1efbb5036595ec3}\label{gameover_8c_a549dbe977774241bd1efbb5036595ec3}} 
+\index{gameover.c@{gameover.c}!set\_selection\_game\_over@{set\_selection\_game\_over}}
+\index{set\_selection\_game\_over@{set\_selection\_game\_over}!gameover.c@{gameover.c}}
+\doxysubsubsection{\texorpdfstring{set\_selection\_game\_over()}{set\_selection\_game\_over()}}
+{\footnotesize\ttfamily void set\+\_\+selection\+\_\+game\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}}}]{action }\end{DoxyParamCaption})}
+
+
+
+Changes the current value of a game over state controlling variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to which the game over state controlling variable is going to change into \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gameover_8c_source_l00005}{5}} of file \mbox{\hyperlink{gameover_8c_source}{gameover.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{gameover_8c_afa0f1ad3d148dd557d93ba9d4bf87476}\label{gameover_8c_afa0f1ad3d148dd557d93ba9d4bf87476}} 
+\index{gameover.c@{gameover.c}!game\_over\_selection@{game\_over\_selection}}
+\index{game\_over\_selection@{game\_over\_selection}!gameover.c@{gameover.c}}
+\doxysubsubsection{\texorpdfstring{game\_over\_selection}{game\_over\_selection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} game\+\_\+over\+\_\+selection = \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35eca4ddf822225ddb5e5eac9c0940dcdab90}{AFK}}}
+
+
+
+Definition at line \mbox{\hyperlink{gameover_8c_source_l00003}{3}} of file \mbox{\hyperlink{gameover_8c_source}{gameover.\+c}}.
+

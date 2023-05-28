@@ -1,0 +1,4 @@
+<map id="rtc_read" name="rtc_read">
+<area shape="rect" id="node1" title="Reads the seconds, minutes, hours, day, month and year from real time clock." alt="" coords="5,5,74,32"/>
+<area shape="rect" id="node2" href="$rtc_8c.html#a3c36593cadd0ab065d627d62b00eb62e" title="Waits while the real time clock updates the values of the time." alt="" coords="122,5,166,32"/>
+</map>

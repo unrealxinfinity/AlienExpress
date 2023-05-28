@@ -1,0 +1,4 @@
+<map id="init_player" name="init_player">
+<area shape="rect" id="node1" title="Loads and stores player xpm and other player related variables." alt="" coords="5,5,86,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#ab3749554144885b5029f6bf77aaa7c7a" title="Loads and sets the variables of struct img_t of a xpm." alt="" coords="134,5,215,32"/>
+</map>

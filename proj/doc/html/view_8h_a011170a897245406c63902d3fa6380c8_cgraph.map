@@ -1,0 +1,6 @@
+<map id="draw_small_xpm" name="draw_small_xpm">
+<area shape="rect" id="node1" title="Loads and calls drawing function on frame_buffer on each pixel of xpm passed by argument." alt="" coords="5,31,124,57"/>
+<area shape="rect" id="node2" href="$view_8c.html#a164a9eeb26da4992f649abb855216e4a" title="Calls drawing function on frame_buffer on each pixel of image passed by argument." alt="" coords="188,5,237,32"/>
+<area shape="rect" id="node4" href="$view_8c.html#ab3749554144885b5029f6bf77aaa7c7a" title="Loads and sets the variables of struct img_t of a xpm." alt="" coords="172,56,253,83"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#ab20eed5c22b21f149e761aa71487aea8" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="301,5,383,32"/>
+</map>

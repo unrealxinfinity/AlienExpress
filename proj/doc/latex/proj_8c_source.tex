@@ -1,0 +1,52 @@
+\hypertarget{proj_8c_source}{}\doxysection{proj.\+c}
+\label{proj_8c_source}\index{src/proj.c@{src/proj.c}}
+\mbox{\hyperlink{proj_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00001}00001 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00002}00002 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{game_8h}{game\_state/game.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{includes_8h}{macros/includes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{graphics_8h}{devices/graphics.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{keyboard_8h}{devices/keyboard.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00007}00007 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00008}00008 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00010}00010 \textcolor{comment}{// Any header files included below this line should have been created by you}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00012}\mbox{\hyperlink{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}{00012}} \textcolor{keywordtype}{int} \mbox{\hyperlink{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[]) \{}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00013}00013   \textcolor{comment}{// sets the language of LCF messages (can be either EN-\/US or PT-\/PT)}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00014}00014   lcf\_set\_language(\textcolor{stringliteral}{"{}EN-\/US"{}});}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00016}00016   \textcolor{comment}{// enables to log function invocations that are being "{}wrapped"{} by LCF}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00017}00017   \textcolor{comment}{// [comment this out if you don't want/need it]}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00018}00018   lcf\_trace\_calls(\textcolor{stringliteral}{"{}trace.txt"{}});}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00020}00020   \textcolor{comment}{// enables to save the output of printf function calls on a file}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00021}00021   \textcolor{comment}{// [comment this out if you don't want/need it]}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00022}00022   lcf\_log\_output(\textcolor{stringliteral}{"{}output.txt"{}});}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00024}00024   \textcolor{comment}{// handles control over to LCF}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00025}00025   \textcolor{comment}{// [LCF handles command line arguments and invokes the right function]}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00026}00026   \textcolor{keywordflow}{if} (lcf\_start(argc, argv))}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00027}00027     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00029}00029   \textcolor{comment}{// LCF clean up tasks}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00030}00030   \textcolor{comment}{// [must be the last statement before return]}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00031}00031   lcf\_cleanup();}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00033}00033   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00034}00034 \}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00042}\mbox{\hyperlink{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b}{00042}} int(\mbox{\hyperlink{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b}{proj\_main\_loop}})(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])\{}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00044}00044     \textcolor{keywordflow}{if}(\mbox{\hyperlink{game_8c_a03aede8ff91764482bb5e9accfae9b4f}{initialize}}())\{}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00045}00045       \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00047}00047     \mbox{\hyperlink{game_8c_a04e415c2c57bcb7efab2055169302eed}{game\_loop}}();}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00048}00048     \textcolor{keywordflow}{if}(\mbox{\hyperlink{game_8c_ab565b98afe74cf9e2bb77aab76c5b2f7}{terminate}}())\{}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00049}00049       \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00050}00050     \}}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00052}00052     \textcolor{keywordflow}{return} EXIT\_SUCCESS;}
+\DoxyCodeLine{\Hypertarget{proj_8c_source_l00053}00053 \}}
+
+\end{DoxyCode}

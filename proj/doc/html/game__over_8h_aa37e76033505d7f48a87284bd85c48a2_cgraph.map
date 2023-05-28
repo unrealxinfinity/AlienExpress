@@ -1,0 +1,9 @@
+<map id="draw_game_over" name="draw_game_over">
+<area shape="rect" id="node1" title="Drawing function that draws all the features of the game over state." alt="" coords="5,56,123,83"/>
+<area shape="rect" id="node2" href="$gameover_8c.html#aeee7500947037ebf01a9a67352ec6bb1" title="Draws the letters from the game over tag onto the screen." alt="" coords="179,5,321,32"/>
+<area shape="rect" id="node6" href="$gameover_8c.html#a8046b6742ef6c5a4aa9ecc601480604b" title="Draws all the game over letters and symbols." alt="" coords="171,56,329,83"/>
+<area shape="rect" id="node7" href="$player_8c.html#a16d1ffc3278a976b73eb2258dd973186" title="Changes all player movement in every direction to STILL, making him not move." alt="" coords="192,107,308,133"/>
+<area shape="rect" id="node3" href="$view_8c.html#a14135df9df90701b8ecdaa94d06f18d8" title="Helper function to set position and draw letters and symbols." alt="" coords="377,31,448,57"/>
+<area shape="rect" id="node4" href="$view_8c.html#a806f64f655004972017f12dc7b44e653" title="Calls drawing function on frame_buffer on each pixel of image passed by argument on char images (lett..." alt="" coords="496,31,602,57"/>
+<area shape="rect" id="node5" href="$graphics_8c.html#aaf12b562a02a21bc9172de234a707c83" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="650,31,782,57"/>
+</map>

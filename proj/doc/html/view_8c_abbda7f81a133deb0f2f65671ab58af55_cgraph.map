@@ -1,0 +1,4 @@
+<map id="draw_map" name="draw_map">
+<area shape="rect" id="node1" title="Calls drawing function on map buffer on each pixel of image passed by argument." alt="" coords="5,5,86,32"/>
+<area shape="rect" id="node2" href="$graphics_8c.html#a786ceea3f74b17a36d7cb12a9d6d1d8e" title="Draws pixel onto map buffer with color and coordinates passed by argument." alt="" coords="134,5,248,32"/>
+</map>

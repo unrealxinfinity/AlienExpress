@@ -1,0 +1,129 @@
+\hypertarget{mouse_8c_source}{}\doxysection{mouse.\+c}
+\label{mouse_8c_source}\index{src/devices/mouse.c@{src/devices/mouse.c}}
+\mbox{\hyperlink{mouse_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mouse_8h}{mouse.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00003}\mbox{\hyperlink{mouse_8c_a0b0da21bbdff62b7b28e9af7ec3d0d76}{00003}} \textcolor{keywordtype}{int} \mbox{\hyperlink{mouse_8c_a0b0da21bbdff62b7b28e9af7ec3d0d76}{hook\_id\_mouse}} = 3;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00005}\mbox{\hyperlink{mouse_8c_ae75156bc7a78e4c01e1c562438e66f2c}{00005}} uint8\_t \mbox{\hyperlink{mouse_8c_ae75156bc7a78e4c01e1c562438e66f2c}{bytes\_index}} = 0;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00006}\mbox{\hyperlink{mouse_8c_a348e5d3a947b5032136f9eeee7222629}{00006}} uint32\_t \mbox{\hyperlink{mouse_8c_a348e5d3a947b5032136f9eeee7222629}{bytes}}[3];}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00009}\mbox{\hyperlink{mouse_8c_a5f6dc719751221fcc748e67511fbe95a}{00009}} uint8\_t \mbox{\hyperlink{mouse_8c_a5f6dc719751221fcc748e67511fbe95a}{mouse\_subscribe}}()\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00010}00010     uint8\_t bit\_no = BIT(\mbox{\hyperlink{mouse_8c_a0b0da21bbdff62b7b28e9af7ec3d0d76}{hook\_id\_mouse}});}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00011}00011     \textcolor{keywordflow}{if}(sys\_irqsetpolicy(\mbox{\hyperlink{define_8h_af10b9efcb908230838524558bb05588a}{MOUSE\_IRQ\_LINE}}, IRQ\_REENABLE | IRQ\_EXCLUSIVE, \&\mbox{\hyperlink{mouse_8c_a0b0da21bbdff62b7b28e9af7ec3d0d76}{hook\_id\_mouse}}))\textcolor{keywordflow}{return} 0xFF;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00012}00012     \textcolor{keywordflow}{return} bit\_no;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00013}00013 \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00014}\mbox{\hyperlink{mouse_8c_abb62339e13d96f9050f69a71428f8eb9}{00014}} \textcolor{keywordtype}{int} \mbox{\hyperlink{mouse_8c_abb62339e13d96f9050f69a71428f8eb9}{mouse\_unsubscribe}}()\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00015}00015     \textcolor{keywordflow}{return} sys\_irqrmpolicy(\&\mbox{\hyperlink{mouse_8c_a0b0da21bbdff62b7b28e9af7ec3d0d76}{hook\_id\_mouse}});}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00016}00016 \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00017}\mbox{\hyperlink{mouse_8c_a77621d937bc2fde8bc8fc0fd69fea489}{00017}} \textcolor{keywordtype}{int} \mbox{\hyperlink{mouse_8c_a77621d937bc2fde8bc8fc0fd69fea489}{mouse\_write}}(uint8\_t command)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00018}00018     uint32\_t mouse\_status;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00019}00019     \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00020}00020         \textcolor{keywordflow}{if}(\mbox{\hyperlink{mouse_8c_aad881781b569b658cd537da533325585}{mouse\_write\_output}}(\mbox{\hyperlink{define_8h_a0615d1ead5f06ae8445d2a8be8364636}{KBC\_STATUS}}, \mbox{\hyperlink{define_8h_a92e32a12d07e5e7237c9993bb1c66728}{WRITE\_MOUSE\_CMD}}) == \mbox{\hyperlink{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}})\textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00021}00021         \textcolor{keywordflow}{if}(\mbox{\hyperlink{mouse_8c_aad881781b569b658cd537da533325585}{mouse\_write\_output}}(\mbox{\hyperlink{define_8h_aa9942f12a871b48b5176e6c9a9f5f174}{OUT\_BUFFER}}, command) == \mbox{\hyperlink{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}})\textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00022}00022         \textcolor{keywordflow}{if}(sys\_inb(\mbox{\hyperlink{define_8h_aa9942f12a871b48b5176e6c9a9f5f174}{OUT\_BUFFER}}, \&mouse\_status))\textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00023}00023     \}\textcolor{keywordflow}{while}(mouse\_status != \mbox{\hyperlink{define_8h_a6f6489887e08bff4887d0bc5dcf214d8}{ACK}});}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00024}00024     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00025}00025 \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00028}\mbox{\hyperlink{mouse_8c_a1ba56a986301d9c423a95beff4037194}{00028}} \textcolor{keywordtype}{int} \mbox{\hyperlink{mouse_8c_a1ba56a986301d9c423a95beff4037194}{mouse\_read\_output}}(\textcolor{keywordtype}{int} port)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00029}00029     uint32\_t status;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00030}00030     uint32\_t command;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00032}00032     \textcolor{keywordflow}{if}(sys\_inb(\mbox{\hyperlink{define_8h_a0615d1ead5f06ae8445d2a8be8364636}{KBC\_STATUS}}, \&status)) \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00034}00034     \textcolor{keywordflow}{if} ((status \& \mbox{\hyperlink{define_8h_ae1ceff90b79b3e4feab3cdab37c950fe}{OUT\_BUFFER\_BIT}})) \{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00035}00035         \textcolor{keywordflow}{if}((status \& \mbox{\hyperlink{define_8h_a81d2ca6759f3f3bf04556b7558aea6bc}{PARITY\_ERROR}}) || (status \& \mbox{\hyperlink{define_8h_ab4556e7b441bc247315ea9a2f3afe79c}{TIME\_OUT\_ERROR}}))\textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00037}00037         sys\_inb(port, \&command);}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00039}00039         \textcolor{keywordflow}{if}(!(status \& BIT(5))) \textcolor{keywordflow}{return} 0xFFFF;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00040}00040         \textcolor{keywordflow}{return} command;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00044}00044     \textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00045}00045 \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00048}\mbox{\hyperlink{mouse_8c_aad881781b569b658cd537da533325585}{00048}} \textcolor{keywordtype}{int} \mbox{\hyperlink{mouse_8c_aad881781b569b658cd537da533325585}{mouse\_write\_output}}(\textcolor{keywordtype}{int} port, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} command)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00049}00049     uint32\_t status;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00050}00050     \textcolor{keywordflow}{if}(sys\_inb(\mbox{\hyperlink{define_8h_a0615d1ead5f06ae8445d2a8be8364636}{KBC\_STATUS}}, \&status))\textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00052}00052     \textcolor{keywordflow}{while}((status \& \mbox{\hyperlink{define_8h_a4896f49aa6f447c44e839a119b2038b6}{IN\_BUFFER\_BIT}}))\{\};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00054}00054     \textcolor{keywordflow}{if}((status \& \mbox{\hyperlink{define_8h_a81d2ca6759f3f3bf04556b7558aea6bc}{PARITY\_ERROR}}) || (status \& \mbox{\hyperlink{define_8h_ab4556e7b441bc247315ea9a2f3afe79c}{TIME\_OUT\_ERROR}}))\textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00056}00056     \textcolor{keywordflow}{if}(sys\_outb(port, command))\textcolor{keywordflow}{return} \mbox{\hyperlink{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00057}00057     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00058}00058     }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00059}00059 \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00061}\mbox{\hyperlink{mouse_8c_a4118e3b7e34070f3c3a6a651776b655e}{00061}} \textcolor{keywordtype}{int} \mbox{\hyperlink{mouse_8c_a4118e3b7e34070f3c3a6a651776b655e}{mouse\_control}}()\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00062}00062     uint32\_t scancode = \mbox{\hyperlink{mouse_8c_a1ba56a986301d9c423a95beff4037194}{mouse\_read\_output}}(\mbox{\hyperlink{define_8h_aa9942f12a871b48b5176e6c9a9f5f174}{OUT\_BUFFER}});}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00063}00063     \textcolor{keywordflow}{if}(scancode == \mbox{\hyperlink{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}})\textcolor{keywordflow}{return} 0xFF;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00065}00065     \textcolor{keywordflow}{if}(\mbox{\hyperlink{mouse_8c_ae75156bc7a78e4c01e1c562438e66f2c}{bytes\_index}} == 0 \&\& (scancode \& \mbox{\hyperlink{define_8h_a6e4a6ed5bec289067d9aefe759abca3e}{MOUSE\_CONTROL\_BIT}})) \mbox{\hyperlink{mouse_8c_a348e5d3a947b5032136f9eeee7222629}{bytes}}[\mbox{\hyperlink{mouse_8c_ae75156bc7a78e4c01e1c562438e66f2c}{bytes\_index}}] = scancode;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00066}00066     \textcolor{keywordflow}{else} \mbox{\hyperlink{mouse_8c_a348e5d3a947b5032136f9eeee7222629}{bytes}}[\mbox{\hyperlink{mouse_8c_ae75156bc7a78e4c01e1c562438e66f2c}{bytes\_index}}] = scancode;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00067}00067     \mbox{\hyperlink{mouse_8c_ae75156bc7a78e4c01e1c562438e66f2c}{bytes\_index}}++;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00069}00069     \textcolor{keywordflow}{if}(\mbox{\hyperlink{mouse_8c_ae75156bc7a78e4c01e1c562438e66f2c}{bytes\_index}} == 3) \{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00070}00070         \mbox{\hyperlink{mouse_8c_ad0aec7c36562ad6b421ed4a8ecd72fc2}{fill\_mouse\_packet}}(scancode);}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00071}00071         \mbox{\hyperlink{mouse_8c_adaf307d3659e610a56c6acf3434baa7f}{move\_mouse}}();}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00072}00072     \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00074}00074     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00075}00075 \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00077}\mbox{\hyperlink{mouse_8c_ad0aec7c36562ad6b421ed4a8ecd72fc2}{00077}} \textcolor{keywordtype}{void} \mbox{\hyperlink{mouse_8c_ad0aec7c36562ad6b421ed4a8ecd72fc2}{fill\_mouse\_packet}}(uint32\_t scancode)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00078}00078     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}} = 0; \mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}<3; \mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}++)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00079}00079         \mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.bytes[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}] = \mbox{\hyperlink{mouse_8c_a348e5d3a947b5032136f9eeee7222629}{bytes}}[\mbox{\hyperlink{global_8h_a5ac05ef73af2f5429ab2c961311728e6}{i}}];}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00080}00080     \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00081}00081     uint32\_t control\_byte = \mbox{\hyperlink{mouse_8c_a348e5d3a947b5032136f9eeee7222629}{bytes}}[0];}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00082}00082     \mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.lb = control\_byte \& \mbox{\hyperlink{define_8h_a3ac6c4732e4b324679fce065ca9bf707}{CLICK\_LEFT}};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00083}00083     \mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.rb = control\_byte \& \mbox{\hyperlink{define_8h_a1c51504fd982b4913ec3b122821897ba}{CLICK\_RIGHT}};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00084}00084     \mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.mb = control\_byte \& \mbox{\hyperlink{define_8h_ace2af6cb129a41ed0dd5cf219f00575b}{CLICK\_MIDDLE}};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00085}00085     \mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.delta\_x = (control\_byte \& \mbox{\hyperlink{define_8h_acb401b7cf6d14fccb64e8b304c9f3ff9}{DELTA\_X}}) ? (\mbox{\hyperlink{define_8h_a411dfcc6fa30fd0536625dfd5f91f22e}{SET\_NEGATIVE}} | \mbox{\hyperlink{mouse_8c_a348e5d3a947b5032136f9eeee7222629}{bytes}}[1]) : \mbox{\hyperlink{mouse_8c_a348e5d3a947b5032136f9eeee7222629}{bytes}}[1];}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00086}00086     \mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.delta\_y = (control\_byte \& \mbox{\hyperlink{define_8h_a1574d066f62fe8032313c2665e55149c}{DELTA\_Y}}) ? (\mbox{\hyperlink{define_8h_a411dfcc6fa30fd0536625dfd5f91f22e}{SET\_NEGATIVE}} | \mbox{\hyperlink{mouse_8c_a348e5d3a947b5032136f9eeee7222629}{bytes}}[2]) : \mbox{\hyperlink{mouse_8c_a348e5d3a947b5032136f9eeee7222629}{bytes}}[2];}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00087}00087     \mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.x\_ov = control\_byte \& \mbox{\hyperlink{define_8h_a82dc3ac9577dabd19733ada75d2822d0}{X\_OVERFLOW}};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00088}00088     \mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.y\_ov = control\_byte \& \mbox{\hyperlink{define_8h_acd54c5569c84fd2d1710cccd190e138a}{Y\_OVERFLOW}};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00090}00090     \mbox{\hyperlink{mouse_8c_ae75156bc7a78e4c01e1c562438e66f2c}{bytes\_index}} = 0;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00091}00091 \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00095}\mbox{\hyperlink{mouse_8c_adaf307d3659e610a56c6acf3434baa7f}{00095}} \textcolor{keywordtype}{void} \mbox{\hyperlink{mouse_8c_adaf307d3659e610a56c6acf3434baa7f}{move\_mouse}}()\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00096}00096     \textcolor{keywordflow}{if}(\mbox{\hyperlink{global_8h_a6051af47ee0e12fc0759559d382d4abf}{mouse\_x}}+\mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.delta\_x < 0 \&\& !\mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.x\_ov)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00097}00097         \mbox{\hyperlink{global_8h_a6051af47ee0e12fc0759559d382d4abf}{mouse\_x}} = 0;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00098}00098     \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00099}00099     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{global_8h_a6051af47ee0e12fc0759559d382d4abf}{mouse\_x}}+\mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.delta\_x > 1140 \&\& !\mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.x\_ov)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00100}00100         \mbox{\hyperlink{global_8h_a6051af47ee0e12fc0759559d382d4abf}{mouse\_x}} = 1140;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00101}00101     \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00102}00102     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(!\mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.x\_ov)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00103}00103         \mbox{\hyperlink{global_8h_a6051af47ee0e12fc0759559d382d4abf}{mouse\_x}}+=\mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.delta\_x;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00104}00104     \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00106}00106     \textcolor{keywordflow}{if}(\mbox{\hyperlink{global_8h_a16e2b32644962a3834c6f7d94d67fa10}{mouse\_y}}-\/\mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.delta\_y < 0 \&\& !\mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.y\_ov)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00107}00107         \mbox{\hyperlink{global_8h_a16e2b32644962a3834c6f7d94d67fa10}{mouse\_y}} = 0;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00108}00108     \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00109}00109     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{global_8h_a16e2b32644962a3834c6f7d94d67fa10}{mouse\_y}}-\/\mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.delta\_y > 850 \&\& !\mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.y\_ov)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00110}00110         \mbox{\hyperlink{global_8h_a16e2b32644962a3834c6f7d94d67fa10}{mouse\_y}} = 850;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00111}00111     \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00112}00112     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(!\mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.y\_ov)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00113}00113         \mbox{\hyperlink{global_8h_a16e2b32644962a3834c6f7d94d67fa10}{mouse\_y}}-\/=\mbox{\hyperlink{global_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}}.delta\_y;}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00114}00114     \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00115}00115 \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00116}\mbox{\hyperlink{mouse_8c_ab485f93fc54f761b3b6f090d99bf9261}{00116}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{mouse_8c_ab485f93fc54f761b3b6f090d99bf9261}{mouse\_position}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} xi, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} yi, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} xf, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} yf)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00117}00117     \textcolor{keywordflow}{if}(\mbox{\hyperlink{global_8h_a6051af47ee0e12fc0759559d382d4abf}{mouse\_x}} >= xi \&\& \mbox{\hyperlink{global_8h_a6051af47ee0e12fc0759559d382d4abf}{mouse\_x}} <= xf \&\& mouse\_y <= yf \&\& mouse\_y >= yi)\{}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00118}00118         \mbox{\hyperlink{global_8h_a6d7d0f4fe93cff4adf733297a127a9d3}{mouse\_hover}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00119}00119         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00120}00120     \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00121}00121     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00122}00122 \}}
+\DoxyCodeLine{\Hypertarget{mouse_8c_source_l00123}00123 }
+
+\end{DoxyCode}

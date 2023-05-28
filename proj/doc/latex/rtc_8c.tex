@@ -1,0 +1,163 @@
+\hypertarget{rtc_8c}{}\doxysection{src/devices/rtc.c File Reference}
+\label{rtc_8c}\index{src/devices/rtc.c@{src/devices/rtc.c}}
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t() \mbox{\hyperlink{rtc_8c_a3524153b3a2cf4a9276c7e8ff8ed101f}{rtc\+\_\+subscribe}} ()
+\begin{DoxyCompactList}\small\item\em Subscribes the real time clock device, setting into the interrupt mask the respective real time clock hook id bit to 1. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{rtc_8c_a2a6094aed95b8610afb0493578ecb855}{rtc\+\_\+unsubscribe}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes the real time clock device, setting into the interrupt mask the respective real time clock hook id bit to 0. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{rtc_8c_ae34ea626b6dcc56a79ffa014d15bd905}{update}} (bool flag)
+\begin{DoxyCompactList}\small\item\em Allows or does not allow interrupts in the real time clock. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{rtc_8c_a3c36593cadd0ab065d627d62b00eb62e}{wait}} ()
+\begin{DoxyCompactList}\small\item\em Waits while the real time clock updates the values of the time. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{rtc_8c_a0b9ae809cf571f61e54712a23c65348e}{rtc\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Handles the interrupts of the real time clock, calling the reading function to update the array that stores the values of the time. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{rtc_8c_a4d1b70cfd76f4646e64e88c892a35863}{rtc\+\_\+read}} (uint8\+\_\+t command, uint8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Reads the seconds, minutes, hours, day, month and year from real time clock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rtc_8c_a9fc22e6d8203dddf397ca66d65055d1d}{hook\+\_\+id\+\_\+rtc}} = \mbox{\hyperlink{define_8h_ac93f7885d306a82906ee65bdbf0db65d}{RTC\+\_\+\+HOOK\+\_\+\+ID}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rtc_8c_a0b9ae809cf571f61e54712a23c65348e}\label{rtc_8c_a0b9ae809cf571f61e54712a23c65348e}} 
+\index{rtc.c@{rtc.c}!rtc\_ih@{rtc\_ih}}
+\index{rtc\_ih@{rtc\_ih}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_ih()}{rtc\_ih()}}
+{\footnotesize\ttfamily void() rtc\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the interrupts of the real time clock, calling the reading function to update the array that stores the values of the time. 
+
+
+
+Definition at line \mbox{\hyperlink{rtc_8c_source_l00043}{43}} of file \mbox{\hyperlink{rtc_8c_source}{rtc.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{rtc_8c_a0b9ae809cf571f61e54712a23c65348e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rtc_8c_a4d1b70cfd76f4646e64e88c892a35863}\label{rtc_8c_a4d1b70cfd76f4646e64e88c892a35863}} 
+\index{rtc.c@{rtc.c}!rtc\_read@{rtc\_read}}
+\index{rtc\_read@{rtc\_read}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_read()}{rtc\_read()}}
+{\footnotesize\ttfamily void() rtc\+\_\+read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command,  }\item[{uint8\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Reads the seconds, minutes, hours, day, month and year from real time clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Command to sent to the real time clock adress in order to let it read the time values \\
+\hline
+{\em index} & The index of the value to read \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rtc_8c_source_l00059}{59}} of file \mbox{\hyperlink{rtc_8c_source}{rtc.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{rtc_8c_a4d1b70cfd76f4646e64e88c892a35863_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rtc_8c_a3524153b3a2cf4a9276c7e8ff8ed101f}\label{rtc_8c_a3524153b3a2cf4a9276c7e8ff8ed101f}} 
+\index{rtc.c@{rtc.c}!rtc\_subscribe@{rtc\_subscribe}}
+\index{rtc\_subscribe@{rtc\_subscribe}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_subscribe()}{rtc\_subscribe()}}
+{\footnotesize\ttfamily uint8\+\_\+t() rtc\+\_\+subscribe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Subscribes the real time clock device, setting into the interrupt mask the respective real time clock hook id bit to 1. 
+
+\begin{DoxyReturn}{Returns}
+Returns the bit number that was set 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{rtc_8c_source_l00005}{5}} of file \mbox{\hyperlink{rtc_8c_source}{rtc.\+c}}.
+
+\mbox{\Hypertarget{rtc_8c_a2a6094aed95b8610afb0493578ecb855}\label{rtc_8c_a2a6094aed95b8610afb0493578ecb855}} 
+\index{rtc.c@{rtc.c}!rtc\_unsubscribe@{rtc\_unsubscribe}}
+\index{rtc\_unsubscribe@{rtc\_unsubscribe}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_unsubscribe()}{rtc\_unsubscribe()}}
+{\footnotesize\ttfamily int() rtc\+\_\+unsubscribe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes the real time clock device, setting into the interrupt mask the respective real time clock hook id bit to 0. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{rtc_8c_source_l00010}{10}} of file \mbox{\hyperlink{rtc_8c_source}{rtc.\+c}}.
+
+\mbox{\Hypertarget{rtc_8c_ae34ea626b6dcc56a79ffa014d15bd905}\label{rtc_8c_ae34ea626b6dcc56a79ffa014d15bd905}} 
+\index{rtc.c@{rtc.c}!update@{update}}
+\index{update@{update}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily int() update (\begin{DoxyParamCaption}\item[{bool}]{flag }\end{DoxyParamCaption})}
+
+
+
+Allows or does not allow interrupts in the real time clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & Boolean to decide whether if real time clock interrupts are allowed or not. Has value true if allowed and false if otherwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{rtc_8c_source_l00015}{15}} of file \mbox{\hyperlink{rtc_8c_source}{rtc.\+c}}.
+
+\mbox{\Hypertarget{rtc_8c_a3c36593cadd0ab065d627d62b00eb62e}\label{rtc_8c_a3c36593cadd0ab065d627d62b00eb62e}} 
+\index{rtc.c@{rtc.c}!wait@{wait}}
+\index{wait@{wait}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily int() wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Waits while the real time clock updates the values of the time. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{rtc_8c_source_l00029}{29}} of file \mbox{\hyperlink{rtc_8c_source}{rtc.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rtc_8c_a9fc22e6d8203dddf397ca66d65055d1d}\label{rtc_8c_a9fc22e6d8203dddf397ca66d65055d1d}} 
+\index{rtc.c@{rtc.c}!hook\_id\_rtc@{hook\_id\_rtc}}
+\index{hook\_id\_rtc@{hook\_id\_rtc}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{hook\_id\_rtc}{hook\_id\_rtc}}
+{\footnotesize\ttfamily int hook\+\_\+id\+\_\+rtc = \mbox{\hyperlink{define_8h_ac93f7885d306a82906ee65bdbf0db65d}{RTC\+\_\+\+HOOK\+\_\+\+ID}}}
+
+
+
+Definition at line \mbox{\hyperlink{rtc_8c_source_l00003}{3}} of file \mbox{\hyperlink{rtc_8c_source}{rtc.\+c}}.
+

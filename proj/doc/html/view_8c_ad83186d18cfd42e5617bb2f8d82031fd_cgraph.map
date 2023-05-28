@@ -1,0 +1,4 @@
+<map id="is_occupied" name="is_occupied">
+<area shape="rect" id="node1" title="Checks in the prev_buffer for collisions." alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#a35fce9c592fbff1ea083e9dc48a7081e" title="Eliminates monster in a certain position passed by argument." alt="" coords="144,5,233,32"/>
+</map>

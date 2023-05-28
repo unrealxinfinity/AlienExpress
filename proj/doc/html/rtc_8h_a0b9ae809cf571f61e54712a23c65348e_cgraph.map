@@ -1,0 +1,5 @@
+<map id="rtc_ih" name="rtc_ih">
+<area shape="rect" id="node1" title="Handles the interrupts of the real time clock, calling the reading function to update the array that ..." alt="" coords="5,5,59,32"/>
+<area shape="rect" id="node2" href="$rtc_8c.html#a4d1b70cfd76f4646e64e88c892a35863" title="Reads the seconds, minutes, hours, day, month and year from real time clock." alt="" coords="107,5,175,32"/>
+<area shape="rect" id="node3" href="$rtc_8c.html#a3c36593cadd0ab065d627d62b00eb62e" title="Waits while the real time clock updates the values of the time." alt="" coords="223,5,267,32"/>
+</map>

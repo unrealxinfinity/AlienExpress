@@ -1,0 +1,11 @@
+<map id="draw_watch" name="draw_watch">
+<area shape="rect" id="node1" title="Calls drawing function to draw watch." alt="" coords="5,56,95,83"/>
+<area shape="rect" id="node2" href="$view_8c.html#a164a9eeb26da4992f649abb855216e4a" title="Calls drawing function on frame_buffer on each pixel of image passed by argument." alt="" coords="181,5,229,32"/>
+<area shape="rect" id="node4" href="$watch_8c.html#a4d7b9dff337c1bcb1246dcb372a954b5" title="Calls number drawing function to draw values of rtc." alt="" coords="170,56,240,83"/>
+<area shape="rect" id="node9" href="$player_8c.html#a45470fb2ac0252923f17300da2820c3b" title="Gets the value of the inventory index currently being used." alt="" coords="143,107,267,133"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#ab20eed5c22b21f149e761aa71487aea8" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="323,5,405,32"/>
+<area shape="rect" id="node5" href="$view_8c.html#ad168c686d7996c549bfd3d4d1beb5017" title="Calls drawing function to draw a number passed by argument." alt="" coords="315,56,413,83"/>
+<area shape="rect" id="node8" href="$view_8c.html#a14135df9df90701b8ecdaa94d06f18d8" title="Helper function to set position and draw letters and symbols." alt="" coords="329,107,400,133"/>
+<area shape="rect" id="node6" href="$view_8c.html#a806f64f655004972017f12dc7b44e653" title="Calls drawing function on frame_buffer on each pixel of image passed by argument on char images (lett..." alt="" coords="461,81,567,108"/>
+<area shape="rect" id="node7" href="$graphics_8c.html#aaf12b562a02a21bc9172de234a707c83" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="615,81,747,108"/>
+</map>

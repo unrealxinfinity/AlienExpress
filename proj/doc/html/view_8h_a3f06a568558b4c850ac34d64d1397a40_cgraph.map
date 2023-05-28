@@ -1,0 +1,4 @@
+<map id="init_inventory" name="init_inventory">
+<area shape="rect" id="node1" title="Loads and stores inventory xpm and other inventory related variables." alt="" coords="5,5,102,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#ab3749554144885b5029f6bf77aaa7c7a" title="Loads and sets the variables of struct img_t of a xpm." alt="" coords="150,5,231,32"/>
+</map>

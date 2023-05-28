@@ -1,0 +1,5 @@
+<map id="manage_collision" name="manage_collision">
+<area shape="rect" id="node1" title="Checks in the frame_buffer for collisions." alt="" coords="5,31,127,57"/>
+<area shape="rect" id="node2" href="$view_8c.html#a35fce9c592fbff1ea083e9dc48a7081e" title="Eliminates monster in a certain position passed by argument." alt="" coords="175,5,264,32"/>
+<area shape="rect" id="node3" href="$view_8c.html#affd2e4622b63d5c571629d2c0e108136" title="Eliminates wolf in a certain position passed by argument." alt="" coords="187,56,252,83"/>
+</map>

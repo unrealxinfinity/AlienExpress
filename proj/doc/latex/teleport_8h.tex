@@ -1,0 +1,122 @@
+\hypertarget{teleport_8h}{}\doxysection{src/\+Entities/teleport.h File Reference}
+\label{teleport_8h}\index{src/Entities/teleport.h@{src/Entities/teleport.h}}
+{\ttfamily \#include \char`\"{}../macros/includes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../load/view.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{teleport_8h_aa201bcb0f8fb745d5be420b614c562c4}{draw\+\_\+teleports}} ()
+\begin{DoxyCompactList}\small\item\em Calls drawing function to draw the teleports and also calls the animation function to animate the score. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{teleport_8h_a827261800a27b1078651ec6b44d508fa}{score\+\_\+animation}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} $\ast$character, int type)
+\begin{DoxyCompactList}\small\item\em Animates the score after delivering a package to a teleport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{teleport_8h_afc82a8ae41796717d038e574614f304f}{pick\+\_\+draw\+\_\+type}} ()
+\begin{DoxyCompactList}\small\item\em Picks the type of coloring format to draw the score numbers. If 0 then it draws normally, if 1 it draws with green coloring, if 4 it draws with red coloring. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{teleport_8h_a9d91168b1662b69ed23bb1672427f63a}{draw\+\_\+score}} (int type)
+\begin{DoxyCompactList}\small\item\em Calls number drawing function to draw the score numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{teleport_8h_a9d91168b1662b69ed23bb1672427f63a}\label{teleport_8h_a9d91168b1662b69ed23bb1672427f63a}} 
+\index{teleport.h@{teleport.h}!draw\_score@{draw\_score}}
+\index{draw\_score@{draw\_score}!teleport.h@{teleport.h}}
+\doxysubsubsection{\texorpdfstring{draw\_score()}{draw\_score()}}
+{\footnotesize\ttfamily void draw\+\_\+score (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Calls number drawing function to draw the score numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of coloring format of the score numbers. If 0 then it draws normally, if 1 it draws with green coloring, if 4 it draws with red coloring \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{teleport_8c_source_l00082}{82}} of file \mbox{\hyperlink{teleport_8c_source}{teleport.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{teleport_8h_a9d91168b1662b69ed23bb1672427f63a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{teleport_8h_aa201bcb0f8fb745d5be420b614c562c4}\label{teleport_8h_aa201bcb0f8fb745d5be420b614c562c4}} 
+\index{teleport.h@{teleport.h}!draw\_teleports@{draw\_teleports}}
+\index{draw\_teleports@{draw\_teleports}!teleport.h@{teleport.h}}
+\doxysubsubsection{\texorpdfstring{draw\_teleports()}{draw\_teleports()}}
+{\footnotesize\ttfamily void draw\+\_\+teleports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function to draw the teleports and also calls the animation function to animate the score. 
+
+
+
+Definition at line \mbox{\hyperlink{teleport_8c_source_l00006}{6}} of file \mbox{\hyperlink{teleport_8c_source}{teleport.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{teleport_8h_aa201bcb0f8fb745d5be420b614c562c4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{teleport_8h_afc82a8ae41796717d038e574614f304f}\label{teleport_8h_afc82a8ae41796717d038e574614f304f}} 
+\index{teleport.h@{teleport.h}!pick\_draw\_type@{pick\_draw\_type}}
+\index{pick\_draw\_type@{pick\_draw\_type}!teleport.h@{teleport.h}}
+\doxysubsubsection{\texorpdfstring{pick\_draw\_type()}{pick\_draw\_type()}}
+{\footnotesize\ttfamily void pick\+\_\+draw\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Picks the type of coloring format to draw the score numbers. If 0 then it draws normally, if 1 it draws with green coloring, if 4 it draws with red coloring. 
+
+
+
+Definition at line \mbox{\hyperlink{teleport_8c_source_l00070}{70}} of file \mbox{\hyperlink{teleport_8c_source}{teleport.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{teleport_8h_afc82a8ae41796717d038e574614f304f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{teleport_8h_a827261800a27b1078651ec6b44d508fa}\label{teleport_8h_a827261800a27b1078651ec6b44d508fa}} 
+\index{teleport.h@{teleport.h}!score\_animation@{score\_animation}}
+\index{score\_animation@{score\_animation}!teleport.h@{teleport.h}}
+\doxysubsubsection{\texorpdfstring{score\_animation()}{score\_animation()}}
+{\footnotesize\ttfamily int score\+\_\+animation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}} $\ast$}]{character,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Animates the score after delivering a package to a teleport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & Teleport that was delivered a package onto \\
+\hline
+{\em type} & Type of coloring format of the score numbers. If 0 then it draws normally, if 1 it draws with green coloring, if 4 it draws with red coloring \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{teleport_8c_source_l00026}{26}} of file \mbox{\hyperlink{teleport_8c_source}{teleport.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{teleport_8h_a827261800a27b1078651ec6b44d508fa_cgraph}
+\end{center}
+\end{figure}

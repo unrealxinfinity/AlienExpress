@@ -1,0 +1,6 @@
+<map id="mouse_control" name="mouse_control">
+<area shape="rect" id="node1" title="Handles the interrupts of the mouse." alt="" coords="5,56,112,83"/>
+<area shape="rect" id="node2" href="$mouse_8c.html#ad0aec7c36562ad6b421ed4a8ecd72fc2" title="Fills the struct mouse_packet with values of the inputs of the mouse." alt="" coords="165,5,290,32"/>
+<area shape="rect" id="node3" href="$mouse_8c.html#a1ba56a986301d9c423a95beff4037194" title="Reads the value of input made by user from a port given by argument." alt="" coords="160,56,295,83"/>
+<area shape="rect" id="node4" href="$mouse_8c.html#adaf307d3659e610a56c6acf3434baa7f" title="Moves the mouse accordingly based on the values stores in the mouse_packet." alt="" coords="179,107,276,133"/>
+</map>

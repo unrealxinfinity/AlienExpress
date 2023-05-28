@@ -1,0 +1,100 @@
+\hypertarget{inventory_8c}{}\doxysection{src/\+Entities/inventory.c File Reference}
+\label{inventory_8c}\index{src/Entities/inventory.c@{src/Entities/inventory.c}}
+{\ttfamily \#include \char`\"{}inventory.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{inventory_8c_af17bea04c910ab49aca091b1ba1aa865}{draw\+\_\+inventory}} ()
+\begin{DoxyCompactList}\small\item\em Calls the drawing function to draw the inventory images and also the items inside the inventory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inventory_8c_a1a264377a2a3622adb979ed4e9a3448e}{is\+\_\+inventory\+\_\+full}} ()
+\begin{DoxyCompactList}\small\item\em Determines whether there is space on the inventory or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inventory_8c_a3dbb1360846f7b69e2f783ad731df620}{remove\+\_\+from\+\_\+equipment}} (int index)
+\begin{DoxyCompactList}\small\item\em Removes item from equipment, placing it on the ground/board. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inventory_8c_aee3f502bd5e787e34a33875d936e0c0a}{count\+\_\+packages}} ()
+\begin{DoxyCompactList}\small\item\em Counts the number of packages that is in the player\textquotesingle{}s inventory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{inventory_8c_aee3f502bd5e787e34a33875d936e0c0a}\label{inventory_8c_aee3f502bd5e787e34a33875d936e0c0a}} 
+\index{inventory.c@{inventory.c}!count\_packages@{count\_packages}}
+\index{count\_packages@{count\_packages}!inventory.c@{inventory.c}}
+\doxysubsubsection{\texorpdfstring{count\_packages()}{count\_packages()}}
+{\footnotesize\ttfamily int count\+\_\+packages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Counts the number of packages that is in the player\textquotesingle{}s inventory. 
+
+\begin{DoxyReturn}{Returns}
+Returns the count of packages 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inventory_8c_source_l00064}{64}} of file \mbox{\hyperlink{inventory_8c_source}{inventory.\+c}}.
+
+\mbox{\Hypertarget{inventory_8c_af17bea04c910ab49aca091b1ba1aa865}\label{inventory_8c_af17bea04c910ab49aca091b1ba1aa865}} 
+\index{inventory.c@{inventory.c}!draw\_inventory@{draw\_inventory}}
+\index{draw\_inventory@{draw\_inventory}!inventory.c@{inventory.c}}
+\doxysubsubsection{\texorpdfstring{draw\_inventory()}{draw\_inventory()}}
+{\footnotesize\ttfamily void draw\+\_\+inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls the drawing function to draw the inventory images and also the items inside the inventory. 
+
+
+
+Definition at line \mbox{\hyperlink{inventory_8c_source_l00003}{3}} of file \mbox{\hyperlink{inventory_8c_source}{inventory.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inventory_8c_af17bea04c910ab49aca091b1ba1aa865_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inventory_8c_a1a264377a2a3622adb979ed4e9a3448e}\label{inventory_8c_a1a264377a2a3622adb979ed4e9a3448e}} 
+\index{inventory.c@{inventory.c}!is\_inventory\_full@{is\_inventory\_full}}
+\index{is\_inventory\_full@{is\_inventory\_full}!inventory.c@{inventory.c}}
+\doxysubsubsection{\texorpdfstring{is\_inventory\_full()}{is\_inventory\_full()}}
+{\footnotesize\ttfamily int is\+\_\+inventory\+\_\+full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Determines whether there is space on the inventory or not. 
+
+\begin{DoxyReturn}{Returns}
+Returns -\/1 if there isn\textquotesingle{}t and if there is it returns the inventory index of the nearest free place 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inventory_8c_source_l00029}{29}} of file \mbox{\hyperlink{inventory_8c_source}{inventory.\+c}}.
+
+\mbox{\Hypertarget{inventory_8c_a3dbb1360846f7b69e2f783ad731df620}\label{inventory_8c_a3dbb1360846f7b69e2f783ad731df620}} 
+\index{inventory.c@{inventory.c}!remove\_from\_equipment@{remove\_from\_equipment}}
+\index{remove\_from\_equipment@{remove\_from\_equipment}!inventory.c@{inventory.c}}
+\doxysubsubsection{\texorpdfstring{remove\_from\_equipment()}{remove\_from\_equipment()}}
+{\footnotesize\ttfamily void remove\+\_\+from\+\_\+equipment (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Removes item from equipment, placing it on the ground/board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of position of equipment where item currently resides \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inventory_8c_source_l00038}{38}} of file \mbox{\hyperlink{inventory_8c_source}{inventory.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{inventory_8c_a3dbb1360846f7b69e2f783ad731df620_cgraph}
+\end{center}
+\end{figure}

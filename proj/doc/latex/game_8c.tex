@@ -1,0 +1,304 @@
+\hypertarget{game_8c}{}\doxysection{src/game\+\_\+state/game.c File Reference}
+\label{game_8c}\index{src/game\_state/game.c@{src/game\_state/game.c}}
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game_8c_a0fc3becd2b2ae6ca9716da98ddf7ea3b}{set\+\_\+state}} (\mbox{\hyperlink{enum_8h_a4edce1ca040716922b6e4a79be4e414d}{game\+\_\+state\+\_\+t}} state)
+\begin{DoxyCompactList}\small\item\em Changes the current value of the state of the struct game\+\_\+state\+\_\+t. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_a690e7c3f471f0ff19bd594c5ccfd7afa}{keyboard\+\_\+ih}} (uint32\+\_\+t scancode)
+\begin{DoxyCompactList}\small\item\em Calls the keyboard interrupt handlers of the current state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_afbf329f85f55c4f9099b65d487446af2}{mouse\+\_\+proj\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Calls the mouse interrupt handlers of the current state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game_8c_ab8f724a6981cd30476e9a4857a15fd6a}{control\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Calls set\+\_\+state function whenever a certain action is made in a current state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_a2d6df225b25002d4eee66fae9a68fed0}{draw\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Calls the drawing functions of the current state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_a03aede8ff91764482bb5e9accfae9b4f}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes all the devices, Calls functions that load and store xpms. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_a04e415c2c57bcb7efab2055169302eed}{game\+\_\+loop}} ()
+\begin{DoxyCompactList}\small\item\em Game loop where the program registers all the interrupts and acts accordingly depending on which one was utilized. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_ab565b98afe74cf9e2bb77aab76c5b2f7}{terminate}} ()
+\begin{DoxyCompactList}\small\item\em Terminates all devices and frees buffer memory space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_a6bdcfe1b8246db3682ddf162252d2107}{timer\+\_\+bit\+\_\+no}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_ac46e3b9be030a4bf04e76f9885b76d99}{kbd\+\_\+bit\+\_\+no}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_a33926598f4dd9062811599f0bf843da8}{mouse\+\_\+bit\+\_\+no}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_ad396a1eb93b26054a63e548cda1e3727}{rtc\+\_\+bit\+\_\+no}}
+\item 
+message \mbox{\hyperlink{game_8c_a9a27098ef2c3f4770fd8d4102a089c35}{msg}}
+\item 
+\mbox{\hyperlink{structgame__info__t}{game\+\_\+info\+\_\+t}} \mbox{\hyperlink{game_8c_a7f9442ba2b3c75118efe0f071a1771d3}{game\+\_\+info}} = \{\mbox{\hyperlink{enum_8h_a4edce1ca040716922b6e4a79be4e414da4c40e60bc71a32b924ce1f08d57f9721}{MENU}}, \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35eca13d000b4d7dc70d90239b7430d1eb6b2}{START}}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game_8c_ab8f724a6981cd30476e9a4857a15fd6a}\label{game_8c_ab8f724a6981cd30476e9a4857a15fd6a}} 
+\index{game.c@{game.c}!control\_state@{control\_state}}
+\index{control\_state@{control\_state}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{control\_state()}{control\_state()}}
+{\footnotesize\ttfamily bool control\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls set\+\_\+state function whenever a certain action is made in a current state. 
+
+\begin{DoxyReturn}{Returns}
+Returns true when the user quits the game and false when he doesn\textquotesingle{}t 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00063}{63}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_ab8f724a6981cd30476e9a4857a15fd6a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_a2d6df225b25002d4eee66fae9a68fed0}\label{game_8c_a2d6df225b25002d4eee66fae9a68fed0}} 
+\index{game.c@{game.c}!draw\_state@{draw\_state}}
+\index{draw\_state@{draw\_state}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{draw\_state()}{draw\_state()}}
+{\footnotesize\ttfamily int draw\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls the drawing functions of the current state. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 if current state isn\textquotesingle{}t available 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00107}{107}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{game_8c_a2d6df225b25002d4eee66fae9a68fed0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_a04e415c2c57bcb7efab2055169302eed}\label{game_8c_a04e415c2c57bcb7efab2055169302eed}} 
+\index{game.c@{game.c}!game\_loop@{game\_loop}}
+\index{game\_loop@{game\_loop}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{game\_loop()}{game\_loop()}}
+{\footnotesize\ttfamily int game\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Game loop where the program registers all the interrupts and acts accordingly depending on which one was utilized. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00163}{163}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{game_8c_a04e415c2c57bcb7efab2055169302eed_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_a03aede8ff91764482bb5e9accfae9b4f}\label{game_8c_a03aede8ff91764482bb5e9accfae9b4f}} 
+\index{game.c@{game.c}!initialize@{initialize}}
+\index{initialize@{initialize}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily int initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes all the devices, Calls functions that load and store xpms. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00138}{138}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a03aede8ff91764482bb5e9accfae9b4f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_a690e7c3f471f0ff19bd594c5ccfd7afa}\label{game_8c_a690e7c3f471f0ff19bd594c5ccfd7afa}} 
+\index{game.c@{game.c}!keyboard\_ih@{keyboard\_ih}}
+\index{keyboard\_ih@{keyboard\_ih}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{keyboard\_ih()}{keyboard\_ih()}}
+{\footnotesize\ttfamily int keyboard\+\_\+ih (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Calls the keyboard interrupt handlers of the current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & Keyboard input value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00025}{25}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a690e7c3f471f0ff19bd594c5ccfd7afa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_afbf329f85f55c4f9099b65d487446af2}\label{game_8c_afbf329f85f55c4f9099b65d487446af2}} 
+\index{game.c@{game.c}!mouse\_proj\_ih@{mouse\_proj\_ih}}
+\index{mouse\_proj\_ih@{mouse\_proj\_ih}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_proj\_ih()}{mouse\_proj\_ih()}}
+{\footnotesize\ttfamily int mouse\+\_\+proj\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls the mouse interrupt handlers of the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00043}{43}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_afbf329f85f55c4f9099b65d487446af2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_a0fc3becd2b2ae6ca9716da98ddf7ea3b}\label{game_8c_a0fc3becd2b2ae6ca9716da98ddf7ea3b}} 
+\index{game.c@{game.c}!set\_state@{set\_state}}
+\index{set\_state@{set\_state}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{set\_state()}{set\_state()}}
+{\footnotesize\ttfamily void set\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enum_8h_a4edce1ca040716922b6e4a79be4e414d}{game\+\_\+state\+\_\+t}}}]{state }\end{DoxyParamCaption})}
+
+
+
+Changes the current value of the state of the struct game\+\_\+state\+\_\+t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The state to which the state of the game is going to change into \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00012}{12}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{game_8c_a0fc3becd2b2ae6ca9716da98ddf7ea3b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_ab565b98afe74cf9e2bb77aab76c5b2f7}\label{game_8c_ab565b98afe74cf9e2bb77aab76c5b2f7}} 
+\index{game.c@{game.c}!terminate@{terminate}}
+\index{terminate@{terminate}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily int terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Terminates all devices and frees buffer memory space. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00214}{214}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_ab565b98afe74cf9e2bb77aab76c5b2f7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{game_8c_a7f9442ba2b3c75118efe0f071a1771d3}\label{game_8c_a7f9442ba2b3c75118efe0f071a1771d3}} 
+\index{game.c@{game.c}!game\_info@{game\_info}}
+\index{game\_info@{game\_info}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{game\_info}{game\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgame__info__t}{game\+\_\+info\+\_\+t}} game\+\_\+info = \{\mbox{\hyperlink{enum_8h_a4edce1ca040716922b6e4a79be4e414da4c40e60bc71a32b924ce1f08d57f9721}{MENU}}, \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35eca13d000b4d7dc70d90239b7430d1eb6b2}{START}}\}}
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00009}{9}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+\mbox{\Hypertarget{game_8c_ac46e3b9be030a4bf04e76f9885b76d99}\label{game_8c_ac46e3b9be030a4bf04e76f9885b76d99}} 
+\index{game.c@{game.c}!kbd\_bit\_no@{kbd\_bit\_no}}
+\index{kbd\_bit\_no@{kbd\_bit\_no}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{kbd\_bit\_no}{kbd\_bit\_no}}
+{\footnotesize\ttfamily uint8\+\_\+t kbd\+\_\+bit\+\_\+no}
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00005}{5}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+\mbox{\Hypertarget{game_8c_a33926598f4dd9062811599f0bf843da8}\label{game_8c_a33926598f4dd9062811599f0bf843da8}} 
+\index{game.c@{game.c}!mouse\_bit\_no@{mouse\_bit\_no}}
+\index{mouse\_bit\_no@{mouse\_bit\_no}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_bit\_no}{mouse\_bit\_no}}
+{\footnotesize\ttfamily uint8\+\_\+t mouse\+\_\+bit\+\_\+no}
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00006}{6}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+\mbox{\Hypertarget{game_8c_a9a27098ef2c3f4770fd8d4102a089c35}\label{game_8c_a9a27098ef2c3f4770fd8d4102a089c35}} 
+\index{game.c@{game.c}!msg@{msg}}
+\index{msg@{msg}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily message msg}
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00008}{8}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+\mbox{\Hypertarget{game_8c_ad396a1eb93b26054a63e548cda1e3727}\label{game_8c_ad396a1eb93b26054a63e548cda1e3727}} 
+\index{game.c@{game.c}!rtc\_bit\_no@{rtc\_bit\_no}}
+\index{rtc\_bit\_no@{rtc\_bit\_no}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_bit\_no}{rtc\_bit\_no}}
+{\footnotesize\ttfamily uint8\+\_\+t rtc\+\_\+bit\+\_\+no}
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00007}{7}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+\mbox{\Hypertarget{game_8c_a6bdcfe1b8246db3682ddf162252d2107}\label{game_8c_a6bdcfe1b8246db3682ddf162252d2107}} 
+\index{game.c@{game.c}!timer\_bit\_no@{timer\_bit\_no}}
+\index{timer\_bit\_no@{timer\_bit\_no}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{timer\_bit\_no}{timer\_bit\_no}}
+{\footnotesize\ttfamily uint8\+\_\+t timer\+\_\+bit\+\_\+no}
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00004}{4}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+

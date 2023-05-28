@@ -1,0 +1,10 @@
+<map id="draw_teleports" name="draw_teleports">
+<area shape="rect" id="node1" title="Calls drawing function to draw the teleports and also calls the animation function to animate the sco..." alt="" coords="5,56,111,83"/>
+<area shape="rect" id="node2" href="$view_8c.html#a164a9eeb26da4992f649abb855216e4a" title="Calls drawing function on frame_buffer on each pixel of image passed by argument." alt="" coords="193,5,241,32"/>
+<area shape="rect" id="node4" href="$view_8c.html#a594f1dfcf0028dbdf461531a604ddc78" title="Calls number drawing function with image and coordinates passed by argument and number value based on..." alt="" coords="323,81,449,108"/>
+<area shape="rect" id="node8" href="$teleport_8c.html#a827261800a27b1078651ec6b44d508fa" title="Animates the score after delivering a package to a teleport." alt="" coords="159,107,275,133"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#ab20eed5c22b21f149e761aa71487aea8" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="345,5,427,32"/>
+<area shape="rect" id="node5" href="$view_8c.html#ad168c686d7996c549bfd3d4d1beb5017" title="Calls drawing function to draw a number passed by argument." alt="" coords="497,81,596,108"/>
+<area shape="rect" id="node6" href="$view_8c.html#a806f64f655004972017f12dc7b44e653" title="Calls drawing function on frame_buffer on each pixel of image passed by argument on char images (lett..." alt="" coords="644,81,749,108"/>
+<area shape="rect" id="node7" href="$graphics_8c.html#aaf12b562a02a21bc9172de234a707c83" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="797,81,929,108"/>
+</map>

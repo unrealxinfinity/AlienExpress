@@ -1,0 +1,105 @@
+\hypertarget{package_8h}{}\doxysection{src/\+Items/package.h File Reference}
+\label{package_8h}\index{src/Items/package.h@{src/Items/package.h}}
+{\ttfamily \#include \char`\"{}../macros/includes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../load/view.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pizza.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ammo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pistol.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}boots.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}backpack.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bone.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grenade.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}watch.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{package_8h_a2c45f09f2d6a39150a819d5cddb6e29e}{draw\+\_\+packages}} ()
+\begin{DoxyCompactList}\small\item\em Calls drawing function to draw packages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{package_8h_a40751647261be838cc425fb684c0a394}{use\+\_\+item}} (int index)
+\begin{DoxyCompactList}\small\item\em Calls functions to use item being currently help. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{package_8h_a130e52ed2fb0f029c53471b0a279d95f}{get\+\_\+item}} (int index, int rate)
+\begin{DoxyCompactList}\small\item\em Randomizes the item to be received after opening a package. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{package_8h_a2c45f09f2d6a39150a819d5cddb6e29e}\label{package_8h_a2c45f09f2d6a39150a819d5cddb6e29e}} 
+\index{package.h@{package.h}!draw\_packages@{draw\_packages}}
+\index{draw\_packages@{draw\_packages}!package.h@{package.h}}
+\doxysubsubsection{\texorpdfstring{draw\_packages()}{draw\_packages()}}
+{\footnotesize\ttfamily void draw\+\_\+packages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function to draw packages. 
+
+
+
+Definition at line \mbox{\hyperlink{package_8c_source_l00005}{5}} of file \mbox{\hyperlink{package_8c_source}{package.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{package_8h_a2c45f09f2d6a39150a819d5cddb6e29e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{package_8h_a130e52ed2fb0f029c53471b0a279d95f}\label{package_8h_a130e52ed2fb0f029c53471b0a279d95f}} 
+\index{package.h@{package.h}!get\_item@{get\_item}}
+\index{get\_item@{get\_item}!package.h@{package.h}}
+\doxysubsubsection{\texorpdfstring{get\_item()}{get\_item()}}
+{\footnotesize\ttfamily int get\+\_\+item (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{rate }\end{DoxyParamCaption})}
+
+
+
+Randomizes the item to be received after opening a package. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & inventory index position on which the item will be put \\
+\hline
+{\em rate} & the randomizing rate for the chosen item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 1 if item was found and 0 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{package_8c_source_l00079}{79}} of file \mbox{\hyperlink{package_8c_source}{package.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{package_8h_a130e52ed2fb0f029c53471b0a279d95f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{package_8h_a40751647261be838cc425fb684c0a394}\label{package_8h_a40751647261be838cc425fb684c0a394}} 
+\index{package.h@{package.h}!use\_item@{use\_item}}
+\index{use\_item@{use\_item}!package.h@{package.h}}
+\doxysubsubsection{\texorpdfstring{use\_item()}{use\_item()}}
+{\footnotesize\ttfamily void use\+\_\+item (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Calls functions to use item being currently help. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index position of inventory of item to use \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{package_8c_source_l00013}{13}} of file \mbox{\hyperlink{package_8c_source}{package.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{package_8h_a40751647261be838cc425fb684c0a394_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,249 @@
+\hypertarget{graphics_8c}{}\doxysection{src/devices/graphics.c File Reference}
+\label{graphics_8c}\index{src/devices/graphics.c@{src/devices/graphics.c}}
+{\ttfamily \#include \char`\"{}graphics.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{graphics_8c_a430711ee8dd8b9944c9393b6f333f48d}{set\+\_\+graphics\+\_\+mode}} (uint16\+\_\+t \mbox{\hyperlink{global_8h_af294e94ca5176720ef5e5cbedc95ca47}{mode}})
+\begin{DoxyCompactList}\small\item\em Sets the current mode to mode passed by argument. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graphics_8c_affe13d565147951f3cc7a0cf456a8f63}{set\+\_\+frame\+\_\+buffer}} (uint16\+\_\+t \mbox{\hyperlink{global_8h_af294e94ca5176720ef5e5cbedc95ca47}{mode}})
+\begin{DoxyCompactList}\small\item\em Calls functions to set the mode and initialize the frame buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graphics_8c_a75bd4a983fc77323b896b214d6c58d8e}{init\+\_\+graphics}} (uint16\+\_\+t \mbox{\hyperlink{global_8h_af294e94ca5176720ef5e5cbedc95ca47}{mode}})
+\begin{DoxyCompactList}\small\item\em Calls functions to set the mode and initialize the frame buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a36571ba095c5f84e8dbaee44d9068af8}{Allocate}} ()
+\begin{DoxyCompactList}\small\item\em Allocate memory space for buffers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_ad86c8351e1980c84350ca70d91c16384}{pass\+\_\+to\+\_\+vm\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Resets value of prev\+\_\+buffer and passes content from frame\+\_\+buffer to prev\+\_\+buffer and vm\+\_\+buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a704b4951dc3211bed297bd742a0ae2f3}{pass\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em Passes content from the map buffer to the frame\+\_\+buffer and resets value of frame\+\_\+buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graphics_8c_ab20eed5c22b21f149e761aa71487aea8}{draw\+\_\+pixel}} (uint16\+\_\+t \mbox{\hyperlink{global_8h_a203751810c0f8ec9ddd93f2159baeae2}{x}}, uint16\+\_\+t \mbox{\hyperlink{global_8h_afb5bcb44a18a16a8e8289cdb742af2f4}{y}}, uint32\+\_\+t colors\+\_\+32)
+\begin{DoxyCompactList}\small\item\em Draws pixel onto frame\+\_\+buffer with color and coordinates passed by argument. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graphics_8c_a786ceea3f74b17a36d7cb12a9d6d1d8e}{draw\+\_\+pixel\+\_\+map}} (uint16\+\_\+t \mbox{\hyperlink{global_8h_a203751810c0f8ec9ddd93f2159baeae2}{x}}, uint16\+\_\+t \mbox{\hyperlink{global_8h_afb5bcb44a18a16a8e8289cdb742af2f4}{y}}, uint32\+\_\+t colors\+\_\+32)
+\begin{DoxyCompactList}\small\item\em Draws pixel onto map buffer with color and coordinates passed by argument. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graphics_8c_aaf12b562a02a21bc9172de234a707c83}{draw\+\_\+pixel\+\_\+number}} (uint16\+\_\+t \mbox{\hyperlink{global_8h_a203751810c0f8ec9ddd93f2159baeae2}{x}}, uint16\+\_\+t \mbox{\hyperlink{global_8h_afb5bcb44a18a16a8e8289cdb742af2f4}{y}}, uint32\+\_\+t colors\+\_\+32, int type)
+\begin{DoxyCompactList}\small\item\em Draws pixel onto frame\+\_\+buffer with color and coordinates passed by argument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{graphics_8c_a012bf9ff938163c7969007b90dc73780}{vm\+\_\+buffer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graphics_8c_a36571ba095c5f84e8dbaee44d9068af8}\label{graphics_8c_a36571ba095c5f84e8dbaee44d9068af8}} 
+\index{graphics.c@{graphics.c}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily void Allocate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Allocate memory space for buffers. 
+
+
+
+Definition at line \mbox{\hyperlink{graphics_8c_source_l00049}{49}} of file \mbox{\hyperlink{graphics_8c_source}{graphics.\+c}}.
+
+\mbox{\Hypertarget{graphics_8c_ab20eed5c22b21f149e761aa71487aea8}\label{graphics_8c_ab20eed5c22b21f149e761aa71487aea8}} 
+\index{graphics.c@{graphics.c}!draw\_pixel@{draw\_pixel}}
+\index{draw\_pixel@{draw\_pixel}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{draw\_pixel()}{draw\_pixel()}}
+{\footnotesize\ttfamily int draw\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws pixel onto frame\+\_\+buffer with color and coordinates passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal coordinate of pixel position \\
+\hline
+{\em y} & vertical coordinate of pixel position \\
+\hline
+{\em color} & Value of color to fill the pixel with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if successfull or if position is not on screen or if color is equal to 0x\+FFFFFE 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{graphics_8c_source_l00064}{64}} of file \mbox{\hyperlink{graphics_8c_source}{graphics.\+c}}.
+
+\mbox{\Hypertarget{graphics_8c_a786ceea3f74b17a36d7cb12a9d6d1d8e}\label{graphics_8c_a786ceea3f74b17a36d7cb12a9d6d1d8e}} 
+\index{graphics.c@{graphics.c}!draw\_pixel\_map@{draw\_pixel\_map}}
+\index{draw\_pixel\_map@{draw\_pixel\_map}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{draw\_pixel\_map()}{draw\_pixel\_map()}}
+{\footnotesize\ttfamily int draw\+\_\+pixel\+\_\+map (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{colors\+\_\+32 }\end{DoxyParamCaption})}
+
+
+
+Draws pixel onto map buffer with color and coordinates passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal coordinate of pixel position \\
+\hline
+{\em y} & vertical coordinate of pixel position \\
+\hline
+{\em color\+\_\+32} & Value of color to fill the pixel with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if successfull or if position is not on screen or if color is equal to 0x\+FFFFFE 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{graphics_8c_source_l00070}{70}} of file \mbox{\hyperlink{graphics_8c_source}{graphics.\+c}}.
+
+\mbox{\Hypertarget{graphics_8c_aaf12b562a02a21bc9172de234a707c83}\label{graphics_8c_aaf12b562a02a21bc9172de234a707c83}} 
+\index{graphics.c@{graphics.c}!draw\_pixel\_number@{draw\_pixel\_number}}
+\index{draw\_pixel\_number@{draw\_pixel\_number}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{draw\_pixel\_number()}{draw\_pixel\_number()}}
+{\footnotesize\ttfamily int draw\+\_\+pixel\+\_\+number (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{colors\+\_\+32,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Draws pixel onto frame\+\_\+buffer with color and coordinates passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal coordinate of pixel position \\
+\hline
+{\em y} & vertical coordinate of pixel position \\
+\hline
+{\em color\+\_\+32} & Value of color to fill the pixel with \\
+\hline
+{\em type} & Type of color format. If 0 then the coloring is normal format, if 1 then coloring is green and if 4 the coloring is red \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if successfull or if position is not on screen or if color is equal to 0x\+FFFFFE 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{graphics_8c_source_l00076}{76}} of file \mbox{\hyperlink{graphics_8c_source}{graphics.\+c}}.
+
+\mbox{\Hypertarget{graphics_8c_a75bd4a983fc77323b896b214d6c58d8e}\label{graphics_8c_a75bd4a983fc77323b896b214d6c58d8e}} 
+\index{graphics.c@{graphics.c}!init\_graphics@{init\_graphics}}
+\index{init\_graphics@{init\_graphics}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{init\_graphics()}{init\_graphics()}}
+{\footnotesize\ttfamily int init\+\_\+graphics (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Calls functions to set the mode and initialize the frame buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The mode to change into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if successfull and 1 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{graphics_8c_source_l00043}{43}} of file \mbox{\hyperlink{graphics_8c_source}{graphics.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{graphics_8c_a75bd4a983fc77323b896b214d6c58d8e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8c_a704b4951dc3211bed297bd742a0ae2f3}\label{graphics_8c_a704b4951dc3211bed297bd742a0ae2f3}} 
+\index{graphics.c@{graphics.c}!pass\_map@{pass\_map}}
+\index{pass\_map@{pass\_map}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{pass\_map()}{pass\_map()}}
+{\footnotesize\ttfamily void pass\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Passes content from the map buffer to the frame\+\_\+buffer and resets value of frame\+\_\+buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The mode to change into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if successfull and 1 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{graphics_8c_source_l00059}{59}} of file \mbox{\hyperlink{graphics_8c_source}{graphics.\+c}}.
+
+\mbox{\Hypertarget{graphics_8c_ad86c8351e1980c84350ca70d91c16384}\label{graphics_8c_ad86c8351e1980c84350ca70d91c16384}} 
+\index{graphics.c@{graphics.c}!pass\_to\_vm\_buffer@{pass\_to\_vm\_buffer}}
+\index{pass\_to\_vm\_buffer@{pass\_to\_vm\_buffer}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{pass\_to\_vm\_buffer()}{pass\_to\_vm\_buffer()}}
+{\footnotesize\ttfamily void pass\+\_\+to\+\_\+vm\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets value of prev\+\_\+buffer and passes content from frame\+\_\+buffer to prev\+\_\+buffer and vm\+\_\+buffer. 
+
+
+
+Definition at line \mbox{\hyperlink{graphics_8c_source_l00054}{54}} of file \mbox{\hyperlink{graphics_8c_source}{graphics.\+c}}.
+
+\mbox{\Hypertarget{graphics_8c_affe13d565147951f3cc7a0cf456a8f63}\label{graphics_8c_affe13d565147951f3cc7a0cf456a8f63}} 
+\index{graphics.c@{graphics.c}!set\_frame\_buffer@{set\_frame\_buffer}}
+\index{set\_frame\_buffer@{set\_frame\_buffer}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{set\_frame\_buffer()}{set\_frame\_buffer()}}
+{\footnotesize\ttfamily int set\+\_\+frame\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Calls functions to set the mode and initialize the frame buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The mode to change into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if successfull and 1 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{graphics_8c_source_l00021}{21}} of file \mbox{\hyperlink{graphics_8c_source}{graphics.\+c}}.
+
+\mbox{\Hypertarget{graphics_8c_a430711ee8dd8b9944c9393b6f333f48d}\label{graphics_8c_a430711ee8dd8b9944c9393b6f333f48d}} 
+\index{graphics.c@{graphics.c}!set\_graphics\_mode@{set\_graphics\_mode}}
+\index{set\_graphics\_mode@{set\_graphics\_mode}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{set\_graphics\_mode()}{set\_graphics\_mode()}}
+{\footnotesize\ttfamily int set\+\_\+graphics\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets the current mode to mode passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The mode to change into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if successfull and 1 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{graphics_8c_source_l00007}{7}} of file \mbox{\hyperlink{graphics_8c_source}{graphics.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{graphics_8c_a012bf9ff938163c7969007b90dc73780}\label{graphics_8c_a012bf9ff938163c7969007b90dc73780}} 
+\index{graphics.c@{graphics.c}!vm\_buffer@{vm\_buffer}}
+\index{vm\_buffer@{vm\_buffer}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{vm\_buffer}{vm\_buffer}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ vm\+\_\+buffer}
+
+
+
+Definition at line \mbox{\hyperlink{graphics_8c_source_l00004}{4}} of file \mbox{\hyperlink{graphics_8c_source}{graphics.\+c}}.
+

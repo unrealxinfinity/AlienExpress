@@ -1,0 +1,5 @@
+<map id="remove_package" name="remove_package">
+<area shape="rect" id="node1" title="Removes package from the ground and places on character&#39;s inventory if character&#39;s inventory is not y..." alt="" coords="5,31,124,57"/>
+<area shape="rect" id="node2" href="$inventory_8c.html#a1a264377a2a3622adb979ed4e9a3448e" title="Determines whether there is space on the inventory or not." alt="" coords="172,5,284,32"/>
+<area shape="rect" id="node3" href="$view_8c.html#a7d3f77b855f0ef54a954e55384bf942f" title="Detects if character passed through by argument is in contact with another entity also passed by argu..." alt="" coords="173,56,283,83"/>
+</map>

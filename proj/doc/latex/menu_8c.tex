@@ -1,0 +1,171 @@
+\hypertarget{menu_8c}{}\doxysection{src/game\+\_\+state/menu.c File Reference}
+\label{menu_8c}\index{src/game\_state/menu.c@{src/game\_state/menu.c}}
+{\ttfamily \#include \char`\"{}menu.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_8c_ad629a741c3862ebb8a373c1c99142bae}{set\+\_\+selection\+\_\+menu}} (\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} action)
+\begin{DoxyCompactList}\small\item\em Changes the current value of a menu state controlling variable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} \mbox{\hyperlink{menu_8c_af87515ecd00168541179d564277f684b}{mouse\+\_\+ih\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Controls the inputs of the mouse to control the menu state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} \mbox{\hyperlink{menu_8c_a028513452da9798db6bf320c9da036b8}{keyboard\+\_\+ih\+\_\+menu}} (uint32\+\_\+t scancode)
+\begin{DoxyCompactList}\small\item\em Controls the inputs of the keyboard to control the menu state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a8b6c981db3aad686de04545c1e87f33c}{draw\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Drawing function that draws all the features of the menu state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a9da2ef883f8459c5bd45f54cc199c88e}{draw\+\_\+menu\+\_\+words}} ()
+\begin{DoxyCompactList}\small\item\em Draws all the menu letters and symbols. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_ab27d67997c0e6747c7650ef41eb88f20}{draw\+\_\+menu\+\_\+title}} ()
+\begin{DoxyCompactList}\small\item\em Draws the letters from the main title onto the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} \mbox{\hyperlink{menu_8c_a8af1b2519ab80b1240db3fc83699c04b}{menu\+\_\+selection}} = \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35eca4ddf822225ddb5e5eac9c0940dcdab90}{AFK}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{menu_8c_a8b6c981db3aad686de04545c1e87f33c}\label{menu_8c_a8b6c981db3aad686de04545c1e87f33c}} 
+\index{menu.c@{menu.c}!draw\_menu@{draw\_menu}}
+\index{draw\_menu@{draw\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{draw\_menu()}{draw\_menu()}}
+{\footnotesize\ttfamily void draw\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Drawing function that draws all the features of the menu state. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00046}{46}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a8b6c981db3aad686de04545c1e87f33c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8c_ab27d67997c0e6747c7650ef41eb88f20}\label{menu_8c_ab27d67997c0e6747c7650ef41eb88f20}} 
+\index{menu.c@{menu.c}!draw\_menu\_title@{draw\_menu\_title}}
+\index{draw\_menu\_title@{draw\_menu\_title}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{draw\_menu\_title()}{draw\_menu\_title()}}
+{\footnotesize\ttfamily void draw\+\_\+menu\+\_\+title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the letters from the main title onto the screen. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00081}{81}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_ab27d67997c0e6747c7650ef41eb88f20_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8c_a9da2ef883f8459c5bd45f54cc199c88e}\label{menu_8c_a9da2ef883f8459c5bd45f54cc199c88e}} 
+\index{menu.c@{menu.c}!draw\_menu\_words@{draw\_menu\_words}}
+\index{draw\_menu\_words@{draw\_menu\_words}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{draw\_menu\_words()}{draw\_menu\_words()}}
+{\footnotesize\ttfamily void draw\+\_\+menu\+\_\+words (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws all the menu letters and symbols. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00052}{52}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a9da2ef883f8459c5bd45f54cc199c88e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8c_a028513452da9798db6bf320c9da036b8}\label{menu_8c_a028513452da9798db6bf320c9da036b8}} 
+\index{menu.c@{menu.c}!keyboard\_ih\_menu@{keyboard\_ih\_menu}}
+\index{keyboard\_ih\_menu@{keyboard\_ih\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{keyboard\_ih\_menu()}{keyboard\_ih\_menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} keyboard\+\_\+ih\+\_\+menu (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Controls the inputs of the keyboard to control the menu state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & Keyboard input which will control the menu state and it\textquotesingle{}s features \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the action that has been made by the user using the keyboard 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00031}{31}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+\mbox{\Hypertarget{menu_8c_af87515ecd00168541179d564277f684b}\label{menu_8c_af87515ecd00168541179d564277f684b}} 
+\index{menu.c@{menu.c}!mouse\_ih\_menu@{mouse\_ih\_menu}}
+\index{mouse\_ih\_menu@{mouse\_ih\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_ih\_menu()}{mouse\_ih\_menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} mouse\+\_\+ih\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Controls the inputs of the mouse to control the menu state. 
+
+\begin{DoxyReturn}{Returns}
+Returns the action that has been made by the user using the mouse 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00010}{10}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{menu_8c_af87515ecd00168541179d564277f684b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8c_ad629a741c3862ebb8a373c1c99142bae}\label{menu_8c_ad629a741c3862ebb8a373c1c99142bae}} 
+\index{menu.c@{menu.c}!set\_selection\_menu@{set\_selection\_menu}}
+\index{set\_selection\_menu@{set\_selection\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{set\_selection\_menu()}{set\_selection\_menu()}}
+{\footnotesize\ttfamily void set\+\_\+selection\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}}}]{action }\end{DoxyParamCaption})}
+
+
+
+Changes the current value of a menu state controlling variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to which the menu state controlling variable is going to change into \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00006}{6}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{menu_8c_a8af1b2519ab80b1240db3fc83699c04b}\label{menu_8c_a8af1b2519ab80b1240db3fc83699c04b}} 
+\index{menu.c@{menu.c}!menu\_selection@{menu\_selection}}
+\index{menu\_selection@{menu\_selection}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_selection}{menu\_selection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} menu\+\_\+selection = \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35eca4ddf822225ddb5e5eac9c0940dcdab90}{AFK}}}
+
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00003}{3}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+

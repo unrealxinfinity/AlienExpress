@@ -1,0 +1,4 @@
+<map id="mouse_write" name="mouse_write">
+<area shape="rect" id="node1" title="Writes to the mouse a certain command to allow us to use the mouse in a way the user wants." alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node2" href="$mouse_8c.html#aad881781b569b658cd537da533325585" title="Writes the value of a command to a port given by argument." alt="" coords="148,5,285,32"/>
+</map>

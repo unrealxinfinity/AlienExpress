@@ -1,0 +1,10 @@
+<map id="move_enemies_lvl" name="move_enemies_lvl">
+<area shape="rect" id="node1" title="Moves the zombie enemies and calls the drawing function to draw them." alt="" coords="5,56,131,83"/>
+<area shape="rect" id="node2" href="$enemies__lvl_8c.html#a46732510bbf2ee847d910fa0e14a8394" title="Calls drawing function to draw a zombie, taking into account the direction he faces." alt="" coords="179,5,301,32"/>
+<area shape="rect" id="node5" href="$view_8c.html#ad83186d18cfd42e5617bb2f8d82031fd" title="Checks in the prev_buffer for collisions." alt="" coords="195,56,285,83"/>
+<area shape="rect" id="node7" href="$view_8c.html#aafcad4c7ae21e495b16b0c1c58bd2e8f" title="Checks in the frame_buffer for collisions." alt="" coords="179,107,301,133"/>
+<area shape="rect" id="node3" href="$view_8c.html#a164a9eeb26da4992f649abb855216e4a" title="Calls drawing function on frame_buffer on each pixel of image passed by argument." alt="" coords="370,5,418,32"/>
+<area shape="rect" id="node4" href="$graphics_8c.html#ab20eed5c22b21f149e761aa71487aea8" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="486,5,569,32"/>
+<area shape="rect" id="node6" href="$view_8c.html#a35fce9c592fbff1ea083e9dc48a7081e" title="Eliminates monster in a certain position passed by argument." alt="" coords="349,56,438,83"/>
+<area shape="rect" id="node8" href="$view_8c.html#affd2e4622b63d5c571629d2c0e108136" title="Eliminates wolf in a certain position passed by argument." alt="" coords="362,107,426,133"/>
+</map>

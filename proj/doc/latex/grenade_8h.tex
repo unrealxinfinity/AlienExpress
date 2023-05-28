@@ -1,0 +1,119 @@
+\hypertarget{grenade_8h}{}\doxysection{src/\+Items/grenade.h File Reference}
+\label{grenade_8h}\index{src/Items/grenade.h@{src/Items/grenade.h}}
+{\ttfamily \#include \char`\"{}../macros/includes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../load/view.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Entities/explosion.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{grenade_8h_a8b5df671979c1e0b3c4063d0aa756e37}{draw\+\_\+grenade}} (int index)
+\begin{DoxyCompactList}\small\item\em Calls drawing function to draw grenade and also calls animations functions to do throwing animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grenade_8h_ae970fad7a23c3620db1d2fe76424fb01}{get\+\_\+grenade}} (int index)
+\begin{DoxyCompactList}\small\item\em Sets the current inventory position to a grenade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grenade_8h_acf79f7abc4738a618e8264e8f2830dfd}{throw\+\_\+animation\+\_\+grenade}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} $\ast$item, bool was\+\_\+throwed)
+\begin{DoxyCompactList}\small\item\em The animation when you throw a grenade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{grenade_8h_ad063985724d231796338c876b180d46e}{kill\+\_\+monster\+\_\+radius}} (int \mbox{\hyperlink{global_8h_a203751810c0f8ec9ddd93f2159baeae2}{x}}, int \mbox{\hyperlink{global_8h_afb5bcb44a18a16a8e8289cdb742af2f4}{y}}, int max\+\_\+x, int max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Eliminates all monsters in a radius cause by grenade explosion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{grenade_8h_a8b5df671979c1e0b3c4063d0aa756e37}\label{grenade_8h_a8b5df671979c1e0b3c4063d0aa756e37}} 
+\index{grenade.h@{grenade.h}!draw\_grenade@{draw\_grenade}}
+\index{draw\_grenade@{draw\_grenade}!grenade.h@{grenade.h}}
+\doxysubsubsection{\texorpdfstring{draw\_grenade()}{draw\_grenade()}}
+{\footnotesize\ttfamily void draw\+\_\+grenade (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function to draw grenade and also calls animations functions to do throwing animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index position of grenade to draw \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{grenade_8c_source_l00003}{3}} of file \mbox{\hyperlink{grenade_8c_source}{grenade.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grenade_8h_a8b5df671979c1e0b3c4063d0aa756e37_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{grenade_8h_ae970fad7a23c3620db1d2fe76424fb01}\label{grenade_8h_ae970fad7a23c3620db1d2fe76424fb01}} 
+\index{grenade.h@{grenade.h}!get\_grenade@{get\_grenade}}
+\index{get\_grenade@{get\_grenade}!grenade.h@{grenade.h}}
+\doxysubsubsection{\texorpdfstring{get\_grenade()}{get\_grenade()}}
+{\footnotesize\ttfamily void get\+\_\+grenade (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Sets the current inventory position to a grenade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Current inventory index position \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{grenade_8c_source_l00017}{17}} of file \mbox{\hyperlink{grenade_8c_source}{grenade.\+c}}.
+
+\mbox{\Hypertarget{grenade_8h_ad063985724d231796338c876b180d46e}\label{grenade_8h_ad063985724d231796338c876b180d46e}} 
+\index{grenade.h@{grenade.h}!kill\_monster\_radius@{kill\_monster\_radius}}
+\index{kill\_monster\_radius@{kill\_monster\_radius}!grenade.h@{grenade.h}}
+\doxysubsubsection{\texorpdfstring{kill\_monster\_radius()}{kill\_monster\_radius()}}
+{\footnotesize\ttfamily void kill\+\_\+monster\+\_\+radius (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{max\+\_\+x,  }\item[{int}]{max\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Eliminates all monsters in a radius cause by grenade explosion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & left horizontal coordinate of grenade explosion radius \\
+\hline
+{\em y} & up vertical coordinate of grenade explosion radius \\
+\hline
+{\em max\+\_\+x} & right horizontal coordinate of grenade explosion radius \\
+\hline
+{\em max\+\_\+y} & down vertical coordinate of grenade explosion radius \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{grenade_8c_source_l00106}{106}} of file \mbox{\hyperlink{grenade_8c_source}{grenade.\+c}}.
+
+\mbox{\Hypertarget{grenade_8h_acf79f7abc4738a618e8264e8f2830dfd}\label{grenade_8h_acf79f7abc4738a618e8264e8f2830dfd}} 
+\index{grenade.h@{grenade.h}!throw\_animation\_grenade@{throw\_animation\_grenade}}
+\index{throw\_animation\_grenade@{throw\_animation\_grenade}!grenade.h@{grenade.h}}
+\doxysubsubsection{\texorpdfstring{throw\_animation\_grenade()}{throw\_animation\_grenade()}}
+{\footnotesize\ttfamily void throw\+\_\+animation\+\_\+grenade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}} $\ast$}]{item,  }\item[{bool}]{was\+\_\+throwed }\end{DoxyParamCaption})}
+
+
+
+The animation when you throw a grenade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & grenade being thrown \\
+\hline
+{\em was\+\_\+throwed} & boolean to keep track if grenade was thrown yet or not. Has value false when grenade has yet not been thrown and true if otherwise \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{grenade_8c_source_l00034}{34}} of file \mbox{\hyperlink{grenade_8c_source}{grenade.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grenade_8h_acf79f7abc4738a618e8264e8f2830dfd_cgraph}
+\end{center}
+\end{figure}

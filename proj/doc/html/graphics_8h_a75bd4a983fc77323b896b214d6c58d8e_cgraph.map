@@ -1,0 +1,5 @@
+<map id="init_graphics" name="init_graphics">
+<area shape="rect" id="node1" title="Calls functions to set the mode and initialize the frame buffer." alt="" coords="5,31,100,57"/>
+<area shape="rect" id="node2" href="$graphics_8c.html#affe13d565147951f3cc7a0cf456a8f63" title="Calls functions to set the mode and initialize the frame buffer." alt="" coords="157,5,273,32"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a430711ee8dd8b9944c9393b6f333f48d" title="Sets the current mode to mode passed by argument." alt="" coords="148,56,282,83"/>
+</map>

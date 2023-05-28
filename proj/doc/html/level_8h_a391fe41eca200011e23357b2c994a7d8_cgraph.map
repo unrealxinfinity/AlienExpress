@@ -1,0 +1,31 @@
+<map id="draw_items" name="draw_items">
+<area shape="rect" id="node1" title="Draws all the items of the level." alt="" coords="5,309,93,336"/>
+<area shape="rect" id="node2" href="$ammo_8c.html#a428a3b24ce93884795e8decc8ebd03d9" title="Calls drawing function to draw ammo." alt="" coords="151,385,242,412"/>
+<area shape="rect" id="node9" href="$backpack_8c.html#a26572a1c00d3598d68e9550e57e7cef1" title="Calls drawing function to draw backpack." alt="" coords="141,335,252,361"/>
+<area shape="rect" id="node10" href="$bone_8c.html#a3a90956fb45816c8c0abfb2e78777a14" title="Calls drawing function to draw bone and also calls animation function when bone is thrown." alt="" coords="155,132,238,159"/>
+<area shape="rect" id="node19" href="$boots_8c.html#aba0450ded3bc569c076a76f8d7c3f9fa" title="Calls drawing function to draw boots." alt="" coords="153,233,240,260"/>
+<area shape="rect" id="node20" href="$grenade_8c.html#a8b5df671979c1e0b3c4063d0aa756e37" title="Calls drawing function to draw grenade and also calls animations functions to do throwing animation." alt="" coords="146,183,247,209"/>
+<area shape="rect" id="node25" href="$pistol_8c.html#a07bfd7c7f98490d664e773354c13669d" title="Calls drawing function to draw pistol." alt="" coords="153,436,240,463"/>
+<area shape="rect" id="node26" href="$pizza_8c.html#a1acbd5bed3a315775a2c6e433cf1958a" title="Calls drawing function to draw pizza." alt="" coords="153,284,240,311"/>
+<area shape="rect" id="node27" href="$watch_8c.html#a5e59d4564c19947797109d9576b2a43f" title="Calls drawing function to draw watch." alt="" coords="152,487,241,513"/>
+<area shape="rect" id="node3" href="$view_8c.html#a164a9eeb26da4992f649abb855216e4a" title="Calls drawing function on frame_buffer on each pixel of image passed by argument." alt="" coords="360,335,408,361"/>
+<area shape="rect" id="node5" href="$view_8c.html#a594f1dfcf0028dbdf461531a604ddc78" title="Calls number drawing function with image and coordinates passed by argument and number value based on..." alt="" coords="321,385,447,412"/>
+<area shape="rect" id="node4" href="$graphics_8c.html#ab20eed5c22b21f149e761aa71487aea8" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="542,385,624,412"/>
+<area shape="rect" id="node6" href="$view_8c.html#ad168c686d7996c549bfd3d4d1beb5017" title="Calls drawing function to draw a number passed by argument." alt="" coords="534,436,632,463"/>
+<area shape="rect" id="node7" href="$view_8c.html#a806f64f655004972017f12dc7b44e653" title="Calls drawing function on frame_buffer on each pixel of image passed by argument on char images (lett..." alt="" coords="705,461,810,488"/>
+<area shape="rect" id="node8" href="$graphics_8c.html#aaf12b562a02a21bc9172de234a707c83" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="865,461,997,488"/>
+<area shape="rect" id="node11" href="$bone_8c.html#a85b12e145c180c176fb6c69b03725a39" title="Animates the bone being thrown." alt="" coords="309,132,459,159"/>
+<area shape="rect" id="node12" href="$player_8c.html#a45470fb2ac0252923f17300da2820c3b" title="Gets the value of the inventory index currently being used." alt="" coords="521,284,645,311"/>
+<area shape="rect" id="node13" href="$player_8c.html#ac8ec5d103e4474fa9e333ee8b2244995" title="knows if player is holding down the letter &quot;i&quot; on the keyboard or not" alt="" coords="526,132,640,159"/>
+<area shape="rect" id="node14" href="$player_8c.html#a2c57ae5b0f2fad1d86c7bc12a096937e" title="Gets the value of variable that registers if selected item on the inventory is equal to the one curre..." alt="" coords="517,183,649,209"/>
+<area shape="rect" id="node15" href="$view_8c.html#aafcad4c7ae21e495b16b0c1c58bd2e8f" title="Checks in the frame_buffer for collisions." alt="" coords="522,31,644,57"/>
+<area shape="rect" id="node18" href="$player_8c.html#a1f767d8d83293c8e1b86b96069e659d2" title="Changes the variable taht registers the index of item of inventory being thrown to a value passed by ..." alt="" coords="517,81,649,108"/>
+<area shape="rect" id="node16" href="$view_8c.html#a35fce9c592fbff1ea083e9dc48a7081e" title="Eliminates monster in a certain position passed by argument." alt="" coords="713,5,802,32"/>
+<area shape="rect" id="node17" href="$view_8c.html#affd2e4622b63d5c571629d2c0e108136" title="Eliminates wolf in a certain position passed by argument." alt="" coords="725,56,790,83"/>
+<area shape="rect" id="node21" href="$grenade_8c.html#acf79f7abc4738a618e8264e8f2830dfd" title="The animation when you throw a grenade." alt="" coords="300,183,468,209"/>
+<area shape="rect" id="node22" href="$grenade_8c.html#ad063985724d231796338c876b180d46e" title="Eliminates all monsters in a radius cause by grenade explosion." alt="" coords="516,233,650,260"/>
+<area shape="rect" id="node23" href="$explosion_8c.html#a543d40a218a951a0699a774099a2d761" title=" " alt="" coords="532,335,634,361"/>
+<area shape="rect" id="node24" href="$explosion_8c.html#ab68b40694f9bf496eb316c2bc5f6bf7f" title=" " alt="" coords="698,335,817,361"/>
+<area shape="rect" id="node28" href="$watch_8c.html#a4d7b9dff337c1bcb1246dcb372a954b5" title="Calls number drawing function to draw values of rtc." alt="" coords="349,487,419,513"/>
+<area shape="rect" id="node29" href="$view_8c.html#a14135df9df90701b8ecdaa94d06f18d8" title="Helper function to set position and draw letters and symbols." alt="" coords="547,487,619,513"/>
+</map>

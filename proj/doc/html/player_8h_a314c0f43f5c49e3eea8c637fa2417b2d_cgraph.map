@@ -1,0 +1,5 @@
+<map id="draw_player" name="draw_player">
+<area shape="rect" id="node1" title="Calls drawing function to draw the player taking into account the direction he faces." alt="" coords="5,29,96,56"/>
+<area shape="rect" id="node2" href="$view_8c.html#a164a9eeb26da4992f649abb855216e4a" title="Calls drawing function on frame_buffer on each pixel of image passed by argument." alt="" coords="144,29,192,56"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#ab20eed5c22b21f149e761aa71487aea8" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="240,29,322,56"/>
+</map>

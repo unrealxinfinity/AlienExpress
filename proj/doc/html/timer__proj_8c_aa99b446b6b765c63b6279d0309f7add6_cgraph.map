@@ -1,0 +1,4 @@
+<map id="timer_set_frequency_proj" name="timer_set_frequency_proj">
+<area shape="rect" id="node1" title="Sets the timer frequency to a certain frequency value." alt="" coords="5,5,172,32"/>
+<area shape="rect" id="node2" href="$timer__proj_8c.html#ae793c0b7886d11d4f4eabd86752922e6" title="Gets the current timer configuration." alt="" coords="220,5,336,32"/>
+</map>

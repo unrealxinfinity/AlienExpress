@@ -1,0 +1,198 @@
+\hypertarget{level_8h}{}\doxysection{src/game\+\_\+state/level.h File Reference}
+\label{level_8h}\index{src/game\_state/level.h@{src/game\_state/level.h}}
+{\ttfamily \#include \char`\"{}../macros/includes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../load/view.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../load/spawner.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../devices/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Entities/player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Entities/enemies\+\_\+lvl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Entities/workers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Entities/wolf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Entities/bullet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Entities/teleport.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Entities/inventory.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} \mbox{\hyperlink{level_8h_a4da4741385e3323692f52e73dea8322c}{keyboard\+\_\+ih\+\_\+level}} (uint32\+\_\+t scancode)
+\begin{DoxyCompactList}\small\item\em Controls the inputs of the keyboard to control the level state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} \mbox{\hyperlink{level_8h_a24f8d25a9801ae001bc117c3e752f494}{mouse\+\_\+ih\+\_\+level}} ()
+\begin{DoxyCompactList}\small\item\em Controls the inputs of the mouse to control the level state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{level_8h_a6cc61e74daa498a3165393ce09a68e89}{draw\+\_\+afk\+\_\+level}} ()
+\begin{DoxyCompactList}\small\item\em Drawing function that draws all the features of the level state in a non moving state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{level_8h_a585d8e2cf0a0b3db2c6afd0a9cbcb25e}{draw\+\_\+level}} ()
+\begin{DoxyCompactList}\small\item\em Drawing function that draws all the features of the level state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{level_8h_a9814054a4131a65bb77b1d902fba20ce}{draw\+\_\+level\+\_\+words}} ()
+\begin{DoxyCompactList}\small\item\em Draws all the level letters and symbols. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{level_8h_af96de77b034effdf5f61e8e89e02c5b5}{draw\+\_\+level\+\_\+numbers}} ()
+\begin{DoxyCompactList}\small\item\em Draws all the level numbers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{level_8h_a391fe41eca200011e23357b2c994a7d8}{draw\+\_\+items}} ()
+\begin{DoxyCompactList}\small\item\em Draws all the items of the level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{level_8h_a6cc61e74daa498a3165393ce09a68e89}\label{level_8h_a6cc61e74daa498a3165393ce09a68e89}} 
+\index{level.h@{level.h}!draw\_afk\_level@{draw\_afk\_level}}
+\index{draw\_afk\_level@{draw\_afk\_level}!level.h@{level.h}}
+\doxysubsubsection{\texorpdfstring{draw\_afk\_level()}{draw\_afk\_level()}}
+{\footnotesize\ttfamily void draw\+\_\+afk\+\_\+level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Drawing function that draws all the features of the level state in a non moving state. 
+
+
+
+Definition at line \mbox{\hyperlink{level_8c_source_l00080}{80}} of file \mbox{\hyperlink{level_8c_source}{level.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{level_8h_a6cc61e74daa498a3165393ce09a68e89_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{level_8h_a391fe41eca200011e23357b2c994a7d8}\label{level_8h_a391fe41eca200011e23357b2c994a7d8}} 
+\index{level.h@{level.h}!draw\_items@{draw\_items}}
+\index{draw\_items@{draw\_items}!level.h@{level.h}}
+\doxysubsubsection{\texorpdfstring{draw\_items()}{draw\_items()}}
+{\footnotesize\ttfamily void draw\+\_\+items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws all the items of the level. 
+
+
+
+Definition at line \mbox{\hyperlink{level_8c_source_l00134}{134}} of file \mbox{\hyperlink{level_8c_source}{level.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{level_8h_a391fe41eca200011e23357b2c994a7d8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{level_8h_a585d8e2cf0a0b3db2c6afd0a9cbcb25e}\label{level_8h_a585d8e2cf0a0b3db2c6afd0a9cbcb25e}} 
+\index{level.h@{level.h}!draw\_level@{draw\_level}}
+\index{draw\_level@{draw\_level}!level.h@{level.h}}
+\doxysubsubsection{\texorpdfstring{draw\_level()}{draw\_level()}}
+{\footnotesize\ttfamily void draw\+\_\+level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Drawing function that draws all the features of the level state. 
+
+
+
+Definition at line \mbox{\hyperlink{level_8c_source_l00107}{107}} of file \mbox{\hyperlink{level_8c_source}{level.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{level_8h_a585d8e2cf0a0b3db2c6afd0a9cbcb25e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{level_8h_af96de77b034effdf5f61e8e89e02c5b5}\label{level_8h_af96de77b034effdf5f61e8e89e02c5b5}} 
+\index{level.h@{level.h}!draw\_level\_numbers@{draw\_level\_numbers}}
+\index{draw\_level\_numbers@{draw\_level\_numbers}!level.h@{level.h}}
+\doxysubsubsection{\texorpdfstring{draw\_level\_numbers()}{draw\_level\_numbers()}}
+{\footnotesize\ttfamily void draw\+\_\+level\+\_\+numbers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws all the level numbers. 
+
+
+
+Definition at line \mbox{\hyperlink{level_8c_source_l00146}{146}} of file \mbox{\hyperlink{level_8c_source}{level.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{level_8h_af96de77b034effdf5f61e8e89e02c5b5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{level_8h_a9814054a4131a65bb77b1d902fba20ce}\label{level_8h_a9814054a4131a65bb77b1d902fba20ce}} 
+\index{level.h@{level.h}!draw\_level\_words@{draw\_level\_words}}
+\index{draw\_level\_words@{draw\_level\_words}!level.h@{level.h}}
+\doxysubsubsection{\texorpdfstring{draw\_level\_words()}{draw\_level\_words()}}
+{\footnotesize\ttfamily void draw\+\_\+level\+\_\+words (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws all the level letters and symbols. 
+
+
+
+Definition at line \mbox{\hyperlink{level_8c_source_l00156}{156}} of file \mbox{\hyperlink{level_8c_source}{level.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{level_8h_a9814054a4131a65bb77b1d902fba20ce_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{level_8h_a4da4741385e3323692f52e73dea8322c}\label{level_8h_a4da4741385e3323692f52e73dea8322c}} 
+\index{level.h@{level.h}!keyboard\_ih\_level@{keyboard\_ih\_level}}
+\index{keyboard\_ih\_level@{keyboard\_ih\_level}!level.h@{level.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_ih\_level()}{keyboard\_ih\_level()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} keyboard\+\_\+ih\+\_\+level (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Controls the inputs of the keyboard to control the level state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & Keyboard input which will control the level state and it\textquotesingle{}s features \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the action that has been made by the user using the keyboard 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{level_8c_source_l00008}{8}} of file \mbox{\hyperlink{level_8c_source}{level.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{level_8h_a4da4741385e3323692f52e73dea8322c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{level_8h_a24f8d25a9801ae001bc117c3e752f494}\label{level_8h_a24f8d25a9801ae001bc117c3e752f494}} 
+\index{level.h@{level.h}!mouse\_ih\_level@{mouse\_ih\_level}}
+\index{mouse\_ih\_level@{mouse\_ih\_level}!level.h@{level.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_ih\_level()}{mouse\_ih\_level()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} mouse\+\_\+ih\+\_\+level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Controls the inputs of the mouse to control the level state. 
+
+\begin{DoxyReturn}{Returns}
+Returns the action that has been made by the user using the mouse 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{level_8c_source_l00016}{16}} of file \mbox{\hyperlink{level_8c_source}{level.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{level_8h_a24f8d25a9801ae001bc117c3e752f494_cgraph}
+\end{center}
+\end{figure}

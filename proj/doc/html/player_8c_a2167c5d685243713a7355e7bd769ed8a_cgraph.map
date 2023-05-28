@@ -1,0 +1,4 @@
+<map id="kill_workers" name="kill_workers">
+<area shape="rect" id="node1" title="Eliminates all worker enemies that are in contact with the player character." alt="" coords="5,5,95,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#a7d3f77b855f0ef54a954e55384bf942f" title="Detects if character passed through by argument is in contact with another entity also passed by argu..." alt="" coords="143,5,252,32"/>
+</map>

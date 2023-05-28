@@ -1,0 +1,13 @@
+<map id="terminate" name="terminate">
+<area shape="rect" id="node1" title="Terminates all devices and frees buffer memory space." alt="" coords="5,183,81,209"/>
+<area shape="rect" id="node2" href="$keyboard_8c.html#a58017421d19bb2004825d339ebb600fa" title="Restores the keyboard to it&#39;s original value." alt="" coords="144,31,265,57"/>
+<area shape="rect" id="node5" href="$keyboard_8c.html#aa8dbaf115a31f57b46d05cee57447157" title="Unsubscribes the keyboard device, setting into the interrupt mask the respective keyboard hook id bit..." alt="" coords="129,81,280,108"/>
+<area shape="rect" id="node6" href="$mouse_8c.html#abb62339e13d96f9050f69a71428f8eb9" title="Unsubscribes the mouse device, setting into the interrupt mask the respective mouse hook id bit to 0." alt="" coords="136,132,273,159"/>
+<area shape="rect" id="node7" href="$mouse_8c.html#a77621d937bc2fde8bc8fc0fd69fea489" title="Writes to the mouse a certain command to allow us to use the mouse in a way the user wants." alt="" coords="157,183,252,209"/>
+<area shape="rect" id="node9" href="$rtc_8c.html#a2a6094aed95b8610afb0493578ecb855" title="Unsubscribes the real time clock device, setting into the interrupt mask the respective real time clo..." alt="" coords="148,233,261,260"/>
+<area shape="rect" id="node10" href="$timer__proj_8c.html#a9e1f3f8773ad05f253feeda4c9d096e4" title="Unsubscribes the timer device, setting into the interrupt mask the respective timer hook id bit to 0." alt="" coords="141,284,268,311"/>
+<area shape="rect" id="node11" href="$rtc_8c.html#ae34ea626b6dcc56a79ffa014d15bd905" title="Allows or does not allow interrupts in the real time clock." alt="" coords="174,335,235,361"/>
+<area shape="rect" id="node3" href="$keyboard_8c.html#aef1b5b40937e761586d8a47bee8bef30" title="Reads the value of input made by user from a port given by argument and stores result on variable com..." alt="" coords="338,5,455,32"/>
+<area shape="rect" id="node4" href="$keyboard_8c.html#a7bd99178b8fc989e05b8be69d0200d7b" title="Writes to the keyboard port a certain command." alt="" coords="337,56,456,83"/>
+<area shape="rect" id="node8" href="$mouse_8c.html#aad881781b569b658cd537da533325585" title="Writes the value of a command to a port given by argument." alt="" coords="328,183,465,209"/>
+</map>

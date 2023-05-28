@@ -1,0 +1,4 @@
+<map id="draw_line" name="draw_line">
+<area shape="rect" id="node1" title="Calls drawing function on frame_buffer to draw a line of format passed by argument." alt="" coords="5,5,81,32"/>
+<area shape="rect" id="node2" href="$graphics_8c.html#ab20eed5c22b21f149e761aa71487aea8" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="129,5,211,32"/>
+</map>

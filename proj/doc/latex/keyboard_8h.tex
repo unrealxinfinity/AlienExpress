@@ -1,0 +1,126 @@
+\hypertarget{keyboard_8h}{}\doxysection{src/devices/keyboard.h File Reference}
+\label{keyboard_8h}\index{src/devices/keyboard.h@{src/devices/keyboard.h}}
+{\ttfamily \#include \char`\"{}../macros/includes.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t() \mbox{\hyperlink{keyboard_8h_a67b87c7a525e4566a2d014dfa9734116}{keyboard\+\_\+subscribe}} ()
+\begin{DoxyCompactList}\small\item\em Subscribes the keyboard device, setting into the interrupt mask the respective keyboard hook id bit to 1. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8h_aa8dbaf115a31f57b46d05cee57447157}{keyboard\+\_\+unsubscribe}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes the keyboard device, setting into the interrupt mask the respective keyboard hook id bit to 0. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8h_aef1b5b40937e761586d8a47bee8bef30}{kbc\+\_\+read\+\_\+output}} (int port, uint32\+\_\+t $\ast$command)
+\begin{DoxyCompactList}\small\item\em Reads the value of input made by user from a port given by argument and stores result on variable command in argument. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8h_a7bd99178b8fc989e05b8be69d0200d7b}{kbc\+\_\+write\+\_\+output}} (int port, unsigned long command)
+\begin{DoxyCompactList}\small\item\em Writes to the keyboard port a certain command. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8h_a58017421d19bb2004825d339ebb600fa}{keyboard\+\_\+restore}} ()
+\begin{DoxyCompactList}\small\item\em Restores the keyboard to it\textquotesingle{}s original value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{keyboard_8h_aef1b5b40937e761586d8a47bee8bef30}\label{keyboard_8h_aef1b5b40937e761586d8a47bee8bef30}} 
+\index{keyboard.h@{keyboard.h}!kbc\_read\_output@{kbc\_read\_output}}
+\index{kbc\_read\_output@{kbc\_read\_output}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_read\_output()}{kbc\_read\_output()}}
+{\footnotesize\ttfamily int() kbc\+\_\+read\+\_\+output (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint32\+\_\+t $\ast$}]{command }\end{DoxyParamCaption})}
+
+
+
+Reads the value of input made by user from a port given by argument and stores result on variable command in argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port from which value is being read \\
+\hline
+{\em command} & Pointer to stored read value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the read value or 0x\+FFFF if error 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{keyboard_8c_source_l00014}{14}} of file \mbox{\hyperlink{keyboard_8c_source}{keyboard.\+c}}.
+
+\mbox{\Hypertarget{keyboard_8h_a7bd99178b8fc989e05b8be69d0200d7b}\label{keyboard_8h_a7bd99178b8fc989e05b8be69d0200d7b}} 
+\index{keyboard.h@{keyboard.h}!kbc\_write\_output@{kbc\_write\_output}}
+\index{kbc\_write\_output@{kbc\_write\_output}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_write\_output()}{kbc\_write\_output()}}
+{\footnotesize\ttfamily int() kbc\+\_\+write\+\_\+output (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{unsigned long}]{command }\end{DoxyParamCaption})}
+
+
+
+Writes to the keyboard port a certain command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port from which value is being written \\
+\hline
+{\em command} & Command being written into port \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 0x\+FFFF if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{keyboard_8c_source_l00038}{38}} of file \mbox{\hyperlink{keyboard_8c_source}{keyboard.\+c}}.
+
+\mbox{\Hypertarget{keyboard_8h_a58017421d19bb2004825d339ebb600fa}\label{keyboard_8h_a58017421d19bb2004825d339ebb600fa}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_restore@{keyboard\_restore}}
+\index{keyboard\_restore@{keyboard\_restore}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_restore()}{keyboard\_restore()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+restore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restores the keyboard to it\textquotesingle{}s original value. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{keyboard_8c_source_l00054}{54}} of file \mbox{\hyperlink{keyboard_8c_source}{keyboard.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{keyboard_8h_a58017421d19bb2004825d339ebb600fa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{keyboard_8h_a67b87c7a525e4566a2d014dfa9734116}\label{keyboard_8h_a67b87c7a525e4566a2d014dfa9734116}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_subscribe@{keyboard\_subscribe}}
+\index{keyboard\_subscribe@{keyboard\_subscribe}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_subscribe()}{keyboard\_subscribe()}}
+{\footnotesize\ttfamily uint8\+\_\+t() keyboard\+\_\+subscribe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Subscribes the keyboard device, setting into the interrupt mask the respective keyboard hook id bit to 1. 
+
+\begin{DoxyReturn}{Returns}
+Returns the bit number that was set if successfull or 0x\+FF if unsuccessfull 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{keyboard_8c_source_l00005}{5}} of file \mbox{\hyperlink{keyboard_8c_source}{keyboard.\+c}}.
+
+\mbox{\Hypertarget{keyboard_8h_aa8dbaf115a31f57b46d05cee57447157}\label{keyboard_8h_aa8dbaf115a31f57b46d05cee57447157}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_unsubscribe@{keyboard\_unsubscribe}}
+\index{keyboard\_unsubscribe@{keyboard\_unsubscribe}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_unsubscribe()}{keyboard\_unsubscribe()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+unsubscribe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes the keyboard device, setting into the interrupt mask the respective keyboard hook id bit to 0. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{keyboard_8c_source_l00011}{11}} of file \mbox{\hyperlink{keyboard_8c_source}{keyboard.\+c}}.
+

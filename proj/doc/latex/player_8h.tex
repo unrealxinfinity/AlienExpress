@@ -1,0 +1,344 @@
+\hypertarget{player_8h}{}\doxysection{src/\+Entities/player.h File Reference}
+\label{player_8h}\index{src/Entities/player.h@{src/Entities/player.h}}
+{\ttfamily \#include \char`\"{}../macros/includes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../load/view.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Items/package.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{player_8h_a16d1ffc3278a976b73eb2258dd973186}{reset\+\_\+movement}} ()
+\begin{DoxyCompactList}\small\item\em Changes all player movement in every direction to STILL, making him not move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{player_8h_ac8ec5d103e4474fa9e333ee8b2244995}{get\+\_\+is\+\_\+holding\+\_\+i}} ()
+\begin{DoxyCompactList}\small\item\em knows if player is holding down the letter \char`\"{}i\char`\"{} on the keyboard or not \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{player_8h_a2c57ae5b0f2fad1d86c7bc12a096937e}{get\+\_\+throwing\+\_\+index}} ()
+\begin{DoxyCompactList}\small\item\em Gets the value of variable that registers if selected item on the inventory is equal to the one currently throwing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{player_8h_a45470fb2ac0252923f17300da2820c3b}{get\+\_\+current\+\_\+index}} ()
+\begin{DoxyCompactList}\small\item\em Gets the value of the inventory index currently being used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player_8h_a1f767d8d83293c8e1b86b96069e659d2}{set\+\_\+throwing\+\_\+index}} (int throw\+\_\+timer)
+\begin{DoxyCompactList}\small\item\em Changes the variable taht registers the index of item of inventory being thrown to a value passed by argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player_8h_aeeb375ca201b643406032cb5222ef0a3}{player\+\_\+controller}} (uint32\+\_\+t scancode)
+\begin{DoxyCompactList}\small\item\em Controlls the action that the player entity can do in the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player_8h_a26353db2709e08598c8a16d5d7150ead}{move\+\_\+player}} ()
+\begin{DoxyCompactList}\small\item\em Moves the player accordingly to the keyboard inputs he has submitted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player_8h_a314c0f43f5c49e3eea8c637fa2417b2d}{draw\+\_\+player}} ()
+\begin{DoxyCompactList}\small\item\em Calls drawing function to draw the player taking into account the direction he faces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player_8h_a2167c5d685243713a7355e7bd769ed8a}{kill\+\_\+workers}} ()
+\begin{DoxyCompactList}\small\item\em Eliminates all worker enemies that are in contact with the player character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player_8h_a948ad1dc58ec4c4ff411f5c8557cc6c3}{remove\+\_\+package}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} character)
+\begin{DoxyCompactList}\small\item\em Removes package from the ground and places on character\textquotesingle{}s inventory if character\textquotesingle{}s inventory is not yet full and if character is in contact with said package. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player_8h_a2db5a8e40c37fab7e58724ae3eef00d0}{remove\+\_\+item\+\_\+from\+\_\+ground}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} character)
+\begin{DoxyCompactList}\small\item\em Removes item from the ground and places on character\textquotesingle{}s inventory if character\textquotesingle{}s inventory is not yet full and if character is in contact with said item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player_8h_a8e1adc86bac8d7afcab2039080871880}{remove\+\_\+from\+\_\+inventory}} (int index)
+\begin{DoxyCompactList}\small\item\em Removes item from inventory and places it on the board. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{player_8h_a1a264377a2a3622adb979ed4e9a3448e}{is\+\_\+inventory\+\_\+full}} ()
+\begin{DoxyCompactList}\small\item\em Determines whether there is space on the inventory or not. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{player_8h_a3af5fee25b9dedcd9533cd79748ca6e3}{is\+\_\+on\+\_\+teleport}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} character)
+\begin{DoxyCompactList}\small\item\em Checks if a character is colliding with a teleport. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{player_8h_a314c0f43f5c49e3eea8c637fa2417b2d}\label{player_8h_a314c0f43f5c49e3eea8c637fa2417b2d}} 
+\index{player.h@{player.h}!draw\_player@{draw\_player}}
+\index{draw\_player@{draw\_player}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{draw\_player()}{draw\_player()}}
+{\footnotesize\ttfamily void draw\+\_\+player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function to draw the player taking into account the direction he faces. 
+
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00256}{256}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{player_8h_a314c0f43f5c49e3eea8c637fa2417b2d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{player_8h_a45470fb2ac0252923f17300da2820c3b}\label{player_8h_a45470fb2ac0252923f17300da2820c3b}} 
+\index{player.h@{player.h}!get\_current\_index@{get\_current\_index}}
+\index{get\_current\_index@{get\_current\_index}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{get\_current\_index()}{get\_current\_index()}}
+{\footnotesize\ttfamily int get\+\_\+current\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the value of the inventory index currently being used. 
+
+\begin{DoxyReturn}{Returns}
+Returns the value of the index of inventory currently being used 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00015}{15}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+
+\mbox{\Hypertarget{player_8h_ac8ec5d103e4474fa9e333ee8b2244995}\label{player_8h_ac8ec5d103e4474fa9e333ee8b2244995}} 
+\index{player.h@{player.h}!get\_is\_holding\_i@{get\_is\_holding\_i}}
+\index{get\_is\_holding\_i@{get\_is\_holding\_i}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{get\_is\_holding\_i()}{get\_is\_holding\_i()}}
+{\footnotesize\ttfamily bool get\+\_\+is\+\_\+holding\+\_\+i (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+knows if player is holding down the letter \char`\"{}i\char`\"{} on the keyboard or not 
+
+\begin{DoxyReturn}{Returns}
+Returns true if player is holding down \char`\"{}i\char`\"{} and false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00018}{18}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+
+\mbox{\Hypertarget{player_8h_a2c57ae5b0f2fad1d86c7bc12a096937e}\label{player_8h_a2c57ae5b0f2fad1d86c7bc12a096937e}} 
+\index{player.h@{player.h}!get\_throwing\_index@{get\_throwing\_index}}
+\index{get\_throwing\_index@{get\_throwing\_index}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{get\_throwing\_index()}{get\_throwing\_index()}}
+{\footnotesize\ttfamily int get\+\_\+throwing\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the value of variable that registers if selected item on the inventory is equal to the one currently throwing. 
+
+\begin{DoxyReturn}{Returns}
+Returns variable that registers the index of inventory which item is being thrown 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00021}{21}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+
+\mbox{\Hypertarget{player_8h_a1a264377a2a3622adb979ed4e9a3448e}\label{player_8h_a1a264377a2a3622adb979ed4e9a3448e}} 
+\index{player.h@{player.h}!is\_inventory\_full@{is\_inventory\_full}}
+\index{is\_inventory\_full@{is\_inventory\_full}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{is\_inventory\_full()}{is\_inventory\_full()}}
+{\footnotesize\ttfamily int is\+\_\+inventory\+\_\+full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Determines whether there is space on the inventory or not. 
+
+\begin{DoxyReturn}{Returns}
+Returns -\/1 if there isn\textquotesingle{}t and if there is it returns the inventory index of the nearest free place 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inventory_8c_source_l00029}{29}} of file \mbox{\hyperlink{inventory_8c_source}{inventory.\+c}}.
+
+\mbox{\Hypertarget{player_8h_a3af5fee25b9dedcd9533cd79748ca6e3}\label{player_8h_a3af5fee25b9dedcd9533cd79748ca6e3}} 
+\index{player.h@{player.h}!is\_on\_teleport@{is\_on\_teleport}}
+\index{is\_on\_teleport@{is\_on\_teleport}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{is\_on\_teleport()}{is\_on\_teleport()}}
+{\footnotesize\ttfamily int is\+\_\+on\+\_\+teleport (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}}}]{character }\end{DoxyParamCaption})}
+
+
+
+Checks if a character is colliding with a teleport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & Character that is being check for collision with teleport \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns -\/1 if there is no collision and Returns the index of teleport being collided if there is collision 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00428}{428}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{player_8h_a3af5fee25b9dedcd9533cd79748ca6e3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{player_8h_a2167c5d685243713a7355e7bd769ed8a}\label{player_8h_a2167c5d685243713a7355e7bd769ed8a}} 
+\index{player.h@{player.h}!kill\_workers@{kill\_workers}}
+\index{kill\_workers@{kill\_workers}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{kill\_workers()}{kill\_workers()}}
+{\footnotesize\ttfamily void kill\+\_\+workers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Eliminates all worker enemies that are in contact with the player character. 
+
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00278}{278}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{player_8h_a2167c5d685243713a7355e7bd769ed8a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{player_8h_a26353db2709e08598c8a16d5d7150ead}\label{player_8h_a26353db2709e08598c8a16d5d7150ead}} 
+\index{player.h@{player.h}!move\_player@{move\_player}}
+\index{move\_player@{move\_player}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{move\_player()}{move\_player()}}
+{\footnotesize\ttfamily void move\+\_\+player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Moves the player accordingly to the keyboard inputs he has submitted. 
+
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00239}{239}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{player_8h_a26353db2709e08598c8a16d5d7150ead_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{player_8h_aeeb375ca201b643406032cb5222ef0a3}\label{player_8h_aeeb375ca201b643406032cb5222ef0a3}} 
+\index{player.h@{player.h}!player\_controller@{player\_controller}}
+\index{player\_controller@{player\_controller}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{player\_controller()}{player\_controller()}}
+{\footnotesize\ttfamily void player\+\_\+controller (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Controlls the action that the player entity can do in the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & Value that will determine which action the player takes \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00034}{34}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{player_8h_aeeb375ca201b643406032cb5222ef0a3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{player_8h_a8e1adc86bac8d7afcab2039080871880}\label{player_8h_a8e1adc86bac8d7afcab2039080871880}} 
+\index{player.h@{player.h}!remove\_from\_inventory@{remove\_from\_inventory}}
+\index{remove\_from\_inventory@{remove\_from\_inventory}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{remove\_from\_inventory()}{remove\_from\_inventory()}}
+{\footnotesize\ttfamily void remove\+\_\+from\+\_\+inventory (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Removes item from inventory and places it on the board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index position of inventory of item being removed from it \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00109}{109}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{player_8h_a8e1adc86bac8d7afcab2039080871880_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{player_8h_a2db5a8e40c37fab7e58724ae3eef00d0}\label{player_8h_a2db5a8e40c37fab7e58724ae3eef00d0}} 
+\index{player.h@{player.h}!remove\_item\_from\_ground@{remove\_item\_from\_ground}}
+\index{remove\_item\_from\_ground@{remove\_item\_from\_ground}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{remove\_item\_from\_ground()}{remove\_item\_from\_ground()}}
+{\footnotesize\ttfamily void remove\+\_\+item\+\_\+from\+\_\+ground (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}}}]{character }\end{DoxyParamCaption})}
+
+
+
+Removes item from the ground and places on character\textquotesingle{}s inventory if character\textquotesingle{}s inventory is not yet full and if character is in contact with said item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & Character that is removing the item from the board \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00289}{289}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{player_8h_a2db5a8e40c37fab7e58724ae3eef00d0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{player_8h_a948ad1dc58ec4c4ff411f5c8557cc6c3}\label{player_8h_a948ad1dc58ec4c4ff411f5c8557cc6c3}} 
+\index{player.h@{player.h}!remove\_package@{remove\_package}}
+\index{remove\_package@{remove\_package}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{remove\_package()}{remove\_package()}}
+{\footnotesize\ttfamily void remove\+\_\+package (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}}}]{character }\end{DoxyParamCaption})}
+
+
+
+Removes package from the ground and places on character\textquotesingle{}s inventory if character\textquotesingle{}s inventory is not yet full and if character is in contact with said package. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & Character that is removing the package from the board \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00407}{407}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{player_8h_a948ad1dc58ec4c4ff411f5c8557cc6c3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{player_8h_a16d1ffc3278a976b73eb2258dd973186}\label{player_8h_a16d1ffc3278a976b73eb2258dd973186}} 
+\index{player.h@{player.h}!reset\_movement@{reset\_movement}}
+\index{reset\_movement@{reset\_movement}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{reset\_movement()}{reset\_movement()}}
+{\footnotesize\ttfamily void reset\+\_\+movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Changes all player movement in every direction to STILL, making him not move. 
+
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00028}{28}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+
+\mbox{\Hypertarget{player_8h_a1f767d8d83293c8e1b86b96069e659d2}\label{player_8h_a1f767d8d83293c8e1b86b96069e659d2}} 
+\index{player.h@{player.h}!set\_throwing\_index@{set\_throwing\_index}}
+\index{set\_throwing\_index@{set\_throwing\_index}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{set\_throwing\_index()}{set\_throwing\_index()}}
+{\footnotesize\ttfamily void set\+\_\+throwing\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{throw\+\_\+timer }\end{DoxyParamCaption})}
+
+
+
+Changes the variable taht registers the index of item of inventory being thrown to a value passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em throw\+\_\+timer} & Value to change variable that registers the index of item of inventory being thrown into \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{player_8c_source_l00025}{25}} of file \mbox{\hyperlink{player_8c_source}{player.\+c}}.
+

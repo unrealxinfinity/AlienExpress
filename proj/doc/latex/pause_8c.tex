@@ -1,0 +1,143 @@
+\hypertarget{pause_8c}{}\doxysection{src/game\+\_\+state/pause.c File Reference}
+\label{pause_8c}\index{src/game\_state/pause.c@{src/game\_state/pause.c}}
+{\ttfamily \#include \char`\"{}pause.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pause_8c_a7981fa96ab53adfca397182f9940b03b}{set\+\_\+selection\+\_\+pause}} (\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} action)
+\begin{DoxyCompactList}\small\item\em Changes the current value of a pause state controlling variable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} \mbox{\hyperlink{pause_8c_a37070ccb6d932088d2a9b3054fe000f3}{keyboard\+\_\+ih\+\_\+pause}} (uint32\+\_\+t scancode)
+\begin{DoxyCompactList}\small\item\em Controls the inputs of the keyboard to control the pause state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} \mbox{\hyperlink{pause_8c_a325fdbdcdac6314eb28250ba9404f8db}{mouse\+\_\+ih\+\_\+pause}} ()
+\begin{DoxyCompactList}\small\item\em Controls the inputs of the mouse to control the pause state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pause_8c_adce399de00d9d2ad86c9e2f75f410c27}{draw\+\_\+pause}} (int type)
+\item 
+void \mbox{\hyperlink{pause_8c_a40aebe98eeff1be54803e38af443333d}{draw\+\_\+pause\+\_\+words}} ()
+\begin{DoxyCompactList}\small\item\em Draws all the pause letters and symbols. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} \mbox{\hyperlink{pause_8c_a8ca9e45ba706c54c6f3332284bdb786a}{pause\+\_\+selection}} = \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35eca4ddf822225ddb5e5eac9c0940dcdab90}{AFK}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pause_8c_adce399de00d9d2ad86c9e2f75f410c27}\label{pause_8c_adce399de00d9d2ad86c9e2f75f410c27}} 
+\index{pause.c@{pause.c}!draw\_pause@{draw\_pause}}
+\index{draw\_pause@{draw\_pause}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{draw\_pause()}{draw\_pause()}}
+{\footnotesize\ttfamily void draw\+\_\+pause (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pause_8c_source_l00047}{47}} of file \mbox{\hyperlink{pause_8c_source}{pause.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8c_adce399de00d9d2ad86c9e2f75f410c27_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pause_8c_a40aebe98eeff1be54803e38af443333d}\label{pause_8c_a40aebe98eeff1be54803e38af443333d}} 
+\index{pause.c@{pause.c}!draw\_pause\_words@{draw\_pause\_words}}
+\index{draw\_pause\_words@{draw\_pause\_words}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{draw\_pause\_words()}{draw\_pause\_words()}}
+{\footnotesize\ttfamily void draw\+\_\+pause\+\_\+words (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws all the pause letters and symbols. 
+
+
+
+Definition at line \mbox{\hyperlink{pause_8c_source_l00054}{54}} of file \mbox{\hyperlink{pause_8c_source}{pause.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8c_a40aebe98eeff1be54803e38af443333d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pause_8c_a37070ccb6d932088d2a9b3054fe000f3}\label{pause_8c_a37070ccb6d932088d2a9b3054fe000f3}} 
+\index{pause.c@{pause.c}!keyboard\_ih\_pause@{keyboard\_ih\_pause}}
+\index{keyboard\_ih\_pause@{keyboard\_ih\_pause}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{keyboard\_ih\_pause()}{keyboard\_ih\_pause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} keyboard\+\_\+ih\+\_\+pause (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Controls the inputs of the keyboard to control the pause state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & Keyboard input which will control the pause state and it\textquotesingle{}s features \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the action that has been made by the user using the keyboard 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{pause_8c_source_l00010}{10}} of file \mbox{\hyperlink{pause_8c_source}{pause.\+c}}.
+
+\mbox{\Hypertarget{pause_8c_a325fdbdcdac6314eb28250ba9404f8db}\label{pause_8c_a325fdbdcdac6314eb28250ba9404f8db}} 
+\index{pause.c@{pause.c}!mouse\_ih\_pause@{mouse\_ih\_pause}}
+\index{mouse\_ih\_pause@{mouse\_ih\_pause}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_ih\_pause()}{mouse\_ih\_pause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} mouse\+\_\+ih\+\_\+pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Controls the inputs of the mouse to control the pause state. 
+
+\begin{DoxyReturn}{Returns}
+Returns the action that has been made by the user using the mouse 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{pause_8c_source_l00027}{27}} of file \mbox{\hyperlink{pause_8c_source}{pause.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{pause_8c_a325fdbdcdac6314eb28250ba9404f8db_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pause_8c_a7981fa96ab53adfca397182f9940b03b}\label{pause_8c_a7981fa96ab53adfca397182f9940b03b}} 
+\index{pause.c@{pause.c}!set\_selection\_pause@{set\_selection\_pause}}
+\index{set\_selection\_pause@{set\_selection\_pause}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{set\_selection\_pause()}{set\_selection\_pause()}}
+{\footnotesize\ttfamily void set\+\_\+selection\+\_\+pause (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}}}]{action }\end{DoxyParamCaption})}
+
+
+
+Changes the current value of a pause state controlling variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to which the pause state controlling variable is going to change into \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{pause_8c_source_l00006}{6}} of file \mbox{\hyperlink{pause_8c_source}{pause.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{pause_8c_a8ca9e45ba706c54c6f3332284bdb786a}\label{pause_8c_a8ca9e45ba706c54c6f3332284bdb786a}} 
+\index{pause.c@{pause.c}!pause\_selection@{pause\_selection}}
+\index{pause\_selection@{pause\_selection}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{pause\_selection}{pause\_selection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35ec}{action\+\_\+t}} pause\+\_\+selection = \mbox{\hyperlink{enum_8h_aec2532b33d2d66f09e5b30ed3ded35eca4ddf822225ddb5e5eac9c0940dcdab90}{AFK}}}
+
+
+
+Definition at line \mbox{\hyperlink{pause_8c_source_l00003}{3}} of file \mbox{\hyperlink{pause_8c_source}{pause.\+c}}.
+

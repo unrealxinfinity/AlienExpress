@@ -1,0 +1,4 @@
+<map id="is_on_teleport" name="is_on_teleport">
+<area shape="rect" id="node1" title="Checks if a character is colliding with a teleport." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#a7d3f77b855f0ef54a954e55384bf942f" title="Detects if character passed through by argument is in contact with another entity also passed by argu..." alt="" coords="156,5,265,32"/>
+</map>

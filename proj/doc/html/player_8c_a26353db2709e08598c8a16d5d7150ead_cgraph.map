@@ -1,0 +1,6 @@
+<map id="move_player" name="move_player">
+<area shape="rect" id="node1" title="Moves the player accordingly to the keyboard inputs he has submitted." alt="" coords="5,31,99,57"/>
+<area shape="rect" id="node2" href="$view_8c.html#aafcad4c7ae21e495b16b0c1c58bd2e8f" title="Checks in the frame_buffer for collisions." alt="" coords="147,31,268,57"/>
+<area shape="rect" id="node3" href="$view_8c.html#a35fce9c592fbff1ea083e9dc48a7081e" title="Eliminates monster in a certain position passed by argument." alt="" coords="316,5,405,32"/>
+<area shape="rect" id="node4" href="$view_8c.html#affd2e4622b63d5c571629d2c0e108136" title="Eliminates wolf in a certain position passed by argument." alt="" coords="329,56,393,83"/>
+</map>

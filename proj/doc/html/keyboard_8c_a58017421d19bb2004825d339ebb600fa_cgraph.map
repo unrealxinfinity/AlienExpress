@@ -1,0 +1,5 @@
+<map id="keyboard_restore" name="keyboard_restore">
+<area shape="rect" id="node1" title="Restores the keyboard to it&#39;s original value." alt="" coords="5,31,127,57"/>
+<area shape="rect" id="node2" href="$keyboard_8c.html#aef1b5b40937e761586d8a47bee8bef30" title="Reads the value of input made by user from a port given by argument and stores result on variable com..." alt="" coords="176,5,293,32"/>
+<area shape="rect" id="node3" href="$keyboard_8c.html#a7bd99178b8fc989e05b8be69d0200d7b" title="Writes to the keyboard port a certain command." alt="" coords="175,56,294,83"/>
+</map>

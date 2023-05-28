@@ -1,0 +1,86 @@
+\hypertarget{bone_8h}{}\doxysection{src/\+Items/bone.h File Reference}
+\label{bone_8h}\index{src/Items/bone.h@{src/Items/bone.h}}
+{\ttfamily \#include \char`\"{}../macros/includes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../load/view.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bone_8h_a3a90956fb45816c8c0abfb2e78777a14}{draw\+\_\+bone}} ()
+\begin{DoxyCompactList}\small\item\em Calls drawing function to draw bone and also calls animation function when bone is thrown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bone_8h_a585f9194dd92b30183c2fc87dd724adb}{get\+\_\+bone}} (int index)
+\begin{DoxyCompactList}\small\item\em Sets the current inventory position to a bone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bone_8h_a85b12e145c180c176fb6c69b03725a39}{throw\+\_\+animation\+\_\+bone}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} $\ast$item, bool was\+\_\+throwed)
+\begin{DoxyCompactList}\small\item\em Animates the bone being thrown. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{bone_8h_a3a90956fb45816c8c0abfb2e78777a14}\label{bone_8h_a3a90956fb45816c8c0abfb2e78777a14}} 
+\index{bone.h@{bone.h}!draw\_bone@{draw\_bone}}
+\index{draw\_bone@{draw\_bone}!bone.h@{bone.h}}
+\doxysubsubsection{\texorpdfstring{draw\_bone()}{draw\_bone()}}
+{\footnotesize\ttfamily void draw\+\_\+bone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function to draw bone and also calls animation function when bone is thrown. 
+
+
+
+Definition at line \mbox{\hyperlink{bone_8c_source_l00004}{4}} of file \mbox{\hyperlink{bone_8c_source}{bone.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bone_8h_a3a90956fb45816c8c0abfb2e78777a14_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bone_8h_a585f9194dd92b30183c2fc87dd724adb}\label{bone_8h_a585f9194dd92b30183c2fc87dd724adb}} 
+\index{bone.h@{bone.h}!get\_bone@{get\_bone}}
+\index{get\_bone@{get\_bone}!bone.h@{bone.h}}
+\doxysubsubsection{\texorpdfstring{get\_bone()}{get\_bone()}}
+{\footnotesize\ttfamily void get\+\_\+bone (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Sets the current inventory position to a bone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Current inventory index position \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{bone_8c_source_l00017}{17}} of file \mbox{\hyperlink{bone_8c_source}{bone.\+c}}.
+
+\mbox{\Hypertarget{bone_8h_a85b12e145c180c176fb6c69b03725a39}\label{bone_8h_a85b12e145c180c176fb6c69b03725a39}} 
+\index{bone.h@{bone.h}!throw\_animation\_bone@{throw\_animation\_bone}}
+\index{throw\_animation\_bone@{throw\_animation\_bone}!bone.h@{bone.h}}
+\doxysubsubsection{\texorpdfstring{throw\_animation\_bone()}{throw\_animation\_bone()}}
+{\footnotesize\ttfamily void throw\+\_\+animation\+\_\+bone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}} $\ast$}]{item,  }\item[{bool}]{was\+\_\+throwed }\end{DoxyParamCaption})}
+
+
+
+Animates the bone being thrown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & bone that is being thrown \\
+\hline
+{\em was\+\_\+thrown} & Boolean to know if bone has been thrown or not. Has value false if it hasnt yet and true if otherwise \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{bone_8c_source_l00027}{27}} of file \mbox{\hyperlink{bone_8c_source}{bone.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bone_8h_a85b12e145c180c176fb6c69b03725a39_cgraph}
+\end{center}
+\end{figure}

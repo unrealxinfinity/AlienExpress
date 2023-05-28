@@ -1,0 +1,4 @@
+<map id="mouse_ih_game_over" name="mouse_ih_game_over">
+<area shape="rect" id="node1" title="Controls the inputs of the mouse to control the game over state." alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node2" href="$mouse_8c.html#ab485f93fc54f761b3b6f090d99bf9261" title="Checks if mouse is colliding with coordinates given by argument." alt="" coords="200,5,312,32"/>
+</map>

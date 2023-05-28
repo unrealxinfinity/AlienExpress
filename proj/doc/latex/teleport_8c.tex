@@ -1,0 +1,138 @@
+\hypertarget{teleport_8c}{}\doxysection{src/\+Entities/teleport.c File Reference}
+\label{teleport_8c}\index{src/Entities/teleport.c@{src/Entities/teleport.c}}
+{\ttfamily \#include \char`\"{}teleport.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{teleport_8c_aa201bcb0f8fb745d5be420b614c562c4}{draw\+\_\+teleports}} ()
+\begin{DoxyCompactList}\small\item\em Calls drawing function to draw the teleports and also calls the animation function to animate the score. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{teleport_8c_a827261800a27b1078651ec6b44d508fa}{score\+\_\+animation}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} $\ast$character, int type)
+\begin{DoxyCompactList}\small\item\em Animates the score after delivering a package to a teleport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{teleport_8c_afc82a8ae41796717d038e574614f304f}{pick\+\_\+draw\+\_\+type}} ()
+\begin{DoxyCompactList}\small\item\em Picks the type of coloring format to draw the score numbers. If 0 then it draws normally, if 1 it draws with green coloring, if 4 it draws with red coloring. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{teleport_8c_a9d91168b1662b69ed23bb1672427f63a}{draw\+\_\+score}} (int type)
+\begin{DoxyCompactList}\small\item\em Calls number drawing function to draw the score numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{teleport_8c_abe9e64ff92b4c5d6588ab16a3f381235}{reached}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{teleport_8c_a9d91168b1662b69ed23bb1672427f63a}\label{teleport_8c_a9d91168b1662b69ed23bb1672427f63a}} 
+\index{teleport.c@{teleport.c}!draw\_score@{draw\_score}}
+\index{draw\_score@{draw\_score}!teleport.c@{teleport.c}}
+\doxysubsubsection{\texorpdfstring{draw\_score()}{draw\_score()}}
+{\footnotesize\ttfamily void draw\+\_\+score (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Calls number drawing function to draw the score numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of coloring format of the score numbers. If 0 then it draws normally, if 1 it draws with green coloring, if 4 it draws with red coloring \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{teleport_8c_source_l00082}{82}} of file \mbox{\hyperlink{teleport_8c_source}{teleport.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{teleport_8c_a9d91168b1662b69ed23bb1672427f63a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{teleport_8c_aa201bcb0f8fb745d5be420b614c562c4}\label{teleport_8c_aa201bcb0f8fb745d5be420b614c562c4}} 
+\index{teleport.c@{teleport.c}!draw\_teleports@{draw\_teleports}}
+\index{draw\_teleports@{draw\_teleports}!teleport.c@{teleport.c}}
+\doxysubsubsection{\texorpdfstring{draw\_teleports()}{draw\_teleports()}}
+{\footnotesize\ttfamily void draw\+\_\+teleports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function to draw the teleports and also calls the animation function to animate the score. 
+
+
+
+Definition at line \mbox{\hyperlink{teleport_8c_source_l00006}{6}} of file \mbox{\hyperlink{teleport_8c_source}{teleport.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{teleport_8c_aa201bcb0f8fb745d5be420b614c562c4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{teleport_8c_afc82a8ae41796717d038e574614f304f}\label{teleport_8c_afc82a8ae41796717d038e574614f304f}} 
+\index{teleport.c@{teleport.c}!pick\_draw\_type@{pick\_draw\_type}}
+\index{pick\_draw\_type@{pick\_draw\_type}!teleport.c@{teleport.c}}
+\doxysubsubsection{\texorpdfstring{pick\_draw\_type()}{pick\_draw\_type()}}
+{\footnotesize\ttfamily void pick\+\_\+draw\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Picks the type of coloring format to draw the score numbers. If 0 then it draws normally, if 1 it draws with green coloring, if 4 it draws with red coloring. 
+
+
+
+Definition at line \mbox{\hyperlink{teleport_8c_source_l00070}{70}} of file \mbox{\hyperlink{teleport_8c_source}{teleport.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{teleport_8c_afc82a8ae41796717d038e574614f304f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{teleport_8c_a827261800a27b1078651ec6b44d508fa}\label{teleport_8c_a827261800a27b1078651ec6b44d508fa}} 
+\index{teleport.c@{teleport.c}!score\_animation@{score\_animation}}
+\index{score\_animation@{score\_animation}!teleport.c@{teleport.c}}
+\doxysubsubsection{\texorpdfstring{score\_animation()}{score\_animation()}}
+{\footnotesize\ttfamily int score\+\_\+animation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}} $\ast$}]{character,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Animates the score after delivering a package to a teleport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & Teleport that was delivered a package onto \\
+\hline
+{\em type} & Type of coloring format of the score numbers. If 0 then it draws normally, if 1 it draws with green coloring, if 4 it draws with red coloring \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{teleport_8c_source_l00026}{26}} of file \mbox{\hyperlink{teleport_8c_source}{teleport.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{teleport_8c_a827261800a27b1078651ec6b44d508fa_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{teleport_8c_abe9e64ff92b4c5d6588ab16a3f381235}\label{teleport_8c_abe9e64ff92b4c5d6588ab16a3f381235}} 
+\index{teleport.c@{teleport.c}!reached@{reached}}
+\index{reached@{reached}!teleport.c@{teleport.c}}
+\doxysubsubsection{\texorpdfstring{reached}{reached}}
+{\footnotesize\ttfamily int reached = 0}
+
+
+
+Definition at line \mbox{\hyperlink{teleport_8c_source_l00003}{3}} of file \mbox{\hyperlink{teleport_8c_source}{teleport.\+c}}.
+

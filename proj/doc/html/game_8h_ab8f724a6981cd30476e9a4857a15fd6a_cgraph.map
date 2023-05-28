@@ -1,0 +1,10 @@
+<map id="control_state" name="control_state">
+<area shape="rect" id="node1" title="Calls set_state function whenever a certain action is made in a current state." alt="" coords="5,81,102,108"/>
+<area shape="rect" id="node2" href="$view_8c.html#a561385b3992d00cde13d63d6feca5afd" title="loads and stores animated xpms of the player on the struct AnimatedImg_t" alt="" coords="157,5,259,32"/>
+<area shape="rect" id="node5" href="$view_8c.html#ab140031bb15222ad7c63ad9504bbbe5c" title="Sets all level variables and entities to their starting values." alt="" coords="173,56,243,83"/>
+<area shape="rect" id="node6" href="$player_8c.html#a16d1ffc3278a976b73eb2258dd973186" title="Changes all player movement in every direction to STILL, making him not move." alt="" coords="150,107,266,133"/>
+<area shape="rect" id="node7" href="$game_8c.html#a0fc3becd2b2ae6ca9716da98ddf7ea3b" title="Changes the current value of the state of the struct game_state_t." alt="" coords="170,157,246,184"/>
+<area shape="rect" id="node3" href="$view_8c.html#a2c7c17f2665afb58618a7df77c1bb102" title="Loads all animated entities xpms into a struct called AnimatedImg_t." alt="" coords="314,5,455,32"/>
+<area shape="rect" id="node4" href="$view_8c.html#ab3749554144885b5029f6bf77aaa7c7a" title="Loads and sets the variables of struct img_t of a xpm." alt="" coords="503,5,585,32"/>
+<area shape="rect" id="node8" href="$view_8c.html#a4d87196986b07d28a857d850534a3179" title="Sets all entities and items to dead so that they will not show on screen anymore." alt="" coords="324,157,446,184"/>
+</map>

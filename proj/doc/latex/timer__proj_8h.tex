@@ -1,0 +1,121 @@
+\hypertarget{timer__proj_8h}{}\doxysection{src/devices/timer\+\_\+proj.h File Reference}
+\label{timer__proj_8h}\index{src/devices/timer\_proj.h@{src/devices/timer\_proj.h}}
+{\ttfamily \#include \char`\"{}../macros/includes.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t() \mbox{\hyperlink{timer__proj_8h_a1b7a4bfd53b7d72912eb8f353ef64490}{timer\+\_\+subscribe}} ()
+\begin{DoxyCompactList}\small\item\em Subscribes the timer device, setting into the interrupt mask the respective timer hook id bit to 1. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{timer__proj_8h_a9e1f3f8773ad05f253feeda4c9d096e4}{timer\+\_\+unsubscribe}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes the timer device, setting into the interrupt mask the respective timer hook id bit to 0. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{timer__proj_8h_aa77a834317c7fb674015afb57ce5eee8}{timer\+\_\+int\+\_\+handler\+\_\+proj}} ()
+\begin{DoxyCompactList}\small\item\em Handles the interruupts of the timer, incrementing the timer count variable. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{timer__proj_8h_aa99b446b6b765c63b6279d0309f7add6}{timer\+\_\+set\+\_\+frequency\+\_\+proj}} (uint8\+\_\+t timer, uint32\+\_\+t freq)
+\begin{DoxyCompactList}\small\item\em Sets the timer frequency to a certain frequency value. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{timer__proj_8h_ae793c0b7886d11d4f4eabd86752922e6}{timer\+\_\+get\+\_\+config}} (uint8\+\_\+t timer)
+\begin{DoxyCompactList}\small\item\em Gets the current timer configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{timer__proj_8h_ae793c0b7886d11d4f4eabd86752922e6}\label{timer__proj_8h_ae793c0b7886d11d4f4eabd86752922e6}} 
+\index{timer\_proj.h@{timer\_proj.h}!timer\_get\_config@{timer\_get\_config}}
+\index{timer\_get\_config@{timer\_get\_config}!timer\_proj.h@{timer\_proj.h}}
+\doxysubsubsection{\texorpdfstring{timer\_get\_config()}{timer\_get\_config()}}
+{\footnotesize\ttfamily uint32\+\_\+t timer\+\_\+get\+\_\+config (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{timer }\end{DoxyParamCaption})}
+
+
+
+Gets the current timer configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & The timer to get the configuration from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the current timer configuration if successfull and 0x\+FFFF if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{timer__proj_8c_source_l00046}{46}} of file \mbox{\hyperlink{timer__proj_8c_source}{timer\+\_\+proj.\+c}}.
+
+\mbox{\Hypertarget{timer__proj_8h_aa77a834317c7fb674015afb57ce5eee8}\label{timer__proj_8h_aa77a834317c7fb674015afb57ce5eee8}} 
+\index{timer\_proj.h@{timer\_proj.h}!timer\_int\_handler\_proj@{timer\_int\_handler\_proj}}
+\index{timer\_int\_handler\_proj@{timer\_int\_handler\_proj}!timer\_proj.h@{timer\_proj.h}}
+\doxysubsubsection{\texorpdfstring{timer\_int\_handler\_proj()}{timer\_int\_handler\_proj()}}
+{\footnotesize\ttfamily void() timer\+\_\+int\+\_\+handler\+\_\+proj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the interruupts of the timer, incrementing the timer count variable. 
+
+
+
+Definition at line \mbox{\hyperlink{timer__proj_8c_source_l00018}{18}} of file \mbox{\hyperlink{timer__proj_8c_source}{timer\+\_\+proj.\+c}}.
+
+\mbox{\Hypertarget{timer__proj_8h_aa99b446b6b765c63b6279d0309f7add6}\label{timer__proj_8h_aa99b446b6b765c63b6279d0309f7add6}} 
+\index{timer\_proj.h@{timer\_proj.h}!timer\_set\_frequency\_proj@{timer\_set\_frequency\_proj}}
+\index{timer\_set\_frequency\_proj@{timer\_set\_frequency\_proj}!timer\_proj.h@{timer\_proj.h}}
+\doxysubsubsection{\texorpdfstring{timer\_set\_frequency\_proj()}{timer\_set\_frequency\_proj()}}
+{\footnotesize\ttfamily int() timer\+\_\+set\+\_\+frequency\+\_\+proj (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{timer,  }\item[{uint32\+\_\+t}]{freq }\end{DoxyParamCaption})}
+
+
+
+Sets the timer frequency to a certain frequency value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & The timer to set the frequency \\
+\hline
+{\em freq} & The value of the frequency to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{timer__proj_8c_source_l00028}{28}} of file \mbox{\hyperlink{timer__proj_8c_source}{timer\+\_\+proj.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{timer__proj_8h_aa99b446b6b765c63b6279d0309f7add6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{timer__proj_8h_a1b7a4bfd53b7d72912eb8f353ef64490}\label{timer__proj_8h_a1b7a4bfd53b7d72912eb8f353ef64490}} 
+\index{timer\_proj.h@{timer\_proj.h}!timer\_subscribe@{timer\_subscribe}}
+\index{timer\_subscribe@{timer\_subscribe}!timer\_proj.h@{timer\_proj.h}}
+\doxysubsubsection{\texorpdfstring{timer\_subscribe()}{timer\_subscribe()}}
+{\footnotesize\ttfamily uint8\+\_\+t() timer\+\_\+subscribe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Subscribes the timer device, setting into the interrupt mask the respective timer hook id bit to 1. 
+
+\begin{DoxyReturn}{Returns}
+Returns the bit number that was set if successfull or 0x\+FF if unsuccessfull 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{timer__proj_8c_source_l00006}{6}} of file \mbox{\hyperlink{timer__proj_8c_source}{timer\+\_\+proj.\+c}}.
+
+\mbox{\Hypertarget{timer__proj_8h_a9e1f3f8773ad05f253feeda4c9d096e4}\label{timer__proj_8h_a9e1f3f8773ad05f253feeda4c9d096e4}} 
+\index{timer\_proj.h@{timer\_proj.h}!timer\_unsubscribe@{timer\_unsubscribe}}
+\index{timer\_unsubscribe@{timer\_unsubscribe}!timer\_proj.h@{timer\_proj.h}}
+\doxysubsubsection{\texorpdfstring{timer\_unsubscribe()}{timer\_unsubscribe()}}
+{\footnotesize\ttfamily int() timer\+\_\+unsubscribe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes the timer device, setting into the interrupt mask the respective timer hook id bit to 0. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{timer__proj_8c_source_l00014}{14}} of file \mbox{\hyperlink{timer__proj_8c_source}{timer\+\_\+proj.\+c}}.
+

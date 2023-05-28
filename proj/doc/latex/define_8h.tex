@@ -1,0 +1,1149 @@
+\hypertarget{define_8h}{}\doxysection{src/macros/define.h File Reference}
+\label{define_8h}\index{src/macros/define.h@{src/macros/define.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}}~0x\+FFFF
+\item 
+\#define \mbox{\hyperlink{define_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}}~0
+\item 
+\#define \mbox{\hyperlink{define_8h_ad40cf8f3e7e75d30d8dd9f7b041e6ef7}{TIMER\+\_\+\+IRQ\+\_\+\+LINE}}~0
+\item 
+\#define \mbox{\hyperlink{define_8h_a300ff385500e663d5280b927366e32d8}{TIMER\+\_\+\+STATUS}}~0x43
+\item 
+\#define \mbox{\hyperlink{define_8h_acc9ff9df4a9674a1ce9ba08fc4a4679e}{TIMER\+\_\+0}}~0x40
+\item 
+\#define \mbox{\hyperlink{define_8h_aa4d79080dd64c8164b45202b5fa77424}{CONST\+\_\+\+FREQ}}~1193182
+\item 
+\#define \mbox{\hyperlink{define_8h_aa129740d09f615ace83f8f0b8bd04e8a}{SELECT\+\_\+\+TIMER}}(\mbox{\hyperlink{global_8h_a64607d6f88be448046247fe4ef73d26e}{n}})~(\mbox{\hyperlink{global_8h_a64607d6f88be448046247fe4ef73d26e}{n}} $<$$<$ 6)
+\item 
+\#define \mbox{\hyperlink{define_8h_a9bea4f38873ae05747004ac2cce63b35}{SELECT\+\_\+\+RB\+\_\+\+TIMER}}(\mbox{\hyperlink{global_8h_a64607d6f88be448046247fe4ef73d26e}{n}})~BIT((\mbox{\hyperlink{global_8h_a64607d6f88be448046247fe4ef73d26e}{n}}) + 1)
+\item 
+\#define \mbox{\hyperlink{define_8h_a4c2eecbfb96744a9c2af71dba75ecb18}{TIMER\+\_\+\+RB\+\_\+\+CMD}}~(BIT(7) $\vert$ BIT(6))
+\item 
+\#define \mbox{\hyperlink{define_8h_af0fc596f1b70585784f6b4531762687d}{TIMER\+\_\+\+COUNT\+\_\+\+MODE}}~BIT(5)
+\item 
+\#define \mbox{\hyperlink{define_8h_a8c0f1933323274c765e23837e4fbc8c7}{TIMER\+\_\+\+LSB\+\_\+\+MSB}}~(BIT(4) $\vert$ BIT(5))
+\item 
+\#define \mbox{\hyperlink{define_8h_adcabd5b693735bced4d5867b84dfb027}{KBD\+\_\+\+HOOK\+\_\+\+ID}}~1
+\item 
+\#define \mbox{\hyperlink{define_8h_a1862e728098ddeac91aaacf6420fc2e7}{KBD\+\_\+\+IRQ\+\_\+\+LINE}}~1
+\item 
+\#define \mbox{\hyperlink{define_8h_a0615d1ead5f06ae8445d2a8be8364636}{KBC\+\_\+\+STATUS}}~0x64
+\item 
+\#define \mbox{\hyperlink{define_8h_ae1ceff90b79b3e4feab3cdab37c950fe}{OUT\+\_\+\+BUFFER\+\_\+\+BIT}}~BIT(0)
+\item 
+\#define \mbox{\hyperlink{define_8h_a4896f49aa6f447c44e839a119b2038b6}{IN\+\_\+\+BUFFER\+\_\+\+BIT}}~BIT(1)
+\item 
+\#define \mbox{\hyperlink{define_8h_a81d2ca6759f3f3bf04556b7558aea6bc}{PARITY\+\_\+\+ERROR}}~BIT(7)
+\item 
+\#define \mbox{\hyperlink{define_8h_ab4556e7b441bc247315ea9a2f3afe79c}{TIME\+\_\+\+OUT\+\_\+\+ERROR}}~BIT(6)
+\item 
+\#define \mbox{\hyperlink{define_8h_aa9942f12a871b48b5176e6c9a9f5f174}{OUT\+\_\+\+BUFFER}}~0x60
+\item 
+\#define \mbox{\hyperlink{define_8h_a1c3fc56ae80b0e77b16b64d1b805dbd1}{IN\+\_\+\+BUFFER}}~0x20
+\item 
+\#define \mbox{\hyperlink{define_8h_af1e33bcc5ef600196ab153395edb1c3c}{STREAMING\+\_\+\+MODE}}~0x\+F4
+\item 
+\#define \mbox{\hyperlink{define_8h_a6f6489887e08bff4887d0bc5dcf214d8}{ACK}}~0x\+FA
+\item 
+\#define \mbox{\hyperlink{define_8h_a92f67631ef5a97e4a266c15bc710776d}{RESEND}}~0x\+FE
+\item 
+\#define \mbox{\hyperlink{define_8h_a62249e384b997229a3e2ae74ade334e2}{DELAY}}~20000
+\item 
+\#define \mbox{\hyperlink{define_8h_a0df4fbf54d7714c0f1c5efcc4f6d99a9}{MAKE\+\_\+\+ESC}}~0x01
+\item 
+\#define \mbox{\hyperlink{define_8h_a6ef830375be126391a1a52952027aa74}{MAKE\+\_\+\+ENTER}}~0x1C
+\item 
+\#define \mbox{\hyperlink{define_8h_a5287931eda665268f55498ec93276c84}{MAKE\+\_\+W}}~0x11
+\item 
+\#define \mbox{\hyperlink{define_8h_aa149c92af302f5d9e72a44f335d00ce0}{MAKE\+\_\+A}}~0x1E
+\item 
+\#define \mbox{\hyperlink{define_8h_a126db2c2ecef7c6abe8a14a8a347d3a9}{MAKE\+\_\+D}}~0x20
+\item 
+\#define \mbox{\hyperlink{define_8h_a7327330cf4cd2aa037a35cb1d4a130e1}{MAKE\+\_\+S}}~0x1F
+\item 
+\#define \mbox{\hyperlink{define_8h_a6f4b2baf27cbca540f54e63677fb63ca}{MAKE\+\_\+P}}~0x19
+\item 
+\#define \mbox{\hyperlink{define_8h_a4cd2f955afad039e9ebcbb1a066ef833}{MAKE\+\_\+O}}~0x18
+\item 
+\#define \mbox{\hyperlink{define_8h_af35869cca53bfece85b39e6ca0809eaf}{MAKE\+\_\+I}}~0x17
+\item 
+\#define \mbox{\hyperlink{define_8h_adbf71b0e13b45d46db2f169718147d70}{MAKE\+\_\+L}}~0x26
+\item 
+\#define \mbox{\hyperlink{define_8h_a7323faa8df8d0eaaa2f295a10b47b734}{MAKE\+\_\+1}}~0x02
+\item 
+\#define \mbox{\hyperlink{define_8h_abc760bcfe107799691af0a7cfb81c953}{MAKE\+\_\+2}}~0x03
+\item 
+\#define \mbox{\hyperlink{define_8h_a0805594367f24340777dd681d19dbb5c}{MAKE\+\_\+3}}~0x04
+\item 
+\#define \mbox{\hyperlink{define_8h_a4b40811cbbde1d36b620ec436879108c}{B}}(\mbox{\hyperlink{global_8h_a64607d6f88be448046247fe4ef73d26e}{n}})~(\mbox{\hyperlink{global_8h_a64607d6f88be448046247fe4ef73d26e}{n}} $\vert$ BIT(7))
+\item 
+\#define \mbox{\hyperlink{define_8h_ab3919f33b46e0808c4ed1c56a6a423f2}{STREAM\+\_\+\+MODE}}~0x\+EA
+\item 
+\#define \mbox{\hyperlink{define_8h_a782efbd04012530bb88bd5660dc24af6}{DATA\+\_\+\+REPORT}}~0x\+F4
+\item 
+\#define \mbox{\hyperlink{define_8h_ab68ffa76160866a0585aead19b67a130}{MOUSE\+\_\+\+HOOK\+\_\+\+ID}}~3
+\item 
+\#define \mbox{\hyperlink{define_8h_af10b9efcb908230838524558bb05588a}{MOUSE\+\_\+\+IRQ\+\_\+\+LINE}}~12
+\item 
+\#define \mbox{\hyperlink{define_8h_a92e32a12d07e5e7237c9993bb1c66728}{WRITE\+\_\+\+MOUSE\+\_\+\+CMD}}~0x\+D4
+\item 
+\#define \mbox{\hyperlink{define_8h_a6f6489887e08bff4887d0bc5dcf214d8}{ACK}}~0x\+FA
+\item 
+\#define \mbox{\hyperlink{define_8h_a6e4a6ed5bec289067d9aefe759abca3e}{MOUSE\+\_\+\+CONTROL\+\_\+\+BIT}}~BIT(3)
+\item 
+\#define \mbox{\hyperlink{define_8h_a3ac6c4732e4b324679fce065ca9bf707}{CLICK\+\_\+\+LEFT}}~BIT(0)
+\item 
+\#define \mbox{\hyperlink{define_8h_a1c51504fd982b4913ec3b122821897ba}{CLICK\+\_\+\+RIGHT}}~BIT(1)
+\item 
+\#define \mbox{\hyperlink{define_8h_ace2af6cb129a41ed0dd5cf219f00575b}{CLICK\+\_\+\+MIDDLE}}~BIT(2)
+\item 
+\#define \mbox{\hyperlink{define_8h_acb401b7cf6d14fccb64e8b304c9f3ff9}{DELTA\+\_\+X}}~BIT(4)
+\item 
+\#define \mbox{\hyperlink{define_8h_a1574d066f62fe8032313c2665e55149c}{DELTA\+\_\+Y}}~BIT(5)
+\item 
+\#define \mbox{\hyperlink{define_8h_a82dc3ac9577dabd19733ada75d2822d0}{X\+\_\+\+OVERFLOW}}~BIT(6)
+\item 
+\#define \mbox{\hyperlink{define_8h_acd54c5569c84fd2d1710cccd190e138a}{Y\+\_\+\+OVERFLOW}}~BIT(7)
+\item 
+\#define \mbox{\hyperlink{define_8h_a411dfcc6fa30fd0536625dfd5f91f22e}{SET\+\_\+\+NEGATIVE}}~0x\+FF00
+\item 
+\#define \mbox{\hyperlink{define_8h_a2617c1997f2516f4d0c0331bd0c600d6}{INTNO}}~0x10
+\item 
+\#define \mbox{\hyperlink{define_8h_ae56562740b1159ed03061cecec40f609}{AL}}~0x02
+\item 
+\#define \mbox{\hyperlink{define_8h_ac653b4a572a53fd35a83e647e96230e4}{AH}}~0x4F
+\item 
+\#define \mbox{\hyperlink{define_8h_a0f37ffb2213a7e5ab25da072e87193ac}{BX}}~BIT(14)
+\item 
+\#define \mbox{\hyperlink{define_8h_a48fa70a72e330f89e31fcd6a44df06c9}{INDEXED\+\_\+\+MODE}}~0x105
+\item 
+\#define \mbox{\hyperlink{define_8h_af41782c40cb3044059158f3ac54fbe7f}{DIRECT\+\_\+\+COLOR\+\_\+1\+\_\+5\+\_\+5\+\_\+5}}~0x110
+\item 
+\#define \mbox{\hyperlink{define_8h_ab23c54cda9c25c8f00a0de1b18faf7fe}{DIRECT\+\_\+\+COLOR\+\_\+8\+\_\+8\+\_\+8}}~0x115
+\item 
+\#define \mbox{\hyperlink{define_8h_a505cd7f074a8012115132d8bb78dc32c}{DIRECT\+\_\+\+COLOR\+\_\+5\+\_\+6\+\_\+5}}~0x11A
+\item 
+\#define \mbox{\hyperlink{define_8h_abcd021ad1acf8260189dd8bce46162ef}{DIRECT\+\_\+\+COLOR\+\_\+8\+\_\+8\+\_\+8\+\_\+8}}~0x14C
+\item 
+\#define \mbox{\hyperlink{define_8h_ac93f7885d306a82906ee65bdbf0db65d}{RTC\+\_\+\+HOOK\+\_\+\+ID}}~2
+\item 
+\#define \mbox{\hyperlink{define_8h_a7f6b0bbf4271dd31625f92ec8314808c}{RTC\+\_\+\+IRQ\+\_\+\+LINE}}~8
+\item 
+\#define \mbox{\hyperlink{define_8h_a2e1c4a2fff11aee38aee30ab43b401f3}{RTC\+\_\+\+ADRESS}}~0x70
+\item 
+\#define \mbox{\hyperlink{define_8h_a0bb14714587a8eed5f490f2afc95f083}{RTC\+\_\+\+OUTPUT}}~0x71
+\item 
+\#define \mbox{\hyperlink{define_8h_a77a045a812e9d5bdcd130cb81a6fd5bd}{RTC\+\_\+\+COMMAND}}~11
+\item 
+\#define \mbox{\hyperlink{define_8h_a82cf926d0322d724ce4d18d03c242780}{RTC\+\_\+\+COMMAND2}}~12
+\item 
+\#define \mbox{\hyperlink{define_8h_a6405f53f64912dd9481ad224381b272b}{RTC\+\_\+\+COMMAND3}}~10
+\item 
+\#define \mbox{\hyperlink{define_8h_a43f6540c6d3a78b930f9adad56cf7fac}{RTC\+\_\+\+SECONDS}}~0
+\item 
+\#define \mbox{\hyperlink{define_8h_aabc0725ac27ea93c913a2a4d7cd51ac7}{RTC\+\_\+\+MINUTES}}~2
+\item 
+\#define \mbox{\hyperlink{define_8h_a4d74cdb9a956c4f1783ad5aff00dc2b8}{RTC\+\_\+\+HOURS}}~4
+\item 
+\#define \mbox{\hyperlink{define_8h_a478c4ef1cbc68cd622e01cceb3446bb2}{RTC\+\_\+\+DAYS}}~7
+\item 
+\#define \mbox{\hyperlink{define_8h_ab16ad8bcc1cd2e491bd8e2c921ee30c5}{RTC\+\_\+\+MONTHS}}~8
+\item 
+\#define \mbox{\hyperlink{define_8h_a8f85622d8edec8b0d36db7c8f1267106}{RTC\+\_\+\+YEARS}}~9
+\item 
+\#define \mbox{\hyperlink{define_8h_a4f66cbb1a1d265c57c82c19eb59233df}{UNBREAKABLE\+\_\+\+WALL}}~0x\+B2\+B2\+B2
+\item 
+\#define \mbox{\hyperlink{define_8h_aad83b5ec5f8d43384c666cf26865aaea}{PLAYER}}~0x161516
+\item 
+\#define \mbox{\hyperlink{define_8h_af5e3aa7c9b13673c6a94f8ebb70010db}{ENEMY}}~0x161319
+\item 
+\#define \mbox{\hyperlink{define_8h_a61fc173cd03db618eb2f64b60f42b55b}{WORKER}}~0\+X15110F
+\item 
+\#define \mbox{\hyperlink{define_8h_aaaa1a6d498de96acbe1cb9057983a01a}{PAUSE\+\_\+\+SCREEN}}~0x00000D
+\item 
+\#define \mbox{\hyperlink{define_8h_a94127cc7d8cfd3ad02d2369ddd49f839}{WOLF}}~0x\+FFFFFD
+\item 
+\#define \mbox{\hyperlink{define_8h_aca8570fb706c81df371b7f9bc454ae03}{PACKAGE}}~0x000000
+\item 
+\#define \mbox{\hyperlink{define_8h_a42a4754c366aff8f1259ee3b1ce08ac9}{PISTOL\+\_\+\+BULLET}}~0x\+ECFFA8
+\item 
+\#define \mbox{\hyperlink{define_8h_a9c3c35f9545d4bd20d9c19ee86a3f067}{BULLET}}~0x000003
+\item 
+\#define \mbox{\hyperlink{define_8h_acb3bc16cb7c143373145b804a57d747e}{AMMO}}~0x000006
+\item 
+\#define \mbox{\hyperlink{define_8h_a36868d2ff907a84d2f27caf3160ce631}{PIZZA}}~0x000007
+\item 
+\#define \mbox{\hyperlink{define_8h_aed0c1059b6964fa09322aab11fe692f8}{WATCH}}~0x000008
+\item 
+\#define \mbox{\hyperlink{define_8h_a2f7087c814499364c1bb7a8d872ca8ab}{BOOTS}}~0x000009
+\item 
+\#define \mbox{\hyperlink{define_8h_a64730259fa96833ccdcdaeb5a149cdcb}{BACKPACK}}~0x00000A
+\item 
+\#define \mbox{\hyperlink{define_8h_a474bb7b721d9b758209f8d688b2f265b}{BONE}}~0x00000C
+\item 
+\#define \mbox{\hyperlink{define_8h_a67652ff1cd5b6edfdfc13dff3d612f2b}{GRENADE}}~0x00000B
+\item 
+\#define \mbox{\hyperlink{define_8h_ace7090923c4e2498d407e66121134375}{PISTOL}}~0x\+FFFFFF
+\item 
+\#define \mbox{\hyperlink{define_8h_aa35e137ee90bb3aab948cb128a20e905}{HEALTH}}~0x\+FF0000
+\item 
+\#define \mbox{\hyperlink{define_8h_a8455cf22aa72fbb4644520d36a42f594}{EMPTY\+\_\+\+HEALTH}}~0x000002
+\item 
+\#define \mbox{\hyperlink{define_8h_a633d4415dae913396d3fef7ace02bfcf}{EMPTY\+\_\+\+INVENTORY}}~0x696969
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{define_8h_a6f6489887e08bff4887d0bc5dcf214d8}\label{define_8h_a6f6489887e08bff4887d0bc5dcf214d8}} 
+\index{define.h@{define.h}!ACK@{ACK}}
+\index{ACK@{ACK}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{ACK}{ACK}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define ACK~0x\+FA}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00061}{61}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a6f6489887e08bff4887d0bc5dcf214d8}\label{define_8h_a6f6489887e08bff4887d0bc5dcf214d8}} 
+\index{define.h@{define.h}!ACK@{ACK}}
+\index{ACK@{ACK}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{ACK}{ACK}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define ACK~0x\+FA}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00061}{61}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ac653b4a572a53fd35a83e647e96230e4}\label{define_8h_ac653b4a572a53fd35a83e647e96230e4}} 
+\index{define.h@{define.h}!AH@{AH}}
+\index{AH@{AH}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{AH}{AH}}
+{\footnotesize\ttfamily \#define AH~0x4F}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00075}{75}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ae56562740b1159ed03061cecec40f609}\label{define_8h_ae56562740b1159ed03061cecec40f609}} 
+\index{define.h@{define.h}!AL@{AL}}
+\index{AL@{AL}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{AL}{AL}}
+{\footnotesize\ttfamily \#define AL~0x02}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00074}{74}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_acb3bc16cb7c143373145b804a57d747e}\label{define_8h_acb3bc16cb7c143373145b804a57d747e}} 
+\index{define.h@{define.h}!AMMO@{AMMO}}
+\index{AMMO@{AMMO}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{AMMO}{AMMO}}
+{\footnotesize\ttfamily \#define AMMO~0x000006}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00110}{110}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a4b40811cbbde1d36b620ec436879108c}\label{define_8h_a4b40811cbbde1d36b620ec436879108c}} 
+\index{define.h@{define.h}!B@{B}}
+\index{B@{B}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{B}{B}}
+{\footnotesize\ttfamily \#define B(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{global_8h_a64607d6f88be448046247fe4ef73d26e}{n}} }\end{DoxyParamCaption})~(\mbox{\hyperlink{global_8h_a64607d6f88be448046247fe4ef73d26e}{n}} $\vert$ BIT(7))}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00052}{52}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a64730259fa96833ccdcdaeb5a149cdcb}\label{define_8h_a64730259fa96833ccdcdaeb5a149cdcb}} 
+\index{define.h@{define.h}!BACKPACK@{BACKPACK}}
+\index{BACKPACK@{BACKPACK}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{BACKPACK}{BACKPACK}}
+{\footnotesize\ttfamily \#define BACKPACK~0x00000A}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00114}{114}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a7b3b25cba33b07c303f3060fe41887f6}\label{define_8h_a7b3b25cba33b07c303f3060fe41887f6}} 
+\index{define.h@{define.h}!BLACK@{BLACK}}
+\index{BLACK@{BLACK}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{BLACK}{BLACK}}
+{\footnotesize\ttfamily \#define BLACK~0}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00008}{8}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a474bb7b721d9b758209f8d688b2f265b}\label{define_8h_a474bb7b721d9b758209f8d688b2f265b}} 
+\index{define.h@{define.h}!BONE@{BONE}}
+\index{BONE@{BONE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{BONE}{BONE}}
+{\footnotesize\ttfamily \#define BONE~0x00000C}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00115}{115}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a2f7087c814499364c1bb7a8d872ca8ab}\label{define_8h_a2f7087c814499364c1bb7a8d872ca8ab}} 
+\index{define.h@{define.h}!BOOTS@{BOOTS}}
+\index{BOOTS@{BOOTS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{BOOTS}{BOOTS}}
+{\footnotesize\ttfamily \#define BOOTS~0x000009}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00113}{113}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a9c3c35f9545d4bd20d9c19ee86a3f067}\label{define_8h_a9c3c35f9545d4bd20d9c19ee86a3f067}} 
+\index{define.h@{define.h}!BULLET@{BULLET}}
+\index{BULLET@{BULLET}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{BULLET}{BULLET}}
+{\footnotesize\ttfamily \#define BULLET~0x000003}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00109}{109}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a0f37ffb2213a7e5ab25da072e87193ac}\label{define_8h_a0f37ffb2213a7e5ab25da072e87193ac}} 
+\index{define.h@{define.h}!BX@{BX}}
+\index{BX@{BX}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{BX}{BX}}
+{\footnotesize\ttfamily \#define BX~BIT(14)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00076}{76}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a3ac6c4732e4b324679fce065ca9bf707}\label{define_8h_a3ac6c4732e4b324679fce065ca9bf707}} 
+\index{define.h@{define.h}!CLICK\_LEFT@{CLICK\_LEFT}}
+\index{CLICK\_LEFT@{CLICK\_LEFT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{CLICK\_LEFT}{CLICK\_LEFT}}
+{\footnotesize\ttfamily \#define CLICK\+\_\+\+LEFT~BIT(0)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00063}{63}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ace2af6cb129a41ed0dd5cf219f00575b}\label{define_8h_ace2af6cb129a41ed0dd5cf219f00575b}} 
+\index{define.h@{define.h}!CLICK\_MIDDLE@{CLICK\_MIDDLE}}
+\index{CLICK\_MIDDLE@{CLICK\_MIDDLE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{CLICK\_MIDDLE}{CLICK\_MIDDLE}}
+{\footnotesize\ttfamily \#define CLICK\+\_\+\+MIDDLE~BIT(2)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00065}{65}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a1c51504fd982b4913ec3b122821897ba}\label{define_8h_a1c51504fd982b4913ec3b122821897ba}} 
+\index{define.h@{define.h}!CLICK\_RIGHT@{CLICK\_RIGHT}}
+\index{CLICK\_RIGHT@{CLICK\_RIGHT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{CLICK\_RIGHT}{CLICK\_RIGHT}}
+{\footnotesize\ttfamily \#define CLICK\+\_\+\+RIGHT~BIT(1)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00064}{64}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aa4d79080dd64c8164b45202b5fa77424}\label{define_8h_aa4d79080dd64c8164b45202b5fa77424}} 
+\index{define.h@{define.h}!CONST\_FREQ@{CONST\_FREQ}}
+\index{CONST\_FREQ@{CONST\_FREQ}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{CONST\_FREQ}{CONST\_FREQ}}
+{\footnotesize\ttfamily \#define CONST\+\_\+\+FREQ~1193182}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00014}{14}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a782efbd04012530bb88bd5660dc24af6}\label{define_8h_a782efbd04012530bb88bd5660dc24af6}} 
+\index{define.h@{define.h}!DATA\_REPORT@{DATA\_REPORT}}
+\index{DATA\_REPORT@{DATA\_REPORT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{DATA\_REPORT}{DATA\_REPORT}}
+{\footnotesize\ttfamily \#define DATA\+\_\+\+REPORT~0x\+F4}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00057}{57}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a62249e384b997229a3e2ae74ade334e2}\label{define_8h_a62249e384b997229a3e2ae74ade334e2}} 
+\index{define.h@{define.h}!DELAY@{DELAY}}
+\index{DELAY@{DELAY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{DELAY}{DELAY}}
+{\footnotesize\ttfamily \#define DELAY~20000}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00037}{37}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_acb401b7cf6d14fccb64e8b304c9f3ff9}\label{define_8h_acb401b7cf6d14fccb64e8b304c9f3ff9}} 
+\index{define.h@{define.h}!DELTA\_X@{DELTA\_X}}
+\index{DELTA\_X@{DELTA\_X}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{DELTA\_X}{DELTA\_X}}
+{\footnotesize\ttfamily \#define DELTA\+\_\+X~BIT(4)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00066}{66}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a1574d066f62fe8032313c2665e55149c}\label{define_8h_a1574d066f62fe8032313c2665e55149c}} 
+\index{define.h@{define.h}!DELTA\_Y@{DELTA\_Y}}
+\index{DELTA\_Y@{DELTA\_Y}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{DELTA\_Y}{DELTA\_Y}}
+{\footnotesize\ttfamily \#define DELTA\+\_\+Y~BIT(5)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00067}{67}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_af41782c40cb3044059158f3ac54fbe7f}\label{define_8h_af41782c40cb3044059158f3ac54fbe7f}} 
+\index{define.h@{define.h}!DIRECT\_COLOR\_1\_5\_5\_5@{DIRECT\_COLOR\_1\_5\_5\_5}}
+\index{DIRECT\_COLOR\_1\_5\_5\_5@{DIRECT\_COLOR\_1\_5\_5\_5}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{DIRECT\_COLOR\_1\_5\_5\_5}{DIRECT\_COLOR\_1\_5\_5\_5}}
+{\footnotesize\ttfamily \#define DIRECT\+\_\+\+COLOR\+\_\+1\+\_\+5\+\_\+5\+\_\+5~0x110}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00078}{78}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a505cd7f074a8012115132d8bb78dc32c}\label{define_8h_a505cd7f074a8012115132d8bb78dc32c}} 
+\index{define.h@{define.h}!DIRECT\_COLOR\_5\_6\_5@{DIRECT\_COLOR\_5\_6\_5}}
+\index{DIRECT\_COLOR\_5\_6\_5@{DIRECT\_COLOR\_5\_6\_5}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{DIRECT\_COLOR\_5\_6\_5}{DIRECT\_COLOR\_5\_6\_5}}
+{\footnotesize\ttfamily \#define DIRECT\+\_\+\+COLOR\+\_\+5\+\_\+6\+\_\+5~0x11A}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00080}{80}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ab23c54cda9c25c8f00a0de1b18faf7fe}\label{define_8h_ab23c54cda9c25c8f00a0de1b18faf7fe}} 
+\index{define.h@{define.h}!DIRECT\_COLOR\_8\_8\_8@{DIRECT\_COLOR\_8\_8\_8}}
+\index{DIRECT\_COLOR\_8\_8\_8@{DIRECT\_COLOR\_8\_8\_8}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{DIRECT\_COLOR\_8\_8\_8}{DIRECT\_COLOR\_8\_8\_8}}
+{\footnotesize\ttfamily \#define DIRECT\+\_\+\+COLOR\+\_\+8\+\_\+8\+\_\+8~0x115}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00079}{79}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_abcd021ad1acf8260189dd8bce46162ef}\label{define_8h_abcd021ad1acf8260189dd8bce46162ef}} 
+\index{define.h@{define.h}!DIRECT\_COLOR\_8\_8\_8\_8@{DIRECT\_COLOR\_8\_8\_8\_8}}
+\index{DIRECT\_COLOR\_8\_8\_8\_8@{DIRECT\_COLOR\_8\_8\_8\_8}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{DIRECT\_COLOR\_8\_8\_8\_8}{DIRECT\_COLOR\_8\_8\_8\_8}}
+{\footnotesize\ttfamily \#define DIRECT\+\_\+\+COLOR\+\_\+8\+\_\+8\+\_\+8\+\_\+8~0x14C}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00081}{81}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a8455cf22aa72fbb4644520d36a42f594}\label{define_8h_a8455cf22aa72fbb4644520d36a42f594}} 
+\index{define.h@{define.h}!EMPTY\_HEALTH@{EMPTY\_HEALTH}}
+\index{EMPTY\_HEALTH@{EMPTY\_HEALTH}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{EMPTY\_HEALTH}{EMPTY\_HEALTH}}
+{\footnotesize\ttfamily \#define EMPTY\+\_\+\+HEALTH~0x000002}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00119}{119}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a633d4415dae913396d3fef7ace02bfcf}\label{define_8h_a633d4415dae913396d3fef7ace02bfcf}} 
+\index{define.h@{define.h}!EMPTY\_INVENTORY@{EMPTY\_INVENTORY}}
+\index{EMPTY\_INVENTORY@{EMPTY\_INVENTORY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{EMPTY\_INVENTORY}{EMPTY\_INVENTORY}}
+{\footnotesize\ttfamily \#define EMPTY\+\_\+\+INVENTORY~0x696969}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00120}{120}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_af5e3aa7c9b13673c6a94f8ebb70010db}\label{define_8h_af5e3aa7c9b13673c6a94f8ebb70010db}} 
+\index{define.h@{define.h}!ENEMY@{ENEMY}}
+\index{ENEMY@{ENEMY}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{ENEMY}{ENEMY}}
+{\footnotesize\ttfamily \#define ENEMY~0x161319}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00103}{103}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}\label{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}} 
+\index{define.h@{define.h}!ERROR@{ERROR}}
+\index{ERROR@{ERROR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{ERROR}{ERROR}}
+{\footnotesize\ttfamily \#define ERROR~0x\+FFFF}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00007}{7}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a67652ff1cd5b6edfdfc13dff3d612f2b}\label{define_8h_a67652ff1cd5b6edfdfc13dff3d612f2b}} 
+\index{define.h@{define.h}!GRENADE@{GRENADE}}
+\index{GRENADE@{GRENADE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{GRENADE}{GRENADE}}
+{\footnotesize\ttfamily \#define GRENADE~0x00000B}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00116}{116}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aa35e137ee90bb3aab948cb128a20e905}\label{define_8h_aa35e137ee90bb3aab948cb128a20e905}} 
+\index{define.h@{define.h}!HEALTH@{HEALTH}}
+\index{HEALTH@{HEALTH}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{HEALTH}{HEALTH}}
+{\footnotesize\ttfamily \#define HEALTH~0x\+FF0000}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00118}{118}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a1c3fc56ae80b0e77b16b64d1b805dbd1}\label{define_8h_a1c3fc56ae80b0e77b16b64d1b805dbd1}} 
+\index{define.h@{define.h}!IN\_BUFFER@{IN\_BUFFER}}
+\index{IN\_BUFFER@{IN\_BUFFER}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{IN\_BUFFER}{IN\_BUFFER}}
+{\footnotesize\ttfamily \#define IN\+\_\+\+BUFFER~0x20}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00033}{33}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a4896f49aa6f447c44e839a119b2038b6}\label{define_8h_a4896f49aa6f447c44e839a119b2038b6}} 
+\index{define.h@{define.h}!IN\_BUFFER\_BIT@{IN\_BUFFER\_BIT}}
+\index{IN\_BUFFER\_BIT@{IN\_BUFFER\_BIT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{IN\_BUFFER\_BIT}{IN\_BUFFER\_BIT}}
+{\footnotesize\ttfamily \#define IN\+\_\+\+BUFFER\+\_\+\+BIT~BIT(1)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00029}{29}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a48fa70a72e330f89e31fcd6a44df06c9}\label{define_8h_a48fa70a72e330f89e31fcd6a44df06c9}} 
+\index{define.h@{define.h}!INDEXED\_MODE@{INDEXED\_MODE}}
+\index{INDEXED\_MODE@{INDEXED\_MODE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{INDEXED\_MODE}{INDEXED\_MODE}}
+{\footnotesize\ttfamily \#define INDEXED\+\_\+\+MODE~0x105}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00077}{77}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a2617c1997f2516f4d0c0331bd0c600d6}\label{define_8h_a2617c1997f2516f4d0c0331bd0c600d6}} 
+\index{define.h@{define.h}!INTNO@{INTNO}}
+\index{INTNO@{INTNO}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{INTNO}{INTNO}}
+{\footnotesize\ttfamily \#define INTNO~0x10}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00073}{73}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a0615d1ead5f06ae8445d2a8be8364636}\label{define_8h_a0615d1ead5f06ae8445d2a8be8364636}} 
+\index{define.h@{define.h}!KBC\_STATUS@{KBC\_STATUS}}
+\index{KBC\_STATUS@{KBC\_STATUS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_STATUS}{KBC\_STATUS}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STATUS~0x64}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00027}{27}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_adcabd5b693735bced4d5867b84dfb027}\label{define_8h_adcabd5b693735bced4d5867b84dfb027}} 
+\index{define.h@{define.h}!KBD\_HOOK\_ID@{KBD\_HOOK\_ID}}
+\index{KBD\_HOOK\_ID@{KBD\_HOOK\_ID}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{KBD\_HOOK\_ID}{KBD\_HOOK\_ID}}
+{\footnotesize\ttfamily \#define KBD\+\_\+\+HOOK\+\_\+\+ID~1}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00025}{25}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a1862e728098ddeac91aaacf6420fc2e7}\label{define_8h_a1862e728098ddeac91aaacf6420fc2e7}} 
+\index{define.h@{define.h}!KBD\_IRQ\_LINE@{KBD\_IRQ\_LINE}}
+\index{KBD\_IRQ\_LINE@{KBD\_IRQ\_LINE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{KBD\_IRQ\_LINE}{KBD\_IRQ\_LINE}}
+{\footnotesize\ttfamily \#define KBD\+\_\+\+IRQ\+\_\+\+LINE~1}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00026}{26}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a7323faa8df8d0eaaa2f295a10b47b734}\label{define_8h_a7323faa8df8d0eaaa2f295a10b47b734}} 
+\index{define.h@{define.h}!MAKE\_1@{MAKE\_1}}
+\index{MAKE\_1@{MAKE\_1}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_1}{MAKE\_1}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+1~0x02}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00049}{49}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_abc760bcfe107799691af0a7cfb81c953}\label{define_8h_abc760bcfe107799691af0a7cfb81c953}} 
+\index{define.h@{define.h}!MAKE\_2@{MAKE\_2}}
+\index{MAKE\_2@{MAKE\_2}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_2}{MAKE\_2}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+2~0x03}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00050}{50}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a0805594367f24340777dd681d19dbb5c}\label{define_8h_a0805594367f24340777dd681d19dbb5c}} 
+\index{define.h@{define.h}!MAKE\_3@{MAKE\_3}}
+\index{MAKE\_3@{MAKE\_3}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_3}{MAKE\_3}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+3~0x04}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00051}{51}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aa149c92af302f5d9e72a44f335d00ce0}\label{define_8h_aa149c92af302f5d9e72a44f335d00ce0}} 
+\index{define.h@{define.h}!MAKE\_A@{MAKE\_A}}
+\index{MAKE\_A@{MAKE\_A}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_A}{MAKE\_A}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+A~0x1E}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00042}{42}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a126db2c2ecef7c6abe8a14a8a347d3a9}\label{define_8h_a126db2c2ecef7c6abe8a14a8a347d3a9}} 
+\index{define.h@{define.h}!MAKE\_D@{MAKE\_D}}
+\index{MAKE\_D@{MAKE\_D}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_D}{MAKE\_D}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+D~0x20}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00043}{43}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a6ef830375be126391a1a52952027aa74}\label{define_8h_a6ef830375be126391a1a52952027aa74}} 
+\index{define.h@{define.h}!MAKE\_ENTER@{MAKE\_ENTER}}
+\index{MAKE\_ENTER@{MAKE\_ENTER}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_ENTER}{MAKE\_ENTER}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+\+ENTER~0x1C}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00040}{40}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a0df4fbf54d7714c0f1c5efcc4f6d99a9}\label{define_8h_a0df4fbf54d7714c0f1c5efcc4f6d99a9}} 
+\index{define.h@{define.h}!MAKE\_ESC@{MAKE\_ESC}}
+\index{MAKE\_ESC@{MAKE\_ESC}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_ESC}{MAKE\_ESC}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+\+ESC~0x01}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00039}{39}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_af35869cca53bfece85b39e6ca0809eaf}\label{define_8h_af35869cca53bfece85b39e6ca0809eaf}} 
+\index{define.h@{define.h}!MAKE\_I@{MAKE\_I}}
+\index{MAKE\_I@{MAKE\_I}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_I}{MAKE\_I}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+I~0x17}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00047}{47}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_adbf71b0e13b45d46db2f169718147d70}\label{define_8h_adbf71b0e13b45d46db2f169718147d70}} 
+\index{define.h@{define.h}!MAKE\_L@{MAKE\_L}}
+\index{MAKE\_L@{MAKE\_L}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_L}{MAKE\_L}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+L~0x26}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00048}{48}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a4cd2f955afad039e9ebcbb1a066ef833}\label{define_8h_a4cd2f955afad039e9ebcbb1a066ef833}} 
+\index{define.h@{define.h}!MAKE\_O@{MAKE\_O}}
+\index{MAKE\_O@{MAKE\_O}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_O}{MAKE\_O}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+O~0x18}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00046}{46}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a6f4b2baf27cbca540f54e63677fb63ca}\label{define_8h_a6f4b2baf27cbca540f54e63677fb63ca}} 
+\index{define.h@{define.h}!MAKE\_P@{MAKE\_P}}
+\index{MAKE\_P@{MAKE\_P}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_P}{MAKE\_P}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+P~0x19}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00045}{45}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a7327330cf4cd2aa037a35cb1d4a130e1}\label{define_8h_a7327330cf4cd2aa037a35cb1d4a130e1}} 
+\index{define.h@{define.h}!MAKE\_S@{MAKE\_S}}
+\index{MAKE\_S@{MAKE\_S}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_S}{MAKE\_S}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+S~0x1F}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00044}{44}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a5287931eda665268f55498ec93276c84}\label{define_8h_a5287931eda665268f55498ec93276c84}} 
+\index{define.h@{define.h}!MAKE\_W@{MAKE\_W}}
+\index{MAKE\_W@{MAKE\_W}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_W}{MAKE\_W}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+W~0x11}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00041}{41}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a6e4a6ed5bec289067d9aefe759abca3e}\label{define_8h_a6e4a6ed5bec289067d9aefe759abca3e}} 
+\index{define.h@{define.h}!MOUSE\_CONTROL\_BIT@{MOUSE\_CONTROL\_BIT}}
+\index{MOUSE\_CONTROL\_BIT@{MOUSE\_CONTROL\_BIT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_CONTROL\_BIT}{MOUSE\_CONTROL\_BIT}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+CONTROL\+\_\+\+BIT~BIT(3)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00062}{62}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ab68ffa76160866a0585aead19b67a130}\label{define_8h_ab68ffa76160866a0585aead19b67a130}} 
+\index{define.h@{define.h}!MOUSE\_HOOK\_ID@{MOUSE\_HOOK\_ID}}
+\index{MOUSE\_HOOK\_ID@{MOUSE\_HOOK\_ID}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_HOOK\_ID}{MOUSE\_HOOK\_ID}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+HOOK\+\_\+\+ID~3}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00058}{58}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_af10b9efcb908230838524558bb05588a}\label{define_8h_af10b9efcb908230838524558bb05588a}} 
+\index{define.h@{define.h}!MOUSE\_IRQ\_LINE@{MOUSE\_IRQ\_LINE}}
+\index{MOUSE\_IRQ\_LINE@{MOUSE\_IRQ\_LINE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_IRQ\_LINE}{MOUSE\_IRQ\_LINE}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+IRQ\+\_\+\+LINE~12}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00059}{59}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aa9942f12a871b48b5176e6c9a9f5f174}\label{define_8h_aa9942f12a871b48b5176e6c9a9f5f174}} 
+\index{define.h@{define.h}!OUT\_BUFFER@{OUT\_BUFFER}}
+\index{OUT\_BUFFER@{OUT\_BUFFER}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{OUT\_BUFFER}{OUT\_BUFFER}}
+{\footnotesize\ttfamily \#define OUT\+\_\+\+BUFFER~0x60}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00032}{32}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ae1ceff90b79b3e4feab3cdab37c950fe}\label{define_8h_ae1ceff90b79b3e4feab3cdab37c950fe}} 
+\index{define.h@{define.h}!OUT\_BUFFER\_BIT@{OUT\_BUFFER\_BIT}}
+\index{OUT\_BUFFER\_BIT@{OUT\_BUFFER\_BIT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{OUT\_BUFFER\_BIT}{OUT\_BUFFER\_BIT}}
+{\footnotesize\ttfamily \#define OUT\+\_\+\+BUFFER\+\_\+\+BIT~BIT(0)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00028}{28}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aca8570fb706c81df371b7f9bc454ae03}\label{define_8h_aca8570fb706c81df371b7f9bc454ae03}} 
+\index{define.h@{define.h}!PACKAGE@{PACKAGE}}
+\index{PACKAGE@{PACKAGE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{PACKAGE}{PACKAGE}}
+{\footnotesize\ttfamily \#define PACKAGE~0x000000}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00107}{107}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a81d2ca6759f3f3bf04556b7558aea6bc}\label{define_8h_a81d2ca6759f3f3bf04556b7558aea6bc}} 
+\index{define.h@{define.h}!PARITY\_ERROR@{PARITY\_ERROR}}
+\index{PARITY\_ERROR@{PARITY\_ERROR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{PARITY\_ERROR}{PARITY\_ERROR}}
+{\footnotesize\ttfamily \#define PARITY\+\_\+\+ERROR~BIT(7)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00030}{30}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aaaa1a6d498de96acbe1cb9057983a01a}\label{define_8h_aaaa1a6d498de96acbe1cb9057983a01a}} 
+\index{define.h@{define.h}!PAUSE\_SCREEN@{PAUSE\_SCREEN}}
+\index{PAUSE\_SCREEN@{PAUSE\_SCREEN}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{PAUSE\_SCREEN}{PAUSE\_SCREEN}}
+{\footnotesize\ttfamily \#define PAUSE\+\_\+\+SCREEN~0x00000D}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00105}{105}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ace7090923c4e2498d407e66121134375}\label{define_8h_ace7090923c4e2498d407e66121134375}} 
+\index{define.h@{define.h}!PISTOL@{PISTOL}}
+\index{PISTOL@{PISTOL}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{PISTOL}{PISTOL}}
+{\footnotesize\ttfamily \#define PISTOL~0x\+FFFFFF}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00117}{117}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a42a4754c366aff8f1259ee3b1ce08ac9}\label{define_8h_a42a4754c366aff8f1259ee3b1ce08ac9}} 
+\index{define.h@{define.h}!PISTOL\_BULLET@{PISTOL\_BULLET}}
+\index{PISTOL\_BULLET@{PISTOL\_BULLET}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{PISTOL\_BULLET}{PISTOL\_BULLET}}
+{\footnotesize\ttfamily \#define PISTOL\+\_\+\+BULLET~0x\+ECFFA8}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00108}{108}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a36868d2ff907a84d2f27caf3160ce631}\label{define_8h_a36868d2ff907a84d2f27caf3160ce631}} 
+\index{define.h@{define.h}!PIZZA@{PIZZA}}
+\index{PIZZA@{PIZZA}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{PIZZA}{PIZZA}}
+{\footnotesize\ttfamily \#define PIZZA~0x000007}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00111}{111}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aad83b5ec5f8d43384c666cf26865aaea}\label{define_8h_aad83b5ec5f8d43384c666cf26865aaea}} 
+\index{define.h@{define.h}!PLAYER@{PLAYER}}
+\index{PLAYER@{PLAYER}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{PLAYER}{PLAYER}}
+{\footnotesize\ttfamily \#define PLAYER~0x161516}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00102}{102}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a92f67631ef5a97e4a266c15bc710776d}\label{define_8h_a92f67631ef5a97e4a266c15bc710776d}} 
+\index{define.h@{define.h}!RESEND@{RESEND}}
+\index{RESEND@{RESEND}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RESEND}{RESEND}}
+{\footnotesize\ttfamily \#define RESEND~0x\+FE}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00036}{36}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a2e1c4a2fff11aee38aee30ab43b401f3}\label{define_8h_a2e1c4a2fff11aee38aee30ab43b401f3}} 
+\index{define.h@{define.h}!RTC\_ADRESS@{RTC\_ADRESS}}
+\index{RTC\_ADRESS@{RTC\_ADRESS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_ADRESS}{RTC\_ADRESS}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ADRESS~0x70}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00088}{88}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a77a045a812e9d5bdcd130cb81a6fd5bd}\label{define_8h_a77a045a812e9d5bdcd130cb81a6fd5bd}} 
+\index{define.h@{define.h}!RTC\_COMMAND@{RTC\_COMMAND}}
+\index{RTC\_COMMAND@{RTC\_COMMAND}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_COMMAND}{RTC\_COMMAND}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+COMMAND~11}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00090}{90}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a82cf926d0322d724ce4d18d03c242780}\label{define_8h_a82cf926d0322d724ce4d18d03c242780}} 
+\index{define.h@{define.h}!RTC\_COMMAND2@{RTC\_COMMAND2}}
+\index{RTC\_COMMAND2@{RTC\_COMMAND2}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_COMMAND2}{RTC\_COMMAND2}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+COMMAND2~12}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00091}{91}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a6405f53f64912dd9481ad224381b272b}\label{define_8h_a6405f53f64912dd9481ad224381b272b}} 
+\index{define.h@{define.h}!RTC\_COMMAND3@{RTC\_COMMAND3}}
+\index{RTC\_COMMAND3@{RTC\_COMMAND3}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_COMMAND3}{RTC\_COMMAND3}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+COMMAND3~10}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00092}{92}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a478c4ef1cbc68cd622e01cceb3446bb2}\label{define_8h_a478c4ef1cbc68cd622e01cceb3446bb2}} 
+\index{define.h@{define.h}!RTC\_DAYS@{RTC\_DAYS}}
+\index{RTC\_DAYS@{RTC\_DAYS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_DAYS}{RTC\_DAYS}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+DAYS~7}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00096}{96}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ac93f7885d306a82906ee65bdbf0db65d}\label{define_8h_ac93f7885d306a82906ee65bdbf0db65d}} 
+\index{define.h@{define.h}!RTC\_HOOK\_ID@{RTC\_HOOK\_ID}}
+\index{RTC\_HOOK\_ID@{RTC\_HOOK\_ID}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_HOOK\_ID}{RTC\_HOOK\_ID}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+HOOK\+\_\+\+ID~2}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00086}{86}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a4d74cdb9a956c4f1783ad5aff00dc2b8}\label{define_8h_a4d74cdb9a956c4f1783ad5aff00dc2b8}} 
+\index{define.h@{define.h}!RTC\_HOURS@{RTC\_HOURS}}
+\index{RTC\_HOURS@{RTC\_HOURS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_HOURS}{RTC\_HOURS}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+HOURS~4}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00095}{95}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a7f6b0bbf4271dd31625f92ec8314808c}\label{define_8h_a7f6b0bbf4271dd31625f92ec8314808c}} 
+\index{define.h@{define.h}!RTC\_IRQ\_LINE@{RTC\_IRQ\_LINE}}
+\index{RTC\_IRQ\_LINE@{RTC\_IRQ\_LINE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_IRQ\_LINE}{RTC\_IRQ\_LINE}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+IRQ\+\_\+\+LINE~8}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00087}{87}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aabc0725ac27ea93c913a2a4d7cd51ac7}\label{define_8h_aabc0725ac27ea93c913a2a4d7cd51ac7}} 
+\index{define.h@{define.h}!RTC\_MINUTES@{RTC\_MINUTES}}
+\index{RTC\_MINUTES@{RTC\_MINUTES}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_MINUTES}{RTC\_MINUTES}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+MINUTES~2}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00094}{94}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ab16ad8bcc1cd2e491bd8e2c921ee30c5}\label{define_8h_ab16ad8bcc1cd2e491bd8e2c921ee30c5}} 
+\index{define.h@{define.h}!RTC\_MONTHS@{RTC\_MONTHS}}
+\index{RTC\_MONTHS@{RTC\_MONTHS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_MONTHS}{RTC\_MONTHS}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+MONTHS~8}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00097}{97}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a0bb14714587a8eed5f490f2afc95f083}\label{define_8h_a0bb14714587a8eed5f490f2afc95f083}} 
+\index{define.h@{define.h}!RTC\_OUTPUT@{RTC\_OUTPUT}}
+\index{RTC\_OUTPUT@{RTC\_OUTPUT}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_OUTPUT}{RTC\_OUTPUT}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+OUTPUT~0x71}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00089}{89}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a43f6540c6d3a78b930f9adad56cf7fac}\label{define_8h_a43f6540c6d3a78b930f9adad56cf7fac}} 
+\index{define.h@{define.h}!RTC\_SECONDS@{RTC\_SECONDS}}
+\index{RTC\_SECONDS@{RTC\_SECONDS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_SECONDS}{RTC\_SECONDS}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+SECONDS~0}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00093}{93}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a8f85622d8edec8b0d36db7c8f1267106}\label{define_8h_a8f85622d8edec8b0d36db7c8f1267106}} 
+\index{define.h@{define.h}!RTC\_YEARS@{RTC\_YEARS}}
+\index{RTC\_YEARS@{RTC\_YEARS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_YEARS}{RTC\_YEARS}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+YEARS~9}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00098}{98}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a9bea4f38873ae05747004ac2cce63b35}\label{define_8h_a9bea4f38873ae05747004ac2cce63b35}} 
+\index{define.h@{define.h}!SELECT\_RB\_TIMER@{SELECT\_RB\_TIMER}}
+\index{SELECT\_RB\_TIMER@{SELECT\_RB\_TIMER}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{SELECT\_RB\_TIMER}{SELECT\_RB\_TIMER}}
+{\footnotesize\ttfamily \#define SELECT\+\_\+\+RB\+\_\+\+TIMER(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{global_8h_a64607d6f88be448046247fe4ef73d26e}{n}} }\end{DoxyParamCaption})~BIT((\mbox{\hyperlink{global_8h_a64607d6f88be448046247fe4ef73d26e}{n}}) + 1)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00016}{16}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aa129740d09f615ace83f8f0b8bd04e8a}\label{define_8h_aa129740d09f615ace83f8f0b8bd04e8a}} 
+\index{define.h@{define.h}!SELECT\_TIMER@{SELECT\_TIMER}}
+\index{SELECT\_TIMER@{SELECT\_TIMER}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{SELECT\_TIMER}{SELECT\_TIMER}}
+{\footnotesize\ttfamily \#define SELECT\+\_\+\+TIMER(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{global_8h_a64607d6f88be448046247fe4ef73d26e}{n}} }\end{DoxyParamCaption})~(\mbox{\hyperlink{global_8h_a64607d6f88be448046247fe4ef73d26e}{n}} $<$$<$ 6)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00015}{15}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a411dfcc6fa30fd0536625dfd5f91f22e}\label{define_8h_a411dfcc6fa30fd0536625dfd5f91f22e}} 
+\index{define.h@{define.h}!SET\_NEGATIVE@{SET\_NEGATIVE}}
+\index{SET\_NEGATIVE@{SET\_NEGATIVE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{SET\_NEGATIVE}{SET\_NEGATIVE}}
+{\footnotesize\ttfamily \#define SET\+\_\+\+NEGATIVE~0x\+FF00}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00070}{70}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ab3919f33b46e0808c4ed1c56a6a423f2}\label{define_8h_ab3919f33b46e0808c4ed1c56a6a423f2}} 
+\index{define.h@{define.h}!STREAM\_MODE@{STREAM\_MODE}}
+\index{STREAM\_MODE@{STREAM\_MODE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{STREAM\_MODE}{STREAM\_MODE}}
+{\footnotesize\ttfamily \#define STREAM\+\_\+\+MODE~0x\+EA}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00056}{56}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_af1e33bcc5ef600196ab153395edb1c3c}\label{define_8h_af1e33bcc5ef600196ab153395edb1c3c}} 
+\index{define.h@{define.h}!STREAMING\_MODE@{STREAMING\_MODE}}
+\index{STREAMING\_MODE@{STREAMING\_MODE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{STREAMING\_MODE}{STREAMING\_MODE}}
+{\footnotesize\ttfamily \#define STREAMING\+\_\+\+MODE~0x\+F4}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00034}{34}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ab4556e7b441bc247315ea9a2f3afe79c}\label{define_8h_ab4556e7b441bc247315ea9a2f3afe79c}} 
+\index{define.h@{define.h}!TIME\_OUT\_ERROR@{TIME\_OUT\_ERROR}}
+\index{TIME\_OUT\_ERROR@{TIME\_OUT\_ERROR}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{TIME\_OUT\_ERROR}{TIME\_OUT\_ERROR}}
+{\footnotesize\ttfamily \#define TIME\+\_\+\+OUT\+\_\+\+ERROR~BIT(6)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00031}{31}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_acc9ff9df4a9674a1ce9ba08fc4a4679e}\label{define_8h_acc9ff9df4a9674a1ce9ba08fc4a4679e}} 
+\index{define.h@{define.h}!TIMER\_0@{TIMER\_0}}
+\index{TIMER\_0@{TIMER\_0}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_0}{TIMER\_0}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+0~0x40}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00013}{13}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_af0fc596f1b70585784f6b4531762687d}\label{define_8h_af0fc596f1b70585784f6b4531762687d}} 
+\index{define.h@{define.h}!TIMER\_COUNT\_MODE@{TIMER\_COUNT\_MODE}}
+\index{TIMER\_COUNT\_MODE@{TIMER\_COUNT\_MODE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_COUNT\_MODE}{TIMER\_COUNT\_MODE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+COUNT\+\_\+\+MODE~BIT(5)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00018}{18}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_ad40cf8f3e7e75d30d8dd9f7b041e6ef7}\label{define_8h_ad40cf8f3e7e75d30d8dd9f7b041e6ef7}} 
+\index{define.h@{define.h}!TIMER\_IRQ\_LINE@{TIMER\_IRQ\_LINE}}
+\index{TIMER\_IRQ\_LINE@{TIMER\_IRQ\_LINE}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IRQ\_LINE}{TIMER\_IRQ\_LINE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IRQ\+\_\+\+LINE~0}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00011}{11}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a8c0f1933323274c765e23837e4fbc8c7}\label{define_8h_a8c0f1933323274c765e23837e4fbc8c7}} 
+\index{define.h@{define.h}!TIMER\_LSB\_MSB@{TIMER\_LSB\_MSB}}
+\index{TIMER\_LSB\_MSB@{TIMER\_LSB\_MSB}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_LSB\_MSB}{TIMER\_LSB\_MSB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+LSB\+\_\+\+MSB~(BIT(4) $\vert$ BIT(5))}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00019}{19}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a4c2eecbfb96744a9c2af71dba75ecb18}\label{define_8h_a4c2eecbfb96744a9c2af71dba75ecb18}} 
+\index{define.h@{define.h}!TIMER\_RB\_CMD@{TIMER\_RB\_CMD}}
+\index{TIMER\_RB\_CMD@{TIMER\_RB\_CMD}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RB\_CMD}{TIMER\_RB\_CMD}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RB\+\_\+\+CMD~(BIT(7) $\vert$ BIT(6))}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00017}{17}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a300ff385500e663d5280b927366e32d8}\label{define_8h_a300ff385500e663d5280b927366e32d8}} 
+\index{define.h@{define.h}!TIMER\_STATUS@{TIMER\_STATUS}}
+\index{TIMER\_STATUS@{TIMER\_STATUS}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_STATUS}{TIMER\_STATUS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+STATUS~0x43}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00012}{12}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a4f66cbb1a1d265c57c82c19eb59233df}\label{define_8h_a4f66cbb1a1d265c57c82c19eb59233df}} 
+\index{define.h@{define.h}!UNBREAKABLE\_WALL@{UNBREAKABLE\_WALL}}
+\index{UNBREAKABLE\_WALL@{UNBREAKABLE\_WALL}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{UNBREAKABLE\_WALL}{UNBREAKABLE\_WALL}}
+{\footnotesize\ttfamily \#define UNBREAKABLE\+\_\+\+WALL~0x\+B2\+B2\+B2}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00101}{101}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_aed0c1059b6964fa09322aab11fe692f8}\label{define_8h_aed0c1059b6964fa09322aab11fe692f8}} 
+\index{define.h@{define.h}!WATCH@{WATCH}}
+\index{WATCH@{WATCH}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{WATCH}{WATCH}}
+{\footnotesize\ttfamily \#define WATCH~0x000008}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00112}{112}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a94127cc7d8cfd3ad02d2369ddd49f839}\label{define_8h_a94127cc7d8cfd3ad02d2369ddd49f839}} 
+\index{define.h@{define.h}!WOLF@{WOLF}}
+\index{WOLF@{WOLF}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{WOLF}{WOLF}}
+{\footnotesize\ttfamily \#define WOLF~0x\+FFFFFD}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00106}{106}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a61fc173cd03db618eb2f64b60f42b55b}\label{define_8h_a61fc173cd03db618eb2f64b60f42b55b}} 
+\index{define.h@{define.h}!WORKER@{WORKER}}
+\index{WORKER@{WORKER}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{WORKER}{WORKER}}
+{\footnotesize\ttfamily \#define WORKER~0\+X15110F}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00104}{104}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a92e32a12d07e5e7237c9993bb1c66728}\label{define_8h_a92e32a12d07e5e7237c9993bb1c66728}} 
+\index{define.h@{define.h}!WRITE\_MOUSE\_CMD@{WRITE\_MOUSE\_CMD}}
+\index{WRITE\_MOUSE\_CMD@{WRITE\_MOUSE\_CMD}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{WRITE\_MOUSE\_CMD}{WRITE\_MOUSE\_CMD}}
+{\footnotesize\ttfamily \#define WRITE\+\_\+\+MOUSE\+\_\+\+CMD~0x\+D4}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00060}{60}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_a82dc3ac9577dabd19733ada75d2822d0}\label{define_8h_a82dc3ac9577dabd19733ada75d2822d0}} 
+\index{define.h@{define.h}!X\_OVERFLOW@{X\_OVERFLOW}}
+\index{X\_OVERFLOW@{X\_OVERFLOW}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{X\_OVERFLOW}{X\_OVERFLOW}}
+{\footnotesize\ttfamily \#define X\+\_\+\+OVERFLOW~BIT(6)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00068}{68}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{define_8h_acd54c5569c84fd2d1710cccd190e138a}\label{define_8h_acd54c5569c84fd2d1710cccd190e138a}} 
+\index{define.h@{define.h}!Y\_OVERFLOW@{Y\_OVERFLOW}}
+\index{Y\_OVERFLOW@{Y\_OVERFLOW}!define.h@{define.h}}
+\doxysubsubsection{\texorpdfstring{Y\_OVERFLOW}{Y\_OVERFLOW}}
+{\footnotesize\ttfamily \#define Y\+\_\+\+OVERFLOW~BIT(7)}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00069}{69}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+

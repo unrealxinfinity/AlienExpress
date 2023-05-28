@@ -1,0 +1,52 @@
+<map id="draw_state" name="draw_state">
+<area shape="rect" id="node1" title="Calls the drawing functions of the current state." alt="" coords="5,1144,90,1171"/>
+<area shape="rect" id="node2" href="$view_8c.html#a164a9eeb26da4992f649abb855216e4a" title="Calls drawing function on frame_buffer on each pixel of image passed by argument." alt="" coords="722,816,770,843"/>
+<area shape="rect" id="node4" href="$level_8c.html#a6cc61e74daa498a3165393ce09a68e89" title="Drawing function that draws all the features of the level state in a non moving state." alt="" coords="144,715,249,741"/>
+<area shape="rect" id="node29" href="$gameover_8c.html#aa37e76033505d7f48a87284bd85c48a2" title="Drawing function that draws all the features of the game over state." alt="" coords="138,81,255,108"/>
+<area shape="rect" id="node33" href="$level_8c.html#a585d8e2cf0a0b3db2c6afd0a9cbcb25e" title="Drawing function that draws all the features of the level state." alt="" coords="156,891,237,917"/>
+<area shape="rect" id="node39" href="$menu_8c.html#a8b6c981db3aad686de04545c1e87f33c" title="Drawing function that draws all the features of the menu state." alt="" coords="153,1397,240,1424"/>
+<area shape="rect" id="node42" href="$pause_8h.html#a91fbb4c4f500ee2b1f21b05a6674b1d3" title="Drawing function that draws all the features of the pause state." alt="" coords="151,1448,242,1475"/>
+<area shape="rect" id="node43" href="$game_8c.html#a0fc3becd2b2ae6ca9716da98ddf7ea3b" title="Changes the current value of the state of the struct game_state_t." alt="" coords="159,1524,234,1551"/>
+<area shape="rect" id="node45" href="$spawner_8c.html#a892164b5b46c6ff69b55418054886bc9" title="Calls all other spawn functions." alt="" coords="167,1676,226,1703"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#ab20eed5c22b21f149e761aa71487aea8" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="857,1183,939,1209"/>
+<area shape="rect" id="node5" href="$bullet_8c.html#ac7cab60c2e2b97a7200404d70db66507" title="Calls drawing function to draw the bullets." alt="" coords="336,891,429,917"/>
+<area shape="rect" id="node6" href="$enemies__lvl_8c.html#a46732510bbf2ee847d910fa0e14a8394" title="Calls drawing function to draw a zombie, taking into account the direction he faces." alt="" coords="511,309,633,336"/>
+<area shape="rect" id="node7" href="$explosion_8c.html#a11b4f699b67ee7bc640638923d405fe0" title=" " alt="" coords="327,765,437,792"/>
+<area shape="rect" id="node9" href="$wolf_8c.html#a273dd63b570422b1d086ffdfd29ffb1b" title="Calls drawing function to draw a friendly wolf, taking into account the direction he faces." alt="" coords="509,411,635,437"/>
+<area shape="rect" id="node10" href="$view_8c.html#a2490feb09e6d7f6d5cd4595b21751a22" title="Calls drawing function to draw the health of the player." alt="" coords="337,1195,427,1221"/>
+<area shape="rect" id="node12" href="$inventory_8c.html#af17bea04c910ab49aca091b1ba1aa865" title="Calls the drawing function to draw the inventory images and also the items inside the inventory." alt="" coords="519,1272,625,1299"/>
+<area shape="rect" id="node14" href="$level_8c.html#a391fe41eca200011e23357b2c994a7d8" title="Draws all the items of the level." alt="" coords="339,941,426,968"/>
+<area shape="rect" id="node22" href="$level_8c.html#af96de77b034effdf5f61e8e89e02c5b5" title="Draws all the level numbers." alt="" coords="314,613,451,640"/>
+<area shape="rect" id="node23" href="$level_8c.html#a9814054a4131a65bb77b1d902fba20ce" title="Draws all the level letters and symbols." alt="" coords="322,664,443,691"/>
+<area shape="rect" id="node24" href="$package_8c.html#a2c45f09f2d6a39150a819d5cddb6e29e" title="Calls drawing function to draw packages." alt="" coords="327,563,438,589"/>
+<area shape="rect" id="node25" href="$player_8c.html#a314c0f43f5c49e3eea8c637fa2417b2d" title="Calls drawing function to draw the player taking into account the direction he faces." alt="" coords="337,840,427,867"/>
+<area shape="rect" id="node26" href="$teleport_8c.html#aa201bcb0f8fb745d5be420b614c562c4" title="Calls drawing function to draw the teleports and also calls the animation function to animate the sco..." alt="" coords="519,1221,625,1248"/>
+<area shape="rect" id="node27" href="$wolf_8c.html#a66cb923d9dc31cb16a281f2fdfc07e1c" title="Calls drawing function to draw the attacking wolf, taking into account the direction he faces." alt="" coords="533,360,611,387"/>
+<area shape="rect" id="node28" href="$workers_8c.html#ae52764eb51d98acd52fc8adbc64f4a97" title="Calls drawing function to draw a worker, taking into account the direction he faces." alt="" coords="522,512,622,539"/>
+<area shape="rect" id="node8" href="$explosion_8c.html#ab68b40694f9bf496eb316c2bc5f6bf7f" title=" " alt="" coords="512,664,632,691"/>
+<area shape="rect" id="node11" href="$view_8c.html#a4f9254adc9d29655ab76844e72aaa8bd" title="Calls drawing function on frame_buffer to draw a line of format passed by argument." alt="" coords="708,1360,784,1387"/>
+<area shape="rect" id="node13" href="$view_8c.html#a594f1dfcf0028dbdf461531a604ddc78" title="Calls number drawing function with image and coordinates passed by argument and number value based on..." alt="" coords="683,1171,809,1197"/>
+<area shape="rect" id="node15" href="$ammo_8c.html#a428a3b24ce93884795e8decc8ebd03d9" title="Calls drawing function to draw ammo." alt="" coords="526,1069,618,1096"/>
+<area shape="rect" id="node16" href="$backpack_8c.html#a26572a1c00d3598d68e9550e57e7cef1" title="Calls drawing function to draw backpack." alt="" coords="516,816,628,843"/>
+<area shape="rect" id="node17" href="$bone_8c.html#a3a90956fb45816c8c0abfb2e78777a14" title="Calls drawing function to draw bone and also calls animation function when bone is thrown." alt="" coords="530,867,614,893"/>
+<area shape="rect" id="node18" href="$boots_8c.html#aba0450ded3bc569c076a76f8d7c3f9fa" title="Calls drawing function to draw boots." alt="" coords="528,917,616,944"/>
+<area shape="rect" id="node19" href="$grenade_8c.html#a8b5df671979c1e0b3c4063d0aa756e37" title="Calls drawing function to draw grenade and also calls animations functions to do throwing animation." alt="" coords="521,968,623,995"/>
+<area shape="rect" id="node20" href="$pistol_8c.html#a07bfd7c7f98490d664e773354c13669d" title="Calls drawing function to draw pistol." alt="" coords="529,1120,615,1147"/>
+<area shape="rect" id="node21" href="$pizza_8c.html#a1acbd5bed3a315775a2c6e433cf1958a" title="Calls drawing function to draw pizza." alt="" coords="529,1019,615,1045"/>
+<area shape="rect" id="node30" href="$gameover_8c.html#aeee7500947037ebf01a9a67352ec6bb1" title="Draws the letters from the game over tag onto the screen." alt="" coords="311,107,453,133"/>
+<area shape="rect" id="node31" href="$gameover_8c.html#a8046b6742ef6c5a4aa9ecc601480604b" title="Draws all the game over letters and symbols." alt="" coords="303,5,461,32"/>
+<area shape="rect" id="node32" href="$player_8c.html#a16d1ffc3278a976b73eb2258dd973186" title="Changes all player movement in every direction to STILL, making him not move." alt="" coords="324,56,440,83"/>
+<area shape="rect" id="node34" href="$bullet_8c.html#aff5208824c3500dbbb11175e9e828e55" title="Moves the bullets." alt="" coords="334,1245,430,1272"/>
+<area shape="rect" id="node35" href="$enemies__lvl_8c.html#aba8db9c3ee3b9bf796b3c5edaa0c240f" title="Moves the zombie enemies and calls the drawing function to draw them." alt="" coords="320,309,445,336"/>
+<area shape="rect" id="node36" href="$player_8c.html#a26353db2709e08598c8a16d5d7150ead" title="Moves the player accordingly to the keyboard inputs he has submitted." alt="" coords="336,1347,429,1373"/>
+<area shape="rect" id="node37" href="$wolf_8c.html#af986c82043d9c65807f7cff252bcc02b" title="Moves the wolf and calls the drawing function to draw it." alt="" coords="342,411,422,437"/>
+<area shape="rect" id="node38" href="$workers_8c.html#a7f810ac5151df5c2ab9a04a9ca1adca0" title="Moves the workers enemies and calls the drawing function to draw them." alt="" coords="331,715,434,741"/>
+<area shape="rect" id="node40" href="$menu_8c.html#ab27d67997c0e6747c7650ef41eb88f20" title="Draws the letters from the main title onto the screen." alt="" coords="325,1448,440,1475"/>
+<area shape="rect" id="node41" href="$menu_8c.html#a9da2ef883f8459c5bd45f54cc199c88e" title="Draws all the menu letters and symbols." alt="" coords="318,1499,446,1525"/>
+<area shape="rect" id="node44" href="$view_8c.html#a4d87196986b07d28a857d850534a3179" title="Sets all entities and items to dead so that they will not show on screen anymore." alt="" coords="321,1549,443,1576"/>
+<area shape="rect" id="node46" href="$spawner_8c.html#a6096221b2443b5e15a3cdf93ed046f69" title="Sets a dead monster to not dead if the rate was high enough." alt="" coords="323,1701,442,1728"/>
+<area shape="rect" id="node47" href="$spawner_8c.html#a05c21159c74e99373724405dbba3aedc" title="Sets a dead package to not dead if the rate was high enough." alt="" coords="322,1752,443,1779"/>
+<area shape="rect" id="node48" href="$spawner_8c.html#af914cc1e1ab0a4d76d41b0d689196436" title="Sets a dead teleport to not dead if the rate was high enough." alt="" coords="325,1803,440,1829"/>
+<area shape="rect" id="node49" href="$spawner_8c.html#a24c5893903346196e76c00c421b3a926" title="Sets a dead wolf to not dead if the rate was high enough." alt="" coords="339,1600,426,1627"/>
+<area shape="rect" id="node50" href="$spawner_8c.html#a1aee5fe5c96bfad41d4fba24b2a7170f" title="Sets a dead worker to not dead if the rate was high enough." alt="" coords="327,1651,437,1677"/>
+</map>

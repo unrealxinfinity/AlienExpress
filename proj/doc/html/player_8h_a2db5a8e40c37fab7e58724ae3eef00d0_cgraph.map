@@ -1,0 +1,6 @@
+<map id="remove_item_from_ground" name="remove_item_from_ground">
+<area shape="rect" id="node1" title="Removes item from the ground and places on character&#39;s inventory if character&#39;s inventory is not yet ..." alt="" coords="5,56,178,83"/>
+<area shape="rect" id="node2" href="$inventory_8c.html#aee3f502bd5e787e34a33875d936e0c0a" title="Counts the number of packages that is in the player&#39;s inventory." alt="" coords="226,5,342,32"/>
+<area shape="rect" id="node3" href="$inventory_8c.html#a1a264377a2a3622adb979ed4e9a3448e" title="Determines whether there is space on the inventory or not." alt="" coords="228,56,340,83"/>
+<area shape="rect" id="node4" href="$view_8c.html#a7d3f77b855f0ef54a954e55384bf942f" title="Detects if character passed through by argument is in contact with another entity also passed by argu..." alt="" coords="229,107,339,133"/>
+</map>

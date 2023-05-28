@@ -1,0 +1,4 @@
+<map id="remove_from_equipment" name="remove_from_equipment">
+<area shape="rect" id="node1" title="Removes item from equipment, placing it on the ground/board." alt="" coords="5,5,167,32"/>
+<area shape="rect" id="node2" href="$inventory_8c.html#aee3f502bd5e787e34a33875d936e0c0a" title="Counts the number of packages that is in the player&#39;s inventory." alt="" coords="215,5,331,32"/>
+</map>

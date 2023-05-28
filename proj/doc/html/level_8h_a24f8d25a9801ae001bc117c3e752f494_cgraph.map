@@ -1,0 +1,25 @@
+<map id="mouse_ih_level" name="mouse_ih_level">
+<area shape="rect" id="node1" title="Controls the inputs of the mouse to control the level state." alt="" coords="5,81,115,108"/>
+<area shape="rect" id="node2" href="$mouse_8c.html#ab485f93fc54f761b3b6f090d99bf9261" title="Checks if mouse is colliding with coordinates given by argument." alt="" coords="187,5,300,32"/>
+<area shape="rect" id="node3" href="$inventory_8c.html#a3dbb1360846f7b69e2f783ad731df620" title="Removes item from equipment, placing it on the ground/board." alt="" coords="163,56,324,83"/>
+<area shape="rect" id="node5" href="$player_8c.html#a8e1adc86bac8d7afcab2039080871880" title="Removes item from inventory and places it on the board." alt="" coords="167,107,320,133"/>
+<area shape="rect" id="node8" href="$package_8c.html#a40751647261be838cc425fb684c0a394" title="Calls functions to use item being currently help." alt="" coords="206,335,281,361"/>
+<area shape="rect" id="node4" href="$inventory_8c.html#aee3f502bd5e787e34a33875d936e0c0a" title="Counts the number of packages that is in the player&#39;s inventory." alt="" coords="380,56,496,83"/>
+<area shape="rect" id="node6" href="$player_8c.html#a3af5fee25b9dedcd9533cd79748ca6e3" title="Checks if a character is colliding with a teleport." alt="" coords="387,107,489,133"/>
+<area shape="rect" id="node7" href="$view_8c.html#a7d3f77b855f0ef54a954e55384bf942f" title="Detects if character passed through by argument is in contact with another entity also passed by argu..." alt="" coords="552,56,662,83"/>
+<area shape="rect" id="node9" href="$player_8c.html#a45470fb2ac0252923f17300da2820c3b" title="Gets the value of the inventory index currently being used." alt="" coords="376,208,500,235"/>
+<area shape="rect" id="node10" href="$package_8c.html#a130e52ed2fb0f029c53471b0a279d95f" title="Randomizes the item to be received after opening a package." alt="" coords="403,259,474,285"/>
+<area shape="rect" id="node19" href="$player_8c.html#a1f767d8d83293c8e1b86b96069e659d2" title="Changes the variable taht registers the index of item of inventory being thrown to a value passed by ..." alt="" coords="372,309,504,336"/>
+<area shape="rect" id="node20" href="$backpack_8c.html#afa3133512956a3a1370db2fce3f0cd3b" title="Changes backpack from inventory to equipment." alt="" coords="386,360,491,387"/>
+<area shape="rect" id="node21" href="$boots_8c.html#a50986467fc35821540182af7074e5c4a" title="Equips boots by placing it in equipment instead of inventory." alt="" coords="398,411,479,437"/>
+<area shape="rect" id="node22" href="$pistol_8c.html#a7f21348ccccb789f74ec02bed0768a17" title="Uses all ammo available from inventory to reload the pistol that is being held." alt="" coords="398,461,478,488"/>
+<area shape="rect" id="node23" href="$pizza_8c.html#aa8a2b5b68d1112c2d258956295c397b5" title="Raises player&#39;s health and stops pizza from being drawn." alt="" coords="398,512,478,539"/>
+<area shape="rect" id="node11" href="$ammo_8c.html#ae6101f273d23ca58992276ef0bf3a2bf" title="Sets the current inventory position to ammo." alt="" coords="566,107,648,133"/>
+<area shape="rect" id="node12" href="$backpack_8c.html#aeccb2fae3124c45946a071f937c29a95" title="Sets the current inventory position to backpack." alt="" coords="556,157,658,184"/>
+<area shape="rect" id="node13" href="$bone_8c.html#a585f9194dd92b30183c2fc87dd724adb" title="Sets the current inventory position to a bone." alt="" coords="570,208,644,235"/>
+<area shape="rect" id="node14" href="$boots_8c.html#ad1a19ed3b2a6c89fd71d14e9e6cd86fa" title="Sets the current inventory position to boots." alt="" coords="568,259,646,285"/>
+<area shape="rect" id="node15" href="$grenade_8c.html#ae970fad7a23c3620db1d2fe76424fb01" title="Sets the current inventory position to a grenade." alt="" coords="561,309,653,336"/>
+<area shape="rect" id="node16" href="$pistol_8c.html#ad1e3877d49e53fe3ec92556846a00e9d" title="Sets the current inventory position to a pistol." alt="" coords="568,360,646,387"/>
+<area shape="rect" id="node17" href="$pizza_8c.html#a67f32a0cf3c84dc349d7689f5ca5126a" title="Sets the current inventory position to a pizza." alt="" coords="568,411,646,437"/>
+<area shape="rect" id="node18" href="$watch_8c.html#a7955d3211628d3b0c0fe5c3a99028934" title="Sets the current inventory position to a watch." alt="" coords="567,461,647,488"/>
+</map>

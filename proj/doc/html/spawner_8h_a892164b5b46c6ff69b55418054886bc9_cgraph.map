@@ -1,0 +1,8 @@
+<map id="spawn" name="spawn">
+<area shape="rect" id="node1" title="Calls all other spawn functions." alt="" coords="5,107,64,133"/>
+<area shape="rect" id="node2" href="$spawner_8c.html#a6096221b2443b5e15a3cdf93ed046f69" title="Sets a dead monster to not dead if the rate was high enough." alt="" coords="113,5,232,32"/>
+<area shape="rect" id="node3" href="$spawner_8c.html#a05c21159c74e99373724405dbba3aedc" title="Sets a dead package to not dead if the rate was high enough." alt="" coords="112,56,233,83"/>
+<area shape="rect" id="node4" href="$spawner_8c.html#af914cc1e1ab0a4d76d41b0d689196436" title="Sets a dead teleport to not dead if the rate was high enough." alt="" coords="115,107,230,133"/>
+<area shape="rect" id="node5" href="$spawner_8c.html#a24c5893903346196e76c00c421b3a926" title="Sets a dead wolf to not dead if the rate was high enough." alt="" coords="129,157,216,184"/>
+<area shape="rect" id="node6" href="$spawner_8c.html#a1aee5fe5c96bfad41d4fba24b2a7170f" title="Sets a dead worker to not dead if the rate was high enough." alt="" coords="117,208,228,235"/>
+</map>

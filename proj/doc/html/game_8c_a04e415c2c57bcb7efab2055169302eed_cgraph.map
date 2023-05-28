@@ -1,0 +1,52 @@
+<map id="game_loop" name="game_loop">
+<area shape="rect" id="node1" title="Game loop where the program registers all the interrupts and acts accordingly depending on which one ..." alt="" coords="5,1208,90,1235"/>
+<area shape="rect" id="node2" href="$game_8c.html#ab8f724a6981cd30476e9a4857a15fd6a" title="Calls set_state function whenever a certain action is made in a current state." alt="" coords="164,107,260,133"/>
+<area shape="rect" id="node9" href="$game_8c.html#a2d6df225b25002d4eee66fae9a68fed0" title="Calls the drawing functions of the current state." alt="" coords="170,473,254,500"/>
+<area shape="rect" id="node28" href="$keyboard_8c.html#aef1b5b40937e761586d8a47bee8bef30" title="Reads the value of input made by user from a port given by argument and stores result on variable com..." alt="" coords="153,980,271,1007"/>
+<area shape="rect" id="node29" href="$game_8c.html#a690e7c3f471f0ff19bd594c5ccfd7afa" title="Calls the keyboard interrupt handlers of the current state." alt="" coords="166,1031,258,1057"/>
+<area shape="rect" id="node37" href="$mouse_8c.html#a4118e3b7e34070f3c3a6a651776b655e" title="Handles the interrupts of the mouse." alt="" coords="159,1233,265,1260"/>
+<area shape="rect" id="node41" href="$game_8c.html#afbf329f85f55c4f9099b65d487446af2" title="Calls the mouse interrupt handlers of the current state." alt="" coords="159,1183,265,1209"/>
+<area shape="rect" id="node46" href="$graphics_8c.html#a704b4951dc3211bed297bd742a0ae2f3" title="Passes content from the map buffer to the frame_buffer and resets value of frame_buffer." alt="" coords="171,1284,253,1311"/>
+<area shape="rect" id="node47" href="$graphics_8c.html#ad86c8351e1980c84350ca70d91c16384" title="Resets value of prev_buffer and passes content from frame_buffer to prev_buffer and vm_buffer." alt="" coords="148,1335,276,1361"/>
+<area shape="rect" id="node48" href="$rtc_8c.html#a0b9ae809cf571f61e54712a23c65348e" title="Handles the interrupts of the real time clock, calling the reading function to update the array that ..." alt="" coords="185,1385,239,1412"/>
+<area shape="rect" id="node50" href="$timer__proj_8c.html#aa77a834317c7fb674015afb57ce5eee8" title="Handles the interruupts of the timer, incrementing the timer count variable." alt="" coords="138,1436,286,1463"/>
+<area shape="rect" id="node3" href="$view_8c.html#a561385b3992d00cde13d63d6feca5afd" title="loads and stores animated xpms of the player on the struct AnimatedImg_t" alt="" coords="367,56,468,83"/>
+<area shape="rect" id="node5" href="$view_8c.html#ab140031bb15222ad7c63ad9504bbbe5c" title="Sets all level variables and entities to their starting values." alt="" coords="383,5,453,32"/>
+<area shape="rect" id="node6" href="$player_8c.html#a16d1ffc3278a976b73eb2258dd973186" title="Changes all player movement in every direction to STILL, making him not move." alt="" coords="562,107,678,133"/>
+<area shape="rect" id="node7" href="$game_8c.html#a0fc3becd2b2ae6ca9716da98ddf7ea3b" title="Changes the current value of the state of the struct game_state_t." alt="" coords="380,157,455,184"/>
+<area shape="rect" id="node4" href="$view_8c.html#a2c7c17f2665afb58618a7df77c1bb102" title="Loads all animated entities xpms into a struct called AnimatedImg_t." alt="" coords="549,5,691,32"/>
+<area shape="rect" id="node8" href="$view_8c.html#a4d87196986b07d28a857d850534a3179" title="Sets all entities and items to dead so that they will not show on screen anymore." alt="" coords="559,56,681,83"/>
+<area shape="rect" id="node10" href="$view_8c.html#a164a9eeb26da4992f649abb855216e4a" title="Calls drawing function on frame_buffer on each pixel of image passed by argument." alt="" coords="739,461,787,488"/>
+<area shape="rect" id="node12" href="$level_8c.html#a6cc61e74daa498a3165393ce09a68e89" title="Drawing function that draws all the features of the level state in a non moving state." alt="" coords="366,473,470,500"/>
+<area shape="rect" id="node23" href="$gameover_8c.html#aa37e76033505d7f48a87284bd85c48a2" title="Drawing function that draws all the features of the game over state." alt="" coords="359,233,476,260"/>
+<area shape="rect" id="node24" href="$level_8c.html#a585d8e2cf0a0b3db2c6afd0a9cbcb25e" title="Drawing function that draws all the features of the level state." alt="" coords="378,549,458,576"/>
+<area shape="rect" id="node25" href="$menu_8c.html#a8b6c981db3aad686de04545c1e87f33c" title="Drawing function that draws all the features of the menu state." alt="" coords="576,157,664,184"/>
+<area shape="rect" id="node26" href="$pause_8h.html#a91fbb4c4f500ee2b1f21b05a6674b1d3" title="Drawing function that draws all the features of the pause state." alt="" coords="373,777,463,804"/>
+<area shape="rect" id="node27" href="$spawner_8c.html#a892164b5b46c6ff69b55418054886bc9" title="Calls all other spawn functions." alt="" coords="389,423,447,449"/>
+<area shape="rect" id="node11" href="$graphics_8c.html#ab20eed5c22b21f149e761aa71487aea8" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="835,461,917,488"/>
+<area shape="rect" id="node13" href="$bullet_8c.html#ac7cab60c2e2b97a7200404d70db66507" title="Calls drawing function to draw the bullets." alt="" coords="573,613,667,640"/>
+<area shape="rect" id="node14" href="$enemies__lvl_8c.html#a46732510bbf2ee847d910fa0e14a8394" title="Calls drawing function to draw a zombie, taking into account the direction he faces." alt="" coords="559,259,681,285"/>
+<area shape="rect" id="node15" href="$explosion_8c.html#a11b4f699b67ee7bc640638923d405fe0" title=" " alt="" coords="565,411,675,437"/>
+<area shape="rect" id="node16" href="$wolf_8c.html#a273dd63b570422b1d086ffdfd29ffb1b" title="Calls drawing function to draw a friendly wolf, taking into account the direction he faces." alt="" coords="557,309,683,336"/>
+<area shape="rect" id="node17" href="$view_8c.html#a2490feb09e6d7f6d5cd4595b21751a22" title="Calls drawing function to draw the health of the player." alt="" coords="575,664,665,691"/>
+<area shape="rect" id="node18" href="$inventory_8c.html#af17bea04c910ab49aca091b1ba1aa865" title="Calls the drawing function to draw the inventory images and also the items inside the inventory." alt="" coords="567,461,673,488"/>
+<area shape="rect" id="node19" href="$level_8c.html#a391fe41eca200011e23357b2c994a7d8" title="Draws all the items of the level." alt="" coords="576,715,664,741"/>
+<area shape="rect" id="node20" href="$level_8c.html#af96de77b034effdf5f61e8e89e02c5b5" title="Draws all the level numbers." alt="" coords="551,360,689,387"/>
+<area shape="rect" id="node21" href="$level_8c.html#a9814054a4131a65bb77b1d902fba20ce" title="Draws all the level letters and symbols." alt="" coords="559,512,681,539"/>
+<area shape="rect" id="node22" href="$package_8c.html#a2c45f09f2d6a39150a819d5cddb6e29e" title="Calls drawing function to draw packages." alt="" coords="564,563,676,589"/>
+<area shape="rect" id="node30" href="$gameover_8c.html#a315f9619cba399b88b3cc8249c5dc76e" title="Controls the inputs of the keyboard to control the game over state." alt="" coords="338,929,498,956"/>
+<area shape="rect" id="node31" href="$level_8c.html#a4da4741385e3323692f52e73dea8322c" title="Controls the inputs of the keyboard to control the level state." alt="" coords="356,980,479,1007"/>
+<area shape="rect" id="node32" href="$menu_8c.html#a028513452da9798db6bf320c9da036b8" title="Controls the inputs of the keyboard to control the menu state." alt="" coords="353,828,483,855"/>
+<area shape="rect" id="node33" href="$pause_8c.html#a37070ccb6d932088d2a9b3054fe000f3" title="Controls the inputs of the keyboard to control the pause state." alt="" coords="351,879,484,905"/>
+<area shape="rect" id="node34" href="$gameover_8c.html#a549dbe977774241bd1efbb5036595ec3" title="Changes the current value of a game over state controlling variable." alt="" coords="334,1132,501,1159"/>
+<area shape="rect" id="node35" href="$menu_8c.html#ad629a741c3862ebb8a373c1c99142bae" title="Changes the current value of a menu state controlling variable." alt="" coords="349,1031,486,1057"/>
+<area shape="rect" id="node36" href="$pause_8c.html#a7981fa96ab53adfca397182f9940b03b" title="Changes the current value of a pause state controlling variable." alt="" coords="348,1081,488,1108"/>
+<area shape="rect" id="node38" href="$mouse_8c.html#ad0aec7c36562ad6b421ed4a8ecd72fc2" title="Fills the struct mouse_packet with values of the inputs of the mouse." alt="" coords="355,1385,480,1412"/>
+<area shape="rect" id="node39" href="$mouse_8c.html#a1ba56a986301d9c423a95beff4037194" title="Reads the value of input made by user from a port given by argument." alt="" coords="350,1436,485,1463"/>
+<area shape="rect" id="node40" href="$mouse_8c.html#adaf307d3659e610a56c6acf3434baa7f" title="Moves the mouse accordingly based on the values stores in the mouse_packet." alt="" coords="369,1487,466,1513"/>
+<area shape="rect" id="node42" href="$gameover_8c.html#a36e46b9ba87d25f8242ff803b61b699f" title="Controls the inputs of the mouse to control the game over state." alt="" coords="345,1284,491,1311"/>
+<area shape="rect" id="node43" href="$level_8c.html#a24f8d25a9801ae001bc117c3e752f494" title="Controls the inputs of the mouse to control the level state." alt="" coords="363,1335,472,1361"/>
+<area shape="rect" id="node44" href="$menu_8c.html#af87515ecd00168541179d564277f684b" title="Controls the inputs of the mouse to control the menu state." alt="" coords="360,1183,476,1209"/>
+<area shape="rect" id="node45" href="$pause_8c.html#a325fdbdcdac6314eb28250ba9404f8db" title="Controls the inputs of the mouse to control the pause state." alt="" coords="358,1233,477,1260"/>
+<area shape="rect" id="node49" href="$rtc_8c.html#a4d1b70cfd76f4646e64e88c892a35863" title="Reads the seconds, minutes, hours, day, month and year from real time clock." alt="" coords="384,1537,452,1564"/>
+</map>

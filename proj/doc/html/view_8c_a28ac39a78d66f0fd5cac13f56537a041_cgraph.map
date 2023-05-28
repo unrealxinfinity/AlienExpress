@@ -1,0 +1,4 @@
+<map id="make_simple_animation" name="make_simple_animation">
+<area shape="rect" id="node1" title="Loads all simple animated entities xpm into a struct simple_animation_t." alt="" coords="5,5,167,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#ab3749554144885b5029f6bf77aaa7c7a" title="Loads and sets the variables of struct img_t of a xpm." alt="" coords="215,5,296,32"/>
+</map>

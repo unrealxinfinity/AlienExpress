@@ -1,0 +1,128 @@
+\hypertarget{define_8h_source}{}\doxysection{define.\+h}
+\label{define_8h_source}\index{src/macros/define.h@{src/macros/define.h}}
+\mbox{\hyperlink{define_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef DEFINE\_H}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00002}00002 \textcolor{preprocessor}{\#define DEFINE\_H}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00005}00005 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00007}\mbox{\hyperlink{define_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{00007}} \textcolor{preprocessor}{\#define ERROR           0xFFFF}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00008}\mbox{\hyperlink{define_8h_a7b3b25cba33b07c303f3060fe41887f6}{00008}} \textcolor{preprocessor}{\#define BLACK           0}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00010}00010 \textcolor{comment}{//timer}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00011}\mbox{\hyperlink{define_8h_ad40cf8f3e7e75d30d8dd9f7b041e6ef7}{00011}} \textcolor{preprocessor}{\#define TIMER\_IRQ\_LINE              0}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00012}\mbox{\hyperlink{define_8h_a300ff385500e663d5280b927366e32d8}{00012}} \textcolor{preprocessor}{\#define TIMER\_STATUS                0x43}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00013}\mbox{\hyperlink{define_8h_acc9ff9df4a9674a1ce9ba08fc4a4679e}{00013}} \textcolor{preprocessor}{\#define TIMER\_0                     0x40}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00014}\mbox{\hyperlink{define_8h_aa4d79080dd64c8164b45202b5fa77424}{00014}} \textcolor{preprocessor}{\#define CONST\_FREQ                  1193182}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00015}\mbox{\hyperlink{define_8h_aa129740d09f615ace83f8f0b8bd04e8a}{00015}} \textcolor{preprocessor}{\#define SELECT\_TIMER(n)                (n << 6)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00016}\mbox{\hyperlink{define_8h_a9bea4f38873ae05747004ac2cce63b35}{00016}} \textcolor{preprocessor}{\#define SELECT\_RB\_TIMER(n)             BIT((n) + 1)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00017}\mbox{\hyperlink{define_8h_a4c2eecbfb96744a9c2af71dba75ecb18}{00017}} \textcolor{preprocessor}{\#define TIMER\_RB\_CMD                (BIT(7) | BIT(6))}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00018}\mbox{\hyperlink{define_8h_af0fc596f1b70585784f6b4531762687d}{00018}} \textcolor{preprocessor}{\#define TIMER\_COUNT\_MODE            BIT(5)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00019}\mbox{\hyperlink{define_8h_a8c0f1933323274c765e23837e4fbc8c7}{00019}} \textcolor{preprocessor}{\#define TIMER\_LSB\_MSB               (BIT(4) | BIT(5))}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00024}00024 \textcolor{comment}{//keyboard}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00025}\mbox{\hyperlink{define_8h_adcabd5b693735bced4d5867b84dfb027}{00025}} \textcolor{preprocessor}{\#define KBD\_HOOK\_ID                 1}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00026}\mbox{\hyperlink{define_8h_a1862e728098ddeac91aaacf6420fc2e7}{00026}} \textcolor{preprocessor}{\#define KBD\_IRQ\_LINE                1}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00027}\mbox{\hyperlink{define_8h_a0615d1ead5f06ae8445d2a8be8364636}{00027}} \textcolor{preprocessor}{\#define KBC\_STATUS                  0x64}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00028}\mbox{\hyperlink{define_8h_ae1ceff90b79b3e4feab3cdab37c950fe}{00028}} \textcolor{preprocessor}{\#define OUT\_BUFFER\_BIT              BIT(0)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00029}\mbox{\hyperlink{define_8h_a4896f49aa6f447c44e839a119b2038b6}{00029}} \textcolor{preprocessor}{\#define IN\_BUFFER\_BIT               BIT(1)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00030}\mbox{\hyperlink{define_8h_a81d2ca6759f3f3bf04556b7558aea6bc}{00030}} \textcolor{preprocessor}{\#define PARITY\_ERROR                BIT(7)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00031}\mbox{\hyperlink{define_8h_ab4556e7b441bc247315ea9a2f3afe79c}{00031}} \textcolor{preprocessor}{\#define TIME\_OUT\_ERROR              BIT(6)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00032}\mbox{\hyperlink{define_8h_aa9942f12a871b48b5176e6c9a9f5f174}{00032}} \textcolor{preprocessor}{\#define OUT\_BUFFER                  0x60}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00033}\mbox{\hyperlink{define_8h_a1c3fc56ae80b0e77b16b64d1b805dbd1}{00033}} \textcolor{preprocessor}{\#define IN\_BUFFER                   0x20}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00034}\mbox{\hyperlink{define_8h_af1e33bcc5ef600196ab153395edb1c3c}{00034}} \textcolor{preprocessor}{\#define STREAMING\_MODE              0xF4}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00035}00035 \textcolor{preprocessor}{\#define ACK                         0xFA}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00036}\mbox{\hyperlink{define_8h_a92f67631ef5a97e4a266c15bc710776d}{00036}} \textcolor{preprocessor}{\#define RESEND                      0xFE}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00037}\mbox{\hyperlink{define_8h_a62249e384b997229a3e2ae74ade334e2}{00037}} \textcolor{preprocessor}{\#define DELAY                       20000}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00039}\mbox{\hyperlink{define_8h_a0df4fbf54d7714c0f1c5efcc4f6d99a9}{00039}} \textcolor{preprocessor}{\#define MAKE\_ESC                    0x01}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00040}\mbox{\hyperlink{define_8h_a6ef830375be126391a1a52952027aa74}{00040}} \textcolor{preprocessor}{\#define MAKE\_ENTER                  0x1C}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00041}\mbox{\hyperlink{define_8h_a5287931eda665268f55498ec93276c84}{00041}} \textcolor{preprocessor}{\#define MAKE\_W                      0x11}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00042}\mbox{\hyperlink{define_8h_aa149c92af302f5d9e72a44f335d00ce0}{00042}} \textcolor{preprocessor}{\#define MAKE\_A                      0x1E}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00043}\mbox{\hyperlink{define_8h_a126db2c2ecef7c6abe8a14a8a347d3a9}{00043}} \textcolor{preprocessor}{\#define MAKE\_D                      0x20}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00044}\mbox{\hyperlink{define_8h_a7327330cf4cd2aa037a35cb1d4a130e1}{00044}} \textcolor{preprocessor}{\#define MAKE\_S                      0x1F}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00045}\mbox{\hyperlink{define_8h_a6f4b2baf27cbca540f54e63677fb63ca}{00045}} \textcolor{preprocessor}{\#define MAKE\_P                      0x19}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00046}\mbox{\hyperlink{define_8h_a4cd2f955afad039e9ebcbb1a066ef833}{00046}} \textcolor{preprocessor}{\#define MAKE\_O                      0x18}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00047}\mbox{\hyperlink{define_8h_af35869cca53bfece85b39e6ca0809eaf}{00047}} \textcolor{preprocessor}{\#define MAKE\_I                      0x17}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00048}\mbox{\hyperlink{define_8h_adbf71b0e13b45d46db2f169718147d70}{00048}} \textcolor{preprocessor}{\#define MAKE\_L                      0x26}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00049}\mbox{\hyperlink{define_8h_a7323faa8df8d0eaaa2f295a10b47b734}{00049}} \textcolor{preprocessor}{\#define MAKE\_1                      0x02}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00050}\mbox{\hyperlink{define_8h_abc760bcfe107799691af0a7cfb81c953}{00050}} \textcolor{preprocessor}{\#define MAKE\_2                      0x03}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00051}\mbox{\hyperlink{define_8h_a0805594367f24340777dd681d19dbb5c}{00051}} \textcolor{preprocessor}{\#define MAKE\_3                      0x04}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00052}\mbox{\hyperlink{define_8h_a4b40811cbbde1d36b620ec436879108c}{00052}} \textcolor{preprocessor}{\#define B(n)                        (n | BIT(7))}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00055}00055 \textcolor{comment}{//mouse}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00056}\mbox{\hyperlink{define_8h_ab3919f33b46e0808c4ed1c56a6a423f2}{00056}} \textcolor{preprocessor}{\#define STREAM\_MODE                 0xEA}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00057}\mbox{\hyperlink{define_8h_a782efbd04012530bb88bd5660dc24af6}{00057}} \textcolor{preprocessor}{\#define DATA\_REPORT                 0xF4}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00058}\mbox{\hyperlink{define_8h_ab68ffa76160866a0585aead19b67a130}{00058}} \textcolor{preprocessor}{\#define MOUSE\_HOOK\_ID               3}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00059}\mbox{\hyperlink{define_8h_af10b9efcb908230838524558bb05588a}{00059}} \textcolor{preprocessor}{\#define MOUSE\_IRQ\_LINE              12}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00060}\mbox{\hyperlink{define_8h_a92e32a12d07e5e7237c9993bb1c66728}{00060}} \textcolor{preprocessor}{\#define WRITE\_MOUSE\_CMD             0xD4}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00061}\mbox{\hyperlink{define_8h_a6f6489887e08bff4887d0bc5dcf214d8}{00061}} \textcolor{preprocessor}{\#define ACK                         0xFA}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00062}\mbox{\hyperlink{define_8h_a6e4a6ed5bec289067d9aefe759abca3e}{00062}} \textcolor{preprocessor}{\#define MOUSE\_CONTROL\_BIT           BIT(3)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00063}\mbox{\hyperlink{define_8h_a3ac6c4732e4b324679fce065ca9bf707}{00063}} \textcolor{preprocessor}{\#define CLICK\_LEFT                  BIT(0)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00064}\mbox{\hyperlink{define_8h_a1c51504fd982b4913ec3b122821897ba}{00064}} \textcolor{preprocessor}{\#define CLICK\_RIGHT                 BIT(1)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00065}\mbox{\hyperlink{define_8h_ace2af6cb129a41ed0dd5cf219f00575b}{00065}} \textcolor{preprocessor}{\#define CLICK\_MIDDLE                BIT(2)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00066}\mbox{\hyperlink{define_8h_acb401b7cf6d14fccb64e8b304c9f3ff9}{00066}} \textcolor{preprocessor}{\#define DELTA\_X                     BIT(4)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00067}\mbox{\hyperlink{define_8h_a1574d066f62fe8032313c2665e55149c}{00067}} \textcolor{preprocessor}{\#define DELTA\_Y                     BIT(5)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00068}\mbox{\hyperlink{define_8h_a82dc3ac9577dabd19733ada75d2822d0}{00068}} \textcolor{preprocessor}{\#define X\_OVERFLOW                  BIT(6)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00069}\mbox{\hyperlink{define_8h_acd54c5569c84fd2d1710cccd190e138a}{00069}} \textcolor{preprocessor}{\#define Y\_OVERFLOW                  BIT(7)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00070}\mbox{\hyperlink{define_8h_a411dfcc6fa30fd0536625dfd5f91f22e}{00070}} \textcolor{preprocessor}{\#define SET\_NEGATIVE                0xFF00}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00072}00072 \textcolor{comment}{//graphics}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00073}\mbox{\hyperlink{define_8h_a2617c1997f2516f4d0c0331bd0c600d6}{00073}} \textcolor{preprocessor}{\#define INTNO                       0x10}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00074}\mbox{\hyperlink{define_8h_ae56562740b1159ed03061cecec40f609}{00074}} \textcolor{preprocessor}{\#define AL                          0x02}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00075}\mbox{\hyperlink{define_8h_ac653b4a572a53fd35a83e647e96230e4}{00075}} \textcolor{preprocessor}{\#define AH                          0x4F}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00076}\mbox{\hyperlink{define_8h_a0f37ffb2213a7e5ab25da072e87193ac}{00076}} \textcolor{preprocessor}{\#define BX                          BIT(14)}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00077}\mbox{\hyperlink{define_8h_a48fa70a72e330f89e31fcd6a44df06c9}{00077}} \textcolor{preprocessor}{\#define INDEXED\_MODE                0x105}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00078}\mbox{\hyperlink{define_8h_af41782c40cb3044059158f3ac54fbe7f}{00078}} \textcolor{preprocessor}{\#define DIRECT\_COLOR\_1\_5\_5\_5        0x110}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00079}\mbox{\hyperlink{define_8h_ab23c54cda9c25c8f00a0de1b18faf7fe}{00079}} \textcolor{preprocessor}{\#define DIRECT\_COLOR\_8\_8\_8          0x115}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00080}\mbox{\hyperlink{define_8h_a505cd7f074a8012115132d8bb78dc32c}{00080}} \textcolor{preprocessor}{\#define DIRECT\_COLOR\_5\_6\_5          0x11A}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00081}\mbox{\hyperlink{define_8h_abcd021ad1acf8260189dd8bce46162ef}{00081}} \textcolor{preprocessor}{\#define DIRECT\_COLOR\_8\_8\_8\_8        0x14C}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00084}00084 \textcolor{comment}{//RTC}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00086}\mbox{\hyperlink{define_8h_ac93f7885d306a82906ee65bdbf0db65d}{00086}} \textcolor{preprocessor}{\#define RTC\_HOOK\_ID                 2}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00087}\mbox{\hyperlink{define_8h_a7f6b0bbf4271dd31625f92ec8314808c}{00087}} \textcolor{preprocessor}{\#define RTC\_IRQ\_LINE                8}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00088}\mbox{\hyperlink{define_8h_a2e1c4a2fff11aee38aee30ab43b401f3}{00088}} \textcolor{preprocessor}{\#define RTC\_ADRESS                  0x70}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00089}\mbox{\hyperlink{define_8h_a0bb14714587a8eed5f490f2afc95f083}{00089}} \textcolor{preprocessor}{\#define RTC\_OUTPUT                  0x71}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00090}\mbox{\hyperlink{define_8h_a77a045a812e9d5bdcd130cb81a6fd5bd}{00090}} \textcolor{preprocessor}{\#define RTC\_COMMAND                 11}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00091}\mbox{\hyperlink{define_8h_a82cf926d0322d724ce4d18d03c242780}{00091}} \textcolor{preprocessor}{\#define RTC\_COMMAND2                12}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00092}\mbox{\hyperlink{define_8h_a6405f53f64912dd9481ad224381b272b}{00092}} \textcolor{preprocessor}{\#define RTC\_COMMAND3                10}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00093}\mbox{\hyperlink{define_8h_a43f6540c6d3a78b930f9adad56cf7fac}{00093}} \textcolor{preprocessor}{\#define RTC\_SECONDS                 0}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00094}\mbox{\hyperlink{define_8h_aabc0725ac27ea93c913a2a4d7cd51ac7}{00094}} \textcolor{preprocessor}{\#define RTC\_MINUTES                 2}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00095}\mbox{\hyperlink{define_8h_a4d74cdb9a956c4f1783ad5aff00dc2b8}{00095}} \textcolor{preprocessor}{\#define RTC\_HOURS                   4}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00096}\mbox{\hyperlink{define_8h_a478c4ef1cbc68cd622e01cceb3446bb2}{00096}} \textcolor{preprocessor}{\#define RTC\_DAYS                    7}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00097}\mbox{\hyperlink{define_8h_ab16ad8bcc1cd2e491bd8e2c921ee30c5}{00097}} \textcolor{preprocessor}{\#define RTC\_MONTHS                  8}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00098}\mbox{\hyperlink{define_8h_a8f85622d8edec8b0d36db7c8f1267106}{00098}} \textcolor{preprocessor}{\#define RTC\_YEARS                   9}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00100}00100 \textcolor{comment}{//entities}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00101}\mbox{\hyperlink{define_8h_a4f66cbb1a1d265c57c82c19eb59233df}{00101}} \textcolor{preprocessor}{\#define UNBREAKABLE\_WALL            0xB2B2B2}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00102}\mbox{\hyperlink{define_8h_aad83b5ec5f8d43384c666cf26865aaea}{00102}} \textcolor{preprocessor}{\#define PLAYER                      0x161516}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00103}\mbox{\hyperlink{define_8h_af5e3aa7c9b13673c6a94f8ebb70010db}{00103}} \textcolor{preprocessor}{\#define ENEMY                       0x161319}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00104}\mbox{\hyperlink{define_8h_a61fc173cd03db618eb2f64b60f42b55b}{00104}} \textcolor{preprocessor}{\#define WORKER                      0X15110F}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00105}\mbox{\hyperlink{define_8h_aaaa1a6d498de96acbe1cb9057983a01a}{00105}} \textcolor{preprocessor}{\#define PAUSE\_SCREEN                0x00000D       }}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00106}\mbox{\hyperlink{define_8h_a94127cc7d8cfd3ad02d2369ddd49f839}{00106}} \textcolor{preprocessor}{\#define WOLF                        0xFFFFFD}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00107}\mbox{\hyperlink{define_8h_aca8570fb706c81df371b7f9bc454ae03}{00107}} \textcolor{preprocessor}{\#define PACKAGE                     0x000000}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00108}\mbox{\hyperlink{define_8h_a42a4754c366aff8f1259ee3b1ce08ac9}{00108}} \textcolor{preprocessor}{\#define PISTOL\_BULLET               0xECFFA8}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00109}\mbox{\hyperlink{define_8h_a9c3c35f9545d4bd20d9c19ee86a3f067}{00109}} \textcolor{preprocessor}{\#define BULLET                      0x000003}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00110}\mbox{\hyperlink{define_8h_acb3bc16cb7c143373145b804a57d747e}{00110}} \textcolor{preprocessor}{\#define AMMO                        0x000006}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00111}\mbox{\hyperlink{define_8h_a36868d2ff907a84d2f27caf3160ce631}{00111}} \textcolor{preprocessor}{\#define PIZZA                       0x000007}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00112}\mbox{\hyperlink{define_8h_aed0c1059b6964fa09322aab11fe692f8}{00112}} \textcolor{preprocessor}{\#define WATCH                       0x000008}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00113}\mbox{\hyperlink{define_8h_a2f7087c814499364c1bb7a8d872ca8ab}{00113}} \textcolor{preprocessor}{\#define BOOTS                       0x000009}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00114}\mbox{\hyperlink{define_8h_a64730259fa96833ccdcdaeb5a149cdcb}{00114}} \textcolor{preprocessor}{\#define BACKPACK                    0x00000A}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00115}\mbox{\hyperlink{define_8h_a474bb7b721d9b758209f8d688b2f265b}{00115}} \textcolor{preprocessor}{\#define BONE                        0x00000C}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00116}\mbox{\hyperlink{define_8h_a67652ff1cd5b6edfdfc13dff3d612f2b}{00116}} \textcolor{preprocessor}{\#define GRENADE                     0x00000B}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00117}\mbox{\hyperlink{define_8h_ace7090923c4e2498d407e66121134375}{00117}} \textcolor{preprocessor}{\#define PISTOL                      0xFFFFFF}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00118}\mbox{\hyperlink{define_8h_aa35e137ee90bb3aab948cb128a20e905}{00118}} \textcolor{preprocessor}{\#define HEALTH                      0xFF0000}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00119}\mbox{\hyperlink{define_8h_a8455cf22aa72fbb4644520d36a42f594}{00119}} \textcolor{preprocessor}{\#define EMPTY\_HEALTH                0x000002}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00120}\mbox{\hyperlink{define_8h_a633d4415dae913396d3fef7ace02bfcf}{00120}} \textcolor{preprocessor}{\#define EMPTY\_INVENTORY             0x696969}}
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{define_8h_source_l00122}00122 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

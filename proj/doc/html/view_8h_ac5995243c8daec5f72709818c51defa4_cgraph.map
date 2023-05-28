@@ -1,0 +1,6 @@
+<map id="draw_timer" name="draw_timer">
+<area shape="rect" id="node1" title="Calls drawing function to draw the ongoing timer based on the values passed by argument." alt="" coords="5,5,90,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#ad168c686d7996c549bfd3d4d1beb5017" title="Calls drawing function to draw a number passed by argument." alt="" coords="138,5,236,32"/>
+<area shape="rect" id="node3" href="$view_8c.html#a806f64f655004972017f12dc7b44e653" title="Calls drawing function on frame_buffer on each pixel of image passed by argument on char images (lett..." alt="" coords="284,5,389,32"/>
+<area shape="rect" id="node4" href="$graphics_8c.html#aaf12b562a02a21bc9172de234a707c83" title="Draws pixel onto frame_buffer with color and coordinates passed by argument." alt="" coords="437,5,570,32"/>
+</map>

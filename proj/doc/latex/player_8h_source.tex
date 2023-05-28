@@ -1,0 +1,47 @@
+\hypertarget{player_8h_source}{}\doxysection{player.\+h}
+\label{player_8h_source}\index{src/Entities/player.h@{src/Entities/player.h}}
+\mbox{\hyperlink{player_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef PLAYER\_H}}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00002}00002 \textcolor{preprocessor}{\#define PLAYER\_H}}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}../macros/includes.h"{}}}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00005}00005 \textcolor{preprocessor}{\#include "{}../load/view.h"{}}}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00007}00007 \textcolor{preprocessor}{\#include "{}../Items/package.h"{}}}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00013}00013 \textcolor{keywordtype}{void} \mbox{\hyperlink{player_8h_a16d1ffc3278a976b73eb2258dd973186}{reset\_movement}}();}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00021}00021 \textcolor{keywordtype}{bool} \mbox{\hyperlink{player_8h_ac8ec5d103e4474fa9e333ee8b2244995}{get\_is\_holding\_i}}();}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00027}00027 \textcolor{keywordtype}{int} \mbox{\hyperlink{player_8h_a2c57ae5b0f2fad1d86c7bc12a096937e}{get\_throwing\_index}}();}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00033}00033 \textcolor{keywordtype}{int} \mbox{\hyperlink{player_8h_a45470fb2ac0252923f17300da2820c3b}{get\_current\_index}}();}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00039}00039 \textcolor{keywordtype}{void} \mbox{\hyperlink{player_8h_a1f767d8d83293c8e1b86b96069e659d2}{set\_throwing\_index}}(\textcolor{keywordtype}{int} throw\_timer);}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00045}00045 \textcolor{keywordtype}{void} \mbox{\hyperlink{player_8h_aeeb375ca201b643406032cb5222ef0a3}{player\_controller}}(uint32\_t scancode);}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00050}00050 \textcolor{keywordtype}{void} \mbox{\hyperlink{player_8h_a26353db2709e08598c8a16d5d7150ead}{move\_player}}();}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00055}00055 \textcolor{keywordtype}{void} \mbox{\hyperlink{player_8h_a314c0f43f5c49e3eea8c637fa2417b2d}{draw\_player}}();}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00059}00059 \textcolor{keywordtype}{void} \mbox{\hyperlink{player_8h_a2167c5d685243713a7355e7bd769ed8a}{kill\_workers}}();}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00065}00065 \textcolor{keywordtype}{void} \mbox{\hyperlink{player_8h_a948ad1dc58ec4c4ff411f5c8557cc6c3}{remove\_package}}(\mbox{\hyperlink{structimg__t}{img\_t}} character);}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00071}00071 \textcolor{keywordtype}{void} \mbox{\hyperlink{player_8h_a2db5a8e40c37fab7e58724ae3eef00d0}{remove\_item\_from\_ground}}(\mbox{\hyperlink{structimg__t}{img\_t}} character);}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00076}00076 \textcolor{keywordtype}{void} \mbox{\hyperlink{player_8h_a8e1adc86bac8d7afcab2039080871880}{remove\_from\_inventory}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00082}00082 \textcolor{keywordtype}{int} \mbox{\hyperlink{player_8h_a1a264377a2a3622adb979ed4e9a3448e}{is\_inventory\_full}}();}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00089}00089 \textcolor{keywordtype}{int} \mbox{\hyperlink{player_8h_a3af5fee25b9dedcd9533cd79748ca6e3}{is\_on\_teleport}}(\mbox{\hyperlink{structimg__t}{img\_t}} character);}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00094}00094 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{player_8h_source_l00095}00095 }
+
+\end{DoxyCode}

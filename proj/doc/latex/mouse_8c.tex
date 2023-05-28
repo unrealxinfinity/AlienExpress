@@ -1,0 +1,265 @@
+\hypertarget{mouse_8c}{}\doxysection{src/devices/mouse.c File Reference}
+\label{mouse_8c}\index{src/devices/mouse.c@{src/devices/mouse.c}}
+{\ttfamily \#include \char`\"{}mouse.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{mouse_8c_a5f6dc719751221fcc748e67511fbe95a}{mouse\+\_\+subscribe}} ()
+\begin{DoxyCompactList}\small\item\em Subscribes the mouse device, setting into the interrupt mask the respective mouse hook id bit to 1. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8c_abb62339e13d96f9050f69a71428f8eb9}{mouse\+\_\+unsubscribe}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes the mouse device, setting into the interrupt mask the respective mouse hook id bit to 0. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8c_a77621d937bc2fde8bc8fc0fd69fea489}{mouse\+\_\+write}} (uint8\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em Writes to the mouse a certain command to allow us to use the mouse in a way the user wants. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8c_a1ba56a986301d9c423a95beff4037194}{mouse\+\_\+read\+\_\+output}} (int port)
+\begin{DoxyCompactList}\small\item\em Reads the value of input made by user from a port given by argument. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8c_aad881781b569b658cd537da533325585}{mouse\+\_\+write\+\_\+output}} (int port, unsigned long command)
+\begin{DoxyCompactList}\small\item\em Writes the value of a command to a port given by argument. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8c_a4118e3b7e34070f3c3a6a651776b655e}{mouse\+\_\+control}} ()
+\begin{DoxyCompactList}\small\item\em Handles the interrupts of the mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse_8c_ad0aec7c36562ad6b421ed4a8ecd72fc2}{fill\+\_\+mouse\+\_\+packet}} (uint32\+\_\+t scancode)
+\begin{DoxyCompactList}\small\item\em Fills the struct mouse\+\_\+packet with values of the inputs of the mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse_8c_adaf307d3659e610a56c6acf3434baa7f}{move\+\_\+mouse}} ()
+\begin{DoxyCompactList}\small\item\em Moves the mouse accordingly based on the values stores in the mouse\+\_\+packet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{mouse_8c_ab485f93fc54f761b3b6f090d99bf9261}{mouse\+\_\+position}} (unsigned int xi, unsigned int yi, unsigned int xf, unsigned int yf)
+\begin{DoxyCompactList}\small\item\em Checks if mouse is colliding with coordinates given by argument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{mouse_8c_a0b0da21bbdff62b7b28e9af7ec3d0d76}{hook\+\_\+id\+\_\+mouse}} = 3
+\item 
+uint8\+\_\+t \mbox{\hyperlink{mouse_8c_ae75156bc7a78e4c01e1c562438e66f2c}{bytes\+\_\+index}} = 0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{mouse_8c_a348e5d3a947b5032136f9eeee7222629}{bytes}} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mouse_8c_ad0aec7c36562ad6b421ed4a8ecd72fc2}\label{mouse_8c_ad0aec7c36562ad6b421ed4a8ecd72fc2}} 
+\index{mouse.c@{mouse.c}!fill\_mouse\_packet@{fill\_mouse\_packet}}
+\index{fill\_mouse\_packet@{fill\_mouse\_packet}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{fill\_mouse\_packet()}{fill\_mouse\_packet()}}
+{\footnotesize\ttfamily void fill\+\_\+mouse\+\_\+packet (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Fills the struct mouse\+\_\+packet with values of the inputs of the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & The value of the inputs the user gives \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{mouse_8c_source_l00077}{77}} of file \mbox{\hyperlink{mouse_8c_source}{mouse.\+c}}.
+
+\mbox{\Hypertarget{mouse_8c_a4118e3b7e34070f3c3a6a651776b655e}\label{mouse_8c_a4118e3b7e34070f3c3a6a651776b655e}} 
+\index{mouse.c@{mouse.c}!mouse\_control@{mouse\_control}}
+\index{mouse\_control@{mouse\_control}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_control()}{mouse\_control()}}
+{\footnotesize\ttfamily int mouse\+\_\+control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the interrupts of the mouse. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 0x\+FF if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{mouse_8c_source_l00061}{61}} of file \mbox{\hyperlink{mouse_8c_source}{mouse.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{mouse_8c_a4118e3b7e34070f3c3a6a651776b655e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_ab485f93fc54f761b3b6f090d99bf9261}\label{mouse_8c_ab485f93fc54f761b3b6f090d99bf9261}} 
+\index{mouse.c@{mouse.c}!mouse\_position@{mouse\_position}}
+\index{mouse\_position@{mouse\_position}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_position()}{mouse\_position()}}
+{\footnotesize\ttfamily bool mouse\+\_\+position (\begin{DoxyParamCaption}\item[{unsigned int}]{xi,  }\item[{unsigned int}]{yi,  }\item[{unsigned int}]{xf,  }\item[{unsigned int}]{yf }\end{DoxyParamCaption})}
+
+
+
+Checks if mouse is colliding with coordinates given by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xi} & left horizontal coordinate of collision target \\
+\hline
+{\em yi} & up vertical coordinate of collision target \\
+\hline
+{\em xf} & right horizontal coordinate of collision target \\
+\hline
+{\em yf} & down vertical coordinate of collision target \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if there is collision and false if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{mouse_8c_source_l00116}{116}} of file \mbox{\hyperlink{mouse_8c_source}{mouse.\+c}}.
+
+\mbox{\Hypertarget{mouse_8c_a1ba56a986301d9c423a95beff4037194}\label{mouse_8c_a1ba56a986301d9c423a95beff4037194}} 
+\index{mouse.c@{mouse.c}!mouse\_read\_output@{mouse\_read\_output}}
+\index{mouse\_read\_output@{mouse\_read\_output}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_read\_output()}{mouse\_read\_output()}}
+{\footnotesize\ttfamily int mouse\+\_\+read\+\_\+output (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})}
+
+
+
+Reads the value of input made by user from a port given by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port from which value is being read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the value of input made if successfull and 0x\+FFFF if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{mouse_8c_source_l00028}{28}} of file \mbox{\hyperlink{mouse_8c_source}{mouse.\+c}}.
+
+\mbox{\Hypertarget{mouse_8c_a5f6dc719751221fcc748e67511fbe95a}\label{mouse_8c_a5f6dc719751221fcc748e67511fbe95a}} 
+\index{mouse.c@{mouse.c}!mouse\_subscribe@{mouse\_subscribe}}
+\index{mouse\_subscribe@{mouse\_subscribe}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_subscribe()}{mouse\_subscribe()}}
+{\footnotesize\ttfamily uint8\+\_\+t mouse\+\_\+subscribe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Subscribes the mouse device, setting into the interrupt mask the respective mouse hook id bit to 1. 
+
+\begin{DoxyReturn}{Returns}
+Returns the bit number that was set if successfull or 0x\+FF if unsuccessfull 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{mouse_8c_source_l00009}{9}} of file \mbox{\hyperlink{mouse_8c_source}{mouse.\+c}}.
+
+\mbox{\Hypertarget{mouse_8c_abb62339e13d96f9050f69a71428f8eb9}\label{mouse_8c_abb62339e13d96f9050f69a71428f8eb9}} 
+\index{mouse.c@{mouse.c}!mouse\_unsubscribe@{mouse\_unsubscribe}}
+\index{mouse\_unsubscribe@{mouse\_unsubscribe}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_unsubscribe()}{mouse\_unsubscribe()}}
+{\footnotesize\ttfamily int mouse\+\_\+unsubscribe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes the mouse device, setting into the interrupt mask the respective mouse hook id bit to 0. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{mouse_8c_source_l00014}{14}} of file \mbox{\hyperlink{mouse_8c_source}{mouse.\+c}}.
+
+\mbox{\Hypertarget{mouse_8c_a77621d937bc2fde8bc8fc0fd69fea489}\label{mouse_8c_a77621d937bc2fde8bc8fc0fd69fea489}} 
+\index{mouse.c@{mouse.c}!mouse\_write@{mouse\_write}}
+\index{mouse\_write@{mouse\_write}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_write()}{mouse\_write()}}
+{\footnotesize\ttfamily int mouse\+\_\+write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command }\end{DoxyParamCaption})}
+
+
+
+Writes to the mouse a certain command to allow us to use the mouse in a way the user wants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Command to write to mouse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{mouse_8c_source_l00017}{17}} of file \mbox{\hyperlink{mouse_8c_source}{mouse.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{mouse_8c_a77621d937bc2fde8bc8fc0fd69fea489_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_aad881781b569b658cd537da533325585}\label{mouse_8c_aad881781b569b658cd537da533325585}} 
+\index{mouse.c@{mouse.c}!mouse\_write\_output@{mouse\_write\_output}}
+\index{mouse\_write\_output@{mouse\_write\_output}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_write\_output()}{mouse\_write\_output()}}
+{\footnotesize\ttfamily int mouse\+\_\+write\+\_\+output (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{unsigned long}]{command }\end{DoxyParamCaption})}
+
+
+
+Writes the value of a command to a port given by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port from which value is being written \\
+\hline
+{\em command} & Command to write to port \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 0x\+FFFF if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{mouse_8c_source_l00048}{48}} of file \mbox{\hyperlink{mouse_8c_source}{mouse.\+c}}.
+
+\mbox{\Hypertarget{mouse_8c_adaf307d3659e610a56c6acf3434baa7f}\label{mouse_8c_adaf307d3659e610a56c6acf3434baa7f}} 
+\index{mouse.c@{mouse.c}!move\_mouse@{move\_mouse}}
+\index{move\_mouse@{move\_mouse}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{move\_mouse()}{move\_mouse()}}
+{\footnotesize\ttfamily void move\+\_\+mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Moves the mouse accordingly based on the values stores in the mouse\+\_\+packet. 
+
+
+
+Definition at line \mbox{\hyperlink{mouse_8c_source_l00095}{95}} of file \mbox{\hyperlink{mouse_8c_source}{mouse.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{mouse_8c_a348e5d3a947b5032136f9eeee7222629}\label{mouse_8c_a348e5d3a947b5032136f9eeee7222629}} 
+\index{mouse.c@{mouse.c}!bytes@{bytes}}
+\index{bytes@{bytes}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{bytes}{bytes}}
+{\footnotesize\ttfamily uint32\+\_\+t bytes\mbox{[}3\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{mouse_8c_source_l00006}{6}} of file \mbox{\hyperlink{mouse_8c_source}{mouse.\+c}}.
+
+\mbox{\Hypertarget{mouse_8c_ae75156bc7a78e4c01e1c562438e66f2c}\label{mouse_8c_ae75156bc7a78e4c01e1c562438e66f2c}} 
+\index{mouse.c@{mouse.c}!bytes\_index@{bytes\_index}}
+\index{bytes\_index@{bytes\_index}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{bytes\_index}{bytes\_index}}
+{\footnotesize\ttfamily uint8\+\_\+t bytes\+\_\+index = 0}
+
+
+
+Definition at line \mbox{\hyperlink{mouse_8c_source_l00005}{5}} of file \mbox{\hyperlink{mouse_8c_source}{mouse.\+c}}.
+
+\mbox{\Hypertarget{mouse_8c_a0b0da21bbdff62b7b28e9af7ec3d0d76}\label{mouse_8c_a0b0da21bbdff62b7b28e9af7ec3d0d76}} 
+\index{mouse.c@{mouse.c}!hook\_id\_mouse@{hook\_id\_mouse}}
+\index{hook\_id\_mouse@{hook\_id\_mouse}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{hook\_id\_mouse}{hook\_id\_mouse}}
+{\footnotesize\ttfamily int hook\+\_\+id\+\_\+mouse = 3}
+
+
+
+Definition at line \mbox{\hyperlink{mouse_8c_source_l00003}{3}} of file \mbox{\hyperlink{mouse_8c_source}{mouse.\+c}}.
+

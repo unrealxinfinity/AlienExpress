@@ -1,0 +1,991 @@
+\hypertarget{view_8c}{}\doxysection{src/load/view.c File Reference}
+\label{view_8c}\index{src/load/view.c@{src/load/view.c}}
+{\ttfamily \#include \char`\"{}view.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{view_8c_ad83186d18cfd42e5617bb2f8d82031fd}{is\+\_\+occupied}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} img, int distance)
+\begin{DoxyCompactList}\small\item\em Checks in the prev\+\_\+buffer for collisions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_aafcad4c7ae21e495b16b0c1c58bd2e8f}{manage\+\_\+collision}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} $\ast$img, int distance)
+\begin{DoxyCompactList}\small\item\em Checks in the frame\+\_\+buffer for collisions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a35fce9c592fbff1ea083e9dc48a7081e}{hit\+\_\+monster}} (int \mbox{\hyperlink{global_8h_a203751810c0f8ec9ddd93f2159baeae2}{x}}, int \mbox{\hyperlink{global_8h_afb5bcb44a18a16a8e8289cdb742af2f4}{y}})
+\begin{DoxyCompactList}\small\item\em Eliminates monster in a certain position passed by argument. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{view_8c_affd2e4622b63d5c571629d2c0e108136}{hit\+\_\+wolf}} (int \mbox{\hyperlink{global_8h_a203751810c0f8ec9ddd93f2159baeae2}{x}}, int \mbox{\hyperlink{global_8h_afb5bcb44a18a16a8e8289cdb742af2f4}{y}})
+\begin{DoxyCompactList}\small\item\em Eliminates wolf in a certain position passed by argument. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{view_8c_a7d3f77b855f0ef54a954e55384bf942f}{manage\+\_\+hitbox}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} target, \mbox{\hyperlink{structimg__t}{img\+\_\+t}} character)
+\begin{DoxyCompactList}\small\item\em Detects if character passed through by argument is in contact with another entity also passed by argument. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a164a9eeb26da4992f649abb855216e4a}{draw}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} draw\+\_\+img, \mbox{\hyperlink{structimg__t}{img\+\_\+t}} img)
+\begin{DoxyCompactList}\small\item\em Calls drawing function on frame\+\_\+buffer on each pixel of image passed by argument. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_abbda7f81a133deb0f2f65671ab58af55}{draw\+\_\+map}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} draw\+\_\+img, \mbox{\hyperlink{structimg__t}{img\+\_\+t}} img)
+\begin{DoxyCompactList}\small\item\em Calls drawing function on map buffer on each pixel of image passed by argument. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a806f64f655004972017f12dc7b44e653}{draw\+\_\+numbers}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} number, int type)
+\begin{DoxyCompactList}\small\item\em Calls drawing function on frame\+\_\+buffer on each pixel of image passed by argument on char images (letters, symbols, numbers) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a011170a897245406c63902d3fa6380c8}{draw\+\_\+small\+\_\+xpm}} (xpm\+\_\+map\+\_\+t xpm, uint16\+\_\+t \mbox{\hyperlink{global_8h_a203751810c0f8ec9ddd93f2159baeae2}{x}}, uint16\+\_\+t \mbox{\hyperlink{global_8h_afb5bcb44a18a16a8e8289cdb742af2f4}{y}})
+\begin{DoxyCompactList}\small\item\em Loads and calls drawing function on frame\+\_\+buffer on each pixel of xpm passed by argument. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a9d739c00ce855529ea44be07d9e4fba9}{draw\+Tiles}} ()
+\begin{DoxyCompactList}\small\item\em Loads and calls drawing function on map buffer of the background xpm. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a1fd4dcba337f8d1bed5ab9c895776b66}{draw\+Border}} ()
+\begin{DoxyCompactList}\small\item\em Loads and calls drawing function on map buffer of the border xpm. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_ac5995243c8daec5f72709818c51defa4}{draw\+\_\+timer}} (int sec, int min)
+\begin{DoxyCompactList}\small\item\em Calls drawing function to draw the ongoing timer based on the values passed by argument. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_ad168c686d7996c549bfd3d4d1beb5017}{draw\+\_\+number}} (int number, int \mbox{\hyperlink{global_8h_a203751810c0f8ec9ddd93f2159baeae2}{x}}, int \mbox{\hyperlink{global_8h_afb5bcb44a18a16a8e8289cdb742af2f4}{y}}, int type)
+\begin{DoxyCompactList}\small\item\em Calls drawing function to draw a number passed by argument. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a2490feb09e6d7f6d5cd4595b21751a22}{draw\+\_\+health}} ()
+\begin{DoxyCompactList}\small\item\em Calls drawing function to draw the health of the player. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a594f1dfcf0028dbdf461531a604ddc78}{draw\+\_\+img\+\_\+number}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} img, int \mbox{\hyperlink{global_8h_a203751810c0f8ec9ddd93f2159baeae2}{x}}, int \mbox{\hyperlink{global_8h_afb5bcb44a18a16a8e8289cdb742af2f4}{y}})
+\begin{DoxyCompactList}\small\item\em Calls number drawing function with image and coordinates passed by argument and number value based on the specific image number associated with it. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a4f9254adc9d29655ab76844e72aaa8bd}{draw\+\_\+line}} (int \mbox{\hyperlink{global_8h_a203751810c0f8ec9ddd93f2159baeae2}{x}}, int \mbox{\hyperlink{global_8h_afb5bcb44a18a16a8e8289cdb742af2f4}{y}}, int len, uint32\+\_\+t colors)
+\begin{DoxyCompactList}\small\item\em Calls drawing function on frame\+\_\+buffer to draw a line of format passed by argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a14135df9df90701b8ecdaa94d06f18d8}{set\+\_\+char}} (\mbox{\hyperlink{structimg__t}{img\+\_\+t}} $\ast$img, int \mbox{\hyperlink{global_8h_a203751810c0f8ec9ddd93f2159baeae2}{x}}, int \mbox{\hyperlink{global_8h_afb5bcb44a18a16a8e8289cdb742af2f4}{y}}, int type)
+\begin{DoxyCompactList}\small\item\em Helper function to set position and draw letters and symbols. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a07ec880c5b32e97f3c17870519563095}{init\+\_\+monsters}} ()
+\begin{DoxyCompactList}\small\item\em Loads and stores monster xpm and other monster related variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a041229471071ed2eb58afc5bc742c3d3}{init\+\_\+packages}} ()
+\begin{DoxyCompactList}\small\item\em Loads and stores packages xpm and other package related variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a249a1d8ea926c04c1bfd21f149c9ce0c}{init\+\_\+teleports}} ()
+\begin{DoxyCompactList}\small\item\em Loads and stores teleporter xpm and other teleporter related variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a3f06a568558b4c850ac34d64d1397a40}{init\+\_\+inventory}} ()
+\begin{DoxyCompactList}\small\item\em Loads and stores inventory xpm and other inventory related variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a87ad5967d92a5fd7e12dc48d8ba58062}{init\+\_\+items}} ()
+\begin{DoxyCompactList}\small\item\em Loads and stores item xpm and other item related variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a6c420a61dfa33ec9c279bb0a3610f53b}{init\+\_\+bullets}} ()
+\begin{DoxyCompactList}\small\item\em Loads and stores bullet xpm and other bullet related variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a0cfda75baff0367a5791bbd65b4eb3ef}{init\+\_\+chars}} ()
+\begin{DoxyCompactList}\small\item\em Loads and stores letters and symbols xpm and other related variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_aab8b2781a71cfdafc5d847a0eb819359}{init\+\_\+numbers}} ()
+\begin{DoxyCompactList}\small\item\em Loads and stores number xpm and other number related variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a57635694b1ac97e079e5ca9f3771ef7d}{init\+\_\+player}} ()
+\begin{DoxyCompactList}\small\item\em Loads and stores player xpm and other player related variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a7effee293000b28cf9987753f9f2e061}{init\+\_\+misc}} ()
+\begin{DoxyCompactList}\small\item\em Loads and stores single item xpm and other related variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_ace2f34a28adc6ccc1ecc3689a3fcac55}{initialize\+\_\+game}} ()
+\begin{DoxyCompactList}\small\item\em Calls all the initializing functions (the ones with the prefix \char`\"{}init\char`\"{}). The initializing functions load the xpms and stores them in a struct \mbox{\hyperlink{structimg__t}{img\+\_\+t}}. The creation and storage of an \mbox{\hyperlink{struct_animated_img__t}{Animated\+Img\+\_\+t}} struct is also used for entities with animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_ab140031bb15222ad7c63ad9504bbbe5c}{init\+\_\+level}} ()
+\begin{DoxyCompactList}\small\item\em Sets all level variables and entities to their starting values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a4d87196986b07d28a857d850534a3179}{eliminate\+\_\+entities}} ()
+\begin{DoxyCompactList}\small\item\em Sets all entities and items to dead so that they will not show on screen anymore. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a2d63b26282ebd8e4a9bfc606405a88f4}{init\+\_\+mouse}} ()
+\begin{DoxyCompactList}\small\item\em Loads and stores mouse xpm and other mouse related variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a561385b3992d00cde13d63d6feca5afd}{init\+\_\+anim\+\_\+img}} ()
+\begin{DoxyCompactList}\small\item\em loads and stores animated xpms of the player on the struct \mbox{\hyperlink{struct_animated_img__t}{Animated\+Img\+\_\+t}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structimg__t}{img\+\_\+t}} \mbox{\hyperlink{view_8c_ab3749554144885b5029f6bf77aaa7c7a}{make\+\_\+img}} (xpm\+\_\+map\+\_\+t xpm, unsigned int \mbox{\hyperlink{global_8h_a203751810c0f8ec9ddd93f2159baeae2}{x}}, unsigned int \mbox{\hyperlink{global_8h_afb5bcb44a18a16a8e8289cdb742af2f4}{y}})
+\begin{DoxyCompactList}\small\item\em Loads and sets the variables of struct \mbox{\hyperlink{structimg__t}{img\+\_\+t}} of a xpm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_animated_img__t}{Animated\+Img\+\_\+t}} \mbox{\hyperlink{view_8c_a2c7c17f2665afb58618a7df77c1bb102}{make\+\_\+animated\+\_\+img}} (int no\+\_\+images, int speed, xpm\+\_\+map\+\_\+t $\ast$up, xpm\+\_\+map\+\_\+t $\ast$left, xpm\+\_\+map\+\_\+t $\ast$right, xpm\+\_\+map\+\_\+t $\ast$down)
+\begin{DoxyCompactList}\small\item\em Loads all animated entities xpms into a struct called \mbox{\hyperlink{struct_animated_img__t}{Animated\+Img\+\_\+t}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsimple__animation__t}{simple\+\_\+animation\+\_\+t}} \mbox{\hyperlink{view_8c_a28ac39a78d66f0fd5cac13f56537a041}{make\+\_\+simple\+\_\+animation}} (int no\+\_\+images, xpm\+\_\+map\+\_\+t $\ast$animation)
+\begin{DoxyCompactList}\small\item\em Loads all simple animated entities xpm into a struct \mbox{\hyperlink{structsimple__animation__t}{simple\+\_\+animation\+\_\+t}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{view_8c_a164a9eeb26da4992f649abb855216e4a}\label{view_8c_a164a9eeb26da4992f649abb855216e4a}} 
+\index{view.c@{view.c}!draw@{draw}}
+\index{draw@{draw}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily int draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}}}]{draw\+\_\+img,  }\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}}}]{img }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function on frame\+\_\+buffer on each pixel of image passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em draw\+\_\+img} & Colors, width, height of image \\
+\hline
+{\em img} & coordinates of the position of image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00254}{254}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{view_8c_a164a9eeb26da4992f649abb855216e4a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a2490feb09e6d7f6d5cd4595b21751a22}\label{view_8c_a2490feb09e6d7f6d5cd4595b21751a22}} 
+\index{view.c@{view.c}!draw\_health@{draw\_health}}
+\index{draw\_health@{draw\_health}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_health()}{draw\_health()}}
+{\footnotesize\ttfamily int draw\+\_\+health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function to draw the health of the player. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00411}{411}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{view_8c_a2490feb09e6d7f6d5cd4595b21751a22_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a594f1dfcf0028dbdf461531a604ddc78}\label{view_8c_a594f1dfcf0028dbdf461531a604ddc78}} 
+\index{view.c@{view.c}!draw\_img\_number@{draw\_img\_number}}
+\index{draw\_img\_number@{draw\_img\_number}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_img\_number()}{draw\_img\_number()}}
+{\footnotesize\ttfamily int draw\+\_\+img\+\_\+number (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}}}]{img,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Calls number drawing function with image and coordinates passed by argument and number value based on the specific image number associated with it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The image to be drawn \\
+\hline
+{\em x} & horizontal coordinate of image position \\
+\hline
+{\em y} & vertical coordinate of image position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00423}{423}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a594f1dfcf0028dbdf461531a604ddc78_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a4f9254adc9d29655ab76844e72aaa8bd}\label{view_8c_a4f9254adc9d29655ab76844e72aaa8bd}} 
+\index{view.c@{view.c}!draw\_line@{draw\_line}}
+\index{draw\_line@{draw\_line}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_line()}{draw\_line()}}
+{\footnotesize\ttfamily int draw\+\_\+line (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{len,  }\item[{uint32\+\_\+t}]{colors }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function on frame\+\_\+buffer to draw a line of format passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal coordinate of line position \\
+\hline
+{\em y} & vertical coordinate of line position \\
+\hline
+{\em len} & The length of the line to be drawn \\
+\hline
+{\em colors} & The color that will fill the line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00438}{438}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{view_8c_a4f9254adc9d29655ab76844e72aaa8bd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_abbda7f81a133deb0f2f65671ab58af55}\label{view_8c_abbda7f81a133deb0f2f65671ab58af55}} 
+\index{view.c@{view.c}!draw\_map@{draw\_map}}
+\index{draw\_map@{draw\_map}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_map()}{draw\_map()}}
+{\footnotesize\ttfamily int draw\+\_\+map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}}}]{draw\+\_\+img,  }\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}}}]{img }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function on map buffer on each pixel of image passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em draw\+\_\+img} & Colors, width, height of image \\
+\hline
+{\em img} & coordinates of the position of image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00264}{264}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{view_8c_abbda7f81a133deb0f2f65671ab58af55_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_ad168c686d7996c549bfd3d4d1beb5017}\label{view_8c_ad168c686d7996c549bfd3d4d1beb5017}} 
+\index{view.c@{view.c}!draw\_number@{draw\_number}}
+\index{draw\_number@{draw\_number}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_number()}{draw\_number()}}
+{\footnotesize\ttfamily int draw\+\_\+number (\begin{DoxyParamCaption}\item[{int}]{number,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function to draw a number passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Value of number to be drawn \\
+\hline
+{\em x} & horizontal coordinate of number position \\
+\hline
+{\em y} & vertical coordinate of number position \\
+\hline
+{\em type} & Type of coloring format. If 0 then it is normal coloring, if 1 then it is green coloring, if 4 then it is red coloring. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00361}{361}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_ad168c686d7996c549bfd3d4d1beb5017_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a806f64f655004972017f12dc7b44e653}\label{view_8c_a806f64f655004972017f12dc7b44e653}} 
+\index{view.c@{view.c}!draw\_numbers@{draw\_numbers}}
+\index{draw\_numbers@{draw\_numbers}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_numbers()}{draw\_numbers()}}
+{\footnotesize\ttfamily int draw\+\_\+numbers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}}}]{number,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function on frame\+\_\+buffer on each pixel of image passed by argument on char images (letters, symbols, numbers) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Colors, width, height, coordinates of the position of image \\
+\hline
+{\em type} & The type of coloring of image. If 0 then it\textquotesingle{}s normal coloring, if 1 then it\textquotesingle{}s green coloring and if 4 it is red coloring \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00273}{273}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{view_8c_a806f64f655004972017f12dc7b44e653_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a011170a897245406c63902d3fa6380c8}\label{view_8c_a011170a897245406c63902d3fa6380c8}} 
+\index{view.c@{view.c}!draw\_small\_xpm@{draw\_small\_xpm}}
+\index{draw\_small\_xpm@{draw\_small\_xpm}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_small\_xpm()}{draw\_small\_xpm()}}
+{\footnotesize\ttfamily int draw\+\_\+small\+\_\+xpm (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{xpm,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+Loads and calls drawing function on frame\+\_\+buffer on each pixel of xpm passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & Colors, width, height of xpm \\
+\hline
+{\em x} & horizontal coordinate of xpm position \\
+\hline
+{\em y} & vertical coordinate of xpm position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00283}{283}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a011170a897245406c63902d3fa6380c8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_ac5995243c8daec5f72709818c51defa4}\label{view_8c_ac5995243c8daec5f72709818c51defa4}} 
+\index{view.c@{view.c}!draw\_timer@{draw\_timer}}
+\index{draw\_timer@{draw\_timer}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_timer()}{draw\_timer()}}
+{\footnotesize\ttfamily int draw\+\_\+timer (\begin{DoxyParamCaption}\item[{int}]{sec,  }\item[{int}]{min }\end{DoxyParamCaption})}
+
+
+
+Calls drawing function to draw the ongoing timer based on the values passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sec} & The value of the seconds of the timer \\
+\hline
+{\em min} & The value of the minutes of the timer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00339}{339}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_ac5995243c8daec5f72709818c51defa4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a1fd4dcba337f8d1bed5ab9c895776b66}\label{view_8c_a1fd4dcba337f8d1bed5ab9c895776b66}} 
+\index{view.c@{view.c}!drawBorder@{drawBorder}}
+\index{drawBorder@{drawBorder}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{drawBorder()}{drawBorder()}}
+{\footnotesize\ttfamily int draw\+Border (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and calls drawing function on map buffer of the border xpm. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00305}{305}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a1fd4dcba337f8d1bed5ab9c895776b66_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a9d739c00ce855529ea44be07d9e4fba9}\label{view_8c_a9d739c00ce855529ea44be07d9e4fba9}} 
+\index{view.c@{view.c}!drawTiles@{drawTiles}}
+\index{drawTiles@{drawTiles}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{drawTiles()}{drawTiles()}}
+{\footnotesize\ttfamily int draw\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and calls drawing function on map buffer of the background xpm. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 if successfull and 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00289}{289}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a9d739c00ce855529ea44be07d9e4fba9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a4d87196986b07d28a857d850534a3179}\label{view_8c_a4d87196986b07d28a857d850534a3179}} 
+\index{view.c@{view.c}!eliminate\_entities@{eliminate\_entities}}
+\index{eliminate\_entities@{eliminate\_entities}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{eliminate\_entities()}{eliminate\_entities()}}
+{\footnotesize\ttfamily void eliminate\+\_\+entities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets all entities and items to dead so that they will not show on screen anymore. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00661}{661}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+\mbox{\Hypertarget{view_8c_a35fce9c592fbff1ea083e9dc48a7081e}\label{view_8c_a35fce9c592fbff1ea083e9dc48a7081e}} 
+\index{view.c@{view.c}!hit\_monster@{hit\_monster}}
+\index{hit\_monster@{hit\_monster}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{hit\_monster()}{hit\_monster()}}
+{\footnotesize\ttfamily void hit\+\_\+monster (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Eliminates monster in a certain position passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal coordinate of monster position \\
+\hline
+{\em y} & vertical coordinate of monster position \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00230}{230}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+\mbox{\Hypertarget{view_8c_affd2e4622b63d5c571629d2c0e108136}\label{view_8c_affd2e4622b63d5c571629d2c0e108136}} 
+\index{view.c@{view.c}!hit\_wolf@{hit\_wolf}}
+\index{hit\_wolf@{hit\_wolf}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{hit\_wolf()}{hit\_wolf()}}
+{\footnotesize\ttfamily bool hit\+\_\+wolf (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Eliminates wolf in a certain position passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal coordinate of wolf position \\
+\hline
+{\em y} & vertical coordinate of wolf position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if wolf is in the position and false if otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00240}{240}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+\mbox{\Hypertarget{view_8c_a561385b3992d00cde13d63d6feca5afd}\label{view_8c_a561385b3992d00cde13d63d6feca5afd}} 
+\index{view.c@{view.c}!init\_anim\_img@{init\_anim\_img}}
+\index{init\_anim\_img@{init\_anim\_img}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_anim\_img()}{init\_anim\_img()}}
+{\footnotesize\ttfamily void init\+\_\+anim\+\_\+img (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+loads and stores animated xpms of the player on the struct \mbox{\hyperlink{struct_animated_img__t}{Animated\+Img\+\_\+t}} 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00729}{729}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a561385b3992d00cde13d63d6feca5afd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a6c420a61dfa33ec9c279bb0a3610f53b}\label{view_8c_a6c420a61dfa33ec9c279bb0a3610f53b}} 
+\index{view.c@{view.c}!init\_bullets@{init\_bullets}}
+\index{init\_bullets@{init\_bullets}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_bullets()}{init\_bullets()}}
+{\footnotesize\ttfamily void init\+\_\+bullets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and stores bullet xpm and other bullet related variables. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00543}{543}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{view_8c_a6c420a61dfa33ec9c279bb0a3610f53b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a0cfda75baff0367a5791bbd65b4eb3ef}\label{view_8c_a0cfda75baff0367a5791bbd65b4eb3ef}} 
+\index{view.c@{view.c}!init\_chars@{init\_chars}}
+\index{init\_chars@{init\_chars}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_chars()}{init\_chars()}}
+{\footnotesize\ttfamily void init\+\_\+chars (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and stores letters and symbols xpm and other related variables. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00550}{550}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{view_8c_a0cfda75baff0367a5791bbd65b4eb3ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a3f06a568558b4c850ac34d64d1397a40}\label{view_8c_a3f06a568558b4c850ac34d64d1397a40}} 
+\index{view.c@{view.c}!init\_inventory@{init\_inventory}}
+\index{init\_inventory@{init\_inventory}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_inventory()}{init\_inventory()}}
+{\footnotesize\ttfamily void init\+\_\+inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and stores inventory xpm and other inventory related variables. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00507}{507}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{view_8c_a3f06a568558b4c850ac34d64d1397a40_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a87ad5967d92a5fd7e12dc48d8ba58062}\label{view_8c_a87ad5967d92a5fd7e12dc48d8ba58062}} 
+\index{view.c@{view.c}!init\_items@{init\_items}}
+\index{init\_items@{init\_items}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_items()}{init\_items()}}
+{\footnotesize\ttfamily void init\+\_\+items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and stores item xpm and other item related variables. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00523}{523}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{view_8c_a87ad5967d92a5fd7e12dc48d8ba58062_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_ab140031bb15222ad7c63ad9504bbbe5c}\label{view_8c_ab140031bb15222ad7c63ad9504bbbe5c}} 
+\index{view.c@{view.c}!init\_level@{init\_level}}
+\index{init\_level@{init\_level}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_level()}{init\_level()}}
+{\footnotesize\ttfamily void init\+\_\+level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets all level variables and entities to their starting values. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00640}{640}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+\mbox{\Hypertarget{view_8c_a7effee293000b28cf9987753f9f2e061}\label{view_8c_a7effee293000b28cf9987753f9f2e061}} 
+\index{view.c@{view.c}!init\_misc@{init\_misc}}
+\index{init\_misc@{init\_misc}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_misc()}{init\_misc()}}
+{\footnotesize\ttfamily void init\+\_\+misc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and stores single item xpm and other related variables. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00611}{611}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a7effee293000b28cf9987753f9f2e061_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a07ec880c5b32e97f3c17870519563095}\label{view_8c_a07ec880c5b32e97f3c17870519563095}} 
+\index{view.c@{view.c}!init\_monsters@{init\_monsters}}
+\index{init\_monsters@{init\_monsters}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_monsters()}{init\_monsters()}}
+{\footnotesize\ttfamily void init\+\_\+monsters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and stores monster xpm and other monster related variables. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00453}{453}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a07ec880c5b32e97f3c17870519563095_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a2d63b26282ebd8e4a9bfc606405a88f4}\label{view_8c_a2d63b26282ebd8e4a9bfc606405a88f4}} 
+\index{view.c@{view.c}!init\_mouse@{init\_mouse}}
+\index{init\_mouse@{init\_mouse}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_mouse()}{init\_mouse()}}
+{\footnotesize\ttfamily void init\+\_\+mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and stores mouse xpm and other mouse related variables. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00720}{720}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a2d63b26282ebd8e4a9bfc606405a88f4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_aab8b2781a71cfdafc5d847a0eb819359}\label{view_8c_aab8b2781a71cfdafc5d847a0eb819359}} 
+\index{view.c@{view.c}!init\_numbers@{init\_numbers}}
+\index{init\_numbers@{init\_numbers}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_numbers()}{init\_numbers()}}
+{\footnotesize\ttfamily void init\+\_\+numbers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and stores number xpm and other number related variables. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00580}{580}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{view_8c_aab8b2781a71cfdafc5d847a0eb819359_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a041229471071ed2eb58afc5bc742c3d3}\label{view_8c_a041229471071ed2eb58afc5bc742c3d3}} 
+\index{view.c@{view.c}!init\_packages@{init\_packages}}
+\index{init\_packages@{init\_packages}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_packages()}{init\_packages()}}
+{\footnotesize\ttfamily void init\+\_\+packages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and stores packages xpm and other package related variables. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00494}{494}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{view_8c_a041229471071ed2eb58afc5bc742c3d3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a57635694b1ac97e079e5ca9f3771ef7d}\label{view_8c_a57635694b1ac97e079e5ca9f3771ef7d}} 
+\index{view.c@{view.c}!init\_player@{init\_player}}
+\index{init\_player@{init\_player}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_player()}{init\_player()}}
+{\footnotesize\ttfamily void init\+\_\+player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and stores player xpm and other player related variables. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00604}{604}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{view_8c_a57635694b1ac97e079e5ca9f3771ef7d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a249a1d8ea926c04c1bfd21f149c9ce0c}\label{view_8c_a249a1d8ea926c04c1bfd21f149c9ce0c}} 
+\index{view.c@{view.c}!init\_teleports@{init\_teleports}}
+\index{init\_teleports@{init\_teleports}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{init\_teleports()}{init\_teleports()}}
+{\footnotesize\ttfamily void init\+\_\+teleports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads and stores teleporter xpm and other teleporter related variables. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00501}{501}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{view_8c_a249a1d8ea926c04c1bfd21f149c9ce0c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_ace2f34a28adc6ccc1ecc3689a3fcac55}\label{view_8c_ace2f34a28adc6ccc1ecc3689a3fcac55}} 
+\index{view.c@{view.c}!initialize\_game@{initialize\_game}}
+\index{initialize\_game@{initialize\_game}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{initialize\_game()}{initialize\_game()}}
+{\footnotesize\ttfamily void initialize\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls all the initializing functions (the ones with the prefix \char`\"{}init\char`\"{}). The initializing functions load the xpms and stores them in a struct \mbox{\hyperlink{structimg__t}{img\+\_\+t}}. The creation and storage of an \mbox{\hyperlink{struct_animated_img__t}{Animated\+Img\+\_\+t}} struct is also used for entities with animation. 
+
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00626}{626}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_ace2f34a28adc6ccc1ecc3689a3fcac55_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_ad83186d18cfd42e5617bb2f8d82031fd}\label{view_8c_ad83186d18cfd42e5617bb2f8d82031fd}} 
+\index{view.c@{view.c}!is\_occupied@{is\_occupied}}
+\index{is\_occupied@{is\_occupied}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{is\_occupied()}{is\_occupied()}}
+{\footnotesize\ttfamily int is\+\_\+occupied (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}}}]{img,  }\item[{int}]{distance }\end{DoxyParamCaption})}
+
+
+
+Checks in the prev\+\_\+buffer for collisions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The entity that is currently moving \\
+\hline
+{\em distance} & The distance that it will move if there is no collision \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if there is no collision and 1 if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00003}{3}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{view_8c_ad83186d18cfd42e5617bb2f8d82031fd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a2c7c17f2665afb58618a7df77c1bb102}\label{view_8c_a2c7c17f2665afb58618a7df77c1bb102}} 
+\index{view.c@{view.c}!make\_animated\_img@{make\_animated\_img}}
+\index{make\_animated\_img@{make\_animated\_img}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{make\_animated\_img()}{make\_animated\_img()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_animated_img__t}{Animated\+Img\+\_\+t}} make\+\_\+animated\+\_\+img (\begin{DoxyParamCaption}\item[{int}]{no\+\_\+images,  }\item[{int}]{speed,  }\item[{xpm\+\_\+map\+\_\+t $\ast$}]{up,  }\item[{xpm\+\_\+map\+\_\+t $\ast$}]{left,  }\item[{xpm\+\_\+map\+\_\+t $\ast$}]{right,  }\item[{xpm\+\_\+map\+\_\+t $\ast$}]{down }\end{DoxyParamCaption})}
+
+
+
+Loads all animated entities xpms into a struct called \mbox{\hyperlink{struct_animated_img__t}{Animated\+Img\+\_\+t}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no\+\_\+images} & The number of different xpms used for every direction the image faces \\
+\hline
+{\em speed} & The velocity on which the entity moves \\
+\hline
+{\em up} & Array which stores the xpms of the entity while facing up \\
+\hline
+{\em left} & Array which stores the xpms of the entity while facing left \\
+\hline
+{\em right} & Array which stores the xpms of the entity while facing right \\
+\hline
+{\em down} & Array which stores the xpms of the entity while facing down \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00767}{767}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{view_8c_a2c7c17f2665afb58618a7df77c1bb102_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_ab3749554144885b5029f6bf77aaa7c7a}\label{view_8c_ab3749554144885b5029f6bf77aaa7c7a}} 
+\index{view.c@{view.c}!make\_img@{make\_img}}
+\index{make\_img@{make\_img}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{make\_img()}{make\_img()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structimg__t}{img\+\_\+t}} make\+\_\+img (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{xpm,  }\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})}
+
+
+
+Loads and sets the variables of struct \mbox{\hyperlink{structimg__t}{img\+\_\+t}} of a xpm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & The xpm to be loaded and stored \\
+\hline
+{\em x} & horizontal coordinate of \mbox{\hyperlink{structimg__t}{img\+\_\+t}} position \\
+\hline
+{\em y} & vertical coordinate of \mbox{\hyperlink{structimg__t}{img\+\_\+t}} position \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00747}{747}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+\mbox{\Hypertarget{view_8c_a28ac39a78d66f0fd5cac13f56537a041}\label{view_8c_a28ac39a78d66f0fd5cac13f56537a041}} 
+\index{view.c@{view.c}!make\_simple\_animation@{make\_simple\_animation}}
+\index{make\_simple\_animation@{make\_simple\_animation}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{make\_simple\_animation()}{make\_simple\_animation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsimple__animation__t}{simple\+\_\+animation\+\_\+t}} make\+\_\+simple\+\_\+animation (\begin{DoxyParamCaption}\item[{int}]{no\+\_\+images,  }\item[{xpm\+\_\+map\+\_\+t $\ast$}]{animation }\end{DoxyParamCaption})}
+
+
+
+Loads all simple animated entities xpm into a struct \mbox{\hyperlink{structsimple__animation__t}{simple\+\_\+animation\+\_\+t}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no\+\_\+images} & The number of different xpms used for the entity \\
+\hline
+{\em animation} & The array with the different xpms of the animation \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00779}{779}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{view_8c_a28ac39a78d66f0fd5cac13f56537a041_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_aafcad4c7ae21e495b16b0c1c58bd2e8f}\label{view_8c_aafcad4c7ae21e495b16b0c1c58bd2e8f}} 
+\index{view.c@{view.c}!manage\_collision@{manage\_collision}}
+\index{manage\_collision@{manage\_collision}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{manage\_collision()}{manage\_collision()}}
+{\footnotesize\ttfamily int manage\+\_\+collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}} $\ast$}]{img,  }\item[{int}]{distance }\end{DoxyParamCaption})}
+
+
+
+Checks in the frame\+\_\+buffer for collisions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The entity that is currently moving \\
+\hline
+{\em distance} & The distance that it will move if there is no collision \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if function was successfull 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00075}{75}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{view_8c_aafcad4c7ae21e495b16b0c1c58bd2e8f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a7d3f77b855f0ef54a954e55384bf942f}\label{view_8c_a7d3f77b855f0ef54a954e55384bf942f}} 
+\index{view.c@{view.c}!manage\_hitbox@{manage\_hitbox}}
+\index{manage\_hitbox@{manage\_hitbox}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{manage\_hitbox()}{manage\_hitbox()}}
+{\footnotesize\ttfamily bool manage\+\_\+hitbox (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}}}]{target,  }\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}}}]{character }\end{DoxyParamCaption})}
+
+
+
+Detects if character passed through by argument is in contact with another entity also passed by argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Entity which is being collided by character \\
+\hline
+{\em character} & Entity that is colliding \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if it is colliding and false if otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00248}{248}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+\mbox{\Hypertarget{view_8c_a14135df9df90701b8ecdaa94d06f18d8}\label{view_8c_a14135df9df90701b8ecdaa94d06f18d8}} 
+\index{view.c@{view.c}!set\_char@{set\_char}}
+\index{set\_char@{set\_char}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{set\_char()}{set\_char()}}
+{\footnotesize\ttfamily void set\+\_\+char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimg__t}{img\+\_\+t}} $\ast$}]{img,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Helper function to set position and draw letters and symbols. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & entity that will be moved and drawn \\
+\hline
+{\em x} & horizontal coordinate of final position \\
+\hline
+{\em y} & vertical coordinate of final position \\
+\hline
+{\em type} & type of coloring. If it\textquotesingle{}s 0 then the coloring is white, if 1 the coloring is green, if 4 coloring is red. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{view_8c_source_l00444}{444}} of file \mbox{\hyperlink{view_8c_source}{view.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a14135df9df90701b8ecdaa94d06f18d8_cgraph}
+\end{center}
+\end{figure}

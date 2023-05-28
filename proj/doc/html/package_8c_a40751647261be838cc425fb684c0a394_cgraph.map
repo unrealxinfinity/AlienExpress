@@ -1,0 +1,18 @@
+<map id="use_item" name="use_item">
+<area shape="rect" id="node1" title="Calls functions to use item being currently help." alt="" coords="5,284,80,311"/>
+<area shape="rect" id="node2" href="$player_8c.html#a45470fb2ac0252923f17300da2820c3b" title="Gets the value of the inventory index currently being used." alt="" coords="132,132,256,159"/>
+<area shape="rect" id="node3" href="$package_8c.html#a130e52ed2fb0f029c53471b0a279d95f" title="Randomizes the item to be received after opening a package." alt="" coords="158,183,230,209"/>
+<area shape="rect" id="node12" href="$player_8c.html#a1f767d8d83293c8e1b86b96069e659d2" title="Changes the variable taht registers the index of item of inventory being thrown to a value passed by ..." alt="" coords="128,233,260,260"/>
+<area shape="rect" id="node13" href="$backpack_8c.html#afa3133512956a3a1370db2fce3f0cd3b" title="Changes backpack from inventory to equipment." alt="" coords="141,284,247,311"/>
+<area shape="rect" id="node14" href="$boots_8c.html#a50986467fc35821540182af7074e5c4a" title="Equips boots by placing it in equipment instead of inventory." alt="" coords="153,335,235,361"/>
+<area shape="rect" id="node15" href="$pistol_8c.html#a7f21348ccccb789f74ec02bed0768a17" title="Uses all ammo available from inventory to reload the pistol that is being held." alt="" coords="154,385,234,412"/>
+<area shape="rect" id="node16" href="$pizza_8c.html#aa8a2b5b68d1112c2d258956295c397b5" title="Raises player&#39;s health and stops pizza from being drawn." alt="" coords="154,436,234,463"/>
+<area shape="rect" id="node4" href="$ammo_8c.html#ae6101f273d23ca58992276ef0bf3a2bf" title="Sets the current inventory position to ammo." alt="" coords="318,5,400,32"/>
+<area shape="rect" id="node5" href="$backpack_8c.html#aeccb2fae3124c45946a071f937c29a95" title="Sets the current inventory position to backpack." alt="" coords="308,56,410,83"/>
+<area shape="rect" id="node6" href="$bone_8c.html#a585f9194dd92b30183c2fc87dd724adb" title="Sets the current inventory position to a bone." alt="" coords="322,107,396,133"/>
+<area shape="rect" id="node7" href="$boots_8c.html#ad1a19ed3b2a6c89fd71d14e9e6cd86fa" title="Sets the current inventory position to boots." alt="" coords="320,157,398,184"/>
+<area shape="rect" id="node8" href="$grenade_8c.html#ae970fad7a23c3620db1d2fe76424fb01" title="Sets the current inventory position to a grenade." alt="" coords="313,208,405,235"/>
+<area shape="rect" id="node9" href="$pistol_8c.html#ad1e3877d49e53fe3ec92556846a00e9d" title="Sets the current inventory position to a pistol." alt="" coords="321,259,398,285"/>
+<area shape="rect" id="node10" href="$pizza_8c.html#a67f32a0cf3c84dc349d7689f5ca5126a" title="Sets the current inventory position to a pizza." alt="" coords="321,309,398,336"/>
+<area shape="rect" id="node11" href="$watch_8c.html#a7955d3211628d3b0c0fe5c3a99028934" title="Sets the current inventory position to a watch." alt="" coords="319,360,399,387"/>
+</map>

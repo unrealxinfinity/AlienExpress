@@ -1,0 +1,5 @@
+<map id="init_misc" name="init_misc">
+<area shape="rect" id="node1" title="Loads and stores single item xpm and other related variables." alt="" coords="5,5,79,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#ab3749554144885b5029f6bf77aaa7c7a" title="Loads and sets the variables of struct img_t of a xpm." alt="" coords="336,5,417,32"/>
+<area shape="rect" id="node3" href="$view_8c.html#a28ac39a78d66f0fd5cac13f56537a041" title="Loads all simple animated entities xpm into a struct simple_animation_t." alt="" coords="127,31,288,57"/>
+</map>
