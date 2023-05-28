@@ -20,7 +20,10 @@ action_t mouse_ih_menu(){
             menu_selection = AFK;
         }
     }
-    if(mouse_packet.lb && mouse_hover) return menu_selection;
+    if(mouse_packet.lb && mouse_hover) {
+        mouse_hover = false;
+        return menu_selection;
+    }
     return AFK;
 
 }

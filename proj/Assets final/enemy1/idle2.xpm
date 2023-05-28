@@ -1,7 +1,7 @@
 /* XPM */
 static char * idle2_xpm[] = {
 "34 24 10 1",
-" 	c #FFFFFF",
+" 	c #FFFFFE",
 ".	c #15110F",
 "+	c #B09F8C",
 "@	c #F2EFEC",

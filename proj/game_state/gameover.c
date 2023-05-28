@@ -18,7 +18,10 @@ action_t mouse_ih_game_over(){
             game_over_selection = AFK;
         }
     }
-    if(mouse_packet.lb && mouse_hover) return game_over_selection;
+    if(mouse_packet.lb && mouse_hover) {
+        mouse_hover = false;
+        return game_over_selection;
+    }
     return AFK;
 }
 
@@ -39,6 +42,7 @@ action_t keyboard_ih_game_over(uint32_t scancode){
 
 void draw_game_over(){
     counter_timer++;
+    reset_movement();
     draw_level();
 
     draw_game_over_tag();

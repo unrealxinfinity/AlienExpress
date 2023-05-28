@@ -42,6 +42,13 @@
 #define MAKE_A                      0x1E
 #define MAKE_D                      0x20
 #define MAKE_S                      0x1F
+#define MAKE_P                      0x19
+#define MAKE_O                      0x18
+#define MAKE_I                      0x17
+#define MAKE_L                      0x26
+#define MAKE_1                      0x02
+#define MAKE_2                      0x03
+#define MAKE_3                      0x04
 #define B(n)                        (n | BIT(7))
 
 
@@ -73,11 +80,40 @@
 #define DIRECT_COLOR_5_6_5          0x11A
 #define DIRECT_COLOR_8_8_8_8        0x14C
 
+
+//RTC
+
+#define RTC_HOOK_ID                 8
+#define RTC_IRQ_LINE                8
+#define RTC_ADRESS                  0x70
+#define RTC_OUTPUT                  0x71
+#define RTC_COMMAND                 11
+#define RTC_COMMAND2                12
+#define RTC_COMMAND3                10
+#define RTC_SECONDS                 0
+#define RTC_MINUTES                 2
+#define RTC_HOURS                   4
+#define RTC_DAYS                    7
+#define RTC_MONTHS                  8
+#define RTC_YEARS                   9
+
 //entities
 #define UNBREAKABLE_WALL            0xB2B2B2
 #define PLAYER                      0x161516
 #define ENEMY                       0x161319
-#define PACKAGE                     0x000001
+#define WORKER                      0X15110F
+#define WOLF                        0
+#define PACKAGE                     0x000000
+#define PISTOL_BULLET               0xECFFA8
+#define BULLET                      0x000003
+#define AMMO                        0x000006
+#define PIZZA                       0x000007
+#define WATCH                       0x000008
+#define BOOTS                       0x000009
+#define BACKPACK                    0x00000A
+#define BONE                        0x00000C
+#define GRENADE                     0x00000B
+#define PISTOL                      0xFFFFFF
 #define HEALTH                      0xFF0000
 #define EMPTY_HEALTH                0x000002
 #define EMPTY_INVENTORY             0x696969

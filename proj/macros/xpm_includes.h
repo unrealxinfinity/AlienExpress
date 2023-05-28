@@ -36,6 +36,46 @@
 #include "../Assets final/mainCharAnimated/DOWN/mcDown7.xpm"
 #include "../Assets final/mainCharAnimated/DOWN/mcDown1.xpm"
 
+#include "../Assets final/mainCharAnimated/DOWN_PISTOL/mcDownPistol1.xpm"
+#include "../Assets final/mainCharAnimated/DOWN_PISTOL/mcDownPistol2.xpm"
+#include "../Assets final/mainCharAnimated/DOWN_PISTOL/mcDownPistol3.xpm"
+#include "../Assets final/mainCharAnimated/DOWN_PISTOL/mcDownPistol4.xpm"
+#include "../Assets final/mainCharAnimated/DOWN_PISTOL/mcDownPistol5.xpm"
+#include "../Assets final/mainCharAnimated/DOWN_PISTOL/mcDownPistol6.xpm"
+#include "../Assets final/mainCharAnimated/DOWN_PISTOL/mcDownPistol7.xpm"
+#include "../Assets final/mainCharAnimated/DOWN_PISTOL/mcDownPistol8.xpm"
+
+
+#include "../Assets final/mainCharAnimated/LEFT_PISTOL/mcLeftPistol1.xpm"
+#include "../Assets final/mainCharAnimated/LEFT_PISTOL/mcLeftPistol2.xpm"
+#include "../Assets final/mainCharAnimated/LEFT_PISTOL/mcLeftPistol3.xpm"
+#include "../Assets final/mainCharAnimated/LEFT_PISTOL/mcLeftPistol4.xpm"
+#include "../Assets final/mainCharAnimated/LEFT_PISTOL/mcLeftPistol5.xpm"
+#include "../Assets final/mainCharAnimated/LEFT_PISTOL/mcLeftPistol6.xpm"
+#include "../Assets final/mainCharAnimated/LEFT_PISTOL/mcLeftPistol7.xpm"
+#include "../Assets final/mainCharAnimated/LEFT_PISTOL/mcLeftPistol8.xpm"
+
+#include "../Assets final/mainCharAnimated/RIGHT_PISTOL/mcRightPistol1.xpm"
+#include "../Assets final/mainCharAnimated/RIGHT_PISTOL/mcRightPistol2.xpm"
+#include "../Assets final/mainCharAnimated/RIGHT_PISTOL/mcRightPistol3.xpm"
+#include "../Assets final/mainCharAnimated/RIGHT_PISTOL/mcRightPistol4.xpm"
+#include "../Assets final/mainCharAnimated/RIGHT_PISTOL/mcRightPistol5.xpm"
+#include "../Assets final/mainCharAnimated/RIGHT_PISTOL/mcRightPistol6.xpm"
+#include "../Assets final/mainCharAnimated/RIGHT_PISTOL/mcRightPistol7.xpm"
+#include "../Assets final/mainCharAnimated/RIGHT_PISTOL/mcRightPistol8.xpm"
+
+#include "../Assets final/mainCharAnimated/UP_PISTOL/mcUpPistol1.xpm"
+#include "../Assets final/mainCharAnimated/UP_PISTOL/mcUpPistol2.xpm"
+#include "../Assets final/mainCharAnimated/UP_PISTOL/mcUpPistol3.xpm"
+#include "../Assets final/mainCharAnimated/UP_PISTOL/mcUpPistol4.xpm"
+#include "../Assets final/mainCharAnimated/UP_PISTOL/mcUpPistol5.xpm"
+#include "../Assets final/mainCharAnimated/UP_PISTOL/mcUpPistol6.xpm"
+#include "../Assets final/mainCharAnimated/UP_PISTOL/mcUpPistol7.xpm"
+#include "../Assets final/mainCharAnimated/UP_PISTOL/mcUpPistol8.xpm"
+
+#include "../Assets final/mainCharAnimated/shoot2.xpm"
+
+
 #include "../Assets final/letters/a.xpm"
 #include "../Assets final/letters/b.xpm"
 #include "../Assets final/letters/c.xpm"
@@ -101,6 +141,39 @@
 #include "../Assets final/numbers/eight.xpm"
 #include "../Assets final/numbers/nine.xpm"
 
+#include "../Assets final/numbers_selected/zero_selected.xpm"
+#include "../Assets final/numbers_selected/one_selected.xpm"
+#include "../Assets final/numbers_selected/two_selected.xpm"
+#include "../Assets final/numbers_selected/three_selected.xpm"
+#include "../Assets final/numbers_selected/four_selected.xpm"
+#include "../Assets final/numbers_selected/five_selected.xpm"
+#include "../Assets final/numbers_selected/six_selected.xpm"
+#include "../Assets final/numbers_selected/seven_selected.xpm"
+#include "../Assets final/numbers_selected/eight_selected.xpm"
+#include "../Assets final/numbers_selected/nine_selected.xpm"
+
+#include "../Assets final/numbers_red/zero_red.xpm"
+#include "../Assets final/numbers_red/one_red.xpm"
+#include "../Assets final/numbers_red/two_red.xpm"
+#include "../Assets final/numbers_red/three_red.xpm"
+#include "../Assets final/numbers_red/four_red.xpm"
+#include "../Assets final/numbers_red/five_red.xpm"
+#include "../Assets final/numbers_red/six_red.xpm"
+#include "../Assets final/numbers_red/seven_red.xpm"
+#include "../Assets final/numbers_red/eight_red.xpm"
+#include "../Assets final/numbers_red/nine_red.xpm"
+
+#include "../Assets final/small_numbers/small_zero.xpm"
+#include "../Assets final/small_numbers/small_one.xpm"
+#include "../Assets final/small_numbers/small_two.xpm"
+#include "../Assets final/small_numbers/small_three.xpm"
+#include "../Assets final/small_numbers/small_four.xpm"
+#include "../Assets final/small_numbers/small_five.xpm"
+#include "../Assets final/small_numbers/small_six.xpm"
+#include "../Assets final/small_numbers/small_seven.xpm"
+#include "../Assets final/small_numbers/small_eight.xpm"
+#include "../Assets final/small_numbers/small_nine.xpm"
+
 #include "../Assets final/symbols/two_dots.xpm"
 
 #include "../Assets final/mouse/mouse_normal.xpm"
@@ -112,9 +185,22 @@
 #include "../Assets final/tileset/unbreakableWalls.xpm"
 #include "../Assets final/tileset/teleport.xpm"
 #include "../Assets final/tileset/inventory.xpm"
+#include "../Assets final/tileset/selected.xpm"
+#include "../Assets final/mainCharFront.xpm"
 
 #include "../Assets final/items/bigBox.xpm"
 #include "../Assets final/items/smallBox.xpm"
+#include "../Assets final/items/bullet32.xpm"
+#include "../Assets final/items/clock32.xpm"
+
+#include "../Assets final/powerups/heal.xpm"
+#include "../Assets final/powerups/dmgBoost.xpm"
+#include "../Assets final/powerups/pistol32.xpm"
+#include "../Assets final/powerups/pizza32.xpm"
+#include "../Assets final/powerups/healing32.xpm"
+#include "../Assets final/powerups/speedBoots32.xpm"
+
+
 
 
 #include "../Assets final/Enemy3/enemy.xpm"
@@ -133,5 +219,19 @@
 #include "../Assets final/Enemy3/enemyAttack7.xpm"
 #include "../Assets final/Enemy3/enemyAttack8.xpm"
 #include "../Assets final/Enemy3/enemyProjectile.xpm"
+
+#include "../Assets final/enemy2/alien1.xpm"
+#include "../Assets final/enemy2/alien2.xpm"
+#include "../Assets final/enemy2/alien2Right.xpm"
+#include "../Assets final/enemy2/alien3Left.xpm"
+#include "../Assets final/enemy2/alien3Right.xpm"
+
+#include "../Assets final/enemy1/right1.xpm"
+#include "../Assets final/enemy1/right2.xpm"
+#include "../Assets final/enemy1/right3.xpm"
+#include "../Assets final/enemy1/right4.xpm"
+#include "../Assets final/enemy1/right5.xpm"
+#include "../Assets final/enemy1/idle2.xpm"
+
 
 #endif

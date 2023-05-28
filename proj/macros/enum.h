@@ -6,6 +6,7 @@ typedef enum{
     MENU,
     LEVEL1,
     PAUSE,
+    INFO,
     GAME_OVER
 }game_state_t;
 typedef enum{

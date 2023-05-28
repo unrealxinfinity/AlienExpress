@@ -37,27 +37,38 @@ action_t mouse_ih_pause(){
             pause_selection = AFK;
         }
     }
-    if(mouse_packet.lb && mouse_hover) return pause_selection;
+    if(mouse_packet.lb && mouse_hover) {
+        mouse_hover = false;
+        return pause_selection;
+    }
     return AFK;
 }
 
 void draw_pause(){
     draw_packages();
-    draw_small_xpm((xpm_map_t) unbreakableWalls_xpm, 200, 400);
+    draw_guns();
+    count = -1;
+    draw_afk_player();
+    draw_teleports();
+    for (int i = 0; i < (int) (sizeof(workers) / sizeof(workers[0])); i++) {
+        if(!workers[i].is_dead)draw_workers(workers[i]);
+    }
     
-    draw_player();
-    
-    for (int i = 0; i < (int) (sizeof(enemies_lv1) / sizeof(enemies_lv1[0])); i++) draw_enemies(enemies_lv1[i]);
+    for (int i = 0; i < (int) (sizeof(enemies_lv1) / sizeof(enemies_lv1[0])); i++) {
+        if(!enemies_lv1[i].is_dead)draw_enemies(enemies_lv1[i]);
+    }
 
     draw_pause_words();
 
     draw_level_words();
-    draw_level_numbers();
+    draw_timer(seconds, minutes);
 
     if(mouse_hover)draw(mouse_animation.animation[1], mouse);
     else draw(mouse_animation.animation[0], mouse);
 
     draw_health();
+    draw_inventory();
+    if(!selected.is_dead)draw(selected, selected);
 }
 
 void draw_pause_words(){

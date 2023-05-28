@@ -1,7 +1,7 @@
 /* XPM */
 static char * mainCharFrontT_xpm[] = {
 "36 36 705 2",
-"  	c None",
+"  	c #FFFFFE",
 ". 	c #000022",
 "+ 	c #626269",
 "@ 	c #63646B",
